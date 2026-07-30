@@ -40,6 +40,14 @@ python cadspot.py --input example_spot_table.tsv --target Core_MRS --reference H
 
 The default candidate rule uses `--robust-z-cutoff 3.0`. This parameter can be changed by the user, but the manuscript analyses used the default value.
 
+For manuscript-level coordinate reproducibility from a table that already contains the saved residual z-score and neighborhood-support columns, CAD-SPOT can reuse those columns:
+
+```bash
+python cadspot.py --input cadspot_candidate_coordinate_table.tsv.gz --target target_score --reference reference_score --technical log_nCount log_nFeature --composition Epithelial_malignant_proxy ECM_Stroma CAF Macrophage T_cell --target-z-col MMS_resid_z --reference-z-col HG_resid_z --neighbor-reference-z-col neighbor_HG_resid_z --local-support-col local_support --output full_cadspot_associations.tsv --coordinate-output full_cadspot_coordinates.tsv
+```
+
+This mode is useful when the coordinate-prioritization layer is being rerun from an archived analysis table rather than recomputed from a minimal exported spot table.
+
 ## Outputs
 
 `example_cadspot_associations.tsv` reports raw, technical-adjusted and composition-adjusted Spearman correlations.
@@ -63,5 +71,3 @@ In the simulation terminology used in the manuscript, the architecture field rep
 ## Reproducibility
 
 The script is table-based and does not require a Seurat, Scanpy, Giotto or Squidpy object. This is intentional: users can export scores and covariates from any upstream workflow, run the same command-line audit, and archive the flat association and coordinate tables with the manuscript.
-
-Processed manuscript output tables are provided in `data/processed/`. These tables include density-adjustment summaries, matched-null calibration outputs, residual-method sensitivity analyses, simulation summaries, external-audit results and the compressed candidate-coordinate table.

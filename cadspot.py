@@ -25,15 +25,35 @@ def resid(y, X):
 def z_by_sample(df, col, sample_col):
     return df.groupby(sample_col)[col].transform(lambda s: (s - s.mean()) / (s.std(ddof=0) or 1))
 
-def add_coordinates(df, target_resid, reference_resid, sample_col, x_col, y_col, robust_z_cutoff):
+def add_coordinates(
+    df,
+    target_resid,
+    reference_resid,
+    sample_col,
+    x_col,
+    y_col,
+    robust_z_cutoff,
+    target_z_col=None,
+    reference_z_col=None,
+    neighbor_reference_z_col=None,
+    local_support_col=None,
+):
     out = df.copy()
     out["target_resid"] = target_resid
     out["reference_resid"] = reference_resid
-    out["target_resid_z"] = z_by_sample(out, "target_resid", sample_col)
-    out["reference_resid_z"] = z_by_sample(out, "reference_resid", sample_col)
-    out["neighbor_reference_resid_z"] = 0.0
-    out["local_support"] = 0.0
-    if x_col in out.columns and y_col in out.columns:
+    if target_z_col and target_z_col in out.columns:
+        out["target_resid_z"] = pd.to_numeric(out[target_z_col], errors="coerce")
+    else:
+        out["target_resid_z"] = z_by_sample(out, "target_resid", sample_col)
+    if reference_z_col and reference_z_col in out.columns:
+        out["reference_resid_z"] = pd.to_numeric(out[reference_z_col], errors="coerce")
+    else:
+        out["reference_resid_z"] = z_by_sample(out, "reference_resid", sample_col)
+    if neighbor_reference_z_col and neighbor_reference_z_col in out.columns:
+        out["neighbor_reference_resid_z"] = pd.to_numeric(out[neighbor_reference_z_col], errors="coerce")
+    else:
+        out["neighbor_reference_resid_z"] = 0.0
+    if not (neighbor_reference_z_col and neighbor_reference_z_col in out.columns) and x_col in out.columns and y_col in out.columns:
         for sample, idx in out.groupby(sample_col).groups.items():
             sub = out.loc[idx]
             xy = sub[[x_col, y_col]].apply(pd.to_numeric, errors="coerce").values
@@ -42,11 +62,12 @@ def add_coordinates(df, target_resid, reference_resid, sample_col, x_col, y_col,
             nn = NearestNeighbors(n_neighbors=7).fit(xy)
             neigh = nn.kneighbors(xy, return_distance=False)[:, 1:]
             rz = sub["reference_resid_z"].values
-            tz = sub["target_resid_z"].values
             out.loc[idx, "neighbor_reference_resid_z"] = np.nanmean(rz[neigh], axis=1)
-            out.loc[idx, "local_support"] = np.nanmean(np.minimum(tz[neigh], rz[neigh]), axis=1)
-    for c in ["neighbor_reference_resid_z", "local_support"]:
-        out[c] = z_by_sample(out, c, sample_col)
+        out["neighbor_reference_resid_z"] = z_by_sample(out, "neighbor_reference_resid_z", sample_col)
+    if local_support_col and local_support_col in out.columns:
+        out["local_support"] = pd.to_numeric(out[local_support_col], errors="coerce")
+    else:
+        out["local_support"] = out["target_resid_z"] * out["neighbor_reference_resid_z"]
     out["priority_score"] = out[["target_resid_z", "reference_resid_z", "neighbor_reference_resid_z", "local_support"]].mean(axis=1)
     out["priority_robust_z"] = np.nan
     out["cadspot_candidate"] = False
@@ -72,6 +93,10 @@ def main():
     ap.add_argument("--x-col", default="x")
     ap.add_argument("--y-col", default="y")
     ap.add_argument("--robust-z-cutoff", type=float, default=3.0)
+    ap.add_argument("--target-z-col", default=None)
+    ap.add_argument("--reference-z-col", default=None)
+    ap.add_argument("--neighbor-reference-z-col", default=None)
+    ap.add_argument("--local-support-col", default=None)
     ap.add_argument("--coordinate-output", default=None)
     ap.add_argument("--output", required=True)
     args = ap.parse_args()
@@ -91,7 +116,19 @@ def main():
         rows.append({"layer": name, "spearman_rho": stats.spearmanr(a[m], b[m]).statistic, "n_spots": int(m.sum())})
     pd.DataFrame(rows).to_csv(args.output, sep="\t", index=False)
     if args.coordinate_output and args.composition:
-        coord = add_coordinates(df, comp_target, comp_ref, args.sample_col, args.x_col, args.y_col, args.robust_z_cutoff)
+        coord = add_coordinates(
+            df,
+            comp_target,
+            comp_ref,
+            args.sample_col,
+            args.x_col,
+            args.y_col,
+            args.robust_z_cutoff,
+            args.target_z_col,
+            args.reference_z_col,
+            args.neighbor_reference_z_col,
+            args.local_support_col,
+        )
         coord.to_csv(args.coordinate_output, sep="\t", index=False)
 
 if __name__ == "__main__":
