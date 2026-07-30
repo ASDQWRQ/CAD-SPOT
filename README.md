@@ -2,7 +2,7 @@
 
 CAD-SPOT (Composition-Aware Decomposition for Spatial Prioritization of Transcriptomic coordinates) is a lightweight command-line workflow for auditing spot-level spatial transcriptomic score associations and exporting ranked candidate coordinates. The workflow is score-agnostic: the example uses a stress-correlate target and hypoxia/glycolysis reference, but users can provide other target-reference score pairs if appropriate covariates are available.
 
-Repository: https://github.com/ASDQWRQ/CAD-SPOT. A Zenodo DOI should be added here after archival deposition if this repository is used for manuscript submission.
+Repository: https://github.com/ASDQWRQ/CAD-SPOT.
 
 ## Installation
 
