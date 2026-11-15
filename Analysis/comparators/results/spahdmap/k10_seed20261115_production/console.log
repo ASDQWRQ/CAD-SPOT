@@ -1,0 +1,98 @@
+D:\CADSPOT_REVISION_20261115\Analysis\comparators\vendor\SpaHDmap\SpaHDmap\utils\visualize.py:6: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import resource_filename
+*** Reading and preparing AnnData for section GSM8443449_PDAC-p1 ***
+Pre-processing gene expression data for 4804 spots and 3000 genes.
+Swapping x and y coordinates.
+D:\CADSPOT_REVISION_20261115\Analysis\comparators\vendor\SpaHDmap\SpaHDmap\data\data_util.py:466: UserWarning: Data seems to be already normalized, skipping pre-processing.
+  warnings.warn("Data seems to be already normalized, skipping pre-processing.")
+Processing image, seems to be HE image.
+*** Preparing the tissue splits and creating pseudo spots... ***
+*** Single section detected. Using its 3000 genes. ***
+*** The split size is set to 256 pixels. ***
+For section GSM8443449_PDAC-p1, divide the tissue into 49 sub-tissues, and create 25000 pseudo spots.
+*** Using GPU ***
+D:\CADSPOT_REVISION_20261115\Analysis\comparators\vendor\SpaHDmap\SpaHDmap\data\data_util.py:194: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.show()
+Step 1: Run NMF
+*** Performing NMF... ***
+Step 2: Pre-train the SpaHDmap model
+D:\CADSPOT_REVISION_20261115\Analysis\comparators\vendor\SpaHDmap\SpaHDmap\train.py:525: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  self.scaler = torch.cuda.amp.GradScaler()
+D:\CADSPOT_REVISION_20261115\Analysis\comparators\vendor\SpaHDmap\SpaHDmap\train.py:571: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+[Iter: 200 / 5000], Epoch: 16, Loss: 0.064780, Learning rate: 3.984269e-04
+[Iter: 400 / 5000], Epoch: 31, Loss: 0.063111, Learning rate: 3.937323e-04
+[Iter: 600 / 5000], Epoch: 47, Loss: 0.063276, Learning rate: 3.859904e-04
+[Iter: 800 / 5000], Epoch: 62, Loss: 0.063389, Learning rate: 3.753232e-04
+[Iter: 1000 / 5000], Epoch: 77, Loss: 0.063062, Learning rate: 3.618989e-04
+[Iter: 1200 / 5000], Epoch: 93, Loss: 0.062884, Learning rate: 3.459292e-04
+[Iter: 1400 / 5000], Epoch: 108, Loss: 0.062917, Learning rate: 3.276661e-04
+[Iter: 1600 / 5000], Epoch: 124, Loss: 0.063268, Learning rate: 3.073974e-04
+[Iter: 1800 / 5000], Epoch: 139, Loss: 0.063039, Learning rate: 2.854430e-04
+[Iter: 2000 / 5000], Epoch: 154, Loss: 0.062754, Learning rate: 2.621489e-04
+[Iter: 2200 / 5000], Epoch: 170, Loss: 0.062816, Learning rate: 2.378826e-04
+[Iter: 2400 / 5000], Epoch: 185, Loss: 0.062968, Learning rate: 2.130267e-04
+[Iter: 2600 / 5000], Epoch: 200, Loss: 0.063004, Learning rate: 1.879733e-04
+Reached convergence, stop early
+*** Finished pre-training the SpaHDmap model and saved at D:\CADSPOT_REVISION_20261115\Analysis\comparators\results\spahdmap\k10_seed20261115_production\official_outputs/models//pretrained_model.pth ***
+Step 3: Train the GCN model
+*** Performing GCN... ***
+*** Training GCN for GSM8443449_PDAC-p1... ***
+D:\CADSPOT_REVISION_20261115\Analysis\comparators\vendor\SpaHDmap\SpaHDmap\train.py:708: UserWarning: Sparse invariant checks are implicitly disabled. Memory errors (e.g. SEGFAULT) will occur when operating on a sparse tensor which violates the invariants, but checks incur performance overhead. To silence this warning, explicitly opt in or out. See `torch.sparse.check_sparse_tensor_invariants.__doc__` for guidance.  (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\Context.cpp:767.)
+  adj_matrix = torch.sparse_coo_tensor(i, v, torch.Size(shape)).to(self.device)
+[Iter: 200 / 5000], Loss: 0.011303, Learning rate: 4.985215e-03
+[Iter: 400 / 5000], Loss: 0.006047, Learning rate: 4.941093e-03
+[Iter: 600 / 5000], Loss: 0.005712, Learning rate: 4.868331e-03
+[Iter: 800 / 5000], Loss: 0.005580, Learning rate: 4.768075e-03
+[Iter: 1000 / 5000], Loss: 0.005514, Learning rate: 4.641907e-03
+[Iter: 1200 / 5000], Loss: 0.005481, Learning rate: 4.491816e-03
+[Iter: 1400 / 5000], Loss: 0.005459, Learning rate: 4.320170e-03
+[Iter: 1600 / 5000], Loss: 0.005443, Learning rate: 4.129675e-03
+[Iter: 1800 / 5000], Loss: 0.005430, Learning rate: 3.923336e-03
+[Iter: 2000 / 5000], Loss: 0.005419, Learning rate: 3.704407e-03
+[Iter: 2200 / 5000], Loss: 0.005410, Learning rate: 3.476340e-03
+[Iter: 2400 / 5000], Loss: 0.005401, Learning rate: 3.242732e-03
+[Iter: 2600 / 5000], Loss: 0.005394, Learning rate: 3.007268e-03
+[Iter: 2800 / 5000], Loss: 0.005390, Learning rate: 2.773660e-03
+[Iter: 3000 / 5000], Loss: 0.005384, Learning rate: 2.545593e-03
+[Iter: 3200 / 5000], Loss: 0.005380, Learning rate: 2.326664e-03
+[Iter: 3400 / 5000], Loss: 0.005377, Learning rate: 2.120325e-03
+[Iter: 3600 / 5000], Loss: 0.005374, Learning rate: 1.929830e-03
+[Iter: 3800 / 5000], Loss: 0.005371, Learning rate: 1.758184e-03
+[Iter: 4000 / 5000], Loss: 0.005369, Learning rate: 1.608093e-03
+[Iter: 4200 / 5000], Loss: 0.005367, Learning rate: 1.481925e-03
+[Iter: 4400 / 5000], Loss: 0.005365, Learning rate: 1.381669e-03
+[Iter: 4600 / 5000], Loss: 0.005363, Learning rate: 1.308907e-03
+[Iter: 4800 / 5000], Loss: 0.005362, Learning rate: 1.264785e-03
+[Iter: 5000 / 5000], Loss: 0.005361, Learning rate: 1.250000e-03
+Step 4: Run Voronoi Diagram
+Step 5: Train the SpaHDmap model
+*** Training the model... ***
+[Iter: 200 / 2000], Epoch: 16,Image Loss: 0.015480, Expression Loss: 0.815084, Total Loss: 0.545675,Learning rate: 4.522638e-03
+[Iter: 400 / 2000], Epoch: 31,Image Loss: 0.008377, Expression Loss: 0.791066, Total Loss: 0.530692,Learning rate: 3.272888e-03
+[Iter: 600 / 2000], Epoch: 47,Image Loss: 0.007426, Expression Loss: 0.789011, Total Loss: 0.533420,Learning rate: 1.728112e-03
+[Iter: 800 / 2000], Epoch: 62,Image Loss: 0.006806, Expression Loss: 0.788652, Total Loss: 0.538226,Learning rate: 4.783620e-04
+[Iter: 1000 / 2000], Epoch: 77,Image Loss: 0.006617, Expression Loss: 0.787772, Total Loss: 0.540182,Learning rate: 1.000000e-06
+[Iter: 1200 / 2000], Epoch: 93,Image Loss: 0.010459, Expression Loss: 0.797049, Total Loss: 0.328678,Learning rate: 3.621934e-04
+[Iter: 1400 / 2000], Epoch: 108,Image Loss: 0.007436, Expression Loss: 0.787198, Total Loss: 0.284053,Learning rate: 2.625068e-04
+[Iter: 1600 / 2000], Epoch: 124,Image Loss: 0.006381, Expression Loss: 0.780408, Total Loss: 0.274500,Learning rate: 1.390898e-04
+[Iter: 1800 / 2000], Epoch: 139,Image Loss: 0.005978, Expression Loss: 0.778962, Total Loss: 0.275311,Learning rate: 3.917489e-05
+[Iter: 2000 / 2000], Epoch: 154,Image Loss: 0.005853, Expression Loss: 0.775928, Total Loss: 0.271563,Learning rate: 1.000000e-06
+*** Finished training the SpaHDmap model and saved at D:\CADSPOT_REVISION_20261115\Analysis\comparators\results\spahdmap\k10_seed20261115_production\official_outputs/models//trained_model.pth ***
+*** Extracting SpaHDmap scores for GSM8443449_PDAC-p1... ***
+Traceback (most recent call last):
+  File "D:\CADSPOT_REVISION_20261115\Analysis\comparators\run_methods.py", line 214, in <module>
+    
+  File "D:\CADSPOT_REVISION_20261115\Analysis\comparators\run_methods.py", line 210, in main
+    log.data['input_manifest_sha256'] = common.sha256(args.manifest)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CADSPOT_REVISION_20261115\Analysis\comparators\common.py", line 138, in execute_logged
+    function()
+  File "D:\CADSPOT_REVISION_20261115\Analysis\comparators\run_methods.py", line 210, in <lambda>
+    log.data['input_manifest_sha256'] = common.sha256(args.manifest)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\CADSPOT_REVISION_20261115\Analysis\comparators\run_methods.py", line 143, in run_spahdmap
+    common.export_scores(out / s['sample_id'], section.adata, final, 'SpaHDmap', args.seed, smoke=args.smoke)
+  File "D:\CADSPOT_REVISION_20261115\Analysis\comparators\common.py", line 118, in export_scores
+    raise ValueError('Zero-sum final factor vector; do not silently assign domains')
+ValueError: Zero-sum final factor vector; do not silently assign domains

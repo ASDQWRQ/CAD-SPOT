@@ -1,0 +1,29 @@
+{
+  "mapper_args": {
+    "split_size": 256,
+    "smooth_threshold": 0.01,
+    "redundant_ratio": 0.2,
+    "overlap_ratio": 0.15,
+    "bound_ratio": 0.05,
+    "num_workers": 0,
+    "batch_size": 4,
+    "batch_size_train": 4,
+    "lr_train": 0.0004,
+    "weight_decay": 1e-05,
+    "total_iter_pretrain": 5000,
+    "rec_iter": 200,
+    "eta_min": 1e-06,
+    "lr": 0.005,
+    "total_iter_gcn": 5000,
+    "weight_image": 0.67,
+    "weight_exp": 0.33,
+    "weight_reg": 0.5,
+    "total_iter_train": 2000,
+    "fix_iter_train": 1000
+  },
+  "source_image": "D:\\CADSPOT_REVISION_20261115\\Data\\GSE274103\\prepared\\GSM8443449_PDAC-p1\\C30_spatial\\tissue_hires_image.png",
+  "fullres_to_hires_scale": 0.077071294,
+  "hires_radius": 6.99546347582869,
+  "coordinate_conversion": "zero-based fullres XY * scale + 1; official swap to row/col then subtract1",
+  "source": "registered Space Ranger hires PNG; not original full-resolution pathology TIFF"
+}

@@ -1,0 +1,10 @@
+{
+  "method": "STAMP",
+  "seed": 20261115,
+  "smoke_test": false,
+  "n_spots": 4911,
+  "n_factors": 10,
+  "factor_labels_aligned_across_methods": false,
+  "posterior_proportions": true,
+  "zero_sum_rows": 0
+}

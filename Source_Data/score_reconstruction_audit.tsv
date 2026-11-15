@@ -1,0 +1,3 @@
+score	n_specified	n_available	missing_genes	archived_vs_recomputed_spearman	archived_vs_recomputed_pearson
+target	23	19	LDHA;ALDOA;PKM;TPI1	0.5720166297912258	0.5652122468026664
+reference	21	20	GAPDH	0.5217542775554649	0.5035070416585818

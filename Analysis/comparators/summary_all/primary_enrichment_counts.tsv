@@ -1,0 +1,12 @@
+method	sample_id	block_width_pitches	n_factors	enriched_domains	enriched_loadings	n_valid_domain_tests	n_valid_loading_tests	candidate_count	eligible_count	common_scope	fit_note
+POPARI	GSM8443449_PDAC-p1	8	10	0.0	3.0	10	10	112	4461	STAMP+POPARI+SpaHDmap	fixed50_spatial_updates_NOT_claimed_converged
+POPARI	GSM8443450_PDAC-p2	8	10	0.0	3.0	10	10	141	4357	STAMP+POPARI	fixed50_spatial_updates_NOT_claimed_converged
+POPARI	GSM8443451_PDAC-p3	8	10	0.0	4.0	10	10	193	4031	STAMP+POPARI	fixed50_spatial_updates_NOT_claimed_converged
+POPARI	GSM8443452_PDAC-p4	8	10	0.0	2.0	10	10	97	4911	STAMP+POPARI	fixed50_spatial_updates_NOT_claimed_converged
+POPARI	GSM8443453_PDAC-p5	8	10	0.0	1.0	10	10	176	4910	STAMP+POPARI	fixed50_spatial_updates_NOT_claimed_converged
+STAMP	GSM8443449_PDAC-p1	8	10	1.0	2.0	10	10	112	4461	STAMP+POPARI+SpaHDmap	official_training_pipeline_and_logged_stopping_rule
+STAMP	GSM8443450_PDAC-p2	8	10	2.0	2.0	10	10	141	4357	STAMP+POPARI	official_training_pipeline_and_logged_stopping_rule
+STAMP	GSM8443451_PDAC-p3	8	10	1.0	1.0	10	10	193	4031	STAMP+POPARI	official_training_pipeline_and_logged_stopping_rule
+STAMP	GSM8443452_PDAC-p4	8	10	1.0	2.0	10	10	97	4911	STAMP+POPARI	official_training_pipeline_and_logged_stopping_rule
+STAMP	GSM8443453_PDAC-p5	8	10	1.0	1.0	10	10	176	4910	STAMP+POPARI	official_training_pipeline_and_logged_stopping_rule
+SpaHDmap	GSM8443449_PDAC-p1	8	10	1.0	1.0	10	10	112	4461	STAMP+POPARI+SpaHDmap	official_training_pipeline_and_logged_stopping_rule

@@ -1,0 +1,4 @@
+method	sections	n_spots	n_candidates	n_input_spots	n_input_candidates	excluded_spots	excluded_candidates	factor_count	seed	official_commit	fixed_spatial_budget	convergence_claim	run_directory	checkpoint_only
+STAMP	5	23013	755	23013	755	0	0	10	20261115	0099ab268c712c91f398a2862db59b1dc793f69b		official_stopping_rule_not_global_optimum	D:\CADSPOT_REVISION_20261115\Analysis\comparators\results\stamp\k10_seed20261115_retry_numpy2	False
+POPARI	5	23013	755	23013	755	0	0	10	20261115	c4be229e486635871566f01d74633418c8e7ba5b	50.0	False	D:\CADSPOT_REVISION_20261115\Analysis\comparators\results\popari\k10_seed20261115_budget50	True
+SpaHDmap	1	4461	112	4804	148	343	36	10	20261115	d56a45a1ca52656790e1b53da46eece5b42ebe68		official_stopping_rule_not_global_optimum	D:\CADSPOT_REVISION_20261115\Analysis\comparators\results\spahdmap\k10_seed20261115_production	False

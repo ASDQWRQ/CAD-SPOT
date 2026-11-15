@@ -1,0 +1,46 @@
+{
+  "status": "completed",
+  "arguments": {
+    "method": "stamp",
+    "manifest": "D:\\CADSPOT_REVISION_20261115\\Analysis\\comparators\\inputs\\manifest.json",
+    "out": "D:\\CADSPOT_REVISION_20261115\\Analysis\\comparators\\results\\stamp\\k10_seed20261115_retry_numpy2",
+    "sample": null,
+    "k": 10,
+    "seed": 20261115,
+    "device": "cuda:0",
+    "batch_size": 512,
+    "popari_iterations": 200,
+    "stamp_epochs": 800,
+    "pseudo_ratio": 5,
+    "smoke": false
+  },
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.22631-SP0",
+  "packages": {
+    "numpy": "2.4.4",
+    "scipy": "1.18.0",
+    "pandas": "3.0.5",
+    "scikit-learn": "1.9.0",
+    "torch": "2.11.0+cu128",
+    "anndata": "0.13.4",
+    "scanpy": "1.12.6",
+    "squidpy": "1.8.4",
+    "pyro-ppl": "1.9.2"
+  },
+  "repository": "scTM",
+  "commit": "0099ab268c712c91f398a2862db59b1dc793f69b",
+  "source_diff": "diff --git a/sctm/stamp.py b/sctm/stamp.py\nindex c19a798..42184cd 100755\n--- a/sctm/stamp.py\n+++ b/sctm/stamp.py\n@@ -351,7 +351,8 @@ class STAMP:\n         self.device = device\n         self.model = self.model.to(device)\n \n-        avg_loss = np.Inf\n+        avg_loss = np.inf\n+        self.training_history = []\n \n         if early_stop:\n             self.early_stopper = EarlyStopper(patience=patience)\n@@ -394,6 +395,7 @@ class STAMP:\n                 # iteration += 1\n                 # print(f\"Full time{end - start}\n             avg_loss = np.mean(losses)\n+            self.training_history.append(float(avg_loss))\n \n             if np.isnan(avg_loss):\n                 break\n@@ -793,7 +795,7 @@ class EarlyStopper:\n \n     def reset(self):\n         self.counter = 0\n-        self.min_training_loss = np.Inf\n+        self.min_training_loss = np.inf\n \n \n class ConvergenceTracker:\n@@ -810,10 +812,10 @@ class ConvergenceTracker:\n         elif training_loss > (self.min_training_loss + self.min_delta):\n             self.counter += 1\n             if self.counter >= self.patience:\n-                self.min_training_loss = -np.Inf\n+                self.min_training_loss = -np.inf\n                 return False\n         return True\n \n     def reset(self):\n         self.counter = 0\n-        self.min_training_loss = np.Inf\n+        self.min_training_loss = np.inf\n",
+  "cuda_available": true,
+  "utc_started": "2026-11-15T11:22:25Z",
+  "gpu": "NVIDIA GeForce RTX 5060 Ti",
+  "gpu_total_mib": 8150.5625,
+  "input_manifest_sha256": "b5fc4fbe0000f6866ac62eacad4c5e8ea9b655bb50e2dd7e375a4f1765e8d742",
+  "input_h5ad_sha256": {
+    "GSM8443449_PDAC-p1": "2adcfb5d2ad60659930ee2b06d7d5e3317608f366bb7f0842afd3c3b6b988ffa",
+    "GSM8443450_PDAC-p2": "3ab4305f3adc5c9d10898eafede165563bce12f7c34276b4a9d55437fbe6117b",
+    "GSM8443451_PDAC-p3": "e0e14aa68fb3570e0995fa518e046fd6c39bc8817cf78d6a319dda9128aee23d",
+    "GSM8443452_PDAC-p4": "ee78fe1d7213ab2fe12a13f8359dacfdec1226b538af5bee916995951c07368d",
+    "GSM8443453_PDAC-p5": "7ba01d482cbbcaea963b34b8db747f9f7c7531ff69c6e8e472d7ff6ef970c161"
+  },
+  "wall_seconds": 303.4530000000086
+}

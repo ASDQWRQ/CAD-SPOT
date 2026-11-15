@@ -1,0 +1,35 @@
+{
+  "missing": [],
+  "conflicts": [
+    {
+      "parent": "centrosome",
+      "requirement": "pillow<12,>=7.1.0",
+      "installed": "13.0.0",
+      "protected": false
+    },
+    {
+      "parent": "discotoolkit",
+      "requirement": "umap-learn<0.6,>=0.5",
+      "installed": "0.6.0",
+      "protected": false
+    },
+    {
+      "parent": "ortools",
+      "requirement": "protobuf<6.34,>=6.33.1",
+      "installed": "7.36.2",
+      "protected": false
+    },
+    {
+      "parent": "squidpy",
+      "requirement": "imagecodecs<2026,>=2025.8.2",
+      "installed": "2026.11.11",
+      "protected": false
+    },
+    {
+      "parent": "squidpy",
+      "requirement": "pynndescent<0.7",
+      "installed": "0.7.0",
+      "protected": false
+    }
+  ]
+}

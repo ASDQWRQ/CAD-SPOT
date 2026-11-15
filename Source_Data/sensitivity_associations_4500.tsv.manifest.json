@@ -1,0 +1,69 @@
+{
+  "cadspot_version": "2.0.0",
+  "python": "3.12.14",
+  "numpy": "2.4.4",
+  "pandas": "3.0.5",
+  "scipy": "1.18.0",
+  "sklearn": "1.9.0",
+  "arguments": {
+    "input": "D:\\CADSPOT_REVISION_20261115\\Source_Data\\archived_coordinate_table.tsv.gz",
+    "target": "target_score",
+    "reference": "reference_score",
+    "technical": [
+      "log_nCount",
+      "log_nFeature"
+    ],
+    "composition": [
+      "Epithelial_malignant_proxy",
+      "ECM_Stroma",
+      "CAF",
+      "Macrophage",
+      "T_cell"
+    ],
+    "sample_col": "sample_id",
+    "id_col": "barcode",
+    "x_col": "x",
+    "y_col": "y",
+    "coordinate_units": "full_resolution_pixels",
+    "ranking_method": "legacy",
+    "robust_z_cutoff": 3.0,
+    "top_k": 50,
+    "spline_knots": 4,
+    "methods": [
+      "score_residual_spearman",
+      "partial_spearman",
+      "spline_score_residual_spearman"
+    ],
+    "coordinate_output": null,
+    "ranking_comparison_output": null,
+    "archived_comparison_output": null,
+    "bootstrap_output": "D:\\CADSPOT_REVISION_20261115\\Source_Data\\block_bootstrap_4500_ci.tsv",
+    "bootstrap_draws_output": "D:\\CADSPOT_REVISION_20261115\\Source_Data\\block_bootstrap_4500_draws.tsv",
+    "bootstrap_audit_output": "D:\\CADSPOT_REVISION_20261115\\Source_Data\\block_bootstrap_4500_audit.tsv",
+    "block_map_output": "D:\\CADSPOT_REVISION_20261115\\Source_Data\\block_map_4500.tsv",
+    "block_size": 4500.0,
+    "bootstrap_reps": 1000,
+    "bootstrap_methods": [
+      "score_residual_spearman"
+    ],
+    "confidence": 0.95,
+    "seed": 20261115,
+    "null_rho_file": null,
+    "null_output": null,
+    "manifest_output": null,
+    "output": "D:\\CADSPOT_REVISION_20261115\\Source_Data\\sensitivity_associations_4500.tsv"
+  },
+  "input_sha256": "ef2155d233e21cd12e0bf8dc3b03c7a061e00895f781a967a309ab6d818f0a12",
+  "n_spots": 23013,
+  "sections": [
+    "GSM8443449_PDAC-p1",
+    "GSM8443450_PDAC-p2",
+    "GSM8443451_PDAC-p3",
+    "GSM8443452_PDAC-p4",
+    "GSM8443453_PDAC-p5"
+  ],
+  "primary_estimator": "Spearman_of_linear_score_residuals_with_section_fixed_effects",
+  "archived_overrides_used": false,
+  "spatial_neighbors": 6,
+  "coordinate_unit_assumption": "User-declared common x/y Euclidean units; not inferable from numbers"
+}

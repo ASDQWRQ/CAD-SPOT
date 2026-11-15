@@ -1,0 +1,13 @@
+{
+  "source_h5": "D:\\BMC_Bioinformatics_CADSPOT_REBUILD_20260730\\work\\GSE203612_extracted\\GSM6177599_NYU_BRCA0_Vis_processed_filtered_feature_bc_matrix.h5",
+  "source_sha256": "ceeccda48dfb54fe0d2d2e71892f4f5652ac1074cd303b49a53bfc5d25f3a19b",
+  "normalization": "log1p_CP10K",
+  "scoring": "mean_gene_z",
+  "mean_tolerance": 0.25,
+  "detection_tolerance": 0.05,
+  "length_tolerance": 0.25,
+  "matching_universe": "available,length_annotated,detected_in_at_least_1_percent,positive_variance",
+  "length_source": "Ensembl113_GRCh38_exon_union",
+  "excluded_genes": "target_and_reference",
+  "seed": 20261115
+}

@@ -1,0 +1,13 @@
+{
+  "n_input_spots": 4804,
+  "n_valid_spots": 4461,
+  "n_zero_vectors": 343,
+  "n_input_candidates": 148,
+  "n_valid_candidates": 112,
+  "n_excluded_candidates": 36,
+  "native_score_sha256": "1b8e1116f56929fd09e6eefceaa35f99bdf91d4ceae4d198e5a3f1010d869006",
+  "final_checkpoint_sha256": "d5d1767f2f4341a17ff55d231277fb1187a9bd9a0643c337ca36738cb5f9aa79",
+  "no_pseudocount": true,
+  "scope": "Only positive-sum final vectors normalized; invalid vectors retained raw and unassigned",
+  "row_alignment": "Original prepared h5ad order; official preprocessing skipped expression filtering and only swapped coordinates"
+}

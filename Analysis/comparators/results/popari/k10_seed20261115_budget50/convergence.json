@@ -1,0 +1,12 @@
+{
+  "iterations": 50,
+  "reason": "main_approved_fixed_iteration_budget",
+  "convergence_claim": false,
+  "last_objective": {
+    "iteration": 50.0,
+    "negative_log_likelihood": -294256711.4573693,
+    "relative_objective_change": 4.09082594111463e-07,
+    "max_relative_loading_change": 0.0075730279690642,
+    "consecutive_stable_iterations": 0.0
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "status": "completed",
+  "arguments": {
+    "method": "popari",
+    "manifest": "D:\\CADSPOT_REVISION_20261115\\Analysis\\comparators\\inputs\\manifest.json",
+    "out": "D:\\CADSPOT_REVISION_20261115\\Analysis\\comparators\\results\\popari\\k10_seed20261115_production",
+    "sample": null,
+    "k": 10,
+    "seed": 20261115,
+    "device": "cuda:0",
+    "batch_size": 128,
+    "popari_iterations": 200,
+    "popari_dtype": "float64",
+    "popari_min_iterations": 50,
+    "popari_patience": 10,
+    "popari_objective_tol": 0.0001,
+    "popari_loading_tol": 0.001,
+    "stamp_epochs": 800,
+    "pseudo_ratio": 5,
+    "smoke": false
+  },
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.22631-SP0",
+  "packages": {
+    "numpy": "2.4.4",
+    "scipy": "1.18.0",
+    "pandas": "3.0.5",
+    "scikit-learn": "1.9.0",
+    "torch": "2.11.0+cu128",
+    "anndata": "0.13.4",
+    "scanpy": "1.12.6",
+    "squidpy": "1.8.4",
+    "pyro-ppl": "1.9.2"
+  },
+  "repository": "popari",
+  "commit": "c4be229e486635871566f01d74633418c8e7ba5b",
+  "source_diff": "diff --git a/popari/_binning_utils.py b/popari/_binning_utils.py\nindex 7d3abe1..14af5fb 100644\n--- a/popari/_binning_utils.py\n+++ b/popari/_binning_utils.py\n@@ -2,10 +2,8 @@ from abc import ABC, abstractmethod\n from typing import Optional\n \n import numpy as np\n-import pymetis\n from anndata import AnnData\n from numpy.typing import NDArray\n-from pymetis import Options, part_graph\n from scipy.sparse import csr_array\n from sklearn.neighbors import NearestNeighbors\n from sklearn.preprocessing import OneHotEncoder\n@@ -171,6 +169,9 @@ class PartitionDownsampler(Downsampler):\n         downsample_rate: float = 0.2,\n     ):\n \n+        # Optional Windows-incompatible dependency is unused by single-level fits.\n+        from pymetis import Options, part_graph\n+\n         num_bins = round(len(dataset) * downsample_rate)\n         adjacency_list = dataset.obsm[adjacency_list_key]\n \n",
+  "cuda_available": true,
+  "utc_started": "2026-11-15T11:31:49Z",
+  "gpu": "NVIDIA GeForce RTX 5060 Ti",
+  "gpu_total_mib": 8150.5625,
+  "input_manifest_sha256": "b5fc4fbe0000f6866ac62eacad4c5e8ea9b655bb50e2dd7e375a4f1765e8d742",
+  "input_h5ad_sha256": {
+    "GSM8443449_PDAC-p1": "2adcfb5d2ad60659930ee2b06d7d5e3317608f366bb7f0842afd3c3b6b988ffa",
+    "GSM8443450_PDAC-p2": "3ab4305f3adc5c9d10898eafede165563bce12f7c34276b4a9d55437fbe6117b",
+    "GSM8443451_PDAC-p3": "e0e14aa68fb3570e0995fa518e046fd6c39bc8817cf78d6a319dda9128aee23d",
+    "GSM8443452_PDAC-p4": "ee78fe1d7213ab2fe12a13f8359dacfdec1226b538af5bee916995951c07368d",
+    "GSM8443453_PDAC-p5": "7ba01d482cbbcaea963b34b8db747f9f7c7531ff69c6e8e472d7ff6ef970c161"
+  },
+  "source_run": "D:\\CADSPOT_REVISION_20261115\\Analysis\\comparators\\results\\popari\\k10_seed20261115_production",
+  "source_run_status_at_export": "running",
+  "fixed_spatial_iteration_budget": 50,
+  "convergence_claim": false,
+  "export_arguments": {
+    "run": "D:\\CADSPOT_REVISION_20261115\\Analysis\\comparators\\results\\popari\\k10_seed20261115_production",
+    "out": "D:\\CADSPOT_REVISION_20261115\\Analysis\\comparators\\results\\popari\\k10_seed20261115_budget50",
+    "iteration": 50,
+    "timeout_minutes": 40
+  },
+  "checkpoint_sha256": "bfbf97ec1e02e2a357e1631909e04fa87abf28044b0a4d2bda113947941b96f9",
+  "interpretation": "Actual POPARI spatial model at50 updates after5 nonspatial warmup; fixed-budget contextual comparison, not claimed converged"
+}

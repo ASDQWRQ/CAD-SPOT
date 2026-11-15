@@ -1,73 +1,66 @@
 # CAD-SPOT
 
-CAD-SPOT (Composition-Aware Decomposition for Spatial Prioritization of Transcriptomic coordinates) is a lightweight command-line workflow for auditing spot-level spatial transcriptomic score associations and exporting ranked candidate coordinates. The workflow is score-agnostic: the example uses a stress-correlate target and hypoxia/glycolysis reference, but users can provide other target-reference score pairs if appropriate covariates are available.
+Composition-aware association auditing and spatial coordinate prioritization.
 
-Repository: https://github.com/ASDQWRQ/CAD-SPOT.
+## Revision source: 2.0.0-review
 
-## Installation
-
-CAD-SPOT requires Python 3.10 or later. Install dependencies with:
-
-```bash
-pip install -r requirements.txt
-```
-
-The demonstration script uses only `pandas`, `numpy`, `scipy` and `scikit-learn`.
-
-## Input
-
-CAD-SPOT reads a tab-delimited spot-level table. The example file is `example_spot_table.tsv`.
-
-Required columns in the example:
-
-- `sample_id`: section or sample identifier.
-- `barcode`: Visium spot barcode or another stable coordinate identifier.
-- `x`, `y`: pixel-space or array-space spot coordinates from the upstream spatial object.
-- `Core_MRS`: example target score.
-- `HG_score`: example reference score.
-- `log_nCount`, `log_nFeature`: technical covariates.
-- `Epithelial_malignant_proxy`, `ECM_Stroma`, `CAF`, `Macrophage`, `T_cell`: example composition covariates.
-
-Users may replace `Core_MRS`, `HG_score` and the covariate columns with their own score names by changing the command-line arguments.
-
-Possible score-pair examples include ligand-receptor co-activity, immune-exclusion signatures, transcription-factor target modules or any other user-defined target-reference score pair.
-
-## Quick start
+CAD-SPOT starts from a table of target/reference scores, technical covariates,
+optional composition proxies and spatial coordinates. It reports raw,
+technical-adjusted and composition-adjusted associations and exports the
+residuals, six-neighbor support and ranking components for every coordinate.
+It does not estimate cell fractions or make causal or clinical predictions.
 
 ```bash
-python cadspot.py --input example_spot_table.tsv --target Core_MRS --reference HG_score --technical log_nCount log_nFeature --composition Epithelial_malignant_proxy ECM_Stroma CAF Macrophage T_cell --output example_cadspot_associations.tsv --coordinate-output example_cadspot_coordinates.tsv
+python -m pip install -r requirements.txt
+python -m unittest discover -s Software/tests -v
+python Analysis/run_reanalysis.py --stages core
 ```
 
-The default candidate rule uses `--robust-z-cutoff 3.0`. This parameter can be changed by the user, but the manuscript analyses used the default value.
+The supplied frozen score table reproduces 23,013 PDAC spots, pooled adjusted
+rho 0.199254 and **755 freshly computed candidates**. The earlier 507-candidate
+list reused archived ranking fields; these no longer override fresh residuals.
 
-For manuscript-level coordinate reproducibility from a table that already contains the saved residual z-score and neighborhood-support columns, CAD-SPOT can reuse those columns:
+## Included analyses
 
-```bash
-python cadspot.py --input cadspot_candidate_coordinate_table.tsv.gz --target target_score --reference reference_score --technical log_nCount log_nFeature --composition Epithelial_malignant_proxy ECM_Stroma CAF Macrophage T_cell --target-z-col MMS_resid_z --reference-z-col HG_resid_z --neighbor-reference-z-col neighbor_HG_resid_z --local-support-col local_support --output full_cadspot_associations.tsv --coordinate-output full_cadspot_coordinates.tsv
-```
+- OLS score-residual Spearman, genuine partial Spearman and additive-spline
+  sensitivity, with explicit estimator and adjustment-layer labels.
+- Section-stratified spatial block bootstrap, with all models refitted per draw.
+- Continuous-priority versus signed residual-product comparisons on common
+  spot universes, including the positive residual quadrant.
+- Strict expression/detection/exon-union-length matched gene-set generation
+  and internally paired observed/null calibration.
+- Limited contextual comparisons with the official POPARI, STAMP and SpaHDmap
+  implementations. These are overlap analyses, not accuracy benchmarks.
 
-This mode is useful when the coordinate-prioritization layer is being rerun from an archived analysis table rather than recomputed from a minimal exported spot table.
+**Two distinct score inputs:** the frozen-score demonstration (rho 0.199) and
+the independently reconstructed 19/20-gene expression audit (rho 0.324) are
+not interchangeable. The gene-set empirical P value does not calibrate the
+frozen-score estimate or individual candidate coordinates.
 
-## Outputs
+## Documentation
 
-`example_cadspot_associations.tsv` reports raw, technical-adjusted and composition-adjusted Spearman correlations.
+- [Full reproduction commands](Analysis/README.md)
+- [Core CLI, formulas and input contract](Software/README.md)
+- [Official-model comparisons and limitations](Analysis/comparators/README.md)
 
-`example_cadspot_coordinates.tsv` retains the original input columns and adds:
+The core tests use Python 3.12. Optional raw-data preparation requires h5py;
+plotting and Excel export have separate requirements. Model comparisons require
+their own scientific/CUDA environment and pinned official sources, restored by
+`python Analysis/comparators/setup_sources.py`. They are not core dependencies.
 
-- `target_resid`, `reference_resid`: residualized target and reference scores.
-- `target_resid_z`, `reference_resid_z`: within-sample residual z-scores.
-- `neighbor_reference_resid_z`: local neighborhood support for the reference residual.
-- `local_support`: local joint support based on neighboring target/reference residuals.
-- `priority_score`: average of residual and neighborhood support terms.
-- `priority_robust_z`: within-sample robust z-score for the priority score.
-- `cadspot_candidate`: binary candidate-coordinate flag.
+Public expression counts and registered images are downloaded from NCBI GEO
+GSE274103 and GSE203612 using `Analysis/download_data.py`; they are not bundled
+in this repository. Source outputs, coverage lists and run manifests accompany
+the workflows. Original pre-revision example files are retained for historical
+reference and are not the inputs for the revised manuscript analyses.
 
 ## Interpretation
 
-CAD-SPOT is a coordinate-prioritization aid, not a causal adjustment model and not a histologic validation assay. A candidate coordinate means that the spot has high residual target-reference co-enrichment relative to its section-specific score distribution and local neighborhood support. Candidate coordinates should be treated as follow-up targets for pathology review, multiplex imaging, spatial proteomics or targeted in situ assays.
+The default robust priority-Z cutoff of 3 is adjustable and heuristic.
+Block-bootstrap intervals are conditional on the observed sections. Matching
+does not control FFPE probe-target coverage or GC effects. POPARI's reported
+50-update result is budget limited, not claimed converged. SpaHDmap zero-vector
+spots remain unassigned, and the three-method comparison uses their explicitly
+reported valid-output intersection.
 
-In the simulation terminology used in the manuscript, the architecture field represents broad composition-linked mixture and density gradients, whereas the local microfield represents spatially restricted coupling that remains after composition-aware decomposition.
-
-## Reproducibility
-
-The script is table-based and does not require a Seurat, Scanpy, Giotto or Squidpy object. This is intentional: users can export scores and covariates from any upstream workflow, run the same command-line audit, and archive the flat association and coordinate tables with the manuscript.
+CAD-SPOT source is MIT licensed. Third-party methods retain their own licenses.

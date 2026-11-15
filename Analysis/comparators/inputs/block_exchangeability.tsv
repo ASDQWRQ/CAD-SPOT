@@ -1,0 +1,16 @@
+sample_id	n_blocks	n_exchangeable_blocks	movable_fraction	block_width_pitches	spot_pitch	permutation_null
+GSM8443449_PDAC-p1	72	55	0.8026644462947544	8	279.0	equal-occupancy grid-block exchange; within-block spatial ordering preserved
+GSM8443449_PDAC-p1	272	266	0.9918817651956703	4	279.0	equal-occupancy grid-block exchange; within-block spatial ordering preserved
+GSM8443449_PDAC-p1	36	20	0.5986677768526228	12	279.0	equal-occupancy grid-block exchange; within-block spatial ordering preserved
+GSM8443450_PDAC-p2	70	52	0.8313059444571953	8	279.00716836669267	equal-occupancy grid-block exchange; within-block spatial ordering preserved
+GSM8443450_PDAC-p2	252	248	0.9882946981868258	4	279.00716836669267	equal-occupancy grid-block exchange; within-block spatial ordering preserved
+GSM8443450_PDAC-p2	34	15	0.5696580215744779	12	279.00716836669267	equal-occupancy grid-block exchange; within-block spatial ordering preserved
+GSM8443451_PDAC-p3	70	46	0.7849168940709501	8	279.0017921089397	equal-occupancy grid-block exchange; within-block spatial ordering preserved
+GSM8443451_PDAC-p3	253	250	0.9890845943934508	4	279.0017921089397	equal-occupancy grid-block exchange; within-block spatial ordering preserved
+GSM8443451_PDAC-p3	32	14	0.5631356983378815	12	279.0017921089397	equal-occupancy grid-block exchange; within-block spatial ordering preserved
+GSM8443452_PDAC-p4	72	59	0.8454489920586439	8	279.0	equal-occupancy grid-block exchange; within-block spatial ordering preserved
+GSM8443452_PDAC-p4	272	268	0.9920586438607208	4	279.0	equal-occupancy grid-block exchange; within-block spatial ordering preserved
+GSM8443452_PDAC-p4	36	27	0.7859906332722459	12	279.0	equal-occupancy grid-block exchange; within-block spatial ordering preserved
+GSM8443453_PDAC-p5	72	67	0.9378818737270875	8	279.0	equal-occupancy grid-block exchange; within-block spatial ordering preserved
+GSM8443453_PDAC-p5	272	270	0.9936863543788187	4	279.0	equal-occupancy grid-block exchange; within-block spatial ordering preserved
+GSM8443453_PDAC-p5	36	25	0.7486761710794297	12	279.0	equal-occupancy grid-block exchange; within-block spatial ordering preserved

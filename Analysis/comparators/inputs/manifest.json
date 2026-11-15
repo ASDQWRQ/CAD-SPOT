@@ -1,0 +1,62 @@
+{
+  "sections": [
+    {
+      "sample_id": "GSM8443449_PDAC-p1",
+      "h5ad": "D:\\CADSPOT_REVISION_20261115\\Analysis\\comparators\\inputs\\GSM8443449_PDAC-p1.h5ad",
+      "spatial_dir": "D:\\CADSPOT_REVISION_20261115\\Data\\GSE274103\\prepared\\GSM8443449_PDAC-p1\\C30_spatial",
+      "image_path": "D:\\CADSPOT_REVISION_20261115\\Data\\GSE274103\\prepared\\GSM8443449_PDAC-p1\\C30_spatial\\tissue_hires_image.png",
+      "scalefactors": "D:\\CADSPOT_REVISION_20261115\\Data\\GSE274103\\prepared\\GSM8443449_PDAC-p1\\C30_spatial\\scalefactors_json.json",
+      "n_eligible": 4804,
+      "raw_h5": "D:\\CADSPOT_REVISION_20261115\\Data\\GSE274103\\raw\\GSM8443449_PDAC-p1_filtered_feature_bc_matrix.h5",
+      "raw_sha256": "bb68242041c96ae6ba6cd4e84caac7ab8b5094d73b7c95ec32dd7eae25df8b9c"
+    },
+    {
+      "sample_id": "GSM8443450_PDAC-p2",
+      "h5ad": "D:\\CADSPOT_REVISION_20261115\\Analysis\\comparators\\inputs\\GSM8443450_PDAC-p2.h5ad",
+      "spatial_dir": "D:\\CADSPOT_REVISION_20261115\\Data\\GSE274103\\prepared\\GSM8443450_PDAC-p2\\65362-10_spatial",
+      "image_path": "D:\\CADSPOT_REVISION_20261115\\Data\\GSE274103\\prepared\\GSM8443450_PDAC-p2\\65362-10_spatial\\tissue_hires_image.png",
+      "scalefactors": "D:\\CADSPOT_REVISION_20261115\\Data\\GSE274103\\prepared\\GSM8443450_PDAC-p2\\65362-10_spatial\\scalefactors_json.json",
+      "n_eligible": 4357,
+      "raw_h5": "D:\\CADSPOT_REVISION_20261115\\Data\\GSE274103\\raw\\GSM8443450_PDAC-p2_filtered_feature_bc_matrix.h5",
+      "raw_sha256": "3752e0c5cb039147a33ef534b477e92e7439787dccbceb9683d4d3cf86a9d57f"
+    },
+    {
+      "sample_id": "GSM8443451_PDAC-p3",
+      "h5ad": "D:\\CADSPOT_REVISION_20261115\\Analysis\\comparators\\inputs\\GSM8443451_PDAC-p3.h5ad",
+      "spatial_dir": "D:\\CADSPOT_REVISION_20261115\\Data\\GSE274103\\prepared\\GSM8443451_PDAC-p3\\52906-10_spatial",
+      "image_path": "D:\\CADSPOT_REVISION_20261115\\Data\\GSE274103\\prepared\\GSM8443451_PDAC-p3\\52906-10_spatial\\tissue_hires_image.png",
+      "scalefactors": "D:\\CADSPOT_REVISION_20261115\\Data\\GSE274103\\prepared\\GSM8443451_PDAC-p3\\52906-10_spatial\\scalefactors_json.json",
+      "n_eligible": 4031,
+      "raw_h5": "D:\\CADSPOT_REVISION_20261115\\Data\\GSE274103\\raw\\GSM8443451_PDAC-p3_filtered_feature_bc_matrix.h5",
+      "raw_sha256": "4c790d601bc45771ce1f136a94f1e2b072fdde1d6392fecbe46881a921aeaeb2"
+    },
+    {
+      "sample_id": "GSM8443452_PDAC-p4",
+      "h5ad": "D:\\CADSPOT_REVISION_20261115\\Analysis\\comparators\\inputs\\GSM8443452_PDAC-p4.h5ad",
+      "spatial_dir": "D:\\CADSPOT_REVISION_20261115\\Data\\GSE274103\\prepared\\GSM8443452_PDAC-p4\\G20_spatial",
+      "image_path": "D:\\CADSPOT_REVISION_20261115\\Data\\GSE274103\\prepared\\GSM8443452_PDAC-p4\\G20_spatial\\tissue_hires_image.png",
+      "scalefactors": "D:\\CADSPOT_REVISION_20261115\\Data\\GSE274103\\prepared\\GSM8443452_PDAC-p4\\G20_spatial\\scalefactors_json.json",
+      "n_eligible": 4911,
+      "raw_h5": "D:\\CADSPOT_REVISION_20261115\\Data\\GSE274103\\raw\\GSM8443452_PDAC-p4_filtered_feature_bc_matrix.h5",
+      "raw_sha256": "13415bece2f4d3ea881266109dc7575deaf5e149a26b90036086b3546c0e1c17"
+    },
+    {
+      "sample_id": "GSM8443453_PDAC-p5",
+      "h5ad": "D:\\CADSPOT_REVISION_20261115\\Analysis\\comparators\\inputs\\GSM8443453_PDAC-p5.h5ad",
+      "spatial_dir": "D:\\CADSPOT_REVISION_20261115\\Data\\GSE274103\\prepared\\GSM8443453_PDAC-p5\\E22_spatial",
+      "image_path": "D:\\CADSPOT_REVISION_20261115\\Data\\GSE274103\\prepared\\GSM8443453_PDAC-p5\\E22_spatial\\tissue_hires_image.png",
+      "scalefactors": "D:\\CADSPOT_REVISION_20261115\\Data\\GSE274103\\prepared\\GSM8443453_PDAC-p5\\E22_spatial\\scalefactors_json.json",
+      "n_eligible": 4910,
+      "raw_h5": "D:\\CADSPOT_REVISION_20261115\\Data\\GSE274103\\raw\\GSM8443453_PDAC-p5_filtered_feature_bc_matrix.h5",
+      "raw_sha256": "bb61425bf11308be0edb08e6818d025faab69c9ebd1f7e4873c4fb6f674209ca"
+    }
+  ],
+  "representative": "GSM8443449_PDAC-p1",
+  "factor_count": 10,
+  "seed": 20261115,
+  "n_genes": 3000,
+  "gene_rule": "pooled normalized log-expression variance; labels unused",
+  "candidate_table": "D:\\CADSPOT_REVISION_20261115\\Source_Data\\fresh_coordinates.tsv.gz",
+  "candidate_sha256": "2119b90af4af725de8ccdba947a5e45245c6a190d07a04a7cf62a9923cb6ec52",
+  "eligible_rule": "archived evaluated intersection raw in-tissue finite coordinates nonzero counts >=3 genes"
+}

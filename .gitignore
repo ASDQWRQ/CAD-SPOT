@@ -1,9 +1,12 @@
 __pycache__/
 *.pyc
-.ipynb_checkpoints/
+.venv/
+work/
+Data/
+Analysis/comparators/vendor/
+Analysis/comparators/deps/
+Analysis/comparators/inputs/*.h5ad
 .DS_Store
 Thumbs.db
 ~$*
 *.tmp
-*.log
-_check*.tsv
