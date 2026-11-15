@@ -1,0 +1,28 @@
+{
+  "sample_id": "GSM6177618_NYU_PDAC1_Vis",
+  "verified_utc": "2026-11-15T13:51:48.480864+00:00",
+  "n_spots": 1789,
+  "n_unique_gene_symbols": 33514,
+  "n_pass_locked_qc": 1759,
+  "source_h5_count_dtype": "int32",
+  "tests": {
+    "matrix_is_CSR": true,
+    "matrix_shape_matches_axes": true,
+    "genes_unique": true,
+    "barcodes_unique": true,
+    "raw_h5_barcode_order_matches_prepared_rows": true,
+    "sample_id_absent_for_prepare_section_insert": true,
+    "coordinates_finite": true,
+    "coordinates_unique": true,
+    "counts_nonnegative_integers": true,
+    "total_umi_matches_matrix": true,
+    "n_genes_matches_matrix": true,
+    "qc_flag_matches_locked_rule": true,
+    "all_prepared_hashes_match": true,
+    "no_score_columns_generated": true,
+    "published_workbook_valid": true
+  },
+  "ready_for_technical_workflow": true,
+  "confirmed_PDAC_validation_identity": false,
+  "scope": "Input validation only; no scoring, model fitting, ranking or random controls."
+}

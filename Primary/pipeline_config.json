@@ -1,0 +1,102 @@
+{
+  "panels": {
+    "target_score": [
+      "BAX",
+      "BAK1",
+      "BID",
+      "PMAIP1",
+      "BNIP3",
+      "BNIP3L",
+      "MCL1",
+      "BCL2L1",
+      "HK2",
+      "LDHA",
+      "PDK1",
+      "SLC2A1",
+      "CA9",
+      "ENO1",
+      "ALDOA",
+      "PGK1",
+      "PGAM1",
+      "PKM",
+      "GPI",
+      "TPI1",
+      "VEGFA",
+      "HIF1A",
+      "NDRG1"
+    ],
+    "reference_score": [
+      "ADM",
+      "AK4",
+      "ALDOC",
+      "ANGPTL4",
+      "ANKZF1",
+      "BHLHE40",
+      "CA12",
+      "CCNG2",
+      "DDIT4",
+      "ENO2",
+      "FAM162A",
+      "GAPDH",
+      "GCK",
+      "HK1",
+      "KDM3A",
+      "LDHC",
+      "MXI1",
+      "P4HA1",
+      "P4HA2",
+      "PFKL",
+      "SLC2A3"
+    ],
+    "Epithelial_proxy": [
+      "EPCAM",
+      "KRT7",
+      "KRT8",
+      "KRT18",
+      "KRT19"
+    ],
+    "ECM_proxy": [
+      "COL1A1",
+      "COL1A2",
+      "COL3A1",
+      "DCN",
+      "LUM"
+    ],
+    "Contractile_proxy": [
+      "ACTA2",
+      "TAGLN",
+      "FAP",
+      "PDGFRB"
+    ],
+    "Myeloid_proxy": [
+      "LST1",
+      "TYROBP",
+      "FCER1G",
+      "AIF1",
+      "CD68"
+    ],
+    "Tcell_proxy": [
+      "CD3D",
+      "CD3E",
+      "TRAC",
+      "CD247",
+      "LCK"
+    ]
+  },
+  "technical": [
+    "log_nCount",
+    "log_nFeature"
+  ],
+  "composition": [
+    "Epithelial_proxy",
+    "ECM_proxy",
+    "Contractile_proxy",
+    "Myeloid_proxy",
+    "Tcell_proxy"
+  ],
+  "scoring": "mean_gene_z_by_section",
+  "normalization": "log1p_CP10K",
+  "proxy_interpretation": "transcriptional_proxies_not_cell_fractions",
+  "qc": "in_tissue=1,total_UMI>=100,detected_unique_symbols>=100,finite_coordinates",
+  "frozen_score_table_used": false
+}

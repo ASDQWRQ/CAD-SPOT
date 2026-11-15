@@ -1,0 +1,29 @@
+{
+  "arguments": {
+    "inputs": "D:\\CADSPOT_BMC_INTEGRATED_20261115\\Comparators\\current_inputs",
+    "outputs": [
+      "D:\\CADSPOT_BMC_INTEGRATED_20261115\\Analysis\\comparators\\results\\stamp\\k10_seed20261115_retry_numpy2",
+      "D:\\CADSPOT_BMC_INTEGRATED_20261115\\Analysis\\comparators\\results\\popari\\k10_seed20261115_budget50",
+      "D:\\CADSPOT_BMC_INTEGRATED_20261115\\Analysis\\comparators\\results\\spahdmap\\k10_seed20261115_production"
+    ],
+    "out": "D:\\CADSPOT_BMC_INTEGRATED_20261115\\Comparators\\current_summary",
+    "n_perm": 9999,
+    "seed": 20261115,
+    "block_widths": [
+      8.0,
+      4.0,
+      12.0
+    ],
+    "allow_partial": false
+  },
+  "primary_block_width": 8,
+  "alternative_widths": [
+    4,
+    12
+  ],
+  "p_alternative": "one-sided enrichment",
+  "multiple_testing": "BH jointly over domain and loading tests per method and block-width across sections",
+  "descriptive_expected_overlap": "candidate fraction times domain size; not the conditional block-null expectation",
+  "biological_scope": "sections retained separately; independent STAMP factors not aligned",
+  "eligible_sha256": "baf0e9958ddd853f2d23f3e69b39491ea8ebbb78a847aac9d671a5603a3729a0"
+}

@@ -1,0 +1,36 @@
+{
+  "primary_spots": 23392,
+  "primary_candidates": 650,
+  "model_input_spots": 23013,
+  "model_input_candidates": 646,
+  "comparison_type": "reused_candidate_blind_model_outputs_new_labels_not_retrained",
+  "command": [
+    "D:\\hgsoc_cuda_env\\Scripts\\python.exe",
+    "D:\\CADSPOT_BMC_INTEGRATED_20261115\\Analysis\\comparators\\enrichment.py",
+    "--inputs",
+    "D:\\CADSPOT_BMC_INTEGRATED_20261115\\Comparators\\current_inputs",
+    "--outputs",
+    "D:\\CADSPOT_BMC_INTEGRATED_20261115\\Analysis\\comparators\\results\\stamp\\k10_seed20261115_retry_numpy2",
+    "D:\\CADSPOT_BMC_INTEGRATED_20261115\\Analysis\\comparators\\results\\popari\\k10_seed20261115_budget50",
+    "D:\\CADSPOT_BMC_INTEGRATED_20261115\\Analysis\\comparators\\results\\spahdmap\\k10_seed20261115_production",
+    "--out",
+    "D:\\CADSPOT_BMC_INTEGRATED_20261115\\Comparators\\current_summary",
+    "--n-perm",
+    "9999",
+    "--seed",
+    "20261115",
+    "--block-widths",
+    "8",
+    "4",
+    "12"
+  ],
+  "spatial_permutations": 9999,
+  "seed": 20261115,
+  "methods": [
+    "STAMP",
+    "POPARI",
+    "SpaHDmap"
+  ],
+  "popari": "fixed_budget_50_not_converged",
+  "spahdmap": "representative_section_only_zero_vectors_unassigned"
+}

@@ -1,0 +1,252 @@
+{
+  "sample_id": "GSM6177618_NYU_PDAC1_Vis",
+  "repository": "NCBI Gene Expression Omnibus (GEO)",
+  "series_accession": "GSE203612",
+  "sample_accession": "GSM6177618",
+  "sample_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM6177618",
+  "series_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE203612",
+  "biosample_url": "https://www.ncbi.nlm.nih.gov/biosample/SAMN28600492",
+  "original_paper_doi": "10.1038/s41588-022-01141-9",
+  "identity_status": "Published TableS1 corroborates PDAC NYU1 label; pathology is NA; GEO/BioSample Ovary/Ovarian-carcinoma conflict remains unresolved. Technical-transfer use only, not confirmed PDAC validation.",
+  "official_sample_metadata_lines": [
+    "!Sample_title = NYU_PDAC1_Vis 10x Genomics Visium",
+    "!Sample_source_name_ch1 = Spatial transcriptomics of patient primary pancreatic ductal adenocarcinoma",
+    "!Sample_characteristics_ch1 = cancer type: Ovarian carcinoma",
+    "!Sample_characteristics_ch1 = organ: Ovary",
+    "!Sample_characteristics_ch1 = method: 10x Genomics Visium",
+    "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN28600492",
+    "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX15419205"
+  ],
+  "independence": "Different study from GSE274103. This same external count matrix was already used for a technical-only exploratory audit; not an untouched prospective holdout.",
+  "sources": [
+    {
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6177nnn/GSM6177618/suppl/",
+      "file": "metadata\\GSM6177618_official_ftp_listing.html",
+      "bytes": 1847,
+      "sha256": "c1f235cbd6894e0731ab8b82fd5e235794b0c537764d4523fcce4d09c6f5d3a0",
+      "retrieved_or_verified_utc": "2026-11-15T13:41:35.123488+00:00",
+      "status": "reused_existing",
+      "http_headers_this_run": {}
+    },
+    {
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6177nnn/GSM6177618/suppl/GSM6177618_NYU_PDAC1_Vis_processed_filtered_feature_bc_matrix.h5",
+      "file": "raw\\GSM6177618_NYU_PDAC1_Vis\\GSM6177618_NYU_PDAC1_Vis_processed_filtered_feature_bc_matrix.h5",
+      "bytes": 5169581,
+      "sha256": "8a2ca1102d897bf5f4ded21b571751592d7baf9607a5cb4ae928fcc96a2629f3",
+      "retrieved_or_verified_utc": "2026-11-15T13:41:35.127010+00:00",
+      "status": "reused_existing",
+      "http_headers_this_run": {}
+    },
+    {
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6177nnn/GSM6177618/suppl/GSM6177618_NYU_PDAC1_Vis_processed_spatial_tissue_positions_list.csv.gz",
+      "file": "raw\\GSM6177618_NYU_PDAC1_Vis\\GSM6177618_NYU_PDAC1_Vis_processed_spatial_tissue_positions_list.csv.gz",
+      "bytes": 64211,
+      "sha256": "f301053257e5f37ebd2d37f51296a8394985df48ec5af949e4f10c3ed16ff472",
+      "retrieved_or_verified_utc": "2026-11-15T13:41:35.128010+00:00",
+      "status": "reused_existing",
+      "http_headers_this_run": {}
+    },
+    {
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6177nnn/GSM6177618/suppl/GSM6177618_NYU_PDAC1_Vis_processed_spatial_scalefactors_json.json.gz",
+      "file": "raw\\GSM6177618_NYU_PDAC1_Vis\\GSM6177618_NYU_PDAC1_Vis_processed_spatial_scalefactors_json.json.gz",
+      "bytes": 189,
+      "sha256": "48d4eb5653b1ce127d8b0aa808034376be090576cf498a07fb24f368c27553a6",
+      "retrieved_or_verified_utc": "2026-11-15T13:41:35.129003+00:00",
+      "status": "reused_existing",
+      "http_headers_this_run": {}
+    },
+    {
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6177nnn/GSM6177618/suppl/GSM6177618_NYU_PDAC1_Vis_processed_spatial_tissue_hires_image.png.gz",
+      "file": "raw\\GSM6177618_NYU_PDAC1_Vis\\GSM6177618_NYU_PDAC1_Vis_processed_spatial_tissue_hires_image.png.gz",
+      "bytes": 7956855,
+      "sha256": "06fbac217610b01b4f4edbff6bfab93d31d377102f24eb94040bbc250bbc8608",
+      "retrieved_or_verified_utc": "2026-11-15T13:41:35.135548+00:00",
+      "status": "reused_existing",
+      "http_headers_this_run": {}
+    },
+    {
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6177nnn/GSM6177618/suppl/GSM6177618_NYU_PDAC1_Vis_processed_spatial_tissue_lowres_image.png.gz",
+      "file": "raw\\GSM6177618_NYU_PDAC1_Vis\\GSM6177618_NYU_PDAC1_Vis_processed_spatial_tissue_lowres_image.png.gz",
+      "bytes": 614613,
+      "sha256": "cf736e4cca5fe5a343c5e68cdaa0ff8935296c3f91a2a488b60eb32a3d622b27",
+      "retrieved_or_verified_utc": "2026-11-15T13:41:35.143548+00:00",
+      "status": "reused_existing",
+      "http_headers_this_run": {}
+    },
+    {
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6177nnn/GSM6177618/suppl/GSM6177618_NYU_PDAC1_Vis_processed_spatial_aligned_fiducials.jpg.gz",
+      "file": "raw\\GSM6177618_NYU_PDAC1_Vis\\GSM6177618_NYU_PDAC1_Vis_processed_spatial_aligned_fiducials.jpg.gz",
+      "bytes": 1431308,
+      "sha256": "57cd68a3981cd06acde444b5907a418b48f2a7bdef63fa72aa3a1f2e00a06684",
+      "retrieved_or_verified_utc": "2026-11-15T13:41:35.146067+00:00",
+      "status": "reused_existing",
+      "http_headers_this_run": {}
+    },
+    {
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM6177nnn/GSM6177618/suppl/GSM6177618_NYU_PDAC1_Vis_processed_spatial_detected_tissue_image.jpg.gz",
+      "file": "raw\\GSM6177618_NYU_PDAC1_Vis\\GSM6177618_NYU_PDAC1_Vis_processed_spatial_detected_tissue_image.jpg.gz",
+      "bytes": 1995048,
+      "sha256": "93434c7011370f7bb39ab9fffcf74fbcb4a30bf2a58e8233f029d42a61ad873c",
+      "retrieved_or_verified_utc": "2026-11-15T13:41:35.151066+00:00",
+      "status": "reused_existing",
+      "http_headers_this_run": {}
+    },
+    {
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE203nnn/GSE203612/soft/GSE203612_family.soft.gz",
+      "file": "metadata\\GSE203612_family.soft.gz",
+      "bytes": 8044,
+      "sha256": "274de5e25d9ea1330a1bff695c69add80d9acfc6153bff30a2581fdc40277468",
+      "retrieved_or_verified_utc": "2026-11-15T13:41:35.159597+00:00",
+      "status": "reused_existing",
+      "http_headers_this_run": {}
+    }
+  ],
+  "local_original_count_check": {
+    "path": "D:\\BMC_Bioinformatics_CADSPOT_REBUILD_20260730\\work\\GSE203612_extracted\\GSM6177618_NYU_PDAC1_Vis_processed_filtered_feature_bc_matrix.h5",
+    "exists": true,
+    "sha256": "8a2ca1102d897bf5f4ded21b571751592d7baf9607a5cb4ae928fcc96a2629f3",
+    "same_as_fresh_official_download": true
+  },
+  "matrix": {
+    "format": "scipy_CSR_npz",
+    "orientation": "spots_by_genes",
+    "value_type": "nonnegative_integer_deposited_Gene_Expression_counts",
+    "n_spots": 1789,
+    "n_unique_gene_symbols": 33514,
+    "source_gene_expression_features": 33538,
+    "source_other_features_excluded": 0,
+    "duplicate_symbol_aggregation": "sum_counts_per_spot",
+    "nnz": 3429563,
+    "row_order": "identical_to_positions.tsv_and_barcodes.tsv",
+    "column_order": "identical_to_genes.tsv"
+  },
+  "coordinates": {
+    "units": "full_resolution_image_pixels",
+    "x": "pxl_col_in_fullres",
+    "y": "pxl_row_in_fullres",
+    "origin": "top_left_image",
+    "array_coordinates": "dimensionless_10x_hexagonal_array_indices_not_micrometers",
+    "image_conversion": "x_image=x*tissue_image_scalef; y_image=y*tissue_image_scalef",
+    "missing_coordinate_handling": "fail_if_any_expression_barcode_missing_not_imputed",
+    "n_grid_positions": 4992,
+    "n_expression_positions": 1789,
+    "n_expression_out_of_tissue": 0,
+    "median_nearest_other_spot_distance_pixels": 399.0,
+    "registered_image_audit": {
+      "hires": {
+        "width": 2000,
+        "height": 1884,
+        "n_centers_in_bounds": 1789,
+        "all_in_bounds": true
+      },
+      "lowres": {
+        "width": 600,
+        "height": 565,
+        "n_centers_in_bounds": 1789,
+        "all_in_bounds": true
+      }
+    },
+    "coordinate_documentation_url": "https://www.10xgenomics.com/support/software/space-ranger/2.1/analysis/outputs/spatial-outputs"
+  },
+  "qc": {
+    "input": "deposited_filtered_matrix",
+    "additional_filter_applied": false,
+    "locked_rule_flag_only": "in_tissue==1 and total_umi>=100 and n_genes>=100",
+    "n_passing_locked_rule": 1759,
+    "total_umi_min_median_max": [
+      30,
+      4461.0,
+      24170
+    ],
+    "n_genes_min_median_max": [
+      30,
+      1934.0,
+      4815
+    ]
+  },
+  "scope": "INPUT_PREPARATION_ONLY: no scores, composition proxies, candidate ranking, bootstrap, or random controls generated. No score-dependent sample or spot selection.",
+  "composition_note": "Any later gene-module proxies are transcript-derived covariates, not validated cell fractions or malignant-cell calls.",
+  "generated_utc": "2026-11-15T13:41:36.469363+00:00",
+  "script_sha256": "4d6f451b0df4ea55b73895db6513a53e40884df9638f65d7ade39c482cc05348",
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "numpy": "2.4.4",
+    "pandas": "3.0.5",
+    "scipy": "1.18.0",
+    "h5py": "3.16.0",
+    "pillow": "13.0.0"
+  },
+  "prepared_files": [
+    {
+      "file": "prepared\\GSM6177618_NYU_PDAC1_Vis\\barcodes.tsv",
+      "bytes": 80524,
+      "sha256": "69dd6339efe307f714f18874fe2d2750e73823f7b7319f353f860fdfb0e17c5d"
+    },
+    {
+      "file": "prepared\\GSM6177618_NYU_PDAC1_Vis\\counts.npz",
+      "bytes": 7359725,
+      "sha256": "a7ac9258ebe76475ce0e99d2f3a8c6483d04fd7d9074fea6003f4335a2850708"
+    },
+    {
+      "file": "prepared\\GSM6177618_NYU_PDAC1_Vis\\feature_to_gene.tsv",
+      "bytes": 845755,
+      "sha256": "ae516ce0e5cec08a8de2053451705980ac3d04c7a0068ba1ce1a2a1df33efdf1"
+    },
+    {
+      "file": "prepared\\GSM6177618_NYU_PDAC1_Vis\\genes.tsv",
+      "bytes": 308948,
+      "sha256": "82b0fa962c0e47d07a88f520a6cae5429255887640c23fc7686c5fa098a88c24"
+    },
+    {
+      "file": "prepared\\GSM6177618_NYU_PDAC1_Vis\\positions.tsv",
+      "bytes": 235262,
+      "sha256": "578b6cb4964f4d5277a69e33643ec01293e5c390afa9a0ba88b2341c8cf1b741"
+    },
+    {
+      "file": "prepared\\GSM6177618_NYU_PDAC1_Vis\\positions_all.tsv",
+      "bytes": 282821,
+      "sha256": "bb489df7b604fbd4558bb24b32ff1bd487db31e7a5ce606e32150ee8eab89a1e"
+    },
+    {
+      "file": "prepared\\GSM6177618_NYU_PDAC1_Vis\\source_features.tsv",
+      "bytes": 1550091,
+      "sha256": "97d97dc9a9ef286f94230ed0c93a1b3d9556b71e264e9d7bddfeb76cc4738c0a"
+    }
+  ],
+  "published_identity_evidence": {
+    "publisher_supplement_url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41588-022-01141-9/MediaObjects/41588_2022_1141_MOESM6_ESM.xlsx",
+    "file": "metadata\\Barkley2022_publisher_Supplementary_Tables.xlsx",
+    "sha256": "a899f552e0042ab67a127c126982aab7c8ccbb8733ad387c26eb6009264c1410",
+    "worksheet": "TableS1",
+    "excel_row": 14,
+    "sample_label": "PDAC NYU1",
+    "pathology_value": "NA",
+    "interpretation": "The published authors' sample table lists PDAC NYU1, but pathology is NA. This corroborates the PDAC sample label but does not resolve the inconsistent GEO/BioSample organ and cancer-type fields. No author correction or specimen-level pathology record was obtained.",
+    "status": "repository_identity_conflict_unresolved"
+  },
+  "ready_for_technical_workflow": true,
+  "confirmed_PDAC_validation_identity": false,
+  "analysis_plan": {
+    "path": "../analysis_plan.md",
+    "sha256": "3e2e4c52f253234f6893069c44217856629eb5dfb29b7e8f1c758294423bc0a6"
+  },
+  "technical_input_verification": "Input_Verification.json",
+  "untouched_holdout": false,
+  "permitted_external_claim": "Independent-study full-workflow technical transfer example with unresolved tumor identity; not a confirmed PDAC validation case or an untouched holdout.",
+  "packaging_exclusions": {
+    "patterns": [
+      "**/*.partial",
+      "raw/Visium_HD_3prime_Human_Pancreatic_Cancer/**",
+      "runtime_deps/**"
+    ],
+    "files": [
+      {
+        "file": "metadata\\PMC_supplement_blocked_response.html",
+        "bytes": 1817,
+        "sha256": "b67addb1a4bbc0b5d4bfcd213e21139bd247dc946f17e93d81068e5591513962",
+        "reason": "HTML response masqueraded as XLSX; not supplementary evidence"
+      }
+    ],
+    "new_archive_created": false
+  }
+}

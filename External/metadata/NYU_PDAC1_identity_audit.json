@@ -1,0 +1,11 @@
+{
+  "publisher_supplement_url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41588-022-01141-9/MediaObjects/41588_2022_1141_MOESM6_ESM.xlsx",
+  "file": "metadata\\Barkley2022_publisher_Supplementary_Tables.xlsx",
+  "sha256": "a899f552e0042ab67a127c126982aab7c8ccbb8733ad387c26eb6009264c1410",
+  "worksheet": "TableS1",
+  "excel_row": 14,
+  "sample_label": "PDAC NYU1",
+  "pathology_value": "NA",
+  "interpretation": "The published authors' sample table lists PDAC NYU1, but pathology is NA. This corroborates the PDAC sample label but does not resolve the inconsistent GEO/BioSample organ and cancer-type fields. No author correction or specimen-level pathology record was obtained.",
+  "status": "repository_identity_conflict_unresolved"
+}

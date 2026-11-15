@@ -16,10 +16,15 @@ from sklearn.linear_model import LinearRegression
 from sklearn.neighbors import NearestNeighbors
 from sklearn.preprocessing import SplineTransformer, StandardScaler
 
+__version__ = "2.1.0"
+
 METHODS = ("score_residual_spearman", "partial_spearman", "spline_score_residual_spearman")
+RANKING_METHODS = ("positive_product", "legacy", "positive_support")
 DERIVED = ("target_resid", "reference_resid", "target_resid_z", "reference_resid_z",
            "neighbor_reference_resid_z", "local_support", "priority_score",
-           "priority_robust_z", "cadspot_candidate", "priority_rank", "spatial_status")
+           "priority_robust_z", "cadspot_candidate", "priority_rank", "spatial_status",
+           "positive_product_eligible", "positive_enrichment_eligible", "ranking_eligible",
+           "ranking_method", "priority_center", "priority_scale", "priority_scale_method")
 
 
 def read_table(path):
@@ -167,9 +172,16 @@ def positive_product(a, b):
 
 
 def spatial_ranking(df, target_resid, reference_resid, sample_col="sample_id", id_col="barcode",
-                    x_col="x", y_col="y", robust_z_cutoff=3.0, ranking_method="legacy",
+                    x_col="x", y_col="y", robust_z_cutoff=3.0, ranking_method="positive_product",
                     target_scores=None, reference_scores=None):
-    """Recompute exact six-neighbor within-section rankings, never reuse archives."""
+    """Rank positive residual co-enrichment; export exact six-neighbor annotations.
+
+    The default product uses no neighborhood weight or positivity restriction.
+    Optional legacy/support rankings retain their original h > 0 eligibility.
+    All methods require spatial_status == 'ok' and never reuse archived scores.
+    """
+    if ranking_method not in RANKING_METHODS:
+        raise ValueError(f"Unknown ranking_method {ranking_method!r}; choose from {RANKING_METHODS}")
     out = df.copy().reset_index(drop=True)
     for col in DERIVED:
         if col in out:
@@ -227,25 +239,40 @@ def spatial_ranking(df, target_resid, reference_resid, sample_col="sample_id", i
         out["raw_positive_product"] = positive_product(out.raw_target_z, out.raw_reference_z)
     out["legacy_priority_score"] = out[["target_resid_z", "reference_resid_z",
                                             "neighbor_reference_resid_z", "local_support"]].mean(axis=1, skipna=False)
-    out["priority_score"] = out.legacy_priority_score if ranking_method == "legacy" else (
-        out.baseline_positive_product * np.maximum(out.neighbor_reference_resid_z, 0))
+    if ranking_method == "positive_product":
+        out["priority_score"] = out.baseline_positive_product
+    elif ranking_method == "legacy":
+        out["priority_score"] = out.legacy_priority_score
+    else:  # positive_support; validated before computing any outputs.
+        out["priority_score"] = out.baseline_positive_product * np.maximum(out.neighbor_reference_resid_z, 0)
     ok = out.spatial_status.eq("ok")
     out.loc[~ok, "priority_score"] = np.nan
     out["priority_robust_z"] = np.nan
+    out["priority_center"] = np.nan
+    out["priority_scale"] = np.nan
+    out["priority_scale_method"] = pd.Series(pd.NA, index=out.index, dtype="string")
     out["priority_rank"] = np.nan
     out["baseline_positive_rank"] = np.nan
-    out["positive_enrichment_eligible"] = ok & (out.target_resid_z > 0) & (out.reference_resid_z > 0) & (out.neighbor_reference_resid_z > 0)
+    out["positive_product_eligible"] = ok & (out.target_resid_z > 0) & (out.reference_resid_z > 0)
+    # Keep the historical support-restricted flag for optional methods/comparisons.
+    out["positive_enrichment_eligible"] = out.positive_product_eligible & (out.neighbor_reference_resid_z > 0)
+    out["ranking_eligible"] = (out.positive_product_eligible if ranking_method == "positive_product"
+                               else out.positive_enrichment_eligible)
     out["cadspot_candidate"] = False
     for _, sub in out[ok].groupby(sample_col, sort=True):
         s = sub.priority_score
         mad = float(np.median(np.abs(s - s.median()))) * 1.4826
         scale = mad if mad > 0 else (s.std(ddof=0) or 1.0)
         out.loc[sub.index, "priority_robust_z"] = (s - s.median()) / scale
-        eligible = sub.index[out.loc[sub.index, "positive_enrichment_eligible"]]
+        out.loc[sub.index, "priority_center"] = s.median()
+        out.loc[sub.index, "priority_scale"] = scale
+        out.loc[sub.index, "priority_scale_method"] = (
+            "MAD" if mad > 0 else ("SD" if s.std(ddof=0) > 0 else "constant"))
+        eligible = sub.index[out.loc[sub.index, "ranking_eligible"]]
         out.loc[eligible, "priority_rank"] = out.loc[eligible, "priority_score"].rank(ascending=False, method="min")
         baseline = sub.index[(sub.target_resid_z > 0) & (sub.reference_resid_z > 0)]
         out.loc[baseline, "baseline_positive_rank"] = out.loc[baseline, "baseline_positive_product"].rank(ascending=False, method="min")
-    out["cadspot_candidate"] = out.positive_enrichment_eligible & (out.priority_robust_z >= robust_z_cutoff)
+    out["cadspot_candidate"] = out.ranking_eligible & (out.priority_robust_z >= robust_z_cutoff)
     out["ranking_method"] = ranking_method
     out["ranking_provenance"] = "recomputed_from_scores_not_archived_overrides"
     return out
@@ -438,7 +465,7 @@ def file_sha256(path):
 def write_manifest(path, payload):
     import scipy
     import sklearn
-    data = dict(cadspot_version="2.0.0", python=platform.python_version(), numpy=np.__version__,
+    data = dict(cadspot_version=__version__, python=platform.python_version(), numpy=np.__version__,
                 pandas=pd.__version__, scipy=scipy.__version__, sklearn=sklearn.__version__, **payload)
     Path(path).parent.mkdir(parents=True, exist_ok=True)
     Path(path).write_text(json.dumps(data, indent=2, default=str) + "\n", encoding="utf-8")
@@ -456,7 +483,8 @@ def parser():
     ap.add_argument("--x-col", default="x")
     ap.add_argument("--y-col", default="y")
     ap.add_argument("--coordinate-units", help="Shared x/y Euclidean units within each section; no axis mixing")
-    ap.add_argument("--ranking-method", choices=("legacy", "positive_support"), default="legacy")
+    ap.add_argument("--ranking-method", choices=RANKING_METHODS, default="positive_product",
+                    help="Default: positive residual product; legacy/support methods also require positive neighbor support")
     ap.add_argument("--robust-z-cutoff", type=float, default=3.0)
     ap.add_argument("--top-k", type=int, default=50)
     ap.add_argument("--top-fractions", nargs="+", type=float, default=[.01, .05, .1])

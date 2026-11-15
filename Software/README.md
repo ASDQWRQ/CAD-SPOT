@@ -1,335 +1,320 @@
-# CAD-SPOT Score-Table Revision
+# CAD-SPOT 2.1.0
 
-This directory is a self-contained revision implementation. It does not modify
-or import the old software package. Python, NumPy, pandas, SciPy, and
-scikit-learn are required. Install the core dependencies using
-`python -m pip install -r requirements.txt`. Optional comparison and plotting
-dependencies are documented separately in `../Analysis/comparators/README.md`.
-The verified core runtime uses Python 3.12.14.
-Every CLI run writes a JSON manifest with arguments, input hashes, and exact
-runtime versions. All random generation uses NumPy's recorded seed.
+CAD-SPOT takes user-supplied target/reference scores and covariates, reports
+association layers, and exports an interpretable coordinate ranking. This local
+release defaults to **positive residual co-enrichment**. Six-neighbor reference
+support remains visible as an annotation, not a required positive filter for the
+default ranking. Optional support-weighted methods remain available.
 
-## Portable Quick Start
+The raw-to-score analysis driver is [end_to_end.py](../Analysis/end_to_end.py).
+Its prepared primary input is [Primary/score_table.tsv.gz](../Primary/score_table.tsv.gz).
+Numerical analysis results belong in [Primary/Results](../Primary/Results/), not
+in hardcoded example values in this README.
 
-From this directory, run the released score table without installing a spatial
-object framework:
+## Version and Installation
+
+The designated Python 3.12 runtime passed all 28 unit/integration tests. Core
+changes are confined to ranking dispatch, eligibility, method metadata handling
+and CLI choices/defaults, plus explicit center/scale annotations. Raw associations,
+residual estimators, bootstrap and matched-null code are unchanged. The local
+version is `2.1.0`, exported as `cadspot.__version__` and the manifest's
+`cadspot_version`. Identify the build by this version, source hash and selected
+ranking method. Source hashes are recorded in the release manifest; the exact
+release is tagged `v2.1.0` in the public repository.
+
+Run the examples below from the **package root**, one level above Software:
 
 ```bash
-python cadspot.py --input ../Source_Data/archived_coordinate_table.tsv.gz --target target_score --reference reference_score --technical log_nCount log_nFeature --composition Epithelial_malignant_proxy ECM_Stroma CAF Macrophage T_cell --coordinate-units full_resolution_pixels --output associations.tsv --coordinate-output coordinates.tsv.gz --ranking-comparison-output ranking_comparison.tsv
-python -m unittest discover -s tests -v
+python -m pip install -r Software/requirements.txt
+python -B -m unittest discover -s Software/tests -v
 ```
 
-`../Analysis/run_reanalysis.py` contains the complete manuscript analysis
-commands, including the three block widths and the fresh gene-set calibration.
+The analysis driver additionally requires `h5py` for 10x H5 count matrices.
+It is not needed by the table-only core. Run the preparation tests with
+`python -B -m unittest discover -s Analysis -p 'test_*.py' -v`.
 
-## Two Separate Analyses
+## Primary Example
 
-1. **Score-table demonstration:** the supplied `target_score` and
-   `reference_score`, two technical columns, five composition columns, and
-   section fixed effects reproduce pooled linear score-residual Spearman
-   `0.1992540732014225` (verified on 23,013 supplied rows). This reproduces a
-   table-level association, not the upstream construction of its scores.
-2. **Fresh expression null:** observed and random gene-set scores are both
-   recomputed from the supplied expression matrix with the same scoring and
-   residual model. The explicit available sets can differ from the intended
-   sets. This is not a reproduction of the archived scores or their old null.
-   Never compare the old null's observed statistic to `.199` as though they
-   were the same model. Fresh observed rho is exported, not forced to `.199`.
+The primary example uses fresh scores from public GSE274103 counts and registered
+spatial metadata, rather than an archived target/reference table. The current
+panel definitions and QC decisions are in
+[Primary/pipeline_config.json](../Primary/pipeline_config.json); public input
+locations and checksums are in [Primary/input_manifest.json](../Primary/input_manifest.json).
+Executable reconstruction and analysis commands are in
+[Analysis/README.md](../Analysis/README.md).
 
-The supplied intended target/reference lists have 23/21 genes. The explicit
-available lists supplied for this revision have 19/20 genes: target ALDOA,
-TPI1, PKM, LDHA and reference GAPDH are omitted, not zero-imputed. CLI validation
-checks used genes against the matrix; intended-list audits report missing and
-present-but-unused genes. These list files record the supplied specification,
-not an independent biological validation of those signatures.
+The preparation driver aggregates duplicate gene symbols, retains in-tissue
+spots with at least 100 UMIs, at least 100 detected unique symbols and finite
+coordinates, then library-normalizes to 10,000 counts and applies log1p.
+Each available nonconstant panel gene is standardized within section using
+population SD; its panel score is the unweighted mean. Missing/constant genes
+are recorded and omitted, not zero-imputed. The driver requires at least three
+usable genes in each panel. Section folders retain per-gene scoring parameters,
+panel coverage, QC records and matrices.
 
-## Score-Table CLI
+The five disjoint composition-proxy panels are:
 
-Run from this directory; replace output paths and block size as appropriate:
+| Column | Intended genes |
+| --- | --- |
+| `Epithelial_proxy` | EPCAM KRT7 KRT8 KRT18 KRT19 |
+| `ECM_proxy` | COL1A1 COL1A2 COL3A1 DCN LUM |
+| `Contractile_proxy` | ACTA2 TAGLN FAP PDGFRB |
+| `Myeloid_proxy` | LST1 TYROBP FCER1G AIF1 CD68 |
+| `Tcell_proxy` | CD3D CD3E TRAC CD247 LCK |
 
-```powershell
-& 'D:\hgsoc_cuda_env\Scripts\python.exe' -B cadspot.py `
-  --input 'D:\CADSPOT_REVISION_20261115\Source_Data\archived_coordinate_table.tsv.gz' `
-  --target target_score --reference reference_score `
-  --technical log_nCount log_nFeature `
-  --composition Epithelial_malignant_proxy ECM_Stroma CAF Macrophage T_cell `
-  --sample-col sample_id --id-col barcode --x-col x --y-col y `
-  --coordinate-units pixels --ranking-method legacy --robust-z-cutoff 3 `
-  --top-k 100 --top-fractions 0.01 0.05 0.10 `
-  --output example_output/associations.tsv `
-  --coordinate-output example_output/recomputed_coordinates.tsv `
-  --ranking-comparison-output example_output/baseline_comparison.tsv `
-  --archived-comparison-output example_output/archived_candidate_comparison.tsv
+These are transcriptional proxies, not malignant-cell calls, validated cell
+fractions or functional activation measures. They exclude target/reference
+genes. Actual used membership is recorded in
+[Primary/panel_coverage.tsv](../Primary/panel_coverage.tsv), not inferred from
+the intended lists. The generic core is score-agnostic; the panels are decisions
+of this example, not mandatory software inputs for other applications.
+
+Run the prepared primary table through the CLI:
+
+```bash
+python -B Software/cadspot.py --input Primary/score_table.tsv.gz --target target_score --reference reference_score --technical log_nCount log_nFeature --composition Epithelial_proxy ECM_proxy Contractile_proxy Myeloid_proxy Tcell_proxy --coordinate-units full_resolution_pixels --ranking-method positive_product --output Primary/Results/cli_associations.tsv --coordinate-output Primary/Results/cli_coordinates.tsv.gz --ranking-comparison-output Primary/Results/cli_ranking_comparison.tsv
 ```
 
-Input is a tab-delimited table, optionally gzip-compressed. `(sample_id,
-barcode)` must uniquely identify each row; repeated barcodes across sections
-are allowed. IDs must be nonempty. Scores and covariates must be numeric,
-finite, and complete. This implementation does not median-impute covariates
-or silently drop missing targets. Prepare and archive an explicit complete
-analysis table if necessary. The target and reference cannot be covariates.
+The `cli_` output prefix avoids overwriting the analysis driver's outputs. Omitting
+`--ranking-method` also selects `positive_product`.
 
-`--methods` defaults to all three adjusted estimators below. `raw` is always
-reported once as ordinary Spearman with no covariate/section adjustment.
-`associations.tsv` includes pooled and individual-section rows:
+## Input Contract
 
-- `score_residual_spearman`: OLS of each **unranked score** on standardized
-  numeric covariates, intercept, and section dummies; then Spearman of the
-  two residual vectors. This is the primary `.199` statistic.
-- `partial_spearman`: average-rank both scores and each numeric covariate,
-  retain unranked section dummies, fit OLS, then **Pearson** correlation of
-  rank residuals. It is not Spearman of score residuals.
-- `spline_score_residual_spearman`: additive cubic B-spline covariate terms
-  with `--spline-knots 4` quantile knots, intercept, and section dummies;
-  then Spearman of score residuals. Duplicate quantile knots are collapsed;
-  constant covariates are omitted. There are no interactions or penalties.
+The core reads tab-delimited tables, optionally gzip-compressed. A minimal
+primary-example header is:
 
-Layers are `raw`, `technical_adjusted`, and (when supplied)
-`composition_adjusted`. Per-section fits use that section's observations;
-pooled fits include fixed effects for the observed sections. Undefined
-constant/too-small correlations have an explicit status, not an invented zero.
-No nominal independent-spot p value is supplied.
-
-## Spatial Ranking and Archive Separation
-
-Coordinates must be finite or explicitly missing, with x and y in the same
-Euclidean units **within each section**. `--coordinate-units` records the
-user's declaration, not a unit inference. Never combine a pixel x axis with
-an array-index y axis. If scales differ across sections, harmonize them before
-using one shared block size. Coordinate values alone cannot verify units.
-
-The ranking uses the final linear score model (technical plus composition,
-or technical only), independent of sensitivity estimator choices:
-
-1. Standardize target/reference residuals within section (population SD).
-2. For each spatial-valid spot, find exactly **six other Euclidean nearest
-   neighbors within that section**, with no radius-based neighborhood or
-   cross-section pooling. Seven valid spots suffice. Distance ties use stable
-   spot-ID ordering; duplicate positions still exclude the focal row itself.
-3. Average reference residual z over those six neighbors, then standardize
-   the neighbor means within the section's spatial-valid spots.
-4. Set `local_support = target_resid_z * neighbor_reference_resid_z`.
-
-`--ranking-method legacy` is the explicit default existing heuristic:
-`priority_score = mean(target_z, reference_z, neighbor_reference_z,
-local_support)`. `positive_support` is an optional sensitivity:
-`max(target_z,0) * max(reference_z,0) * max(neighbor_reference_z,0)`.
-Within-section robust priority z uses median and `1.4826 * MAD`, falling back
-to population SD, then 1 for a constant priority. Candidates require robust
-z >= cutoff and **all three** z terms > 0. Candidate `priority_rank` is
-restricted to this positive-support eligibility (without the cutoff).
-
-Missing-coordinate spots retain score residuals but have
-`spatial_status=excluded_missing_coordinates`, no spatial priority/rank,
-neighbor count 0, and candidate false. A section with fewer than seven
-coordinate-valid spots gets `excluded_insufficient_neighbors`; other sections
-continue. Missing coordinates never silently become zero neighborhood support.
-
-Fresh values are always recomputed. Colliding saved output columns, including
-`priority_score` and `cadspot_candidate`, are renamed `archived__...`. Other
-original columns such as `MMS_resid_z` remain original archived input columns;
-they are not renamed into fresh target/reference residuals. Legacy override
-flags (`--target-z-col`, etc.) are intentionally unsupported. Archive presence
-does not change fresh residuals or neighbors. `ranking_provenance` records this.
-
-`--archived-comparison-output` reports actual archived/fresh candidate counts,
-overlap, differences, and Jaccard at pooled and section levels. It does not
-assume the archived count is 507, label archived replay de novo reproduction,
-or claim saved rank-residual z values equal fresh score-residual z values.
-
-## Product Baselines
-
-`baseline_signed_product = target_resid_z * reference_resid_z` is the exact
-requested signed residual-product baseline. It is exported even when a spot
-lacks coordinates, because that product is nonspatial. A negative-negative
-pair can have a large positive product; it is not joint-high enrichment.
-`baseline_positive_product = max(target_resid_z,0) * max(reference_resid_z,0)`
-is retained as a separately named sensitivity, **not a replacement**.
-Raw-score within-section z products are additional, clearly named comparators.
-
-`ranking_comparison` exports pooled and per-section comparisons for top K and
-each requested top fraction. For the signed residual product, restrictions are:
-
-- `all_spots`: both continuous scores ranked on all common spatial-valid spots,
-  with no hidden candidate or neighborhood-positivity filter.
-- `positive_quadrant`: both scores ranked on the same target_z>0, reference_z>0
-  subset; rank correlation is calculated on that restricted subset too.
-- `cadspot_positive_support`: both scores ranked on the same positive-quadrant
-  plus neighbor_reference_z>0 subset.
-
-Both top lists use the **same universe** and deterministic ID tie-breaking.
-Fractions use `ceil(fraction * n_comparison_universe)` (minimum request 1;
-an empty universe produces empty lists). Top K is capped by that common
-universe. Counts, actual selections, coordinate exclusions, intersection,
-Jaccard, overlap fractions relative to each actual list and requested K, and
-negative-negative top selections are explicit. `overlap_fraction` is overlap
-divided by the actual CAD-SPOT top-list size. Comparison rank correlation uses
-the unrestricted continuous priority score, not its candidate-filtered rank.
-These are descriptive ranking agreements, not predictive accuracy or validation.
-
-## Block Bootstrap
-
-Add the following to the score-table command to request spatial uncertainty:
-
-```powershell
-  --bootstrap-output example_output/block_ci.tsv `
-  --block-size 1500 --bootstrap-reps 1000 --seed 20261115 `
-  --bootstrap-draws-output example_output/block_draws.tsv `
-  --bootstrap-audit-output example_output/block_audit.tsv `
-  --block-map-output example_output/block_map.tsv
+```text
+sample_id	barcode	x	y	target_score	reference_score	log_nCount	log_nFeature	Epithelial_proxy	ECM_proxy	Contractile_proxy	Myeloid_proxy	Tcell_proxy
 ```
 
-Block size is an explicit scientific sensitivity choice in declared units,
-not an estimated correlation range. Use several plausible widths. Blocks are
-non-overlapping square grid cells `floor((xy - section_min_xy)/block_size)`;
-each occupied cell belongs to exactly one section. For every replicate, draw
-the original number of occupied blocks **within each fixed section**, with
-replacement. Keep every selected block's full spot multiplicity. Section
-block counts are fixed; section spot counts may vary. Sections themselves are
-not resampled. A section with fewer than two occupied blocks fails explicitly.
+- `(sample_id, barcode)` identifies one spot uniquely. Repeated barcodes in
+  different sections are allowed; missing/empty IDs and within-section duplicates
+  fail. Column names are configurable.
+- Target/reference scores and covariates must be numeric, finite and complete.
+  There is no implicit median imputation or silent target-row deletion.
+- Technical covariates in this example are `log1p(total UMI)` and
+  `log1p(detected unique symbols)`. Composition covariates are optional in the
+  generic CLI. Targets/reference cannot also be covariates.
+- Coordinates are physical x/y in common Euclidean units within section; this
+  example uses full-resolution pixels, x=column and y=row. `--coordinate-units`
+  records a declaration, not a unit inference. Never mix pixel and array axes.
+- A shared bootstrap width assumes comparable coordinate scales. Scale choices
+  across studies must be declared; the analysis driver exposes width settings.
 
-Missing-coordinate spots are excluded from this bootstrap only; ordinary
-score associations still include them. Bootstrap point estimates are refitted
-on the coordinate-complete subset, so their n and rho may differ from the
-nonspatial table result. Excluding an entire section for lack of coordinates
-fails rather than silently changing section strata.
+## Association Layers
 
-Every draw refits all residual models and section fixed effects. Requested
-partial-rank transforms and spline knot locations are also fitted anew on the
-resample. The default `--bootstrap-methods score_residual_spearman` reports all
-available layers for the primary method. Specify any/all of the three method
-names to bootstrap sensitivities too. `--confidence .95` gives percentile CIs;
-undefined draw statistics remain explicit and are not used as zeros. A CI is
-withheld if fewer than 80% (or fewer than two) requested draws are finite.
-The draw/audit files expose failures and the exact section block/spot counts.
+`associations.tsv` contains pooled and separate-section results. `raw` is ordinary
+Spearman without section/covariate adjustment. Adjusted layers are
+`technical_adjusted` and, when proxies are supplied, `composition_adjusted`.
+Pooled adjusted models include section fixed effects; separate-section fits use
+only that section's spots.
 
-**These CIs are conditional on the observed sections and the chosen block
-scheme. They do not establish population-level inference across sections,
-remove spatial dependence by assumption, or validate candidate locations.**
+`--methods` defaults to these three estimators:
 
-## Fresh Matched Sets and Null Calibration
+- `score_residual_spearman`: regress each unranked score on standardized numeric
+  covariates, intercept and section dummies, then correlate residuals by Spearman.
+- `partial_spearman`: average-rank both scores and numeric covariates, retain
+  unranked section dummies, fit OLS, then Pearson-correlate rank residuals.
+- `spline_score_residual_spearman`: additive cubic B-splines with quantile knots,
+  intercept and section dummies, then Spearman of score residuals. Duplicate
+  knots are collapsed; constant covariates are omitted.
 
-`cadspot_null.py generate` requires an explicit universe and numeric matching
-metadata: nonnegative mean expression, detection probability in [0,1], and
-positive gene length. Length construction and metadata provenance belong in
-the supplied metadata audit (e.g. a versioned exon-union annotation); this
-program does not fabricate lengths. Universe genes must exist in both matrix
-and metadata. Missing/invalid values fail, rather than silently narrowing the
-universe. Observed target/reference genes are always excluded from controls;
-`--exclusions` adds a further explicit exclusion list.
+Undefined constant/too-small correlations have an explicit status, not an
+invented zero. These layers describe covariation under supplied proxies; they
+do not establish causal adjustment or biologically truer residual signals.
 
-Sparse input is supported without a full dense gene-by-spot export:
+## Ranking and Candidate Rule
 
-```powershell
-& 'D:\hgsoc_cuda_env\Scripts\python.exe' -B cadspot_null.py generate `
-  --expression INPUT/logcp10k_all.npz --genes INPUT/genes.tsv `
-  --expression-spots INPUT/spots_all.tsv.gz --matrix-orientation spots-by-genes `
-  --expression-scale log1p_CP10K --spot-key-cols sample_id barcode `
-  --target-genes gene_sets/target_available19.tsv `
-  --reference-genes gene_sets/reference_available20.tsv `
-  --intended-target-genes gene_sets/target_intended.tsv `
-  --intended-reference-genes gene_sets/reference_intended.tsv `
-  --metadata INPUT/length_complete_metadata.tsv --length-col gene_length `
-  --universe INPUT/explicit_universe.tsv --exclusions INPUT/excluded_genes.tsv `
-  --mean-tolerance 0.25 --detection-tolerance 0.05 --length-tolerance 0.25 `
-  --n-sets 500 --seed 20261115 --output example_output/matched_sets.tsv
+Ranking uses the final **linear score residuals**, independently of sensitivity
+estimator choices. Residuals are standardized within section using population SD.
+Write `a = target_resid_z` and `b = reference_resid_z`. The default score is:
+
+```text
+P = max(a, 0) * max(b, 0)
 ```
 
-All gene-list TSVs need a `gene` header (or explicit `--gene-col`). The NPZ
-gene axis must exactly follow `--genes`. The matrix spot axis must exactly
-follow `--expression-spots`. Orientation is required, never guessed. Dense
-gene-by-spot TSVs are also accepted; optional `expression_column` in the spot
-map verifies header order. The default composite keys are `(sample_id,
-barcode)`, never a potentially repeated barcode alone. Calibration aligns
-matrix/analysis order by these keys and requires identical spot membership.
+For each section, center and scale use all spatial-valid spots, not just the
+positive quadrant. The exported metadata make the actual rule explicit:
 
-Each target gene is a matching slot. Absolute calipers are applied on
-`log1p(mean_expression)`, untransformed detection probability, and natural
-`log(gene_length)`. The numbers above are explicit example calipers, not an
-automatic recommendation. A randomized maximum bipartite matching assigns
-one eligible unique control gene to every slot. It fails if no full unique
-assignment exists and **never relaxes tolerances**. The output records matched
-slot, chosen gene, all three differences, candidate count, and seed. Genes are
-unique within each set; complete sets may repeat between draws. This matching
-algorithm is not claimed to sample uniformly over all feasible gene sets.
+| Column | Value |
+| --- | --- |
+| `priority_center` | section median of `P` |
+| `priority_scale` | `1.4826 * MAD(P)` if positive; otherwise population SD (`ddof=0`) if positive; otherwise 1 |
+| `priority_scale_method` | `MAD`, `SD`, or `constant`, identifying the chosen scale |
 
-Calibrate only after successful generation:
+The existing `priority_robust_z` column is calculated as
+`(P - priority_center) / priority_scale`. The positive-part product can contain
+many exact zeros, so MAD can be zero even for a nonconstant score. The default
+therefore may use the **SD fallback**, rather than MAD scaling; the retained
+column name does not guarantee a MAD-based score. Missing/excluded spatial rows
+have missing center/scale metadata, not an invented `constant` label. A default
+candidate requires all of:
 
-```powershell
-& 'D:\hgsoc_cuda_env\Scripts\python.exe' -B cadspot_null.py calibrate `
-  --expression INPUT/logcp10k_all.npz --genes INPUT/genes.tsv `
-  --expression-spots INPUT/spots_all.tsv.gz --matrix-orientation spots-by-genes `
-  --expression-scale log1p_CP10K --spot-key-cols sample_id barcode `
-  --target-genes gene_sets/target_available19.tsv `
-  --reference-genes gene_sets/reference_available20.tsv `
-  --intended-target-genes gene_sets/target_intended.tsv `
-  --intended-reference-genes gene_sets/reference_intended.tsv `
-  --matched-sets example_output/matched_sets.tsv --spot-table INPUT/spots_all.tsv.gz `
-  --technical log_nCount log_nFeature `
-  --composition Epithelial_malignant_proxy ECM_Stroma CAF Macrophage T_cell `
-  --scoring mean_gene_z --method score_residual_spearman `
-  --output example_output/fresh_null_summary.tsv `
-  --null-output example_output/fresh_null_rhos.tsv `
-  --score-output example_output/fresh_observed_scores.tsv
+- `spatial_status == "ok"`;
+- `a > 0` and `b > 0`;
+- `priority_robust_z >= 3`, adjustable with `--robust-z-cutoff`.
+
+There is **no** required `h > 0` filter for this method. Zero/negative neighborhood
+support does not by itself disqualify a positive-product candidate. This is a
+heuristic outlier rule, **not a Gaussian three-sigma rule**, calibrated spot-level
+significance or FDR control. No Gaussian distribution or tail probability is
+assumed by the cutoff, including when SD is used. It does not fix a candidate
+percentage or desired count. These metadata annotate the existing computation;
+they do not change numerical scores or candidate selection.
+
+`priority_rank` ranks every eligible spot within section, descending with minimum
+rank for ties, before applying the robust-z cutoff. The coordinate table records
+the selected `ranking_method`; CLI manifests record `arguments.ranking_method`
+even when the method is selected by default. Unknown API methods raise
+`ValueError`; unknown CLI methods fail argparse validation with exit code 2.
+
+## Six-Neighbor Annotation and Eligibility Fields
+
+Each spatial-valid spot has exactly six other Euclidean nearest neighbors in
+its own section. Distance ties are resolved deterministically by spot ID; the
+focal row is excluded even when positions coincide. Reference residual z values
+are averaged over these neighbors and those means standardized within the
+section's spatial-valid subset. This annotation is `h`, exported as
+`neighbor_reference_resid_z`. `local_support = a*h` is also exported. Neither
+term weights the default product.
+
+The masks are deliberately separate:
+
+| Exported mask | Meaning |
+| --- | --- |
+| `positive_product_eligible` | spatial-valid, `a > 0`, `b > 0` |
+| `positive_enrichment_eligible` | historical support mask: product eligibility and `h > 0` |
+| `ranking_eligible` | eligibility of the selected method |
+
+The support mask is **not** reused as the default product candidate mask.
+`ranking_eligible` is used for selected-method ranks and candidates.
+
+Missing-coordinate spots retain nonspatial residuals/products but have
+`excluded_missing_coordinates`, no spatial score/rank and candidate false.
+Sections with fewer than seven coordinate-valid spots have
+`excluded_insufficient_neighbors`. These existing spatial-validity rules apply
+to all methods so six-neighbor annotations are available; missing support is
+never silently converted to zero.
+
+## End-to-End Driver and Results
+
+Use [Analysis/end_to_end.py](../Analysis/end_to_end.py) for preparation and the
+two adjustment-layer coordinate outputs, associations, block bootstrap and
+matched-set audit. Raw input provisioning is separate: `prepare-primary` expects
+the public count H5 files and extracted spatial metadata at the layout its
+`--source-root` specifies. Their actual public URLs and checksums are documented
+in the input manifest linked above; the core does not download or guess inputs.
+
+For already prepared inputs, the following runs associations, both coordinate
+layers and spatial bootstrap without requesting matched-set calibration:
+
+```bash
+python -B Analysis/end_to_end.py --stage run --folder Primary --reps 1000 --widths 1500 3000 4500 --n-sets 0
 ```
 
-Generation and calibration verify matrix, axis-map, gene-list, and generated
-set provenance via the matching manifest. Early generation manifests without
-`spot_key_cols` are accepted only for the original hardcoded
-`[sample_id, barcode]` key; that inference is explicitly recorded. No generated
-manifest is rewritten by calibration.
+The integrated release includes the annotation table at
+`Provenance/ensembl113_exon_union_lengths.tsv`. Its public-GTF derivation is
+implemented by `Analysis/build_gene_lengths.py`. A legacy `--source-root` may
+also provide this table under `Source_Data/` when the release-local file is
+absent. Do not
+mistake the `--n-sets 0` command for a matched-null analysis. A full driver run
+can overwrite its corresponding Results files; archive completed runs first.
 
-Scoring takes the matrix values **as supplied**, with no implicit normalization:
-`mean_gene_z` averages gene-wise z-scores across all supplied keyed spots
-(population SD); `mean_gene_z_by_section` fits each gene's z within section;
-`mean_expression` averages supplied values directly. Constant genes fail
-z-scoring rather than silently becoming invented standardized values. Dense
-arrays are materialized only for the selected genes, not the entire NPZ.
+The authoritative primary output directory is [Primary/Results](../Primary/Results/).
+Expected driver outputs include:
 
-`score_gene_set` is used for both the observed and every random target set.
-The reference set stays fixed. The same `core.fit_pair`, covariates, section
-fixed effects, method, and spline options are used for observed and random
-statistics. Existing `target_score`/`reference_score` columns cannot replace
-these fresh scores. New columns are `fresh_target_score` and
-`fresh_reference_score`. An existing column with either fresh name is rejected
-to prevent ambiguity. No failed/null-NaN control is silently dropped.
+| Output | Content |
+| --- | --- |
+| `associations.tsv` | all association layers and sensitivity estimators |
+| `technical_coordinates.tsv.gz`, `composition_coordinates.tsv.gz` | separate coordinate rankings with selected-method metadata |
+| `candidate_counts.tsv` | section and adjustment-layer counts |
+| `*_baseline_comparison.tsv` | descriptive ranking agreements on common universes |
+| `bootstrap_*_ci.tsv`, `bootstrap_*_draws.tsv.gz`, `bootstrap_*_audit.tsv.gz` | intervals, all draws and sampling audit |
+| `blocks_*.tsv.gz` | section-specific block membership |
+| `matched_summary.tsv`, `matched_rhos.tsv`, `matched_assignments.tsv.gz` | matched-set calibration when requested |
+| `matching_metadata.tsv.gz`, `matching_universe.tsv` | matching inputs when requested |
+| `run_manifest.json` | driver settings, source table hash and runtime versions after successful completion |
 
-The default one-sided plus-one value is
-`(1 + count(null_rho >= fresh_observed_rho)) / (1 + n_controls)`.
-`--alternative two-sided` compares absolute rho magnitudes instead. This is
-**gene-set empirical calibration under the stated matching scheme, not a
-spatial p value**, and has Monte Carlo resolution limited by control count.
-It neither replaces block uncertainty nor tests candidate-location enrichment.
+Results may appear incrementally while the driver is running. A partial output
+directory does not establish successful completion or validate later stages.
+Do not substitute statistics or candidate counts from the previous revision.
 
-For archival audit only, the core CLI accepts `--null-rho-file TABLE` with a
-named `rho` column and optional `--null-output`. Its output is explicitly
-`external_archived_model_equivalence_unverified_not_fresh_reproduction`.
-That path does not generate controls or claim matching/model equivalence.
+## Spatial Bootstrap and Matched Nulls
 
-## Public Functions and Tests
+The core CLI exposes `--bootstrap-output`, explicit `--block-size`,
+`--bootstrap-reps`, seed and auxiliary draw/audit/block-map outputs. Blocks are
+non-overlapping squares with section-specific coordinate origins. Each draw
+resamples occupied blocks with replacement within each fixed section and refits
+the score models, numeric scaling and section effects. Requested partial-rank or
+spline sensitivities are also refitted, not applied to cached residuals.
+Intervals are conditional on the observed sections and chosen spatial scheme,
+not patient-population inference. Missing-coordinate exclusions and undefined
+draws remain explicit; an entire coordinate-missing section fails.
 
-`cadspot.py`: `read_table`, `validate_table`, `design`, `resid`, `fit_pair`,
-`correlation`, `associations`, `z_by_sample`, `positive_product`,
-`spatial_ranking`, `ranking_comparison`, `archived_candidate_comparison`,
-`make_spatial_blocks`, `sample_blocks`, `block_bootstrap`,
-`empirical_calibration`, `write_tsv`, `file_sha256`, `write_manifest`, `main`.
+`cadspot_null.py generate` requires explicit expression/spot axes, metadata and
+a gene universe. `calibrate` rebuilds observed and random scores with the same
+scoring/estimator choices. Use `--help` on either subcommand for all arguments.
+The analysis driver selects `mean_gene_z_by_section` to match primary scoring.
+Its strict calipers are 0.25 on `log1p(mean_expression)`, 0.05 on detection rate
+and 0.25 on log gene length. Target/reference and proxy genes are excluded;
+unique-gene matching fails if infeasible and does not relax tolerances.
 
-`cadspot_null.py`: `gene_list`, `ExpressionData.aligned`, `load_expression`,
-`audit_gene_sets`, `score_gene_set`, `generate_matched_sets`,
-`calibrate_gene_sets`, `main`. Function signatures/docstrings define the same
-contracts used by the CLIs; matching/calibration are also callable in Python.
+The one-sided plus-one value is `(1 + count(null >= observed)) / (1 + n_controls)`.
+This is a gene-set audit, not a spatial-dependence test or coordinate-level FDR.
+GC/probe-coverage matching is not implemented. Available gene membership and
+scoring must match the primary model; the driver checks the observed statistic
+against its main analysis rather than calibrating a different score.
 
-```powershell
-& 'D:\hgsoc_cuda_env\Scripts\python.exe' -B -m unittest discover -s tests -v
+## Migration and Optional Neighborhood Methods
+
+Earlier scripts that omitted `ranking_method` used the four-term heuristic.
+Replaying it now requires explicit selection:
+
+```python
+ranked = cadspot.spatial_ranking(table, target_residuals, reference_residuals,
+                                 ranking_method="legacy")
 ```
 
-Focused synthetic tests cover ID/numeric/missing validation; score-residual
-versus partial Spearman; tied spline knots; exact six-neighbor/self exclusion;
-missing coordinates and insufficient neighbors; section isolation and
-deterministic ties; negative-negative products and requested baselines; fair
-restricted top lists/rank correlation; archive separation; bootstrap refitting,
-fixed section block strata and seed repeatability; strict matching/exclusions
-and infeasible assignments; available-gene audits/no imputation; keyed sparse
-alignment; observed/random model equivalence for all three estimators; finite
-empirical controls; and sparse generation/calibration CLI integration.
-Temporary test artifacts are confined to this directory and removed afterward.
+| Method | Priority score | Eligibility |
+| --- | --- | --- |
+| `positive_product` (new default) | `max(a,0) * max(b,0)` | spatial-valid, positive `a`/`b` |
+| `legacy` | `(a + b + h + a*h) / 4` | spatial-valid, positive `a`/`b`/`h` |
+| `positive_support` | `max(a,0) * max(b,0) * max(h,0)` | spatial-valid, positive `a`/`b`/`h` |
+
+The optional methods preserve their prior numerical rules and support filter.
+Neither older counts nor archived score correlations are this follow-up's primary
+example. Saved derived fields are recomputed, with protected collisions renamed
+`archived__...`; saved eligibility never overrides the newly selected method.
+The protected archive list also includes `priority_center`, `priority_scale`
+and `priority_scale_method`, so old metadata cannot supply fresh scale values.
+
+The completed [ranking ablation summary](../Ranking_Ablation/summary.tsv) shows
+that relative performance depends on signal geometry: the legacy method ranks
+better in the compact setting, the simple product in the dispersed setting.
+Both select candidates in the no-program simulation. These experiments support
+retaining neighborhood weighting as an optional sensitivity, not a universally
+better default. They do not establish biological accuracy or FDR control.
+
+The signed baseline `a*b` remains exported; negative-negative pairs can score
+high and are not positive co-enrichment. The positive baseline remains exported
+as `baseline_positive_product`; it equals the new priority on spatial-valid
+rows by construction, not independent validation. `ranking_comparison` uses the
+same spatial-valid universe for both scores, with separately declared all-spot,
+positive-quadrant and support-positive restrictions. Top fractions use that
+common universe and ties use deterministic IDs. Agreement is descriptive.
+
+## Tests and Scope
+
+The tests cover default/explicit product equivalence; zero/negative `h`
+eligibility; legacy numerical regression; optional support filtering; inclusive
+cutoff and ranking rules; MAD/SD/constant scale metadata and their archival;
+spatial exclusions; API/CLI
+unknown-method rejection; method metadata; archive separation; and unchanged
+associations across ranking methods. Existing tests also cover partial/spline
+estimators, bootstrap refitting, null generation/calibration and sparse keyed I/O.
+Temporary test outputs stay inside Software and are removed afterward.
+
+Unit fixtures check implementation contracts, not superiority on simulations or
+real data. Independent-input preparation and its source-identity audit are
+documented in `External/README.md`. Successful execution and unit tests do not
+establish histopathologic or biological validation.

@@ -1,0 +1,22 @@
+Pathology annotation of patient samples. 	
+	
+Sample	Pathology
+OVCA NYU1	high grade serous carcinoma
+OVCA NYU2	ovarian adenocarcinoma, endometrioid with squamous and focal mucinous differentiation
+OVCA NYU3	ovarian adenocarcinoma, endometrioid
+UCEC NYU1	high grade serous carcinoma
+UCEC NYU2	endometrioid adenocarcinoma, endometrioid type, myometrial invasion, adenomyosis
+UCEC NYU3	endometrial adenocarcinoma, endometrioid with squamous differentiation
+BRCA NYU0	ductal carcinoma in situ, solid type, microinvasion, pseudoangiomatosis, proliferative fibrocystic changes and sclerosing adenosis with calcification
+BRCA NYU1	invasive ductal carcinoma with lobular features, poorly differentiated, rare foci of ductal carcinoma in situ, focal atypical local hyperplasia, fibrocystic changes with dense stromal fibrosis
+BRCA NYU2	invasive lobular carcinoma, pleomorphic and solid types with focal necrosis, apocrine and signet ring features, lobular carcinoma in situ classic type
+BRCA NYU3	focal lobular carcinoma in situ, classical, fibrocystic change with cystic apocrine metaplasia, fibroadenomatoid changes, pseudoangiomatous stromal hyperplasia
+PDAC NYU1	NA
+PDAC NYU2	NA
+PDAC NYU3	duodenal periampullary mucinous adenocarcinoma with focal signet ring invasive through duodenal wall, lymph node involvement
+COAD NYU1	colonic adenocarcinoma, moderately to poorly differentiated with micropapillary features and high score tumor budding, invades through muscularis propria, lymphovascular and perineural invasion
+LIHC NYU1	hepatocellular carcinoma moderately differentiated, chronic hepatitis C
+KIRC NYU1	clear cell renal cell carcinoma
+PRAD NYU1	adenocarcinoma, gleason score 3+4, grade group 2
+GIST NYU1	gastrointestinal stromal tumor, mixed spindle cell and epithelioid type
+GIST NYU2	NA

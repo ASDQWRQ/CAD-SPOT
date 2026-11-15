@@ -1,0 +1,19 @@
+{
+  "seed": 20261115,
+  "replicates_per_geometry": 50,
+  "geometries": [
+    "compact",
+    "dispersed",
+    "null"
+  ],
+  "n_sections": 2,
+  "grid": [
+    40,
+    45
+  ],
+  "signal_amplitude_target": 2.0,
+  "signal_amplitude_reference": 1.8,
+  "score_model": "Known linear architecture/depth/stroma plus injected shared positive program and noise",
+  "comparisons": "Paired seeds; all methods tested on every generated dataset",
+  "interpretation": "Controlled algorithm behavior only, not independent tissue validation or general FDR control"
+}

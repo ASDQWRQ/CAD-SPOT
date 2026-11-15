@@ -1,0 +1,37 @@
+geometry	comparison	metric	n_valid	mean_difference	median_difference	min_difference	max_difference	n_positive	n_negative
+compact	legacy-positive_product	average_precision	50	0.06098258998252008	0.05871596145616215	0.03806931157890636	0.08972846507163179	50	0
+compact	legacy-positive_product	top_5pct_precision	50	0.01855555555555556	0.01666666666666672	-0.005555555555555536	0.050000000000000044	48	1
+compact	legacy-positive_product	top_5pct_recall	50	0.00944752002847543	0.008498583569405138	-0.0027932960893854997	0.025495750708215303	48	1
+compact	legacy-positive_product	candidate_fraction	50	0.05919999999999999	0.05944444444444444	0.05277777777777778	0.06388888888888888	50	0
+compact	legacy-positive_product	candidate_precision	50	-0.03238262670630774	-0.033132830715912276	-0.06547619047619047	0.00436507936507935	2	48
+compact	legacy-positive_product	candidate_recall	50	0.5656125368724055	0.5696028344753556	0.509915014164306	0.6214689265536723	50	0
+compact	positive_support-positive_product	average_precision	50	0.055019658233507435	0.05274816314129077	0.035508371733596	0.08447264533798116	50	0
+compact	positive_support-positive_product	top_5pct_precision	50	0.018666666666666675	0.01666666666666672	0.0	0.050000000000000044	48	0
+compact	positive_support-positive_product	top_5pct_recall	50	0.009503544203151254	0.008498583569405138	0.0	0.025495750708215303	48	0
+compact	positive_support-positive_product	candidate_fraction	50	-0.004122222222222222	-0.004166666666666666	-0.008055555555555552	-0.0008333333333333318	0	50
+compact	positive_support-positive_product	candidate_precision	50	0.008258183324396016	0.007604672681008562	0.0	0.050724637681159424	34	0
+compact	positive_support-positive_product	candidate_recall	50	-0.03881899639887575	-0.04213516392472483	-0.07627118644067798	-0.005617977528089901	0	50
+dispersed	legacy-positive_product	average_precision	50	-0.246651154785435	-0.24852649686670514	-0.2922275420924778	-0.21908307602796762	0	50
+dispersed	legacy-positive_product	top_5pct_precision	50	-0.22177777777777777	-0.22777777777777775	-0.2666666666666667	-0.17222222222222217	0	50
+dispersed	legacy-positive_product	top_5pct_recall	50	-0.1128757881349142	-0.11516853932584264	-0.134453781512605	-0.08732394366197183	0	50
+dispersed	legacy-positive_product	candidate_fraction	50	0.0018166666666666665	0.002083333333333333	-0.005555555555555557	0.010000000000000002	36	13
+dispersed	legacy-positive_product	candidate_precision	50	-0.19294230875829257	-0.19059459459459455	-0.24832214765100669	-0.12954990215264195	0	50
+dispersed	legacy-positive_product	candidate_recall	50	-0.05835965935512436	-0.05774037660389933	-0.12429378531073443	0.02253521126760566	1	49
+dispersed	positive_support-positive_product	average_precision	50	-0.3233149920862337	-0.3258253289288031	-0.35949337938236725	-0.28341345259164674	0	50
+dispersed	positive_support-positive_product	top_5pct_precision	50	-0.27266666666666667	-0.27777777777777773	-0.35	-0.2055555555555555	0	50
+dispersed	positive_support-positive_product	top_5pct_recall	50	-0.1387760466715988	-0.14104624884616604	-0.17867435158501438	-0.10511363636363635	0	50
+dispersed	positive_support-positive_product	candidate_fraction	50	-0.01947222222222222	-0.01986111111111111	-0.025833333333333333	-0.013888888888888888	0	50
+dispersed	positive_support-positive_product	candidate_precision	50	-0.05247433929317607	-0.05310150375939854	-0.12521008403361344	0.007874015748031482	1	47
+dispersed	positive_support-positive_product	candidate_recall	50	-0.20708009045994671	-0.20857823928944616	-0.2612359550561798	-0.16193181818181815	0	50
+null	legacy-positive_product	average_precision	0					0	0
+null	legacy-positive_product	top_5pct_precision	0					0	0
+null	legacy-positive_product	top_5pct_recall	0					0	0
+null	legacy-positive_product	candidate_fraction	50	-0.014144444444444444	-0.014166666666666668	-0.02361111111111111	-0.007222222222222224	0	50
+null	legacy-positive_product	candidate_precision	0					0	0
+null	legacy-positive_product	candidate_recall	0					0	0
+null	positive_support-positive_product	average_precision	0					0	0
+null	positive_support-positive_product	top_5pct_precision	0					0	0
+null	positive_support-positive_product	top_5pct_recall	0					0	0
+null	positive_support-positive_product	candidate_fraction	50	-0.012944444444444446	-0.013333333333333332	-0.020277777777777777	-0.008055555555555555	0	50
+null	positive_support-positive_product	candidate_precision	0					0	0
+null	positive_support-positive_product	candidate_recall	0					0	0

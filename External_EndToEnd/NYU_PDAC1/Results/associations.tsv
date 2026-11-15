@@ -1,0 +1,15 @@
+scope	section	layer	method	spearman_rho	n_spots	status
+pooled	__pooled__	raw	score_residual_spearman	0.5283831866499958	1759	ok
+pooled	__pooled__	technical_adjusted	score_residual_spearman	0.3551624710257446	1759	ok
+pooled	__pooled__	technical_adjusted	partial_spearman	0.39308892678652657	1759	ok
+pooled	__pooled__	technical_adjusted	spline_score_residual_spearman	0.3387297929869823	1759	ok
+pooled	__pooled__	composition_adjusted	score_residual_spearman	0.3641038300962542	1759	ok
+pooled	__pooled__	composition_adjusted	partial_spearman	0.3878676408825157	1759	ok
+pooled	__pooled__	composition_adjusted	spline_score_residual_spearman	0.33939247903208475	1759	ok
+section	GSM6177618_NYU_PDAC1_Vis	raw	score_residual_spearman	0.5283831866499958	1759	ok
+section	GSM6177618_NYU_PDAC1_Vis	technical_adjusted	score_residual_spearman	0.3551624710257446	1759	ok
+section	GSM6177618_NYU_PDAC1_Vis	technical_adjusted	partial_spearman	0.39308892678652657	1759	ok
+section	GSM6177618_NYU_PDAC1_Vis	technical_adjusted	spline_score_residual_spearman	0.3387297929869823	1759	ok
+section	GSM6177618_NYU_PDAC1_Vis	composition_adjusted	score_residual_spearman	0.3641038300962542	1759	ok
+section	GSM6177618_NYU_PDAC1_Vis	composition_adjusted	partial_spearman	0.3878676408825157	1759	ok
+section	GSM6177618_NYU_PDAC1_Vis	composition_adjusted	spline_score_residual_spearman	0.33939247903208475	1759	ok
