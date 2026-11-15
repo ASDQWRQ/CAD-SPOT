@@ -191,7 +191,7 @@ def primary_figures():
             overlaps.append(len(first&other)/k)
         a[5].plot(np.array(fractions)*100,overlaps,'o-',color=color,label=label)
     a[5].set(xlabel='Top-ranked fraction (%)',ylabel='Overlap with product',ylim=(0,1));a[5].legend(loc='lower right')
-    save(fig,a,'Figure4_ranking_ablation')
+    save(fig,a,'FigureS1_neighborhood_ablation')
 
 
 def external_figure():

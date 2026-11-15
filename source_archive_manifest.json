@@ -1,5 +1,5 @@
 {
-  "version": "2.1.0",
+  "version": "2.1.1",
   "files": [
     {
       "path": "Analysis/build_gene_lengths.py",
@@ -8,8 +8,8 @@
     },
     {
       "path": "Analysis/build_tables.py",
-      "bytes": 4534,
-      "sha256": "1093d1bdd9a82eae90680d266be4b378b53ad32562201cd1494a7d94988aa22a"
+      "bytes": 5450,
+      "sha256": "2903adf7ce91c7bd871ac5769bbeddbb096f992d43c2c7d0b10866d84d7b6c61"
     },
     {
       "path": "Analysis/common_gene_sensitivity.py",
@@ -244,12 +244,12 @@
     {
       "path": "Analysis/make_comparator_figure.py",
       "bytes": 3251,
-      "sha256": "f22fdcca5b7ee83ed4c8f31cb257fc7ab8d273c46eb1cca528037d0ae8e5a284"
+      "sha256": "8dd6b823ea348a5a781e9b085d955514fc9b671bfe3db974cd7e46f1174326da"
     },
     {
       "path": "Analysis/make_figures.py",
-      "bytes": 13183,
-      "sha256": "dd114491fee19fb52c80ce0259c5866fc075f0e3acc931de0d715e5386f22ac6"
+      "bytes": 13189,
+      "sha256": "ee92662b2e9d56c4d87d9dd3b18ae4377c1245189c04f71f976900783c71e46c"
     },
     {
       "path": "Analysis/ranking_ablation.py",
@@ -258,8 +258,8 @@
     },
     {
       "path": "Analysis/README.md",
-      "bytes": 5757,
-      "sha256": "ca59519bc56859e640d7e7d2998fd9d1d35fc608a0f52ef36627d37ded2c5b3b"
+      "bytes": 6323,
+      "sha256": "01ed2088c7eaf5894fdc418f8593849205e7342446cdab18bb6f5ba151538536"
     },
     {
       "path": "Analysis/test_end_to_end.py",
@@ -948,18 +948,18 @@
     },
     {
       "path": "README.md",
-      "bytes": 3851,
-      "sha256": "85b202fed0af652b57f3966e266c74b027ab609cd33ca78185b8a8c5e9d2afe8"
+      "bytes": 4939,
+      "sha256": "4d8798b22e0108d994bcdf402dd47ef2ee016d13c1b69f867a9664ae47658f03"
     },
     {
       "path": "requirements.txt",
-      "bytes": 124,
-      "sha256": "f3fb8b797a7149bd2268227ba242128a14006332dc4c7440cd29b1446cf9231c"
+      "bytes": 136,
+      "sha256": "05f8dd34b2de86579664858949a2f5bf352bf8ba18e3bfdaa89d5c153c811dde"
     },
     {
       "path": "Software/cadspot.py",
-      "bytes": 33071,
-      "sha256": "5c65fdcabf3ba0fb1f3d74e7447934cf7550d7385c8c2abab3d416cac0fce4f4"
+      "bytes": 33292,
+      "sha256": "09af54a4fea516b9b2cf623d1f38e79b7a4b10493d9f25bb3d576f2e707e2eb4"
     },
     {
       "path": "Software/cadspot_null.py",
@@ -993,8 +993,8 @@
     },
     {
       "path": "Software/README.md",
-      "bytes": 17481,
-      "sha256": "7a92c543066f9b2b242a378bb7481566ca79ed40b02c486416a81405779893cb"
+      "bytes": 17919,
+      "sha256": "e7c624fa6b6bf079cd9039d75bd1365acbf8671a909602d20845a1af1bed9e8d"
     },
     {
       "path": "Software/requirements.txt",
@@ -1009,12 +1009,152 @@
     {
       "path": "Software/tests/test_ranking_methods.py",
       "bytes": 13697,
-      "sha256": "1d8ca787cd98fc605e531e4999814270064426f36f3f2b897c925b6d849bcd51"
+      "sha256": "f0b9244318aac23bbeb84452f02eed761a9c4e927fe0a4d4dea6ddcbc3bed4f0"
+    },
+    {
+      "path": "Utility_Benchmark/benchmark.py",
+      "bytes": 14908,
+      "sha256": "aefdca824f90cb613860369ee8ace2bd8b5daa838355a0389b07f6392bd8bb1b"
+    },
+    {
+      "path": "Utility_Benchmark/Inputs/external.tsv.gz",
+      "bytes": 240063,
+      "sha256": "82184c0f72c542f78c6dbed07614026c7042ecee7dacabb333450be2ec1fc08d"
+    },
+    {
+      "path": "Utility_Benchmark/Inputs/primary.tsv.gz",
+      "bytes": 2313083,
+      "sha256": "7d748abae864928f96a861ed475256049c8506d14453a9fa6ad500ce90bdd900"
+    },
+    {
+      "path": "Utility_Benchmark/Inputs/primary_10000.tsv.gz",
+      "bytes": 974326,
+      "sha256": "dd0b2333af4657e251dbe8cc9f79d81aff598e617e292d5841c894e23ae5e35c"
+    },
+    {
+      "path": "Utility_Benchmark/Inputs/sources.json",
+      "bytes": 433,
+      "sha256": "04565a97a4f98b3bcebe75f1cef988f6389c7bbccab9bcbc71bce23f08f2cbd8"
+    },
+    {
+      "path": "Utility_Benchmark/make_report.py",
+      "bytes": 12035,
+      "sha256": "b0044e8b4f9012c390844ccbc97ea93ec69a2f3fa557d006f9c457b694a62a3a"
+    },
+    {
+      "path": "Utility_Benchmark/PROTOCOL.md",
+      "bytes": 4593,
+      "sha256": "0fc64f56f25167f79eab60028b01c8bf394e639cf66d86f73fddfb6d567a21cb"
+    },
+    {
+      "path": "Utility_Benchmark/README.md",
+      "bytes": 3531,
+      "sha256": "68634106a1611ab5159339b7c4e91ae32796a4e3fcbc4ee7e2f0334db436b643"
+    },
+    {
+      "path": "Utility_Benchmark/Results/accuracy_summary.tsv",
+      "bytes": 12995,
+      "sha256": "fe608fa8d6bace0acc6e808726941dd4966d5d9b6ca1db5093e0ed8d4748e498"
+    },
+    {
+      "path": "Utility_Benchmark/Results/equivalence.json",
+      "bytes": 554,
+      "sha256": "975bf9f2dfd53b73be1093c29d9ea1e83d788a05aebabe23fa1b2f761177216c"
+    },
+    {
+      "path": "Utility_Benchmark/Results/Figure4_task_utility.pdf",
+      "bytes": 54086,
+      "sha256": "849c95f94dbddddfce7b2d48d88efb2b81bed0fae37f1db08e46207dec3915d2"
+    },
+    {
+      "path": "Utility_Benchmark/Results/Figure4_task_utility.png",
+      "bytes": 343659,
+      "sha256": "3d8dca9a49cd2b18572e2675db4ff5caad3606a72ff97f33116d2d84151a96f4"
+    },
+    {
+      "path": "Utility_Benchmark/Results/injection_replicates.tsv",
+      "bytes": 107540,
+      "sha256": "b232aa1e3bd4dcd555acda01d463573bebf70fe66c5bf16adccd1bdff69d723b"
+    },
+    {
+      "path": "Utility_Benchmark/Results/invalid_launcher_memory_round/performance_environment.json",
+      "bytes": 513,
+      "sha256": "ef829375df0327d7ab3fe0839e1a0e048615f92dedf9e4668a59d8b33bb5f028"
+    },
+    {
+      "path": "Utility_Benchmark/Results/invalid_launcher_memory_round/performance_replicates.tsv",
+      "bytes": 3798,
+      "sha256": "5602944dacb0f685d2ac8cbbdc233e435d39b537eca7d9aafed7ba424123e20d"
+    },
+    {
+      "path": "Utility_Benchmark/Results/invalid_launcher_memory_round/performance_summary.tsv",
+      "bytes": 1706,
+      "sha256": "96594a2205303ec774c65bf027ad9f486247ec1f2ff9867b4cd86d7771e20da7"
+    },
+    {
+      "path": "Utility_Benchmark/Results/paired_accuracy_differences.tsv",
+      "bytes": 7253,
+      "sha256": "0d4a2963bfa940047d80e83685d76c582db00e69d2583f9b8c71cc019c997063"
+    },
+    {
+      "path": "Utility_Benchmark/Results/performance_environment.json",
+      "bytes": 654,
+      "sha256": "6d145b90f3a87f26e176c325ab5237ca2b9e3b9d5ed636d63589ea52fd42417a"
+    },
+    {
+      "path": "Utility_Benchmark/Results/performance_replicates.tsv",
+      "bytes": 3872,
+      "sha256": "1fd78853e4f2930f4b900ac333edbd2ceeedd1e2a6dbb98255aedb5407d693a1"
+    },
+    {
+      "path": "Utility_Benchmark/Results/performance_summary.tsv",
+      "bytes": 1757,
+      "sha256": "16d9fe736b4ec86972b58e62c62b3171d0b9161e8706992f6ebc37ad5a54e701"
+    },
+    {
+      "path": "Utility_Benchmark/Results/simulation_replicates.tsv",
+      "bytes": 211598,
+      "sha256": "4d7dc57471f3d4555fe8d3f86f592d20f2d00e10764606eb9f6251d535de4489"
+    },
+    {
+      "path": "Utility_Benchmark/Results/Utility_Tables_S13_S17.xlsx",
+      "bytes": 151939,
+      "sha256": "9d4aca85b900654a7046f6af758319442c0663faa311a5b74c330309cf8d30aa"
+    },
+    {
+      "path": "Utility_Benchmark/Results/\u5b9e\u7528\u589e\u76ca\u5bf9\u7167\u62a5\u544a.md",
+      "bytes": 4135,
+      "sha256": "0f116463fb9b39b83cc13daabfcf57bc3481d9537ef362f69e4b783f7e671f4b"
+    },
+    {
+      "path": "Utility_Benchmark/Software/cadspot.py",
+      "bytes": 33292,
+      "sha256": "09af54a4fea516b9b2cf623d1f38e79b7a4b10493d9f25bb3d576f2e707e2eb4"
+    },
+    {
+      "path": "Utility_Benchmark/Software/LICENSE.txt",
+      "bytes": 1089,
+      "sha256": "3ef8e2476577d25a86ad4b77a56196eb9cfb69c3ada51c73b1d43209e018ed5f"
+    },
+    {
+      "path": "Utility_Benchmark/Software_baseline/cadspot.py",
+      "bytes": 33071,
+      "sha256": "5c65fdcabf3ba0fb1f3d74e7447934cf7550d7385c8c2abab3d416cac0fce4f4"
+    },
+    {
+      "path": "Utility_Benchmark/Software_baseline/LICENSE.txt",
+      "bytes": 1089,
+      "sha256": "3ef8e2476577d25a86ad4b77a56196eb9cfb69c3ada51c73b1d43209e018ed5f"
+    },
+    {
+      "path": "Utility_Benchmark/standalone_reference.py",
+      "bytes": 1697,
+      "sha256": "a143996fc2414daa2a4873cc9db6f7797e787e160113bb93793a65e9dd6921c8"
     },
     {
       "path": "VERSION",
       "bytes": 7,
-      "sha256": "e99cb4f50aeb36865f25a2859350bfcad129424a39303d8e0b76dda6eedbfb61"
+      "sha256": "f9526c4a14038a3be9cc4c4aab6502bb785311e05a08117768244fe5c9183816"
     }
   ]
 }

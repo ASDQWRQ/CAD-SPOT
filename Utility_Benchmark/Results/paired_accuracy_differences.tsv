@@ -1,0 +1,56 @@
+experiment	scenario	comparison	n_valid	mean_difference	ci_low	ci_high	wins	losses
+injection	external_compact	cadspot_product-minus-raw_product	32	-0.0107470641567531	-0.028697620520953173	0.007448876313234073	13	19
+injection	external_compact	cadspot_product-minus-technical_product	32	0.0033687880495248757	-0.0018074576274114357	0.00795289604712366	22	10
+injection	external_compact	cadspot_product-minus-adjusted_target	32	-0.004387195964021415	-0.013943015984321575	0.005158660957816093	13	19
+injection	external_compact	cadspot_product-minus-adjusted_minimum	32	-0.012904776640090609	-0.01617426326195573	-0.00938351584842588	3	29
+injection	external_compact	cadspot_product-minus-spline_product	32	-0.020026179916775744	-0.0294018066643112	-0.010775174866354176	10	22
+injection	external_dispersed	cadspot_product-minus-raw_product	32	0.02715761653107213	0.020842116293231797	0.03371205755598767	29	3
+injection	external_dispersed	cadspot_product-minus-technical_product	32	0.013870397615554822	0.01210690722783347	0.015659236345510696	32	0
+injection	external_dispersed	cadspot_product-minus-adjusted_target	32	-0.005284938442350961	-0.012143679612222387	0.0012517038796045416	15	17
+injection	external_dispersed	cadspot_product-minus-adjusted_minimum	32	-0.004131385633790747	-0.007082938741001445	-0.00119411062862163	10	22
+injection	external_dispersed	cadspot_product-minus-spline_product	32	-0.04407125261884914	-0.048458575454921854	-0.039492482713142985	0	32
+injection	primary_compact	cadspot_product-minus-raw_product	32	0.05724570144918221	0.029159317064105975	0.08717702582386808	23	9
+injection	primary_compact	cadspot_product-minus-technical_product	32	0.013941918417173939	0.0034946273519847687	0.024323232160876215	22	10
+injection	primary_compact	cadspot_product-minus-adjusted_target	32	0.05905238663663802	0.049015868095110805	0.06948691059162286	32	0
+injection	primary_compact	cadspot_product-minus-adjusted_minimum	32	-0.009240038667793733	-0.013018950817699658	-0.005124807192166146	4	28
+injection	primary_compact	cadspot_product-minus-spline_product	32	0.0037584315441007475	-0.002308298540040106	0.010755596663996649	13	19
+injection	primary_dispersed	cadspot_product-minus-raw_product	32	0.08186105575323148	0.07569787258844897	0.0882632212190876	32	0
+injection	primary_dispersed	cadspot_product-minus-technical_product	32	0.026742011073335743	0.023415512710519	0.030106615494325775	32	0
+injection	primary_dispersed	cadspot_product-minus-adjusted_target	32	0.06719861389318849	0.05941544899402652	0.07500015180780127	32	0
+injection	primary_dispersed	cadspot_product-minus-adjusted_minimum	32	-0.009085031965314875	-0.012518883226378672	-0.005581427854256481	4	28
+injection	primary_dispersed	cadspot_product-minus-spline_product	32	-0.013417057466334452	-0.015815145094459086	-0.010874075845108152	1	31
+simulation	architecture_coupled	cadspot_product-minus-raw_product	40	-0.5232647011391873	-0.5351862099590045	-0.511274605900357	0	40
+simulation	architecture_coupled	cadspot_product-minus-technical_product	40	-0.3207461104828804	-0.33337655622553886	-0.3080707206449618	0	40
+simulation	architecture_coupled	cadspot_product-minus-adjusted_target	40	0.06763379959837681	0.05797236473378031	0.07685870421678997	38	2
+simulation	architecture_coupled	cadspot_product-minus-adjusted_minimum	40	-0.0014199683530186815	-0.004835996719034359	0.0021919738061960004	17	23
+simulation	architecture_coupled	cadspot_product-minus-spline_product	40	0.11560925881384894	0.1091964436522226	0.12226023508973562	40	0
+simulation	linear_compact	cadspot_product-minus-raw_product	40	0.34282943556153905	0.31668334032601214	0.36758608701500906	40	0
+simulation	linear_compact	cadspot_product-minus-technical_product	40	0.2636166178407673	0.23586235080034024	0.2893557201063695	40	0
+simulation	linear_compact	cadspot_product-minus-adjusted_target	40	0.10417894675706903	0.0908934984004512	0.11756272257925839	40	0
+simulation	linear_compact	cadspot_product-minus-adjusted_minimum	40	0.011406350617673672	0.007640786447630367	0.015410927724096114	31	9
+simulation	linear_compact	cadspot_product-minus-spline_product	40	0.05374337078404364	0.044820161103668044	0.0627253282291656	39	1
+simulation	linear_dispersed	cadspot_product-minus-raw_product	40	0.29463389878814306	0.28016001727439893	0.3092165450673234	40	0
+simulation	linear_dispersed	cadspot_product-minus-technical_product	40	0.25069521710789544	0.2386953501421304	0.2632013743884312	40	0
+simulation	linear_dispersed	cadspot_product-minus-adjusted_target	40	0.09562797281476779	0.08424565879712531	0.10735293875278147	40	0
+simulation	linear_dispersed	cadspot_product-minus-adjusted_minimum	40	0.014278324443851475	0.01047916656082522	0.018113374264020005	34	6
+simulation	linear_dispersed	cadspot_product-minus-spline_product	40	-0.0019271855264626687	-0.004662549112353616	0.000688441573301186	21	19
+simulation	no_nuisance	cadspot_product-minus-raw_product	40	-0.022471925061746417	-0.029816760533377847	-0.016054139970377926	1	39
+simulation	no_nuisance	cadspot_product-minus-technical_product	40	-0.01915379843918244	-0.025713827758452625	-0.013437602535889995	2	38
+simulation	no_nuisance	cadspot_product-minus-adjusted_target	40	0.15024840962986366	0.1337317698735379	0.16693007888890302	40	0
+simulation	no_nuisance	cadspot_product-minus-adjusted_minimum	40	0.0202317307615243	0.016132578288580012	0.024434517556572197	39	1
+simulation	no_nuisance	cadspot_product-minus-spline_product	40	0.0718607119316247	0.06321932541126642	0.08083557744756432	40	0
+simulation	no_program	cadspot_product-minus-raw_product	0				0	0
+simulation	no_program	cadspot_product-minus-technical_product	0				0	0
+simulation	no_program	cadspot_product-minus-adjusted_target	0				0	0
+simulation	no_program	cadspot_product-minus-adjusted_minimum	0				0	0
+simulation	no_program	cadspot_product-minus-spline_product	0				0	0
+simulation	noisy_proxy	cadspot_product-minus-raw_product	40	0.13091990886982618	0.11581721404171502	0.14569414956631457	40	0
+simulation	noisy_proxy	cadspot_product-minus-technical_product	40	0.051707091149054495	0.03943592769335865	0.06362693003659639	36	4
+simulation	noisy_proxy	cadspot_product-minus-adjusted_target	40	0.019116599460453392	0.01166719674897691	0.02668868079946634	34	6
+simulation	noisy_proxy	cadspot_product-minus-adjusted_minimum	40	-0.006499713978567344	-0.009645553052475542	-0.003230447746284314	10	30
+simulation	noisy_proxy	cadspot_product-minus-spline_product	40	0.0030933975038159823	-0.0011391241878236816	0.007818187837725577	23	17
+simulation	nonlinear_compact	cadspot_product-minus-raw_product	40	0.004544915972820217	-0.004240671044010956	0.013299557262353559	24	16
+simulation	nonlinear_compact	cadspot_product-minus-technical_product	40	0.0006641839308358644	-0.005091885827072546	0.006691568010468825	19	21
+simulation	nonlinear_compact	cadspot_product-minus-adjusted_target	40	-0.010400260408955152	-0.01281458505996314	-0.00798316723469281	4	36
+simulation	nonlinear_compact	cadspot_product-minus-adjusted_minimum	40	-0.01388585169868932	-0.015987735699015865	-0.011694852910463634	1	39
+simulation	nonlinear_compact	cadspot_product-minus-spline_product	40	-0.1079434254222035	-0.11531287064477602	-0.10034791616655903	0	40

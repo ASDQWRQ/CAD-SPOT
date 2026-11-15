@@ -16,7 +16,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.neighbors import NearestNeighbors
 from sklearn.preprocessing import SplineTransformer, StandardScaler
 
-__version__ = "2.1.0"
+__version__ = "2.1.1"
 
 METHODS = ("score_residual_spearman", "partial_spearman", "spline_score_residual_spearman")
 RANKING_METHODS = ("positive_product", "legacy", "positive_support")
@@ -210,6 +210,8 @@ def spatial_ranking(df, target_resid, reference_resid, sample_col="sample_id", i
         dist, near = nn.kneighbors(xy)
         rz = sub["reference_resid_z"].to_numpy()
         ids = sub[id_col].astype(str).to_numpy()
+        local_means = np.empty(len(sub), dtype=float)
+        local_ids = []
         for i, row_idx in enumerate(idx):
             # Include all ties at the seventh distance, then order by ID.
             candidates = nn.radius_neighbors(xy[i:i+1], radius=np.nextafter(dist[i, -1], np.inf),
@@ -220,9 +222,12 @@ def spatial_ranking(df, target_resid, reference_resid, sample_col="sample_id", i
             chosen = candidates[order[:6]]
             if len(chosen) != 6:
                 raise RuntimeError("Internal error: failed exact six-neighbor construction")
-            out.loc[row_idx, "neighbor_reference_mean_z"] = float(rz[chosen].mean())
-            out.loc[row_idx, "neighbor_ids"] = json.dumps(ids[chosen].tolist())
-            out.loc[row_idx, "neighbor_count"] = 6
+            local_means[i] = float(rz[chosen].mean())
+            local_ids.append(json.dumps(ids[chosen].tolist()))
+        # Keep neighbor arithmetic/ties unchanged; avoid three pandas writes per spot.
+        out.loc[idx, "neighbor_reference_mean_z"] = local_means
+        out.loc[idx, "neighbor_ids"] = local_ids
+        out.loc[idx, "neighbor_count"] = 6
         mean = out.loc[idx, "neighbor_reference_mean_z"]
         sd = mean.std(ddof=0)
         out.loc[idx, "neighbor_reference_resid_z"] = (mean - mean.mean()) / (sd if sd > 0 else 1.0)

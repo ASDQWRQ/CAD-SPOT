@@ -1,4 +1,4 @@
-# Reproduce the integrated CAD-SPOT 2.1.0 example
+# Reproduce the integrated CAD-SPOT 2.1.1 example
 
 Run commands from the repository root. Python 3.10+ is required; the recorded
 analyses used Python 3.12.14. Install `requirements.txt`, or only
@@ -64,6 +64,11 @@ python -B Analysis/ranking_ablation.py
 python -B Analysis/make_figures.py
 python -B Comparators/recompute_overlap.py
 python -B Analysis/make_comparator_figure.py
+python -B Utility_Benchmark/benchmark.py prepare --data-root .
+python -B Utility_Benchmark/benchmark.py accuracy
+python -B Utility_Benchmark/benchmark.py equivalence
+python -B Utility_Benchmark/benchmark.py performance
+python -B Utility_Benchmark/make_report.py
 ```
 
 Simulations use 50 paired seeds in each of three score-level geometries; no
@@ -100,3 +105,8 @@ The main examples are 23,392/650 primary spots/candidates and 1,759/48 external
 spots/candidates. These counts are outputs, not fixed selection targets. The
 repository preserves earlier tagged analyses separately; do not substitute their
 frozen-score counts or statistics into this release.
+
+The primary inference logs retain version 2.1.0. Release 2.1.1 only buffers
+neighbor-output writes; complete outputs are exactly equal. Task-aligned
+benchmarks improve over raw/technical ranking only under some conditions and
+do not establish superiority over equivalent OLS or other spatial platforms.

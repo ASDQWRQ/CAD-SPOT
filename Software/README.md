@@ -1,4 +1,4 @@
-# CAD-SPOT 2.1.0
+# CAD-SPOT 2.1.1
 
 CAD-SPOT takes user-supplied target/reference scores and covariates, reports
 association layers, and exports an interpretable coordinate ranking. This local
@@ -17,10 +17,17 @@ The designated Python 3.12 runtime passed all 28 unit/integration tests. Core
 changes are confined to ranking dispatch, eligibility, method metadata handling
 and CLI choices/defaults, plus explicit center/scale annotations. Raw associations,
 residual estimators, bootstrap and matched-null code are unchanged. The local
-version is `2.1.0`, exported as `cadspot.__version__` and the manifest's
+version is `2.1.1`, exported as `cadspot.__version__` and the manifest's
 `cadspot_version`. Identify the build by this version, source hash and selected
 ranking method. Source hashes are recorded in the release manifest; the exact
-release is tagged `v2.1.0` in the public repository.
+release is tagged `v2.1.1` in the public repository.
+
+Version 2.1.1 buffers six-neighbor output writes per section instead of assigning
+pandas fields per spot. Arithmetic, tie handling and candidate rules are
+unchanged. Full outputs are exactly equal to 2.1.0 on both real score tables and
+edge-case fixtures. Utility_Benchmark contains all prespecified accuracy/timing
+comparisons, including cases favoring baselines; it is not a universal accuracy
+or speed claim over other spatial tools.
 
 Run the examples below from the **package root**, one level above Software:
 

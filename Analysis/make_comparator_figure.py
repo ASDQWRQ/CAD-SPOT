@@ -48,7 +48,7 @@ def main():
         ax.set_yticks(range(len(samples)),[f'p{i}' for i in range(1,6)])
         ax.set_xticks([0,2,4,6,9],[1,3,5,7,10]);ax.set_xlabel('Factor / topic')
     fig.colorbar(im,ax=list(axes[3:]),fraction=.022,pad=.03,label='log2 overlap enrichment')
-    save(fig,axes,'FigureS1_contextual_comparisons')
+    save(fig,axes,'FigureS2_contextual_comparisons')
 
 
 if __name__=='__main__':main()

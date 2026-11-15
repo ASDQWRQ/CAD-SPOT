@@ -1,4 +1,4 @@
-# CAD-SPOT 2.1.0
+# CAD-SPOT 2.1.1
 
 Composition-Aware Decomposition for Spatial Prioritization of Transcriptomic
 coordinates: a table-first workflow connecting explicit score provenance,
@@ -53,9 +53,26 @@ preserved STAMP/POPARI/SpaHDmap fits. They are not a superiority benchmark and
 were not refitted on the expanded primary universe; see
 [Analysis/comparators/README.md](Analysis/comparators/README.md).
 
+## Task-aligned utility and implementation optimization
+
+`Utility_Benchmark/` contains a prespecified 7-scenario, 40-seed simulation
+benchmark, 32-seed injections per real-background/geometry combination, a standard
+OLS reference, all negative results and randomized subprocess measurements.
+Composition-aware ranking improves conditional recovery under linear nuisance,
+but is not universally best: nonlinear and architecture-coupled cases expose
+limits, and an adjusted-minimum baseline can outperform the product. The standard
+OLS product reproduces the default; this is not a new estimator.
+
+Version 2.1.1 only buffers neighbor-output writes. It produces exactly the same
+complete outputs as 2.1.0 on both real tables; primary inference records retain
+their actual 2.1.0 version. On the recorded machine, median 23,392-spot ranking
+time fell from 14.46 to 6.03 seconds with approximately unchanged peak RSS.
+This is a within-software speed improvement, not superiority over minimal scripts
+or other spatial platforms. See `Utility_Benchmark/PROTOCOL.md` and README.
+
 ## Version and historical files
 
-The manuscript analysis release is tagged `v2.1.0`. Older tagged versions and
+The manuscript software release is tagged `v2.1.1`. Older tagged versions and
 legacy root examples/Source_Data files are retained for history, not the active
 public-matrix primary example. Follow the explicit `Software/` and `Analysis/`
 commands above rather than mixing old frozen-score outputs into this release.

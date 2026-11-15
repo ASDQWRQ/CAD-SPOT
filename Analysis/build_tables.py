@@ -45,6 +45,11 @@ def main():
     sheets.append(('S10_Common_Gene_Check',read(ROOT/'External_EndToEnd/NYU_PDAC1/Results/common_gene_sensitivity_associations.tsv')))
     sheets.append(('S11_Model_Scope',read(ROOT/'Comparators/summary/primary_model_scope_audit.tsv')))
     sheets.append(('S12_Model_Enrichment',read(ROOT/'Comparators/current_summary/candidate_factor_enrichment.tsv')))
+    utility=ROOT/'Utility_Benchmark/Results'
+    for name,filename in [('S13_Utility_Simulation','simulation_replicates.tsv'),('S14_Real_Injection','injection_replicates.tsv'),
+        ('S15_Paired_AP_Differences','paired_accuracy_differences.tsv'),('S16_Performance','performance_replicates.tsv')]:
+        sheets.append((name,read(utility/filename)))
+    sheets.append(('S17_Output_Equivalence',pd.DataFrame(json.loads((utility/'equivalence.json').read_text())['real_tables'])))
     book=Workbook();contents=book.active;contents.title='Contents'
     contents.append(['Sheet','Rows','Description'])
     notes=[
@@ -59,7 +64,12 @@ def main():
         'All method-minus-product differences; no selected seeds',
         'Post hoc external 19/20-gene coverage sensitivity; not replacement primary',
         'New primary versus old model-input and valid joint coverage',
-        'Updated labels on reused trained models; contextual overlap, not accuracy']
+        'Updated labels on reused trained models; contextual overlap, not accuracy',
+        'All 40 paired replicates per prespecified utility scenario, including null/negative cases',
+        'All 32 paired injections per background/geometry; not biological ground truth',
+        'AP differences across replicates, not patient-population inference',
+        'Five randomized subprocess repeats; final corrected process-tree RSS round only',
+        'Exact old/new complete output; independent OLS-product agreement']
     for (name,frame),note in zip(sheets,notes):
         contents.append([name,len(frame),note]);ws=book.create_sheet(name)
         ws.append(list(frame.columns))
