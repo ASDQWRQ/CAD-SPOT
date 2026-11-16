@@ -1,0 +1,625 @@
+cohort	program	sample_id	budget	record	model	n_spots	n_spatial_valid	selected	pooled_rho
+ovarian	stress	GSM6506110_SP1	10	model_selection	raw	2937	2937	10	0.3509081800311935
+ovarian	stress	GSM6506110_SP1	10	model_selection	technical	2937	2937	10	0.0904689452436446
+ovarian	stress	GSM6506110_SP1	10	model_selection	composition	2937	2937	10	0.0815826612845857
+ovarian	stress	GSM6506110_SP1	10	model_selection	spline	2937	2937	10	0.077717246052136
+ovarian	stress	GSM6506110_SP1	10	model_agreement	all_three	2937	2937	9	
+ovarian	stress	GSM6506110_SP1	10	model_agreement	some_models	2937	2937	2	
+ovarian	stress	GSM6506110_SP1	10	model_agreement	not_selected	2937	2937	2926	
+ovarian	stress	GSM6506110_SP1	10	model_agreement	excluded	2937	2937	0	
+ovarian	stress	GSM6506111_SP2	10	model_selection	raw	1934	1934	10	0.3509081800311935
+ovarian	stress	GSM6506111_SP2	10	model_selection	technical	1934	1934	10	0.0904689452436446
+ovarian	stress	GSM6506111_SP2	10	model_selection	composition	1934	1934	10	0.0815826612845857
+ovarian	stress	GSM6506111_SP2	10	model_selection	spline	1934	1934	10	0.077717246052136
+ovarian	stress	GSM6506111_SP2	10	model_agreement	all_three	1934	1934	9	
+ovarian	stress	GSM6506111_SP2	10	model_agreement	some_models	1934	1934	3	
+ovarian	stress	GSM6506111_SP2	10	model_agreement	not_selected	1934	1934	1922	
+ovarian	stress	GSM6506111_SP2	10	model_agreement	excluded	1934	1934	0	
+ovarian	stress	GSM6506112_SP3	10	model_selection	raw	1504	1504	10	0.3509081800311935
+ovarian	stress	GSM6506112_SP3	10	model_selection	technical	1504	1504	10	0.0904689452436446
+ovarian	stress	GSM6506112_SP3	10	model_selection	composition	1504	1504	10	0.0815826612845857
+ovarian	stress	GSM6506112_SP3	10	model_selection	spline	1504	1504	10	0.077717246052136
+ovarian	stress	GSM6506112_SP3	10	model_agreement	all_three	1504	1504	8	
+ovarian	stress	GSM6506112_SP3	10	model_agreement	some_models	1504	1504	4	
+ovarian	stress	GSM6506112_SP3	10	model_agreement	not_selected	1504	1504	1492	
+ovarian	stress	GSM6506112_SP3	10	model_agreement	excluded	1504	1504	0	
+ovarian	stress	GSM6506113_SP4	10	model_selection	raw	3004	3004	10	0.3509081800311935
+ovarian	stress	GSM6506113_SP4	10	model_selection	technical	3004	3004	10	0.0904689452436446
+ovarian	stress	GSM6506113_SP4	10	model_selection	composition	3004	3004	10	0.0815826612845857
+ovarian	stress	GSM6506113_SP4	10	model_selection	spline	3004	3004	10	0.077717246052136
+ovarian	stress	GSM6506113_SP4	10	model_agreement	all_three	3004	3004	8	
+ovarian	stress	GSM6506113_SP4	10	model_agreement	some_models	3004	3004	4	
+ovarian	stress	GSM6506113_SP4	10	model_agreement	not_selected	3004	3004	2992	
+ovarian	stress	GSM6506113_SP4	10	model_agreement	excluded	3004	3004	0	
+ovarian	stress	GSM6506114_SP5	10	model_selection	raw	2121	2121	10	0.3509081800311935
+ovarian	stress	GSM6506114_SP5	10	model_selection	technical	2121	2121	10	0.0904689452436446
+ovarian	stress	GSM6506114_SP5	10	model_selection	composition	2121	2121	10	0.0815826612845857
+ovarian	stress	GSM6506114_SP5	10	model_selection	spline	2121	2121	10	0.077717246052136
+ovarian	stress	GSM6506114_SP5	10	model_agreement	all_three	2121	2121	9	
+ovarian	stress	GSM6506114_SP5	10	model_agreement	some_models	2121	2121	2	
+ovarian	stress	GSM6506114_SP5	10	model_agreement	not_selected	2121	2121	2110	
+ovarian	stress	GSM6506114_SP5	10	model_agreement	excluded	2121	2121	0	
+ovarian	stress	GSM6506115_SP6	10	model_selection	raw	1800	1800	10	0.3509081800311935
+ovarian	stress	GSM6506115_SP6	10	model_selection	technical	1800	1800	10	0.0904689452436446
+ovarian	stress	GSM6506115_SP6	10	model_selection	composition	1800	1800	10	0.0815826612845857
+ovarian	stress	GSM6506115_SP6	10	model_selection	spline	1800	1800	10	0.077717246052136
+ovarian	stress	GSM6506115_SP6	10	model_agreement	all_three	1800	1800	5	
+ovarian	stress	GSM6506115_SP6	10	model_agreement	some_models	1800	1800	9	
+ovarian	stress	GSM6506115_SP6	10	model_agreement	not_selected	1800	1800	1786	
+ovarian	stress	GSM6506115_SP6	10	model_agreement	excluded	1800	1800	0	
+ovarian	stress	GSM6506116_SP7	10	model_selection	raw	3629	3629	10	0.3509081800311935
+ovarian	stress	GSM6506116_SP7	10	model_selection	technical	3629	3629	10	0.0904689452436446
+ovarian	stress	GSM6506116_SP7	10	model_selection	composition	3629	3629	10	0.0815826612845857
+ovarian	stress	GSM6506116_SP7	10	model_selection	spline	3629	3629	10	0.077717246052136
+ovarian	stress	GSM6506116_SP7	10	model_agreement	all_three	3629	3629	8	
+ovarian	stress	GSM6506116_SP7	10	model_agreement	some_models	3629	3629	3	
+ovarian	stress	GSM6506116_SP7	10	model_agreement	not_selected	3629	3629	3618	
+ovarian	stress	GSM6506116_SP7	10	model_agreement	excluded	3629	3629	0	
+ovarian	stress	GSM6506117_SP8	10	model_selection	raw	3180	3180	10	0.3509081800311935
+ovarian	stress	GSM6506117_SP8	10	model_selection	technical	3180	3180	10	0.0904689452436446
+ovarian	stress	GSM6506117_SP8	10	model_selection	composition	3180	3180	10	0.0815826612845857
+ovarian	stress	GSM6506117_SP8	10	model_selection	spline	3180	3180	10	0.077717246052136
+ovarian	stress	GSM6506117_SP8	10	model_agreement	all_three	3180	3180	9	
+ovarian	stress	GSM6506117_SP8	10	model_agreement	some_models	3180	3180	2	
+ovarian	stress	GSM6506117_SP8	10	model_agreement	not_selected	3180	3180	3169	
+ovarian	stress	GSM6506117_SP8	10	model_agreement	excluded	3180	3180	0	
+ovarian	stress	GSM6506110_SP1	25	model_selection	raw	2937	2937	25	0.3509081800311935
+ovarian	stress	GSM6506110_SP1	25	model_selection	technical	2937	2937	25	0.0904689452436446
+ovarian	stress	GSM6506110_SP1	25	model_selection	composition	2937	2937	25	0.0815826612845857
+ovarian	stress	GSM6506110_SP1	25	model_selection	spline	2937	2937	25	0.077717246052136
+ovarian	stress	GSM6506110_SP1	25	model_agreement	all_three	2937	2937	21	
+ovarian	stress	GSM6506110_SP1	25	model_agreement	some_models	2937	2937	7	
+ovarian	stress	GSM6506110_SP1	25	model_agreement	not_selected	2937	2937	2909	
+ovarian	stress	GSM6506110_SP1	25	model_agreement	excluded	2937	2937	0	
+ovarian	stress	GSM6506111_SP2	25	model_selection	raw	1934	1934	25	0.3509081800311935
+ovarian	stress	GSM6506111_SP2	25	model_selection	technical	1934	1934	25	0.0904689452436446
+ovarian	stress	GSM6506111_SP2	25	model_selection	composition	1934	1934	25	0.0815826612845857
+ovarian	stress	GSM6506111_SP2	25	model_selection	spline	1934	1934	25	0.077717246052136
+ovarian	stress	GSM6506111_SP2	25	model_agreement	all_three	1934	1934	23	
+ovarian	stress	GSM6506111_SP2	25	model_agreement	some_models	1934	1934	4	
+ovarian	stress	GSM6506111_SP2	25	model_agreement	not_selected	1934	1934	1907	
+ovarian	stress	GSM6506111_SP2	25	model_agreement	excluded	1934	1934	0	
+ovarian	stress	GSM6506112_SP3	25	model_selection	raw	1504	1504	25	0.3509081800311935
+ovarian	stress	GSM6506112_SP3	25	model_selection	technical	1504	1504	25	0.0904689452436446
+ovarian	stress	GSM6506112_SP3	25	model_selection	composition	1504	1504	25	0.0815826612845857
+ovarian	stress	GSM6506112_SP3	25	model_selection	spline	1504	1504	25	0.077717246052136
+ovarian	stress	GSM6506112_SP3	25	model_agreement	all_three	1504	1504	21	
+ovarian	stress	GSM6506112_SP3	25	model_agreement	some_models	1504	1504	8	
+ovarian	stress	GSM6506112_SP3	25	model_agreement	not_selected	1504	1504	1475	
+ovarian	stress	GSM6506112_SP3	25	model_agreement	excluded	1504	1504	0	
+ovarian	stress	GSM6506113_SP4	25	model_selection	raw	3004	3004	25	0.3509081800311935
+ovarian	stress	GSM6506113_SP4	25	model_selection	technical	3004	3004	25	0.0904689452436446
+ovarian	stress	GSM6506113_SP4	25	model_selection	composition	3004	3004	25	0.0815826612845857
+ovarian	stress	GSM6506113_SP4	25	model_selection	spline	3004	3004	25	0.077717246052136
+ovarian	stress	GSM6506113_SP4	25	model_agreement	all_three	3004	3004	20	
+ovarian	stress	GSM6506113_SP4	25	model_agreement	some_models	3004	3004	12	
+ovarian	stress	GSM6506113_SP4	25	model_agreement	not_selected	3004	3004	2972	
+ovarian	stress	GSM6506113_SP4	25	model_agreement	excluded	3004	3004	0	
+ovarian	stress	GSM6506114_SP5	25	model_selection	raw	2121	2121	25	0.3509081800311935
+ovarian	stress	GSM6506114_SP5	25	model_selection	technical	2121	2121	25	0.0904689452436446
+ovarian	stress	GSM6506114_SP5	25	model_selection	composition	2121	2121	25	0.0815826612845857
+ovarian	stress	GSM6506114_SP5	25	model_selection	spline	2121	2121	25	0.077717246052136
+ovarian	stress	GSM6506114_SP5	25	model_agreement	all_three	2121	2121	22	
+ovarian	stress	GSM6506114_SP5	25	model_agreement	some_models	2121	2121	5	
+ovarian	stress	GSM6506114_SP5	25	model_agreement	not_selected	2121	2121	2094	
+ovarian	stress	GSM6506114_SP5	25	model_agreement	excluded	2121	2121	0	
+ovarian	stress	GSM6506115_SP6	25	model_selection	raw	1800	1800	25	0.3509081800311935
+ovarian	stress	GSM6506115_SP6	25	model_selection	technical	1800	1800	25	0.0904689452436446
+ovarian	stress	GSM6506115_SP6	25	model_selection	composition	1800	1800	25	0.0815826612845857
+ovarian	stress	GSM6506115_SP6	25	model_selection	spline	1800	1800	25	0.077717246052136
+ovarian	stress	GSM6506115_SP6	25	model_agreement	all_three	1800	1800	15	
+ovarian	stress	GSM6506115_SP6	25	model_agreement	some_models	1800	1800	19	
+ovarian	stress	GSM6506115_SP6	25	model_agreement	not_selected	1800	1800	1766	
+ovarian	stress	GSM6506115_SP6	25	model_agreement	excluded	1800	1800	0	
+ovarian	stress	GSM6506116_SP7	25	model_selection	raw	3629	3629	25	0.3509081800311935
+ovarian	stress	GSM6506116_SP7	25	model_selection	technical	3629	3629	25	0.0904689452436446
+ovarian	stress	GSM6506116_SP7	25	model_selection	composition	3629	3629	25	0.0815826612845857
+ovarian	stress	GSM6506116_SP7	25	model_selection	spline	3629	3629	25	0.077717246052136
+ovarian	stress	GSM6506116_SP7	25	model_agreement	all_three	3629	3629	22	
+ovarian	stress	GSM6506116_SP7	25	model_agreement	some_models	3629	3629	6	
+ovarian	stress	GSM6506116_SP7	25	model_agreement	not_selected	3629	3629	3601	
+ovarian	stress	GSM6506116_SP7	25	model_agreement	excluded	3629	3629	0	
+ovarian	stress	GSM6506117_SP8	25	model_selection	raw	3180	3180	25	0.3509081800311935
+ovarian	stress	GSM6506117_SP8	25	model_selection	technical	3180	3180	25	0.0904689452436446
+ovarian	stress	GSM6506117_SP8	25	model_selection	composition	3180	3180	25	0.0815826612845857
+ovarian	stress	GSM6506117_SP8	25	model_selection	spline	3180	3180	25	0.077717246052136
+ovarian	stress	GSM6506117_SP8	25	model_agreement	all_three	3180	3180	19	
+ovarian	stress	GSM6506117_SP8	25	model_agreement	some_models	3180	3180	12	
+ovarian	stress	GSM6506117_SP8	25	model_agreement	not_selected	3180	3180	3149	
+ovarian	stress	GSM6506117_SP8	25	model_agreement	excluded	3180	3180	0	
+ovarian	stress	GSM6506110_SP1	50	model_selection	raw	2937	2937	50	0.3509081800311935
+ovarian	stress	GSM6506110_SP1	50	model_selection	technical	2937	2937	50	0.0904689452436446
+ovarian	stress	GSM6506110_SP1	50	model_selection	composition	2937	2937	50	0.0815826612845857
+ovarian	stress	GSM6506110_SP1	50	model_selection	spline	2937	2937	50	0.077717246052136
+ovarian	stress	GSM6506110_SP1	50	model_agreement	all_three	2937	2937	40	
+ovarian	stress	GSM6506110_SP1	50	model_agreement	some_models	2937	2937	19	
+ovarian	stress	GSM6506110_SP1	50	model_agreement	not_selected	2937	2937	2878	
+ovarian	stress	GSM6506110_SP1	50	model_agreement	excluded	2937	2937	0	
+ovarian	stress	GSM6506111_SP2	50	model_selection	raw	1934	1934	50	0.3509081800311935
+ovarian	stress	GSM6506111_SP2	50	model_selection	technical	1934	1934	50	0.0904689452436446
+ovarian	stress	GSM6506111_SP2	50	model_selection	composition	1934	1934	50	0.0815826612845857
+ovarian	stress	GSM6506111_SP2	50	model_selection	spline	1934	1934	50	0.077717246052136
+ovarian	stress	GSM6506111_SP2	50	model_agreement	all_three	1934	1934	42	
+ovarian	stress	GSM6506111_SP2	50	model_agreement	some_models	1934	1934	18	
+ovarian	stress	GSM6506111_SP2	50	model_agreement	not_selected	1934	1934	1874	
+ovarian	stress	GSM6506111_SP2	50	model_agreement	excluded	1934	1934	0	
+ovarian	stress	GSM6506112_SP3	50	model_selection	raw	1504	1504	50	0.3509081800311935
+ovarian	stress	GSM6506112_SP3	50	model_selection	technical	1504	1504	50	0.0904689452436446
+ovarian	stress	GSM6506112_SP3	50	model_selection	composition	1504	1504	50	0.0815826612845857
+ovarian	stress	GSM6506112_SP3	50	model_selection	spline	1504	1504	50	0.077717246052136
+ovarian	stress	GSM6506112_SP3	50	model_agreement	all_three	1504	1504	40	
+ovarian	stress	GSM6506112_SP3	50	model_agreement	some_models	1504	1504	20	
+ovarian	stress	GSM6506112_SP3	50	model_agreement	not_selected	1504	1504	1444	
+ovarian	stress	GSM6506112_SP3	50	model_agreement	excluded	1504	1504	0	
+ovarian	stress	GSM6506113_SP4	50	model_selection	raw	3004	3004	50	0.3509081800311935
+ovarian	stress	GSM6506113_SP4	50	model_selection	technical	3004	3004	50	0.0904689452436446
+ovarian	stress	GSM6506113_SP4	50	model_selection	composition	3004	3004	50	0.0815826612845857
+ovarian	stress	GSM6506113_SP4	50	model_selection	spline	3004	3004	50	0.077717246052136
+ovarian	stress	GSM6506113_SP4	50	model_agreement	all_three	3004	3004	35	
+ovarian	stress	GSM6506113_SP4	50	model_agreement	some_models	3004	3004	29	
+ovarian	stress	GSM6506113_SP4	50	model_agreement	not_selected	3004	3004	2940	
+ovarian	stress	GSM6506113_SP4	50	model_agreement	excluded	3004	3004	0	
+ovarian	stress	GSM6506114_SP5	50	model_selection	raw	2121	2121	50	0.3509081800311935
+ovarian	stress	GSM6506114_SP5	50	model_selection	technical	2121	2121	50	0.0904689452436446
+ovarian	stress	GSM6506114_SP5	50	model_selection	composition	2121	2121	50	0.0815826612845857
+ovarian	stress	GSM6506114_SP5	50	model_selection	spline	2121	2121	50	0.077717246052136
+ovarian	stress	GSM6506114_SP5	50	model_agreement	all_three	2121	2121	45	
+ovarian	stress	GSM6506114_SP5	50	model_agreement	some_models	2121	2121	13	
+ovarian	stress	GSM6506114_SP5	50	model_agreement	not_selected	2121	2121	2063	
+ovarian	stress	GSM6506114_SP5	50	model_agreement	excluded	2121	2121	0	
+ovarian	stress	GSM6506115_SP6	50	model_selection	raw	1800	1800	50	0.3509081800311935
+ovarian	stress	GSM6506115_SP6	50	model_selection	technical	1800	1800	50	0.0904689452436446
+ovarian	stress	GSM6506115_SP6	50	model_selection	composition	1800	1800	50	0.0815826612845857
+ovarian	stress	GSM6506115_SP6	50	model_selection	spline	1800	1800	50	0.077717246052136
+ovarian	stress	GSM6506115_SP6	50	model_agreement	all_three	1800	1800	40	
+ovarian	stress	GSM6506115_SP6	50	model_agreement	some_models	1800	1800	21	
+ovarian	stress	GSM6506115_SP6	50	model_agreement	not_selected	1800	1800	1739	
+ovarian	stress	GSM6506115_SP6	50	model_agreement	excluded	1800	1800	0	
+ovarian	stress	GSM6506116_SP7	50	model_selection	raw	3629	3629	50	0.3509081800311935
+ovarian	stress	GSM6506116_SP7	50	model_selection	technical	3629	3629	50	0.0904689452436446
+ovarian	stress	GSM6506116_SP7	50	model_selection	composition	3629	3629	50	0.0815826612845857
+ovarian	stress	GSM6506116_SP7	50	model_selection	spline	3629	3629	50	0.077717246052136
+ovarian	stress	GSM6506116_SP7	50	model_agreement	all_three	3629	3629	41	
+ovarian	stress	GSM6506116_SP7	50	model_agreement	some_models	3629	3629	17	
+ovarian	stress	GSM6506116_SP7	50	model_agreement	not_selected	3629	3629	3571	
+ovarian	stress	GSM6506116_SP7	50	model_agreement	excluded	3629	3629	0	
+ovarian	stress	GSM6506117_SP8	50	model_selection	raw	3180	3180	50	0.3509081800311935
+ovarian	stress	GSM6506117_SP8	50	model_selection	technical	3180	3180	50	0.0904689452436446
+ovarian	stress	GSM6506117_SP8	50	model_selection	composition	3180	3180	50	0.0815826612845857
+ovarian	stress	GSM6506117_SP8	50	model_selection	spline	3180	3180	50	0.077717246052136
+ovarian	stress	GSM6506117_SP8	50	model_agreement	all_three	3180	3180	37	
+ovarian	stress	GSM6506117_SP8	50	model_agreement	some_models	3180	3180	25	
+ovarian	stress	GSM6506117_SP8	50	model_agreement	not_selected	3180	3180	3118	
+ovarian	stress	GSM6506117_SP8	50	model_agreement	excluded	3180	3180	0	
+ovarian	ifn	GSM6506110_SP1	10	model_selection	raw	2937	2937	10	0.2781906584821788
+ovarian	ifn	GSM6506110_SP1	10	model_selection	technical	2937	2937	10	0.1920841103971217
+ovarian	ifn	GSM6506110_SP1	10	model_selection	composition	2937	2937	10	0.1695327991139946
+ovarian	ifn	GSM6506110_SP1	10	model_selection	spline	2937	2937	10	0.1701933275861686
+ovarian	ifn	GSM6506110_SP1	10	model_agreement	all_three	2937	2937	9	
+ovarian	ifn	GSM6506110_SP1	10	model_agreement	some_models	2937	2937	3	
+ovarian	ifn	GSM6506110_SP1	10	model_agreement	not_selected	2937	2937	2925	
+ovarian	ifn	GSM6506110_SP1	10	model_agreement	excluded	2937	2937	0	
+ovarian	ifn	GSM6506111_SP2	10	model_selection	raw	1934	1934	10	0.2781906584821788
+ovarian	ifn	GSM6506111_SP2	10	model_selection	technical	1934	1934	10	0.1920841103971217
+ovarian	ifn	GSM6506111_SP2	10	model_selection	composition	1934	1934	10	0.1695327991139946
+ovarian	ifn	GSM6506111_SP2	10	model_selection	spline	1934	1934	10	0.1701933275861686
+ovarian	ifn	GSM6506111_SP2	10	model_agreement	all_three	1934	1934	8	
+ovarian	ifn	GSM6506111_SP2	10	model_agreement	some_models	1934	1934	5	
+ovarian	ifn	GSM6506111_SP2	10	model_agreement	not_selected	1934	1934	1921	
+ovarian	ifn	GSM6506111_SP2	10	model_agreement	excluded	1934	1934	0	
+ovarian	ifn	GSM6506112_SP3	10	model_selection	raw	1504	1504	10	0.2781906584821788
+ovarian	ifn	GSM6506112_SP3	10	model_selection	technical	1504	1504	10	0.1920841103971217
+ovarian	ifn	GSM6506112_SP3	10	model_selection	composition	1504	1504	10	0.1695327991139946
+ovarian	ifn	GSM6506112_SP3	10	model_selection	spline	1504	1504	10	0.1701933275861686
+ovarian	ifn	GSM6506112_SP3	10	model_agreement	all_three	1504	1504	8	
+ovarian	ifn	GSM6506112_SP3	10	model_agreement	some_models	1504	1504	4	
+ovarian	ifn	GSM6506112_SP3	10	model_agreement	not_selected	1504	1504	1492	
+ovarian	ifn	GSM6506112_SP3	10	model_agreement	excluded	1504	1504	0	
+ovarian	ifn	GSM6506113_SP4	10	model_selection	raw	3004	3004	10	0.2781906584821788
+ovarian	ifn	GSM6506113_SP4	10	model_selection	technical	3004	3004	10	0.1920841103971217
+ovarian	ifn	GSM6506113_SP4	10	model_selection	composition	3004	3004	10	0.1695327991139946
+ovarian	ifn	GSM6506113_SP4	10	model_selection	spline	3004	3004	10	0.1701933275861686
+ovarian	ifn	GSM6506113_SP4	10	model_agreement	all_three	3004	3004	9	
+ovarian	ifn	GSM6506113_SP4	10	model_agreement	some_models	3004	3004	2	
+ovarian	ifn	GSM6506113_SP4	10	model_agreement	not_selected	3004	3004	2993	
+ovarian	ifn	GSM6506113_SP4	10	model_agreement	excluded	3004	3004	0	
+ovarian	ifn	GSM6506114_SP5	10	model_selection	raw	2121	2121	10	0.2781906584821788
+ovarian	ifn	GSM6506114_SP5	10	model_selection	technical	2121	2121	10	0.1920841103971217
+ovarian	ifn	GSM6506114_SP5	10	model_selection	composition	2121	2121	10	0.1695327991139946
+ovarian	ifn	GSM6506114_SP5	10	model_selection	spline	2121	2121	10	0.1701933275861686
+ovarian	ifn	GSM6506114_SP5	10	model_agreement	all_three	2121	2121	7	
+ovarian	ifn	GSM6506114_SP5	10	model_agreement	some_models	2121	2121	7	
+ovarian	ifn	GSM6506114_SP5	10	model_agreement	not_selected	2121	2121	2107	
+ovarian	ifn	GSM6506114_SP5	10	model_agreement	excluded	2121	2121	0	
+ovarian	ifn	GSM6506115_SP6	10	model_selection	raw	1800	1800	10	0.2781906584821788
+ovarian	ifn	GSM6506115_SP6	10	model_selection	technical	1800	1800	10	0.1920841103971217
+ovarian	ifn	GSM6506115_SP6	10	model_selection	composition	1800	1800	10	0.1695327991139946
+ovarian	ifn	GSM6506115_SP6	10	model_selection	spline	1800	1800	10	0.1701933275861686
+ovarian	ifn	GSM6506115_SP6	10	model_agreement	all_three	1800	1800	9	
+ovarian	ifn	GSM6506115_SP6	10	model_agreement	some_models	1800	1800	2	
+ovarian	ifn	GSM6506115_SP6	10	model_agreement	not_selected	1800	1800	1789	
+ovarian	ifn	GSM6506115_SP6	10	model_agreement	excluded	1800	1800	0	
+ovarian	ifn	GSM6506116_SP7	10	model_selection	raw	3629	3629	10	0.2781906584821788
+ovarian	ifn	GSM6506116_SP7	10	model_selection	technical	3629	3629	10	0.1920841103971217
+ovarian	ifn	GSM6506116_SP7	10	model_selection	composition	3629	3629	10	0.1695327991139946
+ovarian	ifn	GSM6506116_SP7	10	model_selection	spline	3629	3629	10	0.1701933275861686
+ovarian	ifn	GSM6506116_SP7	10	model_agreement	all_three	3629	3629	8	
+ovarian	ifn	GSM6506116_SP7	10	model_agreement	some_models	3629	3629	5	
+ovarian	ifn	GSM6506116_SP7	10	model_agreement	not_selected	3629	3629	3616	
+ovarian	ifn	GSM6506116_SP7	10	model_agreement	excluded	3629	3629	0	
+ovarian	ifn	GSM6506117_SP8	10	model_selection	raw	3180	3180	10	0.2781906584821788
+ovarian	ifn	GSM6506117_SP8	10	model_selection	technical	3180	3180	10	0.1920841103971217
+ovarian	ifn	GSM6506117_SP8	10	model_selection	composition	3180	3180	10	0.1695327991139946
+ovarian	ifn	GSM6506117_SP8	10	model_selection	spline	3180	3180	10	0.1701933275861686
+ovarian	ifn	GSM6506117_SP8	10	model_agreement	all_three	3180	3180	5	
+ovarian	ifn	GSM6506117_SP8	10	model_agreement	some_models	3180	3180	10	
+ovarian	ifn	GSM6506117_SP8	10	model_agreement	not_selected	3180	3180	3165	
+ovarian	ifn	GSM6506117_SP8	10	model_agreement	excluded	3180	3180	0	
+ovarian	ifn	GSM6506110_SP1	25	model_selection	raw	2937	2937	25	0.2781906584821788
+ovarian	ifn	GSM6506110_SP1	25	model_selection	technical	2937	2937	25	0.1920841103971217
+ovarian	ifn	GSM6506110_SP1	25	model_selection	composition	2937	2937	25	0.1695327991139946
+ovarian	ifn	GSM6506110_SP1	25	model_selection	spline	2937	2937	25	0.1701933275861686
+ovarian	ifn	GSM6506110_SP1	25	model_agreement	all_three	2937	2937	22	
+ovarian	ifn	GSM6506110_SP1	25	model_agreement	some_models	2937	2937	7	
+ovarian	ifn	GSM6506110_SP1	25	model_agreement	not_selected	2937	2937	2908	
+ovarian	ifn	GSM6506110_SP1	25	model_agreement	excluded	2937	2937	0	
+ovarian	ifn	GSM6506111_SP2	25	model_selection	raw	1934	1934	25	0.2781906584821788
+ovarian	ifn	GSM6506111_SP2	25	model_selection	technical	1934	1934	25	0.1920841103971217
+ovarian	ifn	GSM6506111_SP2	25	model_selection	composition	1934	1934	25	0.1695327991139946
+ovarian	ifn	GSM6506111_SP2	25	model_selection	spline	1934	1934	25	0.1701933275861686
+ovarian	ifn	GSM6506111_SP2	25	model_agreement	all_three	1934	1934	16	
+ovarian	ifn	GSM6506111_SP2	25	model_agreement	some_models	1934	1934	18	
+ovarian	ifn	GSM6506111_SP2	25	model_agreement	not_selected	1934	1934	1900	
+ovarian	ifn	GSM6506111_SP2	25	model_agreement	excluded	1934	1934	0	
+ovarian	ifn	GSM6506112_SP3	25	model_selection	raw	1504	1504	25	0.2781906584821788
+ovarian	ifn	GSM6506112_SP3	25	model_selection	technical	1504	1504	25	0.1920841103971217
+ovarian	ifn	GSM6506112_SP3	25	model_selection	composition	1504	1504	25	0.1695327991139946
+ovarian	ifn	GSM6506112_SP3	25	model_selection	spline	1504	1504	25	0.1701933275861686
+ovarian	ifn	GSM6506112_SP3	25	model_agreement	all_three	1504	1504	22	
+ovarian	ifn	GSM6506112_SP3	25	model_agreement	some_models	1504	1504	7	
+ovarian	ifn	GSM6506112_SP3	25	model_agreement	not_selected	1504	1504	1475	
+ovarian	ifn	GSM6506112_SP3	25	model_agreement	excluded	1504	1504	0	
+ovarian	ifn	GSM6506113_SP4	25	model_selection	raw	3004	3004	25	0.2781906584821788
+ovarian	ifn	GSM6506113_SP4	25	model_selection	technical	3004	3004	25	0.1920841103971217
+ovarian	ifn	GSM6506113_SP4	25	model_selection	composition	3004	3004	25	0.1695327991139946
+ovarian	ifn	GSM6506113_SP4	25	model_selection	spline	3004	3004	25	0.1701933275861686
+ovarian	ifn	GSM6506113_SP4	25	model_agreement	all_three	3004	3004	19	
+ovarian	ifn	GSM6506113_SP4	25	model_agreement	some_models	3004	3004	14	
+ovarian	ifn	GSM6506113_SP4	25	model_agreement	not_selected	3004	3004	2971	
+ovarian	ifn	GSM6506113_SP4	25	model_agreement	excluded	3004	3004	0	
+ovarian	ifn	GSM6506114_SP5	25	model_selection	raw	2121	2121	25	0.2781906584821788
+ovarian	ifn	GSM6506114_SP5	25	model_selection	technical	2121	2121	25	0.1920841103971217
+ovarian	ifn	GSM6506114_SP5	25	model_selection	composition	2121	2121	25	0.1695327991139946
+ovarian	ifn	GSM6506114_SP5	25	model_selection	spline	2121	2121	25	0.1701933275861686
+ovarian	ifn	GSM6506114_SP5	25	model_agreement	all_three	2121	2121	16	
+ovarian	ifn	GSM6506114_SP5	25	model_agreement	some_models	2121	2121	19	
+ovarian	ifn	GSM6506114_SP5	25	model_agreement	not_selected	2121	2121	2086	
+ovarian	ifn	GSM6506114_SP5	25	model_agreement	excluded	2121	2121	0	
+ovarian	ifn	GSM6506115_SP6	25	model_selection	raw	1800	1800	25	0.2781906584821788
+ovarian	ifn	GSM6506115_SP6	25	model_selection	technical	1800	1800	25	0.1920841103971217
+ovarian	ifn	GSM6506115_SP6	25	model_selection	composition	1800	1800	25	0.1695327991139946
+ovarian	ifn	GSM6506115_SP6	25	model_selection	spline	1800	1800	25	0.1701933275861686
+ovarian	ifn	GSM6506115_SP6	25	model_agreement	all_three	1800	1800	21	
+ovarian	ifn	GSM6506115_SP6	25	model_agreement	some_models	1800	1800	9	
+ovarian	ifn	GSM6506115_SP6	25	model_agreement	not_selected	1800	1800	1770	
+ovarian	ifn	GSM6506115_SP6	25	model_agreement	excluded	1800	1800	0	
+ovarian	ifn	GSM6506116_SP7	25	model_selection	raw	3629	3629	25	0.2781906584821788
+ovarian	ifn	GSM6506116_SP7	25	model_selection	technical	3629	3629	25	0.1920841103971217
+ovarian	ifn	GSM6506116_SP7	25	model_selection	composition	3629	3629	25	0.1695327991139946
+ovarian	ifn	GSM6506116_SP7	25	model_selection	spline	3629	3629	25	0.1701933275861686
+ovarian	ifn	GSM6506116_SP7	25	model_agreement	all_three	3629	3629	17	
+ovarian	ifn	GSM6506116_SP7	25	model_agreement	some_models	3629	3629	18	
+ovarian	ifn	GSM6506116_SP7	25	model_agreement	not_selected	3629	3629	3594	
+ovarian	ifn	GSM6506116_SP7	25	model_agreement	excluded	3629	3629	0	
+ovarian	ifn	GSM6506117_SP8	25	model_selection	raw	3180	3180	25	0.2781906584821788
+ovarian	ifn	GSM6506117_SP8	25	model_selection	technical	3180	3180	25	0.1920841103971217
+ovarian	ifn	GSM6506117_SP8	25	model_selection	composition	3180	3180	25	0.1695327991139946
+ovarian	ifn	GSM6506117_SP8	25	model_selection	spline	3180	3180	25	0.1701933275861686
+ovarian	ifn	GSM6506117_SP8	25	model_agreement	all_three	3180	3180	20	
+ovarian	ifn	GSM6506117_SP8	25	model_agreement	some_models	3180	3180	11	
+ovarian	ifn	GSM6506117_SP8	25	model_agreement	not_selected	3180	3180	3149	
+ovarian	ifn	GSM6506117_SP8	25	model_agreement	excluded	3180	3180	0	
+ovarian	ifn	GSM6506110_SP1	50	model_selection	raw	2937	2937	50	0.2781906584821788
+ovarian	ifn	GSM6506110_SP1	50	model_selection	technical	2937	2937	50	0.1920841103971217
+ovarian	ifn	GSM6506110_SP1	50	model_selection	composition	2937	2937	50	0.1695327991139946
+ovarian	ifn	GSM6506110_SP1	50	model_selection	spline	2937	2937	50	0.1701933275861686
+ovarian	ifn	GSM6506110_SP1	50	model_agreement	all_three	2937	2937	42	
+ovarian	ifn	GSM6506110_SP1	50	model_agreement	some_models	2937	2937	16	
+ovarian	ifn	GSM6506110_SP1	50	model_agreement	not_selected	2937	2937	2879	
+ovarian	ifn	GSM6506110_SP1	50	model_agreement	excluded	2937	2937	0	
+ovarian	ifn	GSM6506111_SP2	50	model_selection	raw	1934	1934	50	0.2781906584821788
+ovarian	ifn	GSM6506111_SP2	50	model_selection	technical	1934	1934	50	0.1920841103971217
+ovarian	ifn	GSM6506111_SP2	50	model_selection	composition	1934	1934	50	0.1695327991139946
+ovarian	ifn	GSM6506111_SP2	50	model_selection	spline	1934	1934	50	0.1701933275861686
+ovarian	ifn	GSM6506111_SP2	50	model_agreement	all_three	1934	1934	40	
+ovarian	ifn	GSM6506111_SP2	50	model_agreement	some_models	1934	1934	21	
+ovarian	ifn	GSM6506111_SP2	50	model_agreement	not_selected	1934	1934	1873	
+ovarian	ifn	GSM6506111_SP2	50	model_agreement	excluded	1934	1934	0	
+ovarian	ifn	GSM6506112_SP3	50	model_selection	raw	1504	1504	50	0.2781906584821788
+ovarian	ifn	GSM6506112_SP3	50	model_selection	technical	1504	1504	50	0.1920841103971217
+ovarian	ifn	GSM6506112_SP3	50	model_selection	composition	1504	1504	50	0.1695327991139946
+ovarian	ifn	GSM6506112_SP3	50	model_selection	spline	1504	1504	50	0.1701933275861686
+ovarian	ifn	GSM6506112_SP3	50	model_agreement	all_three	1504	1504	45	
+ovarian	ifn	GSM6506112_SP3	50	model_agreement	some_models	1504	1504	12	
+ovarian	ifn	GSM6506112_SP3	50	model_agreement	not_selected	1504	1504	1447	
+ovarian	ifn	GSM6506112_SP3	50	model_agreement	excluded	1504	1504	0	
+ovarian	ifn	GSM6506113_SP4	50	model_selection	raw	3004	3004	50	0.2781906584821788
+ovarian	ifn	GSM6506113_SP4	50	model_selection	technical	3004	3004	50	0.1920841103971217
+ovarian	ifn	GSM6506113_SP4	50	model_selection	composition	3004	3004	50	0.1695327991139946
+ovarian	ifn	GSM6506113_SP4	50	model_selection	spline	3004	3004	50	0.1701933275861686
+ovarian	ifn	GSM6506113_SP4	50	model_agreement	all_three	3004	3004	40	
+ovarian	ifn	GSM6506113_SP4	50	model_agreement	some_models	3004	3004	22	
+ovarian	ifn	GSM6506113_SP4	50	model_agreement	not_selected	3004	3004	2942	
+ovarian	ifn	GSM6506113_SP4	50	model_agreement	excluded	3004	3004	0	
+ovarian	ifn	GSM6506114_SP5	50	model_selection	raw	2121	2121	50	0.2781906584821788
+ovarian	ifn	GSM6506114_SP5	50	model_selection	technical	2121	2121	50	0.1920841103971217
+ovarian	ifn	GSM6506114_SP5	50	model_selection	composition	2121	2121	50	0.1695327991139946
+ovarian	ifn	GSM6506114_SP5	50	model_selection	spline	2121	2121	50	0.1701933275861686
+ovarian	ifn	GSM6506114_SP5	50	model_agreement	all_three	2121	2121	35	
+ovarian	ifn	GSM6506114_SP5	50	model_agreement	some_models	2121	2121	31	
+ovarian	ifn	GSM6506114_SP5	50	model_agreement	not_selected	2121	2121	2055	
+ovarian	ifn	GSM6506114_SP5	50	model_agreement	excluded	2121	2121	0	
+ovarian	ifn	GSM6506115_SP6	50	model_selection	raw	1800	1800	50	0.2781906584821788
+ovarian	ifn	GSM6506115_SP6	50	model_selection	technical	1800	1800	50	0.1920841103971217
+ovarian	ifn	GSM6506115_SP6	50	model_selection	composition	1800	1800	50	0.1695327991139946
+ovarian	ifn	GSM6506115_SP6	50	model_selection	spline	1800	1800	50	0.1701933275861686
+ovarian	ifn	GSM6506115_SP6	50	model_agreement	all_three	1800	1800	37	
+ovarian	ifn	GSM6506115_SP6	50	model_agreement	some_models	1800	1800	26	
+ovarian	ifn	GSM6506115_SP6	50	model_agreement	not_selected	1800	1800	1737	
+ovarian	ifn	GSM6506115_SP6	50	model_agreement	excluded	1800	1800	0	
+ovarian	ifn	GSM6506116_SP7	50	model_selection	raw	3629	3629	50	0.2781906584821788
+ovarian	ifn	GSM6506116_SP7	50	model_selection	technical	3629	3629	50	0.1920841103971217
+ovarian	ifn	GSM6506116_SP7	50	model_selection	composition	3629	3629	50	0.1695327991139946
+ovarian	ifn	GSM6506116_SP7	50	model_selection	spline	3629	3629	50	0.1701933275861686
+ovarian	ifn	GSM6506116_SP7	50	model_agreement	all_three	3629	3629	39	
+ovarian	ifn	GSM6506116_SP7	50	model_agreement	some_models	3629	3629	24	
+ovarian	ifn	GSM6506116_SP7	50	model_agreement	not_selected	3629	3629	3566	
+ovarian	ifn	GSM6506116_SP7	50	model_agreement	excluded	3629	3629	0	
+ovarian	ifn	GSM6506117_SP8	50	model_selection	raw	3180	3180	50	0.2781906584821788
+ovarian	ifn	GSM6506117_SP8	50	model_selection	technical	3180	3180	50	0.1920841103971217
+ovarian	ifn	GSM6506117_SP8	50	model_selection	composition	3180	3180	50	0.1695327991139946
+ovarian	ifn	GSM6506117_SP8	50	model_selection	spline	3180	3180	50	0.1701933275861686
+ovarian	ifn	GSM6506117_SP8	50	model_agreement	all_three	3180	3180	36	
+ovarian	ifn	GSM6506117_SP8	50	model_agreement	some_models	3180	3180	29	
+ovarian	ifn	GSM6506117_SP8	50	model_agreement	not_selected	3180	3180	3115	
+ovarian	ifn	GSM6506117_SP8	50	model_agreement	excluded	3180	3180	0	
+pdac	stress	GSM8443449_PDAC-p1	10	model_selection	raw	4972	4972	10	0.4652487804036648
+pdac	stress	GSM8443449_PDAC-p1	10	model_selection	technical	4972	4972	10	0.3509319341793115
+pdac	stress	GSM8443449_PDAC-p1	10	model_selection	composition	4972	4972	10	0.3391664901618478
+pdac	stress	GSM8443449_PDAC-p1	10	model_selection	spline	4972	4972	10	0.3298848237799678
+pdac	stress	GSM8443449_PDAC-p1	10	model_agreement	all_three	4972	4972	7	
+pdac	stress	GSM8443449_PDAC-p1	10	model_agreement	some_models	4972	4972	6	
+pdac	stress	GSM8443449_PDAC-p1	10	model_agreement	not_selected	4972	4972	4959	
+pdac	stress	GSM8443449_PDAC-p1	10	model_agreement	excluded	4972	4972	0	
+pdac	stress	GSM8443450_PDAC-p2	10	model_selection	raw	4373	4373	10	0.4652487804036648
+pdac	stress	GSM8443450_PDAC-p2	10	model_selection	technical	4373	4373	10	0.3509319341793115
+pdac	stress	GSM8443450_PDAC-p2	10	model_selection	composition	4373	4373	10	0.3391664901618478
+pdac	stress	GSM8443450_PDAC-p2	10	model_selection	spline	4373	4373	10	0.3298848237799678
+pdac	stress	GSM8443450_PDAC-p2	10	model_agreement	all_three	4373	4373	6	
+pdac	stress	GSM8443450_PDAC-p2	10	model_agreement	some_models	4373	4373	8	
+pdac	stress	GSM8443450_PDAC-p2	10	model_agreement	not_selected	4373	4373	4359	
+pdac	stress	GSM8443450_PDAC-p2	10	model_agreement	excluded	4373	4373	0	
+pdac	stress	GSM8443451_PDAC-p3	10	model_selection	raw	4134	4134	10	0.4652487804036648
+pdac	stress	GSM8443451_PDAC-p3	10	model_selection	technical	4134	4134	10	0.3509319341793115
+pdac	stress	GSM8443451_PDAC-p3	10	model_selection	composition	4134	4134	10	0.3391664901618478
+pdac	stress	GSM8443451_PDAC-p3	10	model_selection	spline	4134	4134	10	0.3298848237799678
+pdac	stress	GSM8443451_PDAC-p3	10	model_agreement	all_three	4134	4134	10	
+pdac	stress	GSM8443451_PDAC-p3	10	model_agreement	some_models	4134	4134	0	
+pdac	stress	GSM8443451_PDAC-p3	10	model_agreement	not_selected	4134	4134	4124	
+pdac	stress	GSM8443451_PDAC-p3	10	model_agreement	excluded	4134	4134	0	
+pdac	stress	GSM8443452_PDAC-p4	10	model_selection	raw	4970	4970	10	0.4652487804036648
+pdac	stress	GSM8443452_PDAC-p4	10	model_selection	technical	4970	4970	10	0.3509319341793115
+pdac	stress	GSM8443452_PDAC-p4	10	model_selection	composition	4970	4970	10	0.3391664901618478
+pdac	stress	GSM8443452_PDAC-p4	10	model_selection	spline	4970	4970	10	0.3298848237799678
+pdac	stress	GSM8443452_PDAC-p4	10	model_agreement	all_three	4970	4970	9	
+pdac	stress	GSM8443452_PDAC-p4	10	model_agreement	some_models	4970	4970	3	
+pdac	stress	GSM8443452_PDAC-p4	10	model_agreement	not_selected	4970	4970	4958	
+pdac	stress	GSM8443452_PDAC-p4	10	model_agreement	excluded	4970	4970	0	
+pdac	stress	GSM8443453_PDAC-p5	10	model_selection	raw	4943	4943	10	0.4652487804036648
+pdac	stress	GSM8443453_PDAC-p5	10	model_selection	technical	4943	4943	10	0.3509319341793115
+pdac	stress	GSM8443453_PDAC-p5	10	model_selection	composition	4943	4943	10	0.3391664901618478
+pdac	stress	GSM8443453_PDAC-p5	10	model_selection	spline	4943	4943	10	0.3298848237799678
+pdac	stress	GSM8443453_PDAC-p5	10	model_agreement	all_three	4943	4943	8	
+pdac	stress	GSM8443453_PDAC-p5	10	model_agreement	some_models	4943	4943	4	
+pdac	stress	GSM8443453_PDAC-p5	10	model_agreement	not_selected	4943	4943	4931	
+pdac	stress	GSM8443453_PDAC-p5	10	model_agreement	excluded	4943	4943	0	
+pdac	stress	GSM8443449_PDAC-p1	25	model_selection	raw	4972	4972	25	0.4652487804036648
+pdac	stress	GSM8443449_PDAC-p1	25	model_selection	technical	4972	4972	25	0.3509319341793115
+pdac	stress	GSM8443449_PDAC-p1	25	model_selection	composition	4972	4972	25	0.3391664901618478
+pdac	stress	GSM8443449_PDAC-p1	25	model_selection	spline	4972	4972	25	0.3298848237799678
+pdac	stress	GSM8443449_PDAC-p1	25	model_agreement	all_three	4972	4972	20	
+pdac	stress	GSM8443449_PDAC-p1	25	model_agreement	some_models	4972	4972	9	
+pdac	stress	GSM8443449_PDAC-p1	25	model_agreement	not_selected	4972	4972	4943	
+pdac	stress	GSM8443449_PDAC-p1	25	model_agreement	excluded	4972	4972	0	
+pdac	stress	GSM8443450_PDAC-p2	25	model_selection	raw	4373	4373	25	0.4652487804036648
+pdac	stress	GSM8443450_PDAC-p2	25	model_selection	technical	4373	4373	25	0.3509319341793115
+pdac	stress	GSM8443450_PDAC-p2	25	model_selection	composition	4373	4373	25	0.3391664901618478
+pdac	stress	GSM8443450_PDAC-p2	25	model_selection	spline	4373	4373	25	0.3298848237799678
+pdac	stress	GSM8443450_PDAC-p2	25	model_agreement	all_three	4373	4373	21	
+pdac	stress	GSM8443450_PDAC-p2	25	model_agreement	some_models	4373	4373	9	
+pdac	stress	GSM8443450_PDAC-p2	25	model_agreement	not_selected	4373	4373	4343	
+pdac	stress	GSM8443450_PDAC-p2	25	model_agreement	excluded	4373	4373	0	
+pdac	stress	GSM8443451_PDAC-p3	25	model_selection	raw	4134	4134	25	0.4652487804036648
+pdac	stress	GSM8443451_PDAC-p3	25	model_selection	technical	4134	4134	25	0.3509319341793115
+pdac	stress	GSM8443451_PDAC-p3	25	model_selection	composition	4134	4134	25	0.3391664901618478
+pdac	stress	GSM8443451_PDAC-p3	25	model_selection	spline	4134	4134	25	0.3298848237799678
+pdac	stress	GSM8443451_PDAC-p3	25	model_agreement	all_three	4134	4134	15	
+pdac	stress	GSM8443451_PDAC-p3	25	model_agreement	some_models	4134	4134	19	
+pdac	stress	GSM8443451_PDAC-p3	25	model_agreement	not_selected	4134	4134	4100	
+pdac	stress	GSM8443451_PDAC-p3	25	model_agreement	excluded	4134	4134	0	
+pdac	stress	GSM8443452_PDAC-p4	25	model_selection	raw	4970	4970	25	0.4652487804036648
+pdac	stress	GSM8443452_PDAC-p4	25	model_selection	technical	4970	4970	25	0.3509319341793115
+pdac	stress	GSM8443452_PDAC-p4	25	model_selection	composition	4970	4970	25	0.3391664901618478
+pdac	stress	GSM8443452_PDAC-p4	25	model_selection	spline	4970	4970	25	0.3298848237799678
+pdac	stress	GSM8443452_PDAC-p4	25	model_agreement	all_three	4970	4970	19	
+pdac	stress	GSM8443452_PDAC-p4	25	model_agreement	some_models	4970	4970	12	
+pdac	stress	GSM8443452_PDAC-p4	25	model_agreement	not_selected	4970	4970	4939	
+pdac	stress	GSM8443452_PDAC-p4	25	model_agreement	excluded	4970	4970	0	
+pdac	stress	GSM8443453_PDAC-p5	25	model_selection	raw	4943	4943	25	0.4652487804036648
+pdac	stress	GSM8443453_PDAC-p5	25	model_selection	technical	4943	4943	25	0.3509319341793115
+pdac	stress	GSM8443453_PDAC-p5	25	model_selection	composition	4943	4943	25	0.3391664901618478
+pdac	stress	GSM8443453_PDAC-p5	25	model_selection	spline	4943	4943	25	0.3298848237799678
+pdac	stress	GSM8443453_PDAC-p5	25	model_agreement	all_three	4943	4943	21	
+pdac	stress	GSM8443453_PDAC-p5	25	model_agreement	some_models	4943	4943	9	
+pdac	stress	GSM8443453_PDAC-p5	25	model_agreement	not_selected	4943	4943	4913	
+pdac	stress	GSM8443453_PDAC-p5	25	model_agreement	excluded	4943	4943	0	
+pdac	stress	GSM8443449_PDAC-p1	50	model_selection	raw	4972	4972	50	0.4652487804036648
+pdac	stress	GSM8443449_PDAC-p1	50	model_selection	technical	4972	4972	50	0.3509319341793115
+pdac	stress	GSM8443449_PDAC-p1	50	model_selection	composition	4972	4972	50	0.3391664901618478
+pdac	stress	GSM8443449_PDAC-p1	50	model_selection	spline	4972	4972	50	0.3298848237799678
+pdac	stress	GSM8443449_PDAC-p1	50	model_agreement	all_three	4972	4972	37	
+pdac	stress	GSM8443449_PDAC-p1	50	model_agreement	some_models	4972	4972	25	
+pdac	stress	GSM8443449_PDAC-p1	50	model_agreement	not_selected	4972	4972	4910	
+pdac	stress	GSM8443449_PDAC-p1	50	model_agreement	excluded	4972	4972	0	
+pdac	stress	GSM8443450_PDAC-p2	50	model_selection	raw	4373	4373	50	0.4652487804036648
+pdac	stress	GSM8443450_PDAC-p2	50	model_selection	technical	4373	4373	50	0.3509319341793115
+pdac	stress	GSM8443450_PDAC-p2	50	model_selection	composition	4373	4373	50	0.3391664901618478
+pdac	stress	GSM8443450_PDAC-p2	50	model_selection	spline	4373	4373	50	0.3298848237799678
+pdac	stress	GSM8443450_PDAC-p2	50	model_agreement	all_three	4373	4373	42	
+pdac	stress	GSM8443450_PDAC-p2	50	model_agreement	some_models	4373	4373	17	
+pdac	stress	GSM8443450_PDAC-p2	50	model_agreement	not_selected	4373	4373	4314	
+pdac	stress	GSM8443450_PDAC-p2	50	model_agreement	excluded	4373	4373	0	
+pdac	stress	GSM8443451_PDAC-p3	50	model_selection	raw	4134	4134	50	0.4652487804036648
+pdac	stress	GSM8443451_PDAC-p3	50	model_selection	technical	4134	4134	50	0.3509319341793115
+pdac	stress	GSM8443451_PDAC-p3	50	model_selection	composition	4134	4134	50	0.3391664901618478
+pdac	stress	GSM8443451_PDAC-p3	50	model_selection	spline	4134	4134	50	0.3298848237799678
+pdac	stress	GSM8443451_PDAC-p3	50	model_agreement	all_three	4134	4134	39	
+pdac	stress	GSM8443451_PDAC-p3	50	model_agreement	some_models	4134	4134	21	
+pdac	stress	GSM8443451_PDAC-p3	50	model_agreement	not_selected	4134	4134	4074	
+pdac	stress	GSM8443451_PDAC-p3	50	model_agreement	excluded	4134	4134	0	
+pdac	stress	GSM8443452_PDAC-p4	50	model_selection	raw	4970	4970	50	0.4652487804036648
+pdac	stress	GSM8443452_PDAC-p4	50	model_selection	technical	4970	4970	50	0.3509319341793115
+pdac	stress	GSM8443452_PDAC-p4	50	model_selection	composition	4970	4970	50	0.3391664901618478
+pdac	stress	GSM8443452_PDAC-p4	50	model_selection	spline	4970	4970	50	0.3298848237799678
+pdac	stress	GSM8443452_PDAC-p4	50	model_agreement	all_three	4970	4970	38	
+pdac	stress	GSM8443452_PDAC-p4	50	model_agreement	some_models	4970	4970	24	
+pdac	stress	GSM8443452_PDAC-p4	50	model_agreement	not_selected	4970	4970	4908	
+pdac	stress	GSM8443452_PDAC-p4	50	model_agreement	excluded	4970	4970	0	
+pdac	stress	GSM8443453_PDAC-p5	50	model_selection	raw	4943	4943	50	0.4652487804036648
+pdac	stress	GSM8443453_PDAC-p5	50	model_selection	technical	4943	4943	50	0.3509319341793115
+pdac	stress	GSM8443453_PDAC-p5	50	model_selection	composition	4943	4943	50	0.3391664901618478
+pdac	stress	GSM8443453_PDAC-p5	50	model_selection	spline	4943	4943	50	0.3298848237799678
+pdac	stress	GSM8443453_PDAC-p5	50	model_agreement	all_three	4943	4943	40	
+pdac	stress	GSM8443453_PDAC-p5	50	model_agreement	some_models	4943	4943	21	
+pdac	stress	GSM8443453_PDAC-p5	50	model_agreement	not_selected	4943	4943	4882	
+pdac	stress	GSM8443453_PDAC-p5	50	model_agreement	excluded	4943	4943	0	
+pdac	ifn	GSM8443449_PDAC-p1	10	model_selection	raw	4972	4972	10	0.2465082658960355
+pdac	ifn	GSM8443449_PDAC-p1	10	model_selection	technical	4972	4972	10	0.0994722836857218
+pdac	ifn	GSM8443449_PDAC-p1	10	model_selection	composition	4972	4972	10	0.0944269360602766
+pdac	ifn	GSM8443449_PDAC-p1	10	model_selection	spline	4972	4972	10	0.0864245080675825
+pdac	ifn	GSM8443449_PDAC-p1	10	model_agreement	all_three	4972	4972	10	
+pdac	ifn	GSM8443449_PDAC-p1	10	model_agreement	some_models	4972	4972	0	
+pdac	ifn	GSM8443449_PDAC-p1	10	model_agreement	not_selected	4972	4972	4962	
+pdac	ifn	GSM8443449_PDAC-p1	10	model_agreement	excluded	4972	4972	0	
+pdac	ifn	GSM8443450_PDAC-p2	10	model_selection	raw	4373	4373	10	0.2465082658960355
+pdac	ifn	GSM8443450_PDAC-p2	10	model_selection	technical	4373	4373	10	0.0994722836857218
+pdac	ifn	GSM8443450_PDAC-p2	10	model_selection	composition	4373	4373	10	0.0944269360602766
+pdac	ifn	GSM8443450_PDAC-p2	10	model_selection	spline	4373	4373	10	0.0864245080675825
+pdac	ifn	GSM8443450_PDAC-p2	10	model_agreement	all_three	4373	4373	8	
+pdac	ifn	GSM8443450_PDAC-p2	10	model_agreement	some_models	4373	4373	4	
+pdac	ifn	GSM8443450_PDAC-p2	10	model_agreement	not_selected	4373	4373	4361	
+pdac	ifn	GSM8443450_PDAC-p2	10	model_agreement	excluded	4373	4373	0	
+pdac	ifn	GSM8443451_PDAC-p3	10	model_selection	raw	4134	4134	10	0.2465082658960355
+pdac	ifn	GSM8443451_PDAC-p3	10	model_selection	technical	4134	4134	10	0.0994722836857218
+pdac	ifn	GSM8443451_PDAC-p3	10	model_selection	composition	4134	4134	10	0.0944269360602766
+pdac	ifn	GSM8443451_PDAC-p3	10	model_selection	spline	4134	4134	10	0.0864245080675825
+pdac	ifn	GSM8443451_PDAC-p3	10	model_agreement	all_three	4134	4134	9	
+pdac	ifn	GSM8443451_PDAC-p3	10	model_agreement	some_models	4134	4134	2	
+pdac	ifn	GSM8443451_PDAC-p3	10	model_agreement	not_selected	4134	4134	4123	
+pdac	ifn	GSM8443451_PDAC-p3	10	model_agreement	excluded	4134	4134	0	
+pdac	ifn	GSM8443452_PDAC-p4	10	model_selection	raw	4970	4970	10	0.2465082658960355
+pdac	ifn	GSM8443452_PDAC-p4	10	model_selection	technical	4970	4970	10	0.0994722836857218
+pdac	ifn	GSM8443452_PDAC-p4	10	model_selection	composition	4970	4970	10	0.0944269360602766
+pdac	ifn	GSM8443452_PDAC-p4	10	model_selection	spline	4970	4970	10	0.0864245080675825
+pdac	ifn	GSM8443452_PDAC-p4	10	model_agreement	all_three	4970	4970	10	
+pdac	ifn	GSM8443452_PDAC-p4	10	model_agreement	some_models	4970	4970	0	
+pdac	ifn	GSM8443452_PDAC-p4	10	model_agreement	not_selected	4970	4970	4960	
+pdac	ifn	GSM8443452_PDAC-p4	10	model_agreement	excluded	4970	4970	0	
+pdac	ifn	GSM8443453_PDAC-p5	10	model_selection	raw	4943	4943	10	0.2465082658960355
+pdac	ifn	GSM8443453_PDAC-p5	10	model_selection	technical	4943	4943	10	0.0994722836857218
+pdac	ifn	GSM8443453_PDAC-p5	10	model_selection	composition	4943	4943	10	0.0944269360602766
+pdac	ifn	GSM8443453_PDAC-p5	10	model_selection	spline	4943	4943	10	0.0864245080675825
+pdac	ifn	GSM8443453_PDAC-p5	10	model_agreement	all_three	4943	4943	9	
+pdac	ifn	GSM8443453_PDAC-p5	10	model_agreement	some_models	4943	4943	3	
+pdac	ifn	GSM8443453_PDAC-p5	10	model_agreement	not_selected	4943	4943	4931	
+pdac	ifn	GSM8443453_PDAC-p5	10	model_agreement	excluded	4943	4943	0	
+pdac	ifn	GSM8443449_PDAC-p1	25	model_selection	raw	4972	4972	25	0.2465082658960355
+pdac	ifn	GSM8443449_PDAC-p1	25	model_selection	technical	4972	4972	25	0.0994722836857218
+pdac	ifn	GSM8443449_PDAC-p1	25	model_selection	composition	4972	4972	25	0.0944269360602766
+pdac	ifn	GSM8443449_PDAC-p1	25	model_selection	spline	4972	4972	25	0.0864245080675825
+pdac	ifn	GSM8443449_PDAC-p1	25	model_agreement	all_three	4972	4972	22	
+pdac	ifn	GSM8443449_PDAC-p1	25	model_agreement	some_models	4972	4972	6	
+pdac	ifn	GSM8443449_PDAC-p1	25	model_agreement	not_selected	4972	4972	4944	
+pdac	ifn	GSM8443449_PDAC-p1	25	model_agreement	excluded	4972	4972	0	
+pdac	ifn	GSM8443450_PDAC-p2	25	model_selection	raw	4373	4373	25	0.2465082658960355
+pdac	ifn	GSM8443450_PDAC-p2	25	model_selection	technical	4373	4373	25	0.0994722836857218
+pdac	ifn	GSM8443450_PDAC-p2	25	model_selection	composition	4373	4373	25	0.0944269360602766
+pdac	ifn	GSM8443450_PDAC-p2	25	model_selection	spline	4373	4373	25	0.0864245080675825
+pdac	ifn	GSM8443450_PDAC-p2	25	model_agreement	all_three	4373	4373	21	
+pdac	ifn	GSM8443450_PDAC-p2	25	model_agreement	some_models	4373	4373	9	
+pdac	ifn	GSM8443450_PDAC-p2	25	model_agreement	not_selected	4373	4373	4343	
+pdac	ifn	GSM8443450_PDAC-p2	25	model_agreement	excluded	4373	4373	0	
+pdac	ifn	GSM8443451_PDAC-p3	25	model_selection	raw	4134	4134	25	0.2465082658960355
+pdac	ifn	GSM8443451_PDAC-p3	25	model_selection	technical	4134	4134	25	0.0994722836857218
+pdac	ifn	GSM8443451_PDAC-p3	25	model_selection	composition	4134	4134	25	0.0944269360602766
+pdac	ifn	GSM8443451_PDAC-p3	25	model_selection	spline	4134	4134	25	0.0864245080675825
+pdac	ifn	GSM8443451_PDAC-p3	25	model_agreement	all_three	4134	4134	20	
+pdac	ifn	GSM8443451_PDAC-p3	25	model_agreement	some_models	4134	4134	9	
+pdac	ifn	GSM8443451_PDAC-p3	25	model_agreement	not_selected	4134	4134	4105	
+pdac	ifn	GSM8443451_PDAC-p3	25	model_agreement	excluded	4134	4134	0	
+pdac	ifn	GSM8443452_PDAC-p4	25	model_selection	raw	4970	4970	25	0.2465082658960355
+pdac	ifn	GSM8443452_PDAC-p4	25	model_selection	technical	4970	4970	25	0.0994722836857218
+pdac	ifn	GSM8443452_PDAC-p4	25	model_selection	composition	4970	4970	25	0.0944269360602766
+pdac	ifn	GSM8443452_PDAC-p4	25	model_selection	spline	4970	4970	25	0.0864245080675825
+pdac	ifn	GSM8443452_PDAC-p4	25	model_agreement	all_three	4970	4970	23	
+pdac	ifn	GSM8443452_PDAC-p4	25	model_agreement	some_models	4970	4970	4	
+pdac	ifn	GSM8443452_PDAC-p4	25	model_agreement	not_selected	4970	4970	4943	
+pdac	ifn	GSM8443452_PDAC-p4	25	model_agreement	excluded	4970	4970	0	
+pdac	ifn	GSM8443453_PDAC-p5	25	model_selection	raw	4943	4943	25	0.2465082658960355
+pdac	ifn	GSM8443453_PDAC-p5	25	model_selection	technical	4943	4943	25	0.0994722836857218
+pdac	ifn	GSM8443453_PDAC-p5	25	model_selection	composition	4943	4943	25	0.0944269360602766
+pdac	ifn	GSM8443453_PDAC-p5	25	model_selection	spline	4943	4943	25	0.0864245080675825
+pdac	ifn	GSM8443453_PDAC-p5	25	model_agreement	all_three	4943	4943	23	
+pdac	ifn	GSM8443453_PDAC-p5	25	model_agreement	some_models	4943	4943	5	
+pdac	ifn	GSM8443453_PDAC-p5	25	model_agreement	not_selected	4943	4943	4915	
+pdac	ifn	GSM8443453_PDAC-p5	25	model_agreement	excluded	4943	4943	0	
+pdac	ifn	GSM8443449_PDAC-p1	50	model_selection	raw	4972	4972	50	0.2465082658960355
+pdac	ifn	GSM8443449_PDAC-p1	50	model_selection	technical	4972	4972	50	0.0994722836857218
+pdac	ifn	GSM8443449_PDAC-p1	50	model_selection	composition	4972	4972	50	0.0944269360602766
+pdac	ifn	GSM8443449_PDAC-p1	50	model_selection	spline	4972	4972	50	0.0864245080675825
+pdac	ifn	GSM8443449_PDAC-p1	50	model_agreement	all_three	4972	4972	43	
+pdac	ifn	GSM8443449_PDAC-p1	50	model_agreement	some_models	4972	4972	15	
+pdac	ifn	GSM8443449_PDAC-p1	50	model_agreement	not_selected	4972	4972	4914	
+pdac	ifn	GSM8443449_PDAC-p1	50	model_agreement	excluded	4972	4972	0	
+pdac	ifn	GSM8443450_PDAC-p2	50	model_selection	raw	4373	4373	50	0.2465082658960355
+pdac	ifn	GSM8443450_PDAC-p2	50	model_selection	technical	4373	4373	50	0.0994722836857218
+pdac	ifn	GSM8443450_PDAC-p2	50	model_selection	composition	4373	4373	50	0.0944269360602766
+pdac	ifn	GSM8443450_PDAC-p2	50	model_selection	spline	4373	4373	50	0.0864245080675825
+pdac	ifn	GSM8443450_PDAC-p2	50	model_agreement	all_three	4373	4373	43	
+pdac	ifn	GSM8443450_PDAC-p2	50	model_agreement	some_models	4373	4373	14	
+pdac	ifn	GSM8443450_PDAC-p2	50	model_agreement	not_selected	4373	4373	4316	
+pdac	ifn	GSM8443450_PDAC-p2	50	model_agreement	excluded	4373	4373	0	
+pdac	ifn	GSM8443451_PDAC-p3	50	model_selection	raw	4134	4134	50	0.2465082658960355
+pdac	ifn	GSM8443451_PDAC-p3	50	model_selection	technical	4134	4134	50	0.0994722836857218
+pdac	ifn	GSM8443451_PDAC-p3	50	model_selection	composition	4134	4134	50	0.0944269360602766
+pdac	ifn	GSM8443451_PDAC-p3	50	model_selection	spline	4134	4134	50	0.0864245080675825
+pdac	ifn	GSM8443451_PDAC-p3	50	model_agreement	all_three	4134	4134	42	
+pdac	ifn	GSM8443451_PDAC-p3	50	model_agreement	some_models	4134	4134	15	
+pdac	ifn	GSM8443451_PDAC-p3	50	model_agreement	not_selected	4134	4134	4077	
+pdac	ifn	GSM8443451_PDAC-p3	50	model_agreement	excluded	4134	4134	0	
+pdac	ifn	GSM8443452_PDAC-p4	50	model_selection	raw	4970	4970	50	0.2465082658960355
+pdac	ifn	GSM8443452_PDAC-p4	50	model_selection	technical	4970	4970	50	0.0994722836857218
+pdac	ifn	GSM8443452_PDAC-p4	50	model_selection	composition	4970	4970	50	0.0944269360602766
+pdac	ifn	GSM8443452_PDAC-p4	50	model_selection	spline	4970	4970	50	0.0864245080675825
+pdac	ifn	GSM8443452_PDAC-p4	50	model_agreement	all_three	4970	4970	41	
+pdac	ifn	GSM8443452_PDAC-p4	50	model_agreement	some_models	4970	4970	19	
+pdac	ifn	GSM8443452_PDAC-p4	50	model_agreement	not_selected	4970	4970	4910	
+pdac	ifn	GSM8443452_PDAC-p4	50	model_agreement	excluded	4970	4970	0	
+pdac	ifn	GSM8443453_PDAC-p5	50	model_selection	raw	4943	4943	50	0.2465082658960355
+pdac	ifn	GSM8443453_PDAC-p5	50	model_selection	technical	4943	4943	50	0.0994722836857218
+pdac	ifn	GSM8443453_PDAC-p5	50	model_selection	composition	4943	4943	50	0.0944269360602766
+pdac	ifn	GSM8443453_PDAC-p5	50	model_selection	spline	4943	4943	50	0.0864245080675825
+pdac	ifn	GSM8443453_PDAC-p5	50	model_agreement	all_three	4943	4943	46	
+pdac	ifn	GSM8443453_PDAC-p5	50	model_agreement	some_models	4943	4943	10	
+pdac	ifn	GSM8443453_PDAC-p5	50	model_agreement	not_selected	4943	4943	4887	
+pdac	ifn	GSM8443453_PDAC-p5	50	model_agreement	excluded	4943	4943	0	

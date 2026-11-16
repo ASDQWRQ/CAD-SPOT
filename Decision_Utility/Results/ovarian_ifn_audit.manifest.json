@@ -1,0 +1,35 @@
+{
+  "version": "2.3.0",
+  "input_name": "Decision_Utility/Program_Pair/ovarian/score_table.tsv.gz",
+  "input_sha256": "019d60e904547d2cbc5f598b12bf99ea0e93cafa787b808c911f8a3f4fe3c3dd",
+  "target": "target_score",
+  "reference": "reference_score",
+  "technical": [
+    "log_nCount",
+    "log_nFeature"
+  ],
+  "composition": [
+    "Epithelial_proxy",
+    "ECM_proxy",
+    "Contractile_proxy",
+    "Myeloid_proxy",
+    "Tcell_proxy"
+  ],
+  "coordinate_units": "full_resolution_pixels",
+  "budgets": [
+    10,
+    25,
+    50
+  ],
+  "primary_budget": 25,
+  "conditional_models": [
+    "technical",
+    "composition",
+    "spline"
+  ],
+  "positive_priority_required": true,
+  "rank_ties": "ordinal descending priority, ascending barcode within section",
+  "meaning": "descriptive model dependence, not FDR, accuracy or automatic model selection",
+  "core_sha256": "be6b4a17b5e79836d7b38c6095d9f4ae1dfa2fa84cdb25eafce7c93ebb604ced",
+  "audit_source_sha256": "428626febacce5646faacb56834f10d1e71c19f6a6d5220ab830989cf26c4015"
+}

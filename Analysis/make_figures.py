@@ -120,14 +120,14 @@ def ovarian_audits():
     a[5].scatter(range(len(c)),c.composition,color=ORANGE,label='Composition',s=20,marker='s')
     a[5].set(xticks=range(len(c)),xticklabels=[f'{i+1}' for i in range(len(c))],xlabel='OV section',ylabel='Candidate spots')
     a[5].legend(loc='upper center',bbox_to_anchor=(.5,1.18),ncol=1)
-    save(fig,a,'Figure3_ovarian_association_audits')
+    save(fig,a,'Figure4_ovarian_association_audits')
 
 
 def ovarian_coordinates():
     folder=ROOT/'Primary';r=read(folder/'Results','composition_coordinates.tsv.gz')
     manifest=json.loads((folder/'input_manifest.json').read_text());fig,a=grid(2,4)
     for ax,source in zip(a,manifest):image_view(ax,r[r.sample_id.eq(source['sample_id'])],source)
-    save(fig,a,'Figure4_ovarian_candidate_coordinates')
+    save(fig,a,'Figure5_ovarian_candidate_coordinates')
 
 
 def pdac_transfer():
@@ -154,7 +154,7 @@ def pdac_transfer():
         a[5].plot(i+.12,c.composition,'s',color=ORANGE,label='Composition' if i==0 else None)
     a[5].set(xticks=[0,1],xticklabels=['OV','PDAC'],ylabel='Candidate fraction (%)')
     a[5].legend(loc='upper center',bbox_to_anchor=(.5,1.18),ncol=1)
-    save(fig,a,'Figure5_pdac_cross_cancer_transfer')
+    save(fig,a,'Figure6_pdac_cross_cancer_transfer')
 
 
 def neighborhood():

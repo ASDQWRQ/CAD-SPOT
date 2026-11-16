@@ -1,0 +1,121 @@
+sample_id	budget	record	model	n_spots	n_spatial_valid	selected	pooled_rho
+GSM8443449_PDAC-p1	10	model_selection	raw	4972	4972	10	0.46524878040366485
+GSM8443449_PDAC-p1	10	model_selection	technical	4972	4972	10	0.3509319341793115
+GSM8443449_PDAC-p1	10	model_selection	composition	4972	4972	10	0.33916649016184786
+GSM8443449_PDAC-p1	10	model_selection	spline	4972	4972	10	0.3298848237799678
+GSM8443449_PDAC-p1	10	model_agreement	all_three	4972	4972	7	
+GSM8443449_PDAC-p1	10	model_agreement	some_models	4972	4972	6	
+GSM8443449_PDAC-p1	10	model_agreement	not_selected	4972	4972	4959	
+GSM8443449_PDAC-p1	10	model_agreement	excluded	4972	4972	0	
+GSM8443450_PDAC-p2	10	model_selection	raw	4373	4373	10	0.46524878040366485
+GSM8443450_PDAC-p2	10	model_selection	technical	4373	4373	10	0.3509319341793115
+GSM8443450_PDAC-p2	10	model_selection	composition	4373	4373	10	0.33916649016184786
+GSM8443450_PDAC-p2	10	model_selection	spline	4373	4373	10	0.3298848237799678
+GSM8443450_PDAC-p2	10	model_agreement	all_three	4373	4373	6	
+GSM8443450_PDAC-p2	10	model_agreement	some_models	4373	4373	8	
+GSM8443450_PDAC-p2	10	model_agreement	not_selected	4373	4373	4359	
+GSM8443450_PDAC-p2	10	model_agreement	excluded	4373	4373	0	
+GSM8443451_PDAC-p3	10	model_selection	raw	4134	4134	10	0.46524878040366485
+GSM8443451_PDAC-p3	10	model_selection	technical	4134	4134	10	0.3509319341793115
+GSM8443451_PDAC-p3	10	model_selection	composition	4134	4134	10	0.33916649016184786
+GSM8443451_PDAC-p3	10	model_selection	spline	4134	4134	10	0.3298848237799678
+GSM8443451_PDAC-p3	10	model_agreement	all_three	4134	4134	10	
+GSM8443451_PDAC-p3	10	model_agreement	some_models	4134	4134	0	
+GSM8443451_PDAC-p3	10	model_agreement	not_selected	4134	4134	4124	
+GSM8443451_PDAC-p3	10	model_agreement	excluded	4134	4134	0	
+GSM8443452_PDAC-p4	10	model_selection	raw	4970	4970	10	0.46524878040366485
+GSM8443452_PDAC-p4	10	model_selection	technical	4970	4970	10	0.3509319341793115
+GSM8443452_PDAC-p4	10	model_selection	composition	4970	4970	10	0.33916649016184786
+GSM8443452_PDAC-p4	10	model_selection	spline	4970	4970	10	0.3298848237799678
+GSM8443452_PDAC-p4	10	model_agreement	all_three	4970	4970	9	
+GSM8443452_PDAC-p4	10	model_agreement	some_models	4970	4970	3	
+GSM8443452_PDAC-p4	10	model_agreement	not_selected	4970	4970	4958	
+GSM8443452_PDAC-p4	10	model_agreement	excluded	4970	4970	0	
+GSM8443453_PDAC-p5	10	model_selection	raw	4943	4943	10	0.46524878040366485
+GSM8443453_PDAC-p5	10	model_selection	technical	4943	4943	10	0.3509319341793115
+GSM8443453_PDAC-p5	10	model_selection	composition	4943	4943	10	0.33916649016184786
+GSM8443453_PDAC-p5	10	model_selection	spline	4943	4943	10	0.3298848237799678
+GSM8443453_PDAC-p5	10	model_agreement	all_three	4943	4943	8	
+GSM8443453_PDAC-p5	10	model_agreement	some_models	4943	4943	4	
+GSM8443453_PDAC-p5	10	model_agreement	not_selected	4943	4943	4931	
+GSM8443453_PDAC-p5	10	model_agreement	excluded	4943	4943	0	
+GSM8443449_PDAC-p1	25	model_selection	raw	4972	4972	25	0.46524878040366485
+GSM8443449_PDAC-p1	25	model_selection	technical	4972	4972	25	0.3509319341793115
+GSM8443449_PDAC-p1	25	model_selection	composition	4972	4972	25	0.33916649016184786
+GSM8443449_PDAC-p1	25	model_selection	spline	4972	4972	25	0.3298848237799678
+GSM8443449_PDAC-p1	25	model_agreement	all_three	4972	4972	20	
+GSM8443449_PDAC-p1	25	model_agreement	some_models	4972	4972	9	
+GSM8443449_PDAC-p1	25	model_agreement	not_selected	4972	4972	4943	
+GSM8443449_PDAC-p1	25	model_agreement	excluded	4972	4972	0	
+GSM8443450_PDAC-p2	25	model_selection	raw	4373	4373	25	0.46524878040366485
+GSM8443450_PDAC-p2	25	model_selection	technical	4373	4373	25	0.3509319341793115
+GSM8443450_PDAC-p2	25	model_selection	composition	4373	4373	25	0.33916649016184786
+GSM8443450_PDAC-p2	25	model_selection	spline	4373	4373	25	0.3298848237799678
+GSM8443450_PDAC-p2	25	model_agreement	all_three	4373	4373	21	
+GSM8443450_PDAC-p2	25	model_agreement	some_models	4373	4373	9	
+GSM8443450_PDAC-p2	25	model_agreement	not_selected	4373	4373	4343	
+GSM8443450_PDAC-p2	25	model_agreement	excluded	4373	4373	0	
+GSM8443451_PDAC-p3	25	model_selection	raw	4134	4134	25	0.46524878040366485
+GSM8443451_PDAC-p3	25	model_selection	technical	4134	4134	25	0.3509319341793115
+GSM8443451_PDAC-p3	25	model_selection	composition	4134	4134	25	0.33916649016184786
+GSM8443451_PDAC-p3	25	model_selection	spline	4134	4134	25	0.3298848237799678
+GSM8443451_PDAC-p3	25	model_agreement	all_three	4134	4134	15	
+GSM8443451_PDAC-p3	25	model_agreement	some_models	4134	4134	19	
+GSM8443451_PDAC-p3	25	model_agreement	not_selected	4134	4134	4100	
+GSM8443451_PDAC-p3	25	model_agreement	excluded	4134	4134	0	
+GSM8443452_PDAC-p4	25	model_selection	raw	4970	4970	25	0.46524878040366485
+GSM8443452_PDAC-p4	25	model_selection	technical	4970	4970	25	0.3509319341793115
+GSM8443452_PDAC-p4	25	model_selection	composition	4970	4970	25	0.33916649016184786
+GSM8443452_PDAC-p4	25	model_selection	spline	4970	4970	25	0.3298848237799678
+GSM8443452_PDAC-p4	25	model_agreement	all_three	4970	4970	19	
+GSM8443452_PDAC-p4	25	model_agreement	some_models	4970	4970	12	
+GSM8443452_PDAC-p4	25	model_agreement	not_selected	4970	4970	4939	
+GSM8443452_PDAC-p4	25	model_agreement	excluded	4970	4970	0	
+GSM8443453_PDAC-p5	25	model_selection	raw	4943	4943	25	0.46524878040366485
+GSM8443453_PDAC-p5	25	model_selection	technical	4943	4943	25	0.3509319341793115
+GSM8443453_PDAC-p5	25	model_selection	composition	4943	4943	25	0.33916649016184786
+GSM8443453_PDAC-p5	25	model_selection	spline	4943	4943	25	0.3298848237799678
+GSM8443453_PDAC-p5	25	model_agreement	all_three	4943	4943	21	
+GSM8443453_PDAC-p5	25	model_agreement	some_models	4943	4943	9	
+GSM8443453_PDAC-p5	25	model_agreement	not_selected	4943	4943	4913	
+GSM8443453_PDAC-p5	25	model_agreement	excluded	4943	4943	0	
+GSM8443449_PDAC-p1	50	model_selection	raw	4972	4972	50	0.46524878040366485
+GSM8443449_PDAC-p1	50	model_selection	technical	4972	4972	50	0.3509319341793115
+GSM8443449_PDAC-p1	50	model_selection	composition	4972	4972	50	0.33916649016184786
+GSM8443449_PDAC-p1	50	model_selection	spline	4972	4972	50	0.3298848237799678
+GSM8443449_PDAC-p1	50	model_agreement	all_three	4972	4972	37	
+GSM8443449_PDAC-p1	50	model_agreement	some_models	4972	4972	25	
+GSM8443449_PDAC-p1	50	model_agreement	not_selected	4972	4972	4910	
+GSM8443449_PDAC-p1	50	model_agreement	excluded	4972	4972	0	
+GSM8443450_PDAC-p2	50	model_selection	raw	4373	4373	50	0.46524878040366485
+GSM8443450_PDAC-p2	50	model_selection	technical	4373	4373	50	0.3509319341793115
+GSM8443450_PDAC-p2	50	model_selection	composition	4373	4373	50	0.33916649016184786
+GSM8443450_PDAC-p2	50	model_selection	spline	4373	4373	50	0.3298848237799678
+GSM8443450_PDAC-p2	50	model_agreement	all_three	4373	4373	42	
+GSM8443450_PDAC-p2	50	model_agreement	some_models	4373	4373	17	
+GSM8443450_PDAC-p2	50	model_agreement	not_selected	4373	4373	4314	
+GSM8443450_PDAC-p2	50	model_agreement	excluded	4373	4373	0	
+GSM8443451_PDAC-p3	50	model_selection	raw	4134	4134	50	0.46524878040366485
+GSM8443451_PDAC-p3	50	model_selection	technical	4134	4134	50	0.3509319341793115
+GSM8443451_PDAC-p3	50	model_selection	composition	4134	4134	50	0.33916649016184786
+GSM8443451_PDAC-p3	50	model_selection	spline	4134	4134	50	0.3298848237799678
+GSM8443451_PDAC-p3	50	model_agreement	all_three	4134	4134	39	
+GSM8443451_PDAC-p3	50	model_agreement	some_models	4134	4134	21	
+GSM8443451_PDAC-p3	50	model_agreement	not_selected	4134	4134	4074	
+GSM8443451_PDAC-p3	50	model_agreement	excluded	4134	4134	0	
+GSM8443452_PDAC-p4	50	model_selection	raw	4970	4970	50	0.46524878040366485
+GSM8443452_PDAC-p4	50	model_selection	technical	4970	4970	50	0.3509319341793115
+GSM8443452_PDAC-p4	50	model_selection	composition	4970	4970	50	0.33916649016184786
+GSM8443452_PDAC-p4	50	model_selection	spline	4970	4970	50	0.3298848237799678
+GSM8443452_PDAC-p4	50	model_agreement	all_three	4970	4970	38	
+GSM8443452_PDAC-p4	50	model_agreement	some_models	4970	4970	24	
+GSM8443452_PDAC-p4	50	model_agreement	not_selected	4970	4970	4908	
+GSM8443452_PDAC-p4	50	model_agreement	excluded	4970	4970	0	
+GSM8443453_PDAC-p5	50	model_selection	raw	4943	4943	50	0.46524878040366485
+GSM8443453_PDAC-p5	50	model_selection	technical	4943	4943	50	0.3509319341793115
+GSM8443453_PDAC-p5	50	model_selection	composition	4943	4943	50	0.33916649016184786
+GSM8443453_PDAC-p5	50	model_selection	spline	4943	4943	50	0.3298848237799678
+GSM8443453_PDAC-p5	50	model_agreement	all_three	4943	4943	40	
+GSM8443453_PDAC-p5	50	model_agreement	some_models	4943	4943	21	
+GSM8443453_PDAC-p5	50	model_agreement	not_selected	4943	4943	4882	
+GSM8443453_PDAC-p5	50	model_agreement	excluded	4943	4943	0	

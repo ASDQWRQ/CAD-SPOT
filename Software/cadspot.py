@@ -16,7 +16,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.neighbors import NearestNeighbors
 from sklearn.preprocessing import SplineTransformer, StandardScaler
 
-__version__ = "2.2.0"
+__version__ = "2.3.0"
 
 METHODS = ("score_residual_spearman", "partial_spearman", "spline_score_residual_spearman")
 RANKING_METHODS = ("positive_product", "legacy", "positive_support")

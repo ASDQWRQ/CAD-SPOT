@@ -1,0 +1,121 @@
+cohort	perturbation	replicate	seed	n_spots	below_original_qc	qc_rows_removed	status	failure_reason	dropped_genes
+ovarian	count_80pct	0	2026111700	4871	1.0	0	ok		{}
+ovarian	count_50pct	0	2026111700	4871	2.0	0	ok		{}
+ovarian	panel_loss_10pct	0	2026111700	4871	0.0	0	ok		"{""Contractile_proxy"": [""PDGFRB""], ""ECM_proxy"": [""COL1A1""], ""Epithelial_proxy"": [""EPCAM""], ""Myeloid_proxy"": [""FCER1G""], ""Tcell_proxy"": [""TRAC""], ""reference_score"": [""ANGPTL4"", ""SLC2A3""], ""target_score"": [""BID"", ""ENO1"", ""PKM""]}"
+ovarian	count_80pct	1	2026111701	4871	1.0	0	ok		{}
+ovarian	count_50pct	1	2026111701	4871	2.0	0	ok		{}
+ovarian	panel_loss_10pct	1	2026111701	4871	0.0	0	ok		"{""Contractile_proxy"": [""FAP""], ""ECM_proxy"": [""LUM""], ""Epithelial_proxy"": [""EPCAM""], ""Myeloid_proxy"": [""TYROBP""], ""Tcell_proxy"": [""CD3E""], ""reference_score"": [""ADM"", ""DDIT4""], ""target_score"": [""BAK1"", ""BAX"", ""BNIP3L""]}"
+ovarian	count_80pct	2	2026111702	4871	1.0	0	ok		{}
+ovarian	count_50pct	2	2026111702	4871	2.0	0	ok		{}
+ovarian	panel_loss_10pct	2	2026111702	4871	0.0	0	ok		"{""Contractile_proxy"": [""ACTA2""], ""ECM_proxy"": [""COL1A1""], ""Epithelial_proxy"": [""KRT19""], ""Myeloid_proxy"": [""CD68""], ""Tcell_proxy"": [""LCK""], ""reference_score"": [""ADM"", ""FAM162A""], ""target_score"": [""BCL2L1"", ""ENO1"", ""HK2""]}"
+ovarian	count_80pct	3	2026111703	4871	1.0	0	ok		{}
+ovarian	count_50pct	3	2026111703	4871	2.0	0	ok		{}
+ovarian	panel_loss_10pct	3	2026111703	4871	0.0	0	ok		"{""Contractile_proxy"": [""ACTA2""], ""ECM_proxy"": [""COL1A1""], ""Epithelial_proxy"": [""KRT18""], ""Myeloid_proxy"": [""FCER1G""], ""Tcell_proxy"": [""CD3D""], ""reference_score"": [""ANGPTL4"", ""GCK""], ""target_score"": [""BID"", ""PGK1"", ""PKM""]}"
+ovarian	count_80pct	4	2026111704	4871	1.0	0	ok		{}
+ovarian	count_50pct	4	2026111704	4871	2.0	0	ok		{}
+ovarian	panel_loss_10pct	4	2026111704	4871	0.0	0	ok		"{""Contractile_proxy"": [""PDGFRB""], ""ECM_proxy"": [""DCN""], ""Epithelial_proxy"": [""KRT8""], ""Myeloid_proxy"": [""LST1""], ""Tcell_proxy"": [""LCK""], ""reference_score"": [""FAM162A"", ""MXI1""], ""target_score"": [""ENO1"", ""PDK1"", ""PGAM1""]}"
+ovarian	count_80pct	5	2026111705	4871	1.0	0	ok		{}
+ovarian	count_50pct	5	2026111705	4871		0	not_computable	Fixed panel constant: GSM6506111_SP2/target_score/CA9	{}
+ovarian	panel_loss_10pct	5	2026111705	4871	0.0	0	ok		"{""Contractile_proxy"": [""ACTA2""], ""ECM_proxy"": [""COL3A1""], ""Epithelial_proxy"": [""KRT8""], ""Myeloid_proxy"": [""LST1""], ""Tcell_proxy"": [""TRAC""], ""reference_score"": [""ADM"", ""P4HA1""], ""target_score"": [""GPI"", ""LDHA"", ""MCL1""]}"
+ovarian	count_80pct	6	2026111706	4871	1.0	0	ok		{}
+ovarian	count_50pct	6	2026111706	4871	2.0	0	ok		{}
+ovarian	panel_loss_10pct	6	2026111706	4871	0.0	0	ok		"{""Contractile_proxy"": [""TAGLN""], ""ECM_proxy"": [""COL1A2""], ""Epithelial_proxy"": [""KRT7""], ""Myeloid_proxy"": [""LST1""], ""Tcell_proxy"": [""CD3E""], ""reference_score"": [""MXI1"", ""P4HA2""], ""target_score"": [""HIF1A"", ""PGAM1"", ""PKM""]}"
+ovarian	count_80pct	7	2026111707	4871	1.0	0	ok		{}
+ovarian	count_50pct	7	2026111707	4871	2.0	0	ok		{}
+ovarian	panel_loss_10pct	7	2026111707	4871	0.0	0	ok		"{""Contractile_proxy"": [""TAGLN""], ""ECM_proxy"": [""COL1A1""], ""Epithelial_proxy"": [""KRT19""], ""Myeloid_proxy"": [""FCER1G""], ""Tcell_proxy"": [""CD247""], ""reference_score"": [""GCK"", ""P4HA1""], ""target_score"": [""GPI"", ""NDRG1"", ""PGK1""]}"
+ovarian	count_80pct	8	2026111708	4871	1.0	0	ok		{}
+ovarian	count_50pct	8	2026111708	4871	2.0	0	ok		{}
+ovarian	panel_loss_10pct	8	2026111708	4871	0.0	0	ok		"{""Contractile_proxy"": [""ACTA2""], ""ECM_proxy"": [""DCN""], ""Epithelial_proxy"": [""KRT18""], ""Myeloid_proxy"": [""TYROBP""], ""Tcell_proxy"": [""CD3E""], ""reference_score"": [""FAM162A"", ""KDM3A""], ""target_score"": [""HK2"", ""NDRG1"", ""PKM""]}"
+ovarian	count_80pct	9	2026111709	4871	1.0	0	ok		{}
+ovarian	count_50pct	9	2026111709	4871	2.0	0	ok		{}
+ovarian	panel_loss_10pct	9	2026111709	4871	0.0	0	ok		"{""Contractile_proxy"": [""PDGFRB""], ""ECM_proxy"": [""COL1A1""], ""Epithelial_proxy"": [""EPCAM""], ""Myeloid_proxy"": [""CD68""], ""Tcell_proxy"": [""TRAC""], ""reference_score"": [""ALDOC"", ""CA12""], ""target_score"": [""BNIP3L"", ""GPI"", ""HIF1A""]}"
+ovarian	count_80pct	10	2026111710	4871	1.0	0	ok		{}
+ovarian	count_50pct	10	2026111710	4871		0	not_computable	Fixed panel constant: GSM6506111_SP2/target_score/CA9	{}
+ovarian	panel_loss_10pct	10	2026111710	4871	0.0	0	ok		"{""Contractile_proxy"": [""ACTA2""], ""ECM_proxy"": [""COL1A2""], ""Epithelial_proxy"": [""KRT19""], ""Myeloid_proxy"": [""LST1""], ""Tcell_proxy"": [""LCK""], ""reference_score"": [""ANGPTL4"", ""FAM162A""], ""target_score"": [""BAX"", ""BCL2L1"", ""MCL1""]}"
+ovarian	count_80pct	11	2026111711	4871	1.0	0	ok		{}
+ovarian	count_50pct	11	2026111711	4871	2.0	0	ok		{}
+ovarian	panel_loss_10pct	11	2026111711	4871	0.0	0	ok		"{""Contractile_proxy"": [""PDGFRB""], ""ECM_proxy"": [""COL1A1""], ""Epithelial_proxy"": [""KRT8""], ""Myeloid_proxy"": [""CD68""], ""Tcell_proxy"": [""CD3D""], ""reference_score"": [""HK1"", ""PFKL""], ""target_score"": [""BAX"", ""HK2"", ""MCL1""]}"
+ovarian	count_80pct	12	2026111712	4871	1.0	0	ok		{}
+ovarian	count_50pct	12	2026111712	4871		0	not_computable	Fixed panel constant: GSM6506111_SP2/target_score/CA9	{}
+ovarian	panel_loss_10pct	12	2026111712	4871	0.0	0	ok		"{""Contractile_proxy"": [""TAGLN""], ""ECM_proxy"": [""LUM""], ""Epithelial_proxy"": [""KRT18""], ""Myeloid_proxy"": [""CD68""], ""Tcell_proxy"": [""CD247""], ""reference_score"": [""ADM"", ""BHLHE40""], ""target_score"": [""CA9"", ""HIF1A"", ""PDK1""]}"
+ovarian	count_80pct	13	2026111713	4871	1.0	0	ok		{}
+ovarian	count_50pct	13	2026111713	4871		0	not_computable	Fixed panel constant: GSM6506111_SP2/target_score/CA9	{}
+ovarian	panel_loss_10pct	13	2026111713	4871	0.0	0	ok		"{""Contractile_proxy"": [""TAGLN""], ""ECM_proxy"": [""COL1A2""], ""Epithelial_proxy"": [""EPCAM""], ""Myeloid_proxy"": [""AIF1""], ""Tcell_proxy"": [""CD247""], ""reference_score"": [""GCK"", ""P4HA2""], ""target_score"": [""MCL1"", ""PMAIP1"", ""VEGFA""]}"
+ovarian	count_80pct	14	2026111714	4871	1.0	0	ok		{}
+ovarian	count_50pct	14	2026111714	4871	2.0	0	ok		{}
+ovarian	panel_loss_10pct	14	2026111714	4871	0.0	0	ok		"{""Contractile_proxy"": [""TAGLN""], ""ECM_proxy"": [""DCN""], ""Epithelial_proxy"": [""KRT19""], ""Myeloid_proxy"": [""FCER1G""], ""Tcell_proxy"": [""CD3D""], ""reference_score"": [""ADM"", ""AK4""], ""target_score"": [""ALDOA"", ""BNIP3L"", ""NDRG1""]}"
+ovarian	count_80pct	15	2026111715	4871	1.0	0	ok		{}
+ovarian	count_50pct	15	2026111715	4871	2.0	0	ok		{}
+ovarian	panel_loss_10pct	15	2026111715	4871	0.0	0	ok		"{""Contractile_proxy"": [""PDGFRB""], ""ECM_proxy"": [""COL1A2""], ""Epithelial_proxy"": [""KRT18""], ""Myeloid_proxy"": [""AIF1""], ""Tcell_proxy"": [""CD3E""], ""reference_score"": [""KDM3A"", ""SLC2A3""], ""target_score"": [""BID"", ""NDRG1"", ""PMAIP1""]}"
+ovarian	count_80pct	16	2026111716	4871	1.0	0	ok		{}
+ovarian	count_50pct	16	2026111716	4871	2.0	0	ok		{}
+ovarian	panel_loss_10pct	16	2026111716	4871	0.0	0	ok		"{""Contractile_proxy"": [""ACTA2""], ""ECM_proxy"": [""COL1A1""], ""Epithelial_proxy"": [""KRT19""], ""Myeloid_proxy"": [""AIF1""], ""Tcell_proxy"": [""CD3E""], ""reference_score"": [""HK1"", ""P4HA1""], ""target_score"": [""HIF1A"", ""PDK1"", ""TPI1""]}"
+ovarian	count_80pct	17	2026111717	4871	1.0	0	ok		{}
+ovarian	count_50pct	17	2026111717	4871	2.0	0	ok		{}
+ovarian	panel_loss_10pct	17	2026111717	4871	0.0	0	ok		"{""Contractile_proxy"": [""PDGFRB""], ""ECM_proxy"": [""LUM""], ""Epithelial_proxy"": [""KRT7""], ""Myeloid_proxy"": [""AIF1""], ""Tcell_proxy"": [""CD247""], ""reference_score"": [""ADM"", ""PFKL""], ""target_score"": [""BAK1"", ""GPI"", ""PDK1""]}"
+ovarian	count_80pct	18	2026111718	4871	1.0	0	ok		{}
+ovarian	count_50pct	18	2026111718	4871		0	not_computable	Fixed panel constant: GSM6506111_SP2/target_score/CA9	{}
+ovarian	panel_loss_10pct	18	2026111718	4871	0.0	0	ok		"{""Contractile_proxy"": [""FAP""], ""ECM_proxy"": [""COL1A1""], ""Epithelial_proxy"": [""KRT7""], ""Myeloid_proxy"": [""LST1""], ""Tcell_proxy"": [""TRAC""], ""reference_score"": [""ALDOC"", ""CA12""], ""target_score"": [""BAX"", ""BCL2L1"", ""PMAIP1""]}"
+ovarian	count_80pct	19	2026111719	4871	1.0	0	ok		{}
+ovarian	count_50pct	19	2026111719	4871		0	not_computable	Fixed panel constant: GSM6506111_SP2/target_score/CA9	{}
+ovarian	panel_loss_10pct	19	2026111719	4871	0.0	0	ok		"{""Contractile_proxy"": [""FAP""], ""ECM_proxy"": [""COL3A1""], ""Epithelial_proxy"": [""KRT8""], ""Myeloid_proxy"": [""LST1""], ""Tcell_proxy"": [""LCK""], ""reference_score"": [""CA12"", ""MXI1""], ""target_score"": [""BCL2L1"", ""NDRG1"", ""PGK1""]}"
+pdac	count_80pct	0	2026111700	9345	7.0	0	ok		{}
+pdac	count_50pct	0	2026111700	9345	33.0	0	ok		{}
+pdac	panel_loss_10pct	0	2026111700	9345	0.0	0	ok		"{""Contractile_proxy"": [""PDGFRB""], ""ECM_proxy"": [""COL1A1""], ""Epithelial_proxy"": [""EPCAM""], ""Myeloid_proxy"": [""FCER1G""], ""Tcell_proxy"": [""TRAC""], ""reference_score"": [""ANGPTL4"", ""SLC2A3""], ""target_score"": [""BID"", ""CA9""]}"
+pdac	count_80pct	1	2026111701	9345	8.0	0	ok		{}
+pdac	count_50pct	1	2026111701	9345	30.0	0	ok		{}
+pdac	panel_loss_10pct	1	2026111701	9345	0.0	0	ok		"{""Contractile_proxy"": [""FAP""], ""ECM_proxy"": [""LUM""], ""Epithelial_proxy"": [""EPCAM""], ""Myeloid_proxy"": [""TYROBP""], ""Tcell_proxy"": [""CD3E""], ""reference_score"": [""ADM"", ""DDIT4""], ""target_score"": [""BAK1"", ""BNIP3""]}"
+pdac	count_80pct	2	2026111702	9345	8.0	0	ok		{}
+pdac	count_50pct	2	2026111702	9345	31.0	0	ok		{}
+pdac	panel_loss_10pct	2	2026111702	9345	0.0	0	ok		"{""Contractile_proxy"": [""ACTA2""], ""ECM_proxy"": [""COL1A1""], ""Epithelial_proxy"": [""KRT18""], ""Myeloid_proxy"": [""CD68""], ""Tcell_proxy"": [""LCK""], ""reference_score"": [""ADM"", ""FAM162A""], ""target_score"": [""BCL2L1"", ""CA9""]}"
+pdac	count_80pct	3	2026111703	9345	8.0	0	ok		{}
+pdac	count_50pct	3	2026111703	9345	30.0	0	ok		{}
+pdac	panel_loss_10pct	3	2026111703	9345	0.0	0	ok		"{""Contractile_proxy"": [""ACTA2""], ""ECM_proxy"": [""COL1A1""], ""Epithelial_proxy"": [""KRT8""], ""Myeloid_proxy"": [""FCER1G""], ""Tcell_proxy"": [""CD3D""], ""reference_score"": [""ANGPTL4"", ""HK1""], ""target_score"": [""BID"", ""GPI""]}"
+pdac	count_80pct	4	2026111704	9345	8.0	0	ok		{}
+pdac	count_50pct	4	2026111704	9345	32.0	0	ok		{}
+pdac	panel_loss_10pct	4	2026111704	9345	0.0	0	ok		"{""Contractile_proxy"": [""PDGFRB""], ""ECM_proxy"": [""DCN""], ""Epithelial_proxy"": [""KRT7""], ""Myeloid_proxy"": [""LST1""], ""Tcell_proxy"": [""LCK""], ""reference_score"": [""FAM162A"", ""MXI1""], ""target_score"": [""CA9"", ""PDK1""]}"
+pdac	count_80pct	5	2026111705	9345	8.0	0	ok		{}
+pdac	count_50pct	5	2026111705	9345	29.0	0	ok		{}
+pdac	panel_loss_10pct	5	2026111705	9345	0.0	0	ok		"{""Contractile_proxy"": [""ACTA2""], ""ECM_proxy"": [""COL3A1""], ""Epithelial_proxy"": [""KRT7""], ""Myeloid_proxy"": [""LST1""], ""Tcell_proxy"": [""TRAC""], ""reference_score"": [""ADM"", ""P4HA1""], ""target_score"": [""BNIP3L"", ""GPI""]}"
+pdac	count_80pct	6	2026111706	9345	8.0	0	ok		{}
+pdac	count_50pct	6	2026111706	9345	30.0	0	ok		{}
+pdac	panel_loss_10pct	6	2026111706	9345	0.0	0	ok		"{""Contractile_proxy"": [""TAGLN""], ""ECM_proxy"": [""COL1A2""], ""Epithelial_proxy"": [""KRT7""], ""Myeloid_proxy"": [""LST1""], ""Tcell_proxy"": [""CD3E""], ""reference_score"": [""MXI1"", ""P4HA2""], ""target_score"": [""PGAM1"", ""PGK1""]}"
+pdac	count_80pct	7	2026111707	9345	7.0	0	ok		{}
+pdac	count_50pct	7	2026111707	9345	31.0	0	ok		{}
+pdac	panel_loss_10pct	7	2026111707	9345	0.0	0	ok		"{""Contractile_proxy"": [""TAGLN""], ""ECM_proxy"": [""COL1A1""], ""Epithelial_proxy"": [""KRT18""], ""Myeloid_proxy"": [""FCER1G""], ""Tcell_proxy"": [""CD247""], ""reference_score"": [""HK1"", ""P4HA1""], ""target_score"": [""GPI"", ""PGK1""]}"
+pdac	count_80pct	8	2026111708	9345	6.0	0	ok		{}
+pdac	count_50pct	8	2026111708	9345	31.0	0	ok		{}
+pdac	panel_loss_10pct	8	2026111708	9345	0.0	0	ok		"{""Contractile_proxy"": [""ACTA2""], ""ECM_proxy"": [""DCN""], ""Epithelial_proxy"": [""KRT18""], ""Myeloid_proxy"": [""TYROBP""], ""Tcell_proxy"": [""CD3E""], ""reference_score"": [""FAM162A"", ""LDHC""], ""target_score"": [""BCL2L1"", ""GPI""]}"
+pdac	count_80pct	9	2026111709	9345	6.0	0	ok		{}
+pdac	count_50pct	9	2026111709	9345	30.0	0	ok		{}
+pdac	panel_loss_10pct	9	2026111709	9345	0.0	0	ok		"{""Contractile_proxy"": [""PDGFRB""], ""ECM_proxy"": [""COL1A1""], ""Epithelial_proxy"": [""EPCAM""], ""Myeloid_proxy"": [""CD68""], ""Tcell_proxy"": [""TRAC""], ""reference_score"": [""ALDOC"", ""CA12""], ""target_score"": [""BNIP3"", ""GPI""]}"
+pdac	count_80pct	10	2026111710	9345	8.0	0	ok		{}
+pdac	count_50pct	10	2026111710	9345	30.0	0	ok		{}
+pdac	panel_loss_10pct	10	2026111710	9345	0.0	0	ok		"{""Contractile_proxy"": [""ACTA2""], ""ECM_proxy"": [""COL1A2""], ""Epithelial_proxy"": [""KRT18""], ""Myeloid_proxy"": [""LST1""], ""Tcell_proxy"": [""LCK""], ""reference_score"": [""ANGPTL4"", ""FAM162A""], ""target_score"": [""BNIP3L"", ""MCL1""]}"
+pdac	count_80pct	11	2026111711	9345	9.0	0	ok		{}
+pdac	count_50pct	11	2026111711	9345	31.0	0	ok		{}
+pdac	panel_loss_10pct	11	2026111711	9345	0.0	0	ok		"{""Contractile_proxy"": [""PDGFRB""], ""ECM_proxy"": [""COL1A1""], ""Epithelial_proxy"": [""KRT8""], ""Myeloid_proxy"": [""CD68""], ""Tcell_proxy"": [""CD3D""], ""reference_score"": [""KDM3A"", ""PFKL""], ""target_score"": [""BAX"", ""BCL2L1""]}"
+pdac	count_80pct	12	2026111712	9345	7.0	0	ok		{}
+pdac	count_50pct	12	2026111712	9345	29.0	0	ok		{}
+pdac	panel_loss_10pct	12	2026111712	9345	0.0	0	ok		"{""Contractile_proxy"": [""TAGLN""], ""ECM_proxy"": [""LUM""], ""Epithelial_proxy"": [""KRT8""], ""Myeloid_proxy"": [""CD68""], ""Tcell_proxy"": [""CD247""], ""reference_score"": [""ADM"", ""BHLHE40""], ""target_score"": [""HK2"", ""NDRG1""]}"
+pdac	count_80pct	13	2026111713	9345	8.0	0	ok		{}
+pdac	count_50pct	13	2026111713	9345	31.0	0	ok		{}
+pdac	panel_loss_10pct	13	2026111713	9345	0.0	0	ok		"{""Contractile_proxy"": [""TAGLN""], ""ECM_proxy"": [""COL1A2""], ""Epithelial_proxy"": [""EPCAM""], ""Myeloid_proxy"": [""AIF1""], ""Tcell_proxy"": [""CD247""], ""reference_score"": [""HK1"", ""P4HA2""], ""target_score"": [""HIF1A"", ""PMAIP1""]}"
+pdac	count_80pct	14	2026111714	9345	8.0	0	ok		{}
+pdac	count_50pct	14	2026111714	9345	31.0	0	ok		{}
+pdac	panel_loss_10pct	14	2026111714	9345	0.0	0	ok		"{""Contractile_proxy"": [""TAGLN""], ""ECM_proxy"": [""DCN""], ""Epithelial_proxy"": [""KRT18""], ""Myeloid_proxy"": [""FCER1G""], ""Tcell_proxy"": [""CD3D""], ""reference_score"": [""ADM"", ""AK4""], ""target_score"": [""BNIP3"", ""ENO1""]}"
+pdac	count_80pct	15	2026111715	9345	8.0	0	ok		{}
+pdac	count_50pct	15	2026111715	9345	31.0	0	ok		{}
+pdac	panel_loss_10pct	15	2026111715	9345	0.0	0	ok		"{""Contractile_proxy"": [""PDGFRB""], ""ECM_proxy"": [""COL1A2""], ""Epithelial_proxy"": [""KRT8""], ""Myeloid_proxy"": [""AIF1""], ""Tcell_proxy"": [""CD3E""], ""reference_score"": [""LDHC"", ""SLC2A3""], ""target_score"": [""BAK1"", ""PMAIP1""]}"
+pdac	count_80pct	16	2026111716	9345	10.0	0	ok		{}
+pdac	count_50pct	16	2026111716	9345	30.0	0	ok		{}
+pdac	panel_loss_10pct	16	2026111716	9345	0.0	0	ok		"{""Contractile_proxy"": [""ACTA2""], ""ECM_proxy"": [""COL1A1""], ""Epithelial_proxy"": [""KRT18""], ""Myeloid_proxy"": [""AIF1""], ""Tcell_proxy"": [""CD3E""], ""reference_score"": [""KDM3A"", ""P4HA1""], ""target_score"": [""PDK1"", ""VEGFA""]}"
+pdac	count_80pct	17	2026111717	9345	9.0	0	ok		{}
+pdac	count_50pct	17	2026111717	9345	33.0	0	ok		{}
+pdac	panel_loss_10pct	17	2026111717	9345	0.0	0	ok		"{""Contractile_proxy"": [""PDGFRB""], ""ECM_proxy"": [""LUM""], ""Epithelial_proxy"": [""EPCAM""], ""Myeloid_proxy"": [""AIF1""], ""Tcell_proxy"": [""CD247""], ""reference_score"": [""ADM"", ""PFKL""], ""target_score"": [""BAK1"", ""GPI""]}"
+pdac	count_80pct	18	2026111718	9345	8.0	0	ok		{}
+pdac	count_50pct	18	2026111718	9345	31.0	0	ok		{}
+pdac	panel_loss_10pct	18	2026111718	9345	0.0	0	ok		"{""Contractile_proxy"": [""FAP""], ""ECM_proxy"": [""COL1A1""], ""Epithelial_proxy"": [""KRT7""], ""Myeloid_proxy"": [""LST1""], ""Tcell_proxy"": [""TRAC""], ""reference_score"": [""ALDOC"", ""CA12""], ""target_score"": [""BAX"", ""PMAIP1""]}"
+pdac	count_80pct	19	2026111719	9345	7.0	0	ok		{}
+pdac	count_50pct	19	2026111719	9345	32.0	0	ok		{}
+pdac	panel_loss_10pct	19	2026111719	9345	0.0	0	ok		"{""Contractile_proxy"": [""FAP""], ""ECM_proxy"": [""COL3A1""], ""Epithelial_proxy"": [""KRT8""], ""Myeloid_proxy"": [""LST1""], ""Tcell_proxy"": [""LCK""], ""reference_score"": [""CA12"", ""MXI1""], ""target_score"": [""MCL1"", ""PGK1""]}"

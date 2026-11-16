@@ -52,6 +52,14 @@ def main():
         ('S15_Paired_AP_Differences','paired_accuracy_differences.tsv'),('S16_Performance','performance_replicates.tsv')]:
         sheets.append((name,read(utility/filename)))
     sheets.append(('S17_Output_Equivalence',pd.DataFrame(json.loads((utility/'equivalence.json').read_text())['real_tables'])))
+    decision=ROOT/'Decision_Utility/Results'
+    for name,filename in [('S18_Fixed_Budget','fixed_budget_replicates.tsv.gz'),('S19_Inspection_Cost','inspection_cost_replicates.tsv.gz'),
+        ('S20_Model_Agreement','application_audit_summary.tsv'),('S21_Input_Perturbation','perturbation_replicates.tsv.gz'),
+        ('S22_Perturbation_Status','perturbation_qc.tsv')]:
+        sheets.append((name,read(decision/filename)))
+    coverage=read(decision/'second_pair_coverage.tsv');coverage['record_type']='coverage'
+    second=read(decision/'second_pair_associations.tsv');second['record_type']='association'
+    sheets.append(('S23_Second_Pair',pd.concat([coverage,second],ignore_index=True)))
     book=Workbook();contents=book.active;contents.title='Contents'
     contents.append(['Sheet','Rows','Description'])
     notes=[
@@ -71,7 +79,13 @@ def main():
         'All 32 paired injections per background/geometry; not biological ground truth',
         'AP differences across replicates, not patient-population inference',
         'Five randomized subprocess repeats; final corrected process-tree RSS round only',
-        'Exact old/new complete output; independent OLS-product agreement']
+        'Exact old/new complete output; independent OLS-product agreement',
+        'All fixed-budget section outcomes; aggregate within replicate for comparisons',
+        'Inspections for 80 percent known-injection recovery; undefined with no positives',
+        'Full-cohort model membership counts for both predeclared score pairs',
+        'Every computable count/panel/proxy sensitivity; failures explicitly in S22',
+        'All scheduled perturbations, constant-gene failures and original-QC changes',
+        'Illustrative IFN/antigen panels and all associations, not validated signatures']
     for (name,frame),note in zip(sheets,notes):
         contents.append([name,len(frame),note]);ws=book.create_sheet(name)
         ws.append(list(frame.columns))

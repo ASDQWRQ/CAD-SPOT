@@ -1,0 +1,530 @@
+{
+  "ovarian": {
+    "stress": {
+      "any_three": 236,
+      "all_three": 163,
+      "agreement_fraction": 0.690677966101695,
+      "composition_selected": 200,
+      "technical_composition_changed": 54
+    },
+    "ifn": {
+      "any_three": 256,
+      "all_three": 153,
+      "agreement_fraction": 0.59765625,
+      "composition_selected": 200,
+      "technical_composition_changed": 84
+    },
+    "ifn_used": {
+      "target_score": 13,
+      "reference_score": 12
+    },
+    "ifn_rhos": {
+      "raw": 0.2781906584821788,
+      "technical_adjusted": 0.1920841103971217,
+      "composition_adjusted": 0.1695327991139946
+    },
+    "perturbations": {
+      "count_80pct": {
+        "requested": 20,
+        "valid": 20,
+        "mean_top25_retention": 0.6839999999999999,
+        "mean_below_original_qc": 1.0
+      },
+      "count_50pct": {
+        "requested": 20,
+        "valid": 14,
+        "mean_top25_retention": 0.4128571428571429,
+        "mean_below_original_qc": 2.0
+      },
+      "panel_loss_10pct": {
+        "requested": 20,
+        "valid": 20,
+        "mean_top25_retention": 0.756,
+        "mean_below_original_qc": 0.0
+      }
+    }
+  },
+  "pdac": {
+    "stress": {
+      "any_three": 154,
+      "all_three": 96,
+      "agreement_fraction": 0.6233766233766234,
+      "composition_selected": 125,
+      "technical_composition_changed": 42
+    },
+    "ifn": {
+      "any_three": 142,
+      "all_three": 109,
+      "agreement_fraction": 0.7676056338028169,
+      "composition_selected": 125,
+      "technical_composition_changed": 20
+    },
+    "ifn_used": {
+      "target_score": 13,
+      "reference_score": 11
+    },
+    "ifn_rhos": {
+      "raw": 0.2465082658960355,
+      "technical_adjusted": 0.0994722836857218,
+      "composition_adjusted": 0.0944269360602766
+    },
+    "perturbations": {
+      "count_80pct": {
+        "requested": 20,
+        "valid": 20,
+        "mean_top25_retention": 0.666,
+        "mean_below_original_qc": 7.8
+      },
+      "count_50pct": {
+        "requested": 20,
+        "valid": 20,
+        "mean_top25_retention": 0.437,
+        "mean_below_original_qc": 30.8
+      },
+      "panel_loss_10pct": {
+        "requested": 20,
+        "valid": 20,
+        "mean_top25_retention": 0.742,
+        "mean_below_original_qc": 0.0
+      }
+    }
+  },
+  "fixed_budget25": [
+    {
+      "experiment": "injection",
+      "scenario": "ovarian_compact",
+      "method": "adjusted_minimum",
+      "budget": 25,
+      "precision_mean": 0.453125,
+      "precision_std": 0.0816932697508224,
+      "recall_mean": 0.2882363172541743,
+      "recall_std": 0.0470522423927754
+    },
+    {
+      "experiment": "injection",
+      "scenario": "ovarian_compact",
+      "method": "adjusted_target",
+      "budget": 25,
+      "precision_mean": 0.33875,
+      "precision_std": 0.083153569550755,
+      "recall_mean": 0.2150394248608534,
+      "recall_std": 0.0493538027375375
+    },
+    {
+      "experiment": "injection",
+      "scenario": "ovarian_compact",
+      "method": "cadspot_product",
+      "budget": 25,
+      "precision_mean": 0.489375,
+      "precision_std": 0.0804799113383722,
+      "recall_mean": 0.3138431508967223,
+      "recall_std": 0.0458040106331194
+    },
+    {
+      "experiment": "injection",
+      "scenario": "ovarian_compact",
+      "method": "raw_product",
+      "budget": 25,
+      "precision_mean": 0.410625,
+      "precision_std": 0.1407797983124824,
+      "recall_mean": 0.260368351886209,
+      "recall_std": 0.0934023746012447
+    },
+    {
+      "experiment": "injection",
+      "scenario": "ovarian_compact",
+      "method": "spline_product",
+      "budget": 25,
+      "precision_mean": 0.48125,
+      "precision_std": 0.0736053118700265,
+      "recall_mean": 0.3066055967841682,
+      "recall_std": 0.0442566922578926
+    },
+    {
+      "experiment": "injection",
+      "scenario": "ovarian_compact",
+      "method": "technical_product",
+      "budget": 25,
+      "precision_mean": 0.508125,
+      "precision_std": 0.0818904657887398,
+      "recall_mean": 0.3265016233766233,
+      "recall_std": 0.0476861906180592
+    },
+    {
+      "experiment": "injection",
+      "scenario": "ovarian_dispersed",
+      "method": "adjusted_minimum",
+      "budget": 25,
+      "precision_mean": 0.4625,
+      "precision_std": 0.0650062031779498,
+      "recall_mean": 0.2961116264687693,
+      "recall_std": 0.039703159426769
+    },
+    {
+      "experiment": "injection",
+      "scenario": "ovarian_dispersed",
+      "method": "adjusted_target",
+      "budget": 25,
+      "precision_mean": 0.336875,
+      "precision_std": 0.054502885392693,
+      "recall_mean": 0.2136189703153989,
+      "recall_std": 0.0357425347417924
+    },
+    {
+      "experiment": "injection",
+      "scenario": "ovarian_dispersed",
+      "method": "cadspot_product",
+      "budget": 25,
+      "precision_mean": 0.49,
+      "precision_std": 0.0672021505032247,
+      "recall_mean": 0.3161719233147804,
+      "recall_std": 0.0418224746862953
+    },
+    {
+      "experiment": "injection",
+      "scenario": "ovarian_dispersed",
+      "method": "raw_product",
+      "budget": 25,
+      "precision_mean": 0.46125,
+      "precision_std": 0.0484435154953517,
+      "recall_mean": 0.2968653370439085,
+      "recall_std": 0.0318740241360992
+    },
+    {
+      "experiment": "injection",
+      "scenario": "ovarian_dispersed",
+      "method": "spline_product",
+      "budget": 25,
+      "precision_mean": 0.50625,
+      "precision_std": 0.0631306888206341,
+      "recall_mean": 0.3238443104514533,
+      "recall_std": 0.039595551951465
+    },
+    {
+      "experiment": "injection",
+      "scenario": "ovarian_dispersed",
+      "method": "technical_product",
+      "budget": 25,
+      "precision_mean": 0.494375,
+      "precision_std": 0.0634968884175412,
+      "recall_mean": 0.3191771026592455,
+      "recall_std": 0.0395710304290775
+    },
+    {
+      "experiment": "injection",
+      "scenario": "pdac_compact",
+      "method": "adjusted_minimum",
+      "budget": 25,
+      "precision_mean": 0.363125,
+      "precision_std": 0.1366048575152955,
+      "recall_mean": 0.1173435179072454,
+      "recall_std": 0.0452190860648799
+    },
+    {
+      "experiment": "injection",
+      "scenario": "pdac_compact",
+      "method": "adjusted_target",
+      "budget": 25,
+      "precision_mean": 0.310625,
+      "precision_std": 0.1211753594669126,
+      "recall_mean": 0.1006276819607195,
+      "recall_std": 0.0400807687456954
+    },
+    {
+      "experiment": "injection",
+      "scenario": "pdac_compact",
+      "method": "cadspot_product",
+      "budget": 25,
+      "precision_mean": 0.3575,
+      "precision_std": 0.1462432794154779,
+      "recall_mean": 0.114978750618914,
+      "recall_std": 0.0478133352336183
+    },
+    {
+      "experiment": "injection",
+      "scenario": "pdac_compact",
+      "method": "raw_product",
+      "budget": 25,
+      "precision_mean": 0.30375,
+      "precision_std": 0.1675968665501218,
+      "recall_mean": 0.0985311107443472,
+      "recall_std": 0.0552488127850623
+    },
+    {
+      "experiment": "injection",
+      "scenario": "pdac_compact",
+      "method": "spline_product",
+      "budget": 25,
+      "precision_mean": 0.36625,
+      "precision_std": 0.1399020394603355,
+      "recall_mean": 0.1174337762006931,
+      "recall_std": 0.0459028752305036
+    },
+    {
+      "experiment": "injection",
+      "scenario": "pdac_compact",
+      "method": "technical_product",
+      "budget": 25,
+      "precision_mean": 0.34625,
+      "precision_std": 0.1490128810193179,
+      "recall_mean": 0.111770712988942,
+      "recall_std": 0.0491851815334511
+    },
+    {
+      "experiment": "injection",
+      "scenario": "pdac_dispersed",
+      "method": "adjusted_minimum",
+      "budget": 25,
+      "precision_mean": 0.416875,
+      "precision_std": 0.0520816666399991,
+      "recall_mean": 0.1349774096385542,
+      "recall_std": 0.0168693780914126
+    },
+    {
+      "experiment": "injection",
+      "scenario": "pdac_dispersed",
+      "method": "adjusted_target",
+      "budget": 25,
+      "precision_mean": 0.348125,
+      "precision_std": 0.0563077660374573,
+      "recall_mean": 0.1125933528635088,
+      "recall_std": 0.0181167027881693
+    },
+    {
+      "experiment": "injection",
+      "scenario": "pdac_dispersed",
+      "method": "cadspot_product",
+      "budget": 25,
+      "precision_mean": 0.401875,
+      "precision_std": 0.0557319332797344,
+      "recall_mean": 0.1294020259118666,
+      "recall_std": 0.0177259605253654
+    },
+    {
+      "experiment": "injection",
+      "scenario": "pdac_dispersed",
+      "method": "raw_product",
+      "budget": 25,
+      "precision_mean": 0.38,
+      "precision_std": 0.0554163129586901,
+      "recall_mean": 0.1239478461792374,
+      "recall_std": 0.0181204266184771
+    },
+    {
+      "experiment": "injection",
+      "scenario": "pdac_dispersed",
+      "method": "spline_product",
+      "budget": 25,
+      "precision_mean": 0.44,
+      "precision_std": 0.0540011947299137,
+      "recall_mean": 0.1413754332398085,
+      "recall_std": 0.0175353779158536
+    },
+    {
+      "experiment": "injection",
+      "scenario": "pdac_dispersed",
+      "method": "technical_product",
+      "budget": 25,
+      "precision_mean": 0.396875,
+      "precision_std": 0.0559053058824156,
+      "recall_mean": 0.1280507303185344,
+      "recall_std": 0.0179637908317629
+    }
+  ],
+  "cost80": [
+    {
+      "scenario": "ovarian_compact",
+      "method": "adjusted_minimum",
+      "inspections": 170.84375
+    },
+    {
+      "scenario": "ovarian_compact",
+      "method": "adjusted_target",
+      "inspections": 218.703125
+    },
+    {
+      "scenario": "ovarian_compact",
+      "method": "cadspot_product",
+      "inspections": 189.796875
+    },
+    {
+      "scenario": "ovarian_compact",
+      "method": "raw_product",
+      "inspections": 291.078125
+    },
+    {
+      "scenario": "ovarian_compact",
+      "method": "spline_product",
+      "inspections": 205.9375
+    },
+    {
+      "scenario": "ovarian_compact",
+      "method": "technical_product",
+      "inspections": 182.65625
+    },
+    {
+      "scenario": "ovarian_dispersed",
+      "method": "adjusted_minimum",
+      "inspections": 166.640625
+    },
+    {
+      "scenario": "ovarian_dispersed",
+      "method": "adjusted_target",
+      "inspections": 214.640625
+    },
+    {
+      "scenario": "ovarian_dispersed",
+      "method": "cadspot_product",
+      "inspections": 187.890625
+    },
+    {
+      "scenario": "ovarian_dispersed",
+      "method": "raw_product",
+      "inspections": 339.28125
+    },
+    {
+      "scenario": "ovarian_dispersed",
+      "method": "spline_product",
+      "inspections": 176.875
+    },
+    {
+      "scenario": "ovarian_dispersed",
+      "method": "technical_product",
+      "inspections": 186.03125
+    },
+    {
+      "scenario": "pdac_compact",
+      "method": "adjusted_minimum",
+      "inspections": 349.828125
+    },
+    {
+      "scenario": "pdac_compact",
+      "method": "adjusted_target",
+      "inspections": 427.703125
+    },
+    {
+      "scenario": "pdac_compact",
+      "method": "cadspot_product",
+      "inspections": 406.40625
+    },
+    {
+      "scenario": "pdac_compact",
+      "method": "raw_product",
+      "inspections": 508.390625
+    },
+    {
+      "scenario": "pdac_compact",
+      "method": "spline_product",
+      "inspections": 433.75
+    },
+    {
+      "scenario": "pdac_compact",
+      "method": "technical_product",
+      "inspections": 398.046875
+    },
+    {
+      "scenario": "pdac_dispersed",
+      "method": "adjusted_minimum",
+      "inspections": 324.96875
+    },
+    {
+      "scenario": "pdac_dispersed",
+      "method": "adjusted_target",
+      "inspections": 410.5
+    },
+    {
+      "scenario": "pdac_dispersed",
+      "method": "cadspot_product",
+      "inspections": 316.3125
+    },
+    {
+      "scenario": "pdac_dispersed",
+      "method": "raw_product",
+      "inspections": 558.578125
+    },
+    {
+      "scenario": "pdac_dispersed",
+      "method": "spline_product",
+      "inspections": 299.515625
+    },
+    {
+      "scenario": "pdac_dispersed",
+      "method": "technical_product",
+      "inspections": 357.53125
+    }
+  ],
+  "failures": [
+    {
+      "cohort": "ovarian",
+      "perturbation": "count_50pct",
+      "replicate": 5,
+      "seed": 2026111705,
+      "n_spots": 4871,
+      "below_original_qc": NaN,
+      "qc_rows_removed": 0,
+      "status": "not_computable",
+      "failure_reason": "Fixed panel constant: GSM6506111_SP2/target_score/CA9",
+      "dropped_genes": "{}"
+    },
+    {
+      "cohort": "ovarian",
+      "perturbation": "count_50pct",
+      "replicate": 10,
+      "seed": 2026111710,
+      "n_spots": 4871,
+      "below_original_qc": NaN,
+      "qc_rows_removed": 0,
+      "status": "not_computable",
+      "failure_reason": "Fixed panel constant: GSM6506111_SP2/target_score/CA9",
+      "dropped_genes": "{}"
+    },
+    {
+      "cohort": "ovarian",
+      "perturbation": "count_50pct",
+      "replicate": 12,
+      "seed": 2026111712,
+      "n_spots": 4871,
+      "below_original_qc": NaN,
+      "qc_rows_removed": 0,
+      "status": "not_computable",
+      "failure_reason": "Fixed panel constant: GSM6506111_SP2/target_score/CA9",
+      "dropped_genes": "{}"
+    },
+    {
+      "cohort": "ovarian",
+      "perturbation": "count_50pct",
+      "replicate": 13,
+      "seed": 2026111713,
+      "n_spots": 4871,
+      "below_original_qc": NaN,
+      "qc_rows_removed": 0,
+      "status": "not_computable",
+      "failure_reason": "Fixed panel constant: GSM6506111_SP2/target_score/CA9",
+      "dropped_genes": "{}"
+    },
+    {
+      "cohort": "ovarian",
+      "perturbation": "count_50pct",
+      "replicate": 18,
+      "seed": 2026111718,
+      "n_spots": 4871,
+      "below_original_qc": NaN,
+      "qc_rows_removed": 0,
+      "status": "not_computable",
+      "failure_reason": "Fixed panel constant: GSM6506111_SP2/target_score/CA9",
+      "dropped_genes": "{}"
+    },
+    {
+      "cohort": "ovarian",
+      "perturbation": "count_50pct",
+      "replicate": 19,
+      "seed": 2026111719,
+      "n_spots": 4871,
+      "below_original_qc": NaN,
+      "qc_rows_removed": 0,
+      "status": "not_computable",
+      "failure_reason": "Fixed panel constant: GSM6506111_SP2/target_score/CA9",
+      "dropped_genes": "{}"
+    }
+  ]
+}

@@ -1,0 +1,221 @@
+experiment	scenario	budget	metric	comparison	n_valid	mean_difference	ci_low	ci_high
+injection	ovarian_compact	10.0	precision	cadspot_product-minus-raw_product	32	0.0421875	-0.006250000000000009	0.0890625
+injection	ovarian_compact	10.0	precision	cadspot_product-minus-technical_product	32	-0.01562499999999999	-0.028124999999999997	-0.003124999999999994
+injection	ovarian_compact	10.0	precision	cadspot_product-minus-adjusted_target	32	0.07812500000000001	0.04375	0.1140625
+injection	ovarian_compact	10.0	precision	cadspot_product-minus-adjusted_minimum	32	-0.0015624999999999962	-0.02187499999999998	0.01718750000000001
+injection	ovarian_compact	10.0	precision	cadspot_product-minus-spline_product	32	-0.004687499999999987	-0.02187499999999999	0.014062499999999999
+injection	ovarian_compact	25.0	precision	cadspot_product-minus-raw_product	32	0.07875000000000001	0.03437500000000002	0.12312500000000001
+injection	ovarian_compact	25.0	precision	cadspot_product-minus-technical_product	32	-0.018750000000000003	-0.02812500000000001	-0.009374999999999991
+injection	ovarian_compact	25.0	precision	cadspot_product-minus-adjusted_target	32	0.150625	0.13437500000000002	0.166875
+injection	ovarian_compact	25.0	precision	cadspot_product-minus-adjusted_minimum	32	0.036250000000000004	0.022499999999999992	0.05062499999999998
+injection	ovarian_compact	25.0	precision	cadspot_product-minus-spline_product	32	0.008124999999999999	-0.006875000000000011	0.023750000000000007
+injection	ovarian_compact	50.0	precision	cadspot_product-minus-raw_product	32	0.07750000000000001	0.049375000000000016	0.1046953124999999
+injection	ovarian_compact	50.0	precision	cadspot_product-minus-technical_product	32	-0.0053124999999999995	-0.010624999999999997	-0.0003124999999999951
+injection	ovarian_compact	50.0	precision	cadspot_product-minus-adjusted_target	32	0.110625	0.0975	0.1234375
+injection	ovarian_compact	50.0	precision	cadspot_product-minus-adjusted_minimum	32	0.027499999999999997	0.0221875	0.032812499999999994
+injection	ovarian_compact	50.0	precision	cadspot_product-minus-spline_product	32	0.0031250000000000028	-0.003437499999999998	0.0096875
+injection	ovarian_dispersed	10.0	precision	cadspot_product-minus-raw_product	32	0.0171875	-0.023437499999999986	0.056249999999999994
+injection	ovarian_dispersed	10.0	precision	cadspot_product-minus-technical_product	32	-0.014062499999999992	-0.02499999999999999	-0.003124999999999989
+injection	ovarian_dispersed	10.0	precision	cadspot_product-minus-adjusted_target	32	0.08437499999999999	0.046875	0.121875
+injection	ovarian_dispersed	10.0	precision	cadspot_product-minus-adjusted_minimum	32	-0.031249999999999993	-0.05624999999999999	-0.004687500000000008
+injection	ovarian_dispersed	10.0	precision	cadspot_product-minus-spline_product	32	-0.01874999999999999	-0.032812499999999994	-0.004687499999999985
+injection	ovarian_dispersed	25.0	precision	cadspot_product-minus-raw_product	32	0.028750000000000005	0.011249999999999991	0.046875000000000014
+injection	ovarian_dispersed	25.0	precision	cadspot_product-minus-technical_product	32	-0.004375000000000007	-0.011250000000000015	0.0024999999999999953
+injection	ovarian_dispersed	25.0	precision	cadspot_product-minus-adjusted_target	32	0.153125	0.1325	0.17375000000000002
+injection	ovarian_dispersed	25.0	precision	cadspot_product-minus-adjusted_minimum	32	0.027500000000000004	0.014374999999999999	0.041874999999999996
+injection	ovarian_dispersed	25.0	precision	cadspot_product-minus-spline_product	32	-0.016250000000000014	-0.025625000000000016	-0.006875000000000008
+injection	ovarian_dispersed	50.0	precision	cadspot_product-minus-raw_product	32	0.07750000000000001	0.06437500000000002	0.09062500000000001
+injection	ovarian_dispersed	50.0	precision	cadspot_product-minus-technical_product	32	-0.0003125000000000055	-0.004375000000000004	0.004062499999999995
+injection	ovarian_dispersed	50.0	precision	cadspot_product-minus-adjusted_target	32	0.1353125	0.12187500000000001	0.1484375
+injection	ovarian_dispersed	50.0	precision	cadspot_product-minus-adjusted_minimum	32	0.04125000000000001	0.03406250000000001	0.04875
+injection	ovarian_dispersed	50.0	precision	cadspot_product-minus-spline_product	32	0.006562499999999997	-8.716985466783416e-18	0.013124999999999994
+injection	pdac_compact	10.0	precision	cadspot_product-minus-raw_product	32	0.05781249999999999	0.017187499999999994	0.096875
+injection	pdac_compact	10.0	precision	cadspot_product-minus-technical_product	32	0.014062500000000002	-0.014062500000000007	0.0421875
+injection	pdac_compact	10.0	precision	cadspot_product-minus-adjusted_target	32	0.1109375	0.0796875	0.14375
+injection	pdac_compact	10.0	precision	cadspot_product-minus-adjusted_minimum	32	0.0296875	0.007812499999999998	0.05
+injection	pdac_compact	10.0	precision	cadspot_product-minus-spline_product	32	0.009375000000000003	-0.004687500000000008	0.026562500000000003
+injection	pdac_compact	25.0	precision	cadspot_product-minus-raw_product	32	0.05374999999999999	0.025625	0.081875
+injection	pdac_compact	25.0	precision	cadspot_product-minus-technical_product	32	0.01125	-0.0037499999999999964	0.026250000000000006
+injection	pdac_compact	25.0	precision	cadspot_product-minus-adjusted_target	32	0.046875	0.029375000000000005	0.064375
+injection	pdac_compact	25.0	precision	cadspot_product-minus-adjusted_minimum	32	-0.0056249999999999955	-0.016874999999999998	0.005625000000000007
+injection	pdac_compact	25.0	precision	cadspot_product-minus-spline_product	32	-0.008750000000000008	-0.020625000000000004	0.002500000000000004
+injection	pdac_compact	50.0	precision	cadspot_product-minus-raw_product	32	0.0628125	0.02842968749999999	0.0965625
+injection	pdac_compact	50.0	precision	cadspot_product-minus-technical_product	32	0.018437500000000002	0.001875000000000006	0.03499999999999999
+injection	pdac_compact	50.0	precision	cadspot_product-minus-adjusted_target	32	0.061562500000000006	0.04875	0.0740625
+injection	pdac_compact	50.0	precision	cadspot_product-minus-adjusted_minimum	32	-0.013125000000000001	-0.020937500000000005	-0.0050000000000000044
+injection	pdac_compact	50.0	precision	cadspot_product-minus-spline_product	32	0.0084375	0.0012500000000000002	0.016249999999999997
+injection	pdac_dispersed	10.0	precision	cadspot_product-minus-raw_product	32	0.009375	-0.017187499999999994	0.035937500000000004
+injection	pdac_dispersed	10.0	precision	cadspot_product-minus-technical_product	32	0.009374999999999994	-0.010937500000000003	0.029687499999999988
+injection	pdac_dispersed	10.0	precision	cadspot_product-minus-adjusted_target	32	0.1453125	0.109375	0.18125
+injection	pdac_dispersed	10.0	precision	cadspot_product-minus-adjusted_minimum	32	-0.028124999999999983	-0.05156249999999998	-0.0031250000000000097
+injection	pdac_dispersed	10.0	precision	cadspot_product-minus-spline_product	32	0.020312500000000008	0.003124999999999996	0.0390625
+injection	pdac_dispersed	25.0	precision	cadspot_product-minus-raw_product	32	0.021874999999999995	0.006250000000000004	0.03812499999999999
+injection	pdac_dispersed	25.0	precision	cadspot_product-minus-technical_product	32	0.005000000000000001	-0.008749999999999999	0.01812499999999999
+injection	pdac_dispersed	25.0	precision	cadspot_product-minus-adjusted_target	32	0.05374999999999999	0.029999999999999985	0.07624999999999998
+injection	pdac_dispersed	25.0	precision	cadspot_product-minus-adjusted_minimum	32	-0.015	-0.024375000000000008	-0.004999999999999996
+injection	pdac_dispersed	25.0	precision	cadspot_product-minus-spline_product	32	-0.038125000000000006	-0.04937500000000001	-0.027499999999999993
+injection	pdac_dispersed	50.0	precision	cadspot_product-minus-raw_product	32	0.0640625	0.054062499999999986	0.07375
+injection	pdac_dispersed	50.0	precision	cadspot_product-minus-technical_product	32	0.021562500000000005	0.0159375	0.02781250000000001
+injection	pdac_dispersed	50.0	precision	cadspot_product-minus-adjusted_target	32	0.0703125	0.060312499999999984	0.07999999999999999
+injection	pdac_dispersed	50.0	precision	cadspot_product-minus-adjusted_minimum	32	-0.015625000000000003	-0.024062500000000004	-0.006562500000000009
+injection	pdac_dispersed	50.0	precision	cadspot_product-minus-spline_product	32	-0.014375000000000011	-0.02031250000000001	-0.008125000000000014
+simulation	architecture_coupled	10.0	precision	cadspot_product-minus-raw_product	40	-0.27375	-0.30625	-0.2425
+simulation	architecture_coupled	10.0	precision	cadspot_product-minus-technical_product	40	-0.2125	-0.24625	-0.17875000000000002
+simulation	architecture_coupled	10.0	precision	cadspot_product-minus-adjusted_target	40	0.14750000000000002	0.10625	0.1875
+simulation	architecture_coupled	10.0	precision	cadspot_product-minus-adjusted_minimum	40	0.03250000000000001	0.009999999999999998	0.05500000000000003
+simulation	architecture_coupled	10.0	precision	cadspot_product-minus-spline_product	40	0.12000000000000002	0.08875000000000001	0.15125
+simulation	architecture_coupled	25.0	precision	cadspot_product-minus-raw_product	40	-0.37649999999999995	-0.39649999999999996	-0.35699999999999993
+simulation	architecture_coupled	25.0	precision	cadspot_product-minus-technical_product	40	-0.266	-0.2895	-0.2415
+simulation	architecture_coupled	25.0	precision	cadspot_product-minus-adjusted_target	40	0.13199999999999998	0.10899999999999999	0.1555
+simulation	architecture_coupled	25.0	precision	cadspot_product-minus-adjusted_minimum	40	0.04049999999999998	0.02799999999999997	0.05299999999999998
+simulation	architecture_coupled	25.0	precision	cadspot_product-minus-spline_product	40	0.1375	0.121	0.15549999999999997
+simulation	architecture_coupled	50.0	precision	cadspot_product-minus-raw_product	40	-0.43899999999999995	-0.45199999999999996	-0.42574999999999996
+simulation	architecture_coupled	50.0	precision	cadspot_product-minus-technical_product	40	-0.26125	-0.2735	-0.24874999999999997
+simulation	architecture_coupled	50.0	precision	cadspot_product-minus-adjusted_target	40	0.08975000000000001	0.07675000000000001	0.10250000000000001
+simulation	architecture_coupled	50.0	precision	cadspot_product-minus-adjusted_minimum	40	0.022000000000000002	0.014249999999999999	0.03025
+simulation	architecture_coupled	50.0	precision	cadspot_product-minus-spline_product	40	0.11425	0.10625000000000002	0.122
+simulation	linear_compact	10.0	precision	cadspot_product-minus-raw_product	40	0.7150000000000001	0.6675	0.76
+simulation	linear_compact	10.0	precision	cadspot_product-minus-technical_product	40	0.49124999999999996	0.43125	0.55
+simulation	linear_compact	10.0	precision	cadspot_product-minus-adjusted_target	40	0.16375	0.13000000000000003	0.1975
+simulation	linear_compact	10.0	precision	cadspot_product-minus-adjusted_minimum	40	0.048750000000000016	0.026249999999999996	0.07250000000000001
+simulation	linear_compact	10.0	precision	cadspot_product-minus-spline_product	40	0.04375000000000001	0.023750000000000007	0.06375000000000001
+simulation	linear_compact	25.0	precision	cadspot_product-minus-raw_product	40	0.5825	0.545	0.6174999999999999
+simulation	linear_compact	25.0	precision	cadspot_product-minus-technical_product	40	0.40650000000000003	0.366	0.44699999999999995
+simulation	linear_compact	25.0	precision	cadspot_product-minus-adjusted_target	40	0.1545	0.1315	0.1765
+simulation	linear_compact	25.0	precision	cadspot_product-minus-adjusted_minimum	40	0.03650000000000001	0.024	0.049
+simulation	linear_compact	25.0	precision	cadspot_product-minus-spline_product	40	0.05249999999999999	0.03899999999999998	0.06599999999999999
+simulation	linear_compact	50.0	precision	cadspot_product-minus-raw_product	40	0.43375	0.39775	0.46625000000000005
+simulation	linear_compact	50.0	precision	cadspot_product-minus-technical_product	40	0.28725000000000006	0.25600000000000006	0.31700000000000006
+simulation	linear_compact	50.0	precision	cadspot_product-minus-adjusted_target	40	0.12175000000000005	0.10675000000000004	0.13625000000000004
+simulation	linear_compact	50.0	precision	cadspot_product-minus-adjusted_minimum	40	0.03050000000000001	0.02275	0.03825000000000002
+simulation	linear_compact	50.0	precision	cadspot_product-minus-spline_product	40	0.04650000000000002	0.036750000000000026	0.056500000000000015
+simulation	linear_dispersed	10.0	precision	cadspot_product-minus-raw_product	40	0.3425	0.29125	0.39375000000000004
+simulation	linear_dispersed	10.0	precision	cadspot_product-minus-technical_product	40	0.33375000000000005	0.29500000000000004	0.37125
+simulation	linear_dispersed	10.0	precision	cadspot_product-minus-adjusted_target	40	0.15375000000000003	0.12000000000000004	0.18750000000000006
+simulation	linear_dispersed	10.0	precision	cadspot_product-minus-adjusted_minimum	40	0.032499999999999994	0.01	0.05253124999999956
+simulation	linear_dispersed	10.0	precision	cadspot_product-minus-spline_product	40	0.003750000000000009	-0.01125	0.018749999999999996
+simulation	linear_dispersed	25.0	precision	cadspot_product-minus-raw_product	40	0.352	0.3215	0.3825
+simulation	linear_dispersed	25.0	precision	cadspot_product-minus-technical_product	40	0.297	0.27349999999999997	0.3195
+simulation	linear_dispersed	25.0	precision	cadspot_product-minus-adjusted_target	40	0.13549999999999995	0.11249999999999996	0.15799999999999997
+simulation	linear_dispersed	25.0	precision	cadspot_product-minus-adjusted_minimum	40	0.05199999999999999	0.040499999999999994	0.06349999999999997
+simulation	linear_dispersed	25.0	precision	cadspot_product-minus-spline_product	40	-0.001999999999999996	-0.011499999999999996	0.007000000000000015
+simulation	linear_dispersed	50.0	precision	cadspot_product-minus-raw_product	40	0.29325000000000007	0.2765	0.3097500000000001
+simulation	linear_dispersed	50.0	precision	cadspot_product-minus-technical_product	40	0.24125000000000002	0.22575000000000003	0.25675000000000003
+simulation	linear_dispersed	50.0	precision	cadspot_product-minus-adjusted_target	40	0.10900000000000003	0.09474375	0.12350000000000003
+simulation	linear_dispersed	50.0	precision	cadspot_product-minus-adjusted_minimum	40	0.03925000000000002	0.03075000000000002	0.047750000000000015
+simulation	linear_dispersed	50.0	precision	cadspot_product-minus-spline_product	40	-0.00424999999999999	-0.00924999999999998	0.0007500000000000035
+simulation	no_nuisance	10.0	precision	cadspot_product-minus-raw_product	40	-0.01749999999999999	-0.026249999999999996	-0.008749999999999999
+simulation	no_nuisance	10.0	precision	cadspot_product-minus-technical_product	40	-0.012499999999999994	-0.022499999999999985	-0.003749999999999995
+simulation	no_nuisance	10.0	precision	cadspot_product-minus-adjusted_target	40	0.20125	0.16625	0.23625000000000002
+simulation	no_nuisance	10.0	precision	cadspot_product-minus-adjusted_minimum	40	0.031249999999999993	0.01500000000000001	0.04753124999999955
+simulation	no_nuisance	10.0	precision	cadspot_product-minus-spline_product	40	0.05249999999999998	0.03374999999999999	0.07249999999999998
+simulation	no_nuisance	25.0	precision	cadspot_product-minus-raw_product	40	-0.01800000000000001	-0.028500000000000008	-0.00800000000000001
+simulation	no_nuisance	25.0	precision	cadspot_product-minus-technical_product	40	-0.014000000000000009	-0.02250000000000001	-0.006000000000000014
+simulation	no_nuisance	25.0	precision	cadspot_product-minus-adjusted_target	40	0.217	0.19249999999999998	0.24100000000000002
+simulation	no_nuisance	25.0	precision	cadspot_product-minus-adjusted_minimum	40	0.05750000000000001	0.04499999999999999	0.071
+simulation	no_nuisance	25.0	precision	cadspot_product-minus-spline_product	40	0.07600000000000001	0.0635	0.0885
+simulation	no_nuisance	50.0	precision	cadspot_product-minus-raw_product	40	-0.016499999999999994	-0.02449999999999998	-0.00899999999999999
+simulation	no_nuisance	50.0	precision	cadspot_product-minus-technical_product	40	-0.01649999999999999	-0.023249999999999993	-0.010499999999999982
+simulation	no_nuisance	50.0	precision	cadspot_product-minus-adjusted_target	40	0.15775	0.13974999999999999	0.176
+simulation	no_nuisance	50.0	precision	cadspot_product-minus-adjusted_minimum	40	0.048499999999999974	0.040999999999999974	0.055749999999999966
+simulation	no_nuisance	50.0	precision	cadspot_product-minus-spline_product	40	0.06474999999999996	0.05649999999999996	0.07299999999999995
+simulation	no_program	10.0	precision	cadspot_product-minus-raw_product	40	0.0	0.0	0.0
+simulation	no_program	10.0	precision	cadspot_product-minus-technical_product	40	0.0	0.0	0.0
+simulation	no_program	10.0	precision	cadspot_product-minus-adjusted_target	40	0.0	0.0	0.0
+simulation	no_program	10.0	precision	cadspot_product-minus-adjusted_minimum	40	0.0	0.0	0.0
+simulation	no_program	10.0	precision	cadspot_product-minus-spline_product	40	0.0	0.0	0.0
+simulation	no_program	25.0	precision	cadspot_product-minus-raw_product	40	0.0	0.0	0.0
+simulation	no_program	25.0	precision	cadspot_product-minus-technical_product	40	0.0	0.0	0.0
+simulation	no_program	25.0	precision	cadspot_product-minus-adjusted_target	40	0.0	0.0	0.0
+simulation	no_program	25.0	precision	cadspot_product-minus-adjusted_minimum	40	0.0	0.0	0.0
+simulation	no_program	25.0	precision	cadspot_product-minus-spline_product	40	0.0	0.0	0.0
+simulation	no_program	50.0	precision	cadspot_product-minus-raw_product	40	0.0	0.0	0.0
+simulation	no_program	50.0	precision	cadspot_product-minus-technical_product	40	0.0	0.0	0.0
+simulation	no_program	50.0	precision	cadspot_product-minus-adjusted_target	40	0.0	0.0	0.0
+simulation	no_program	50.0	precision	cadspot_product-minus-adjusted_minimum	40	0.0	0.0	0.0
+simulation	no_program	50.0	precision	cadspot_product-minus-spline_product	40	0.0	0.0	0.0
+simulation	noisy_proxy	10.0	precision	cadspot_product-minus-raw_product	40	0.3425	0.3	0.3850312499999996
+simulation	noisy_proxy	10.0	precision	cadspot_product-minus-technical_product	40	0.11875	0.08375000000000002	0.15250000000000002
+simulation	noisy_proxy	10.0	precision	cadspot_product-minus-adjusted_target	40	0.036250000000000004	0.006250000000000022	0.06749999999999999
+simulation	noisy_proxy	10.0	precision	cadspot_product-minus-adjusted_minimum	40	0.013749999999999998	-0.007500000000000007	0.03499999999999999
+simulation	noisy_proxy	10.0	precision	cadspot_product-minus-spline_product	40	-0.016249999999999997	-0.03374999999999999	0.0012500000000000024
+simulation	noisy_proxy	25.0	precision	cadspot_product-minus-raw_product	40	0.29100000000000004	0.262	0.32
+simulation	noisy_proxy	25.0	precision	cadspot_product-minus-technical_product	40	0.11499999999999999	0.0885	0.14100000000000001
+simulation	noisy_proxy	25.0	precision	cadspot_product-minus-adjusted_target	40	0.051500000000000004	0.03250000000000001	0.07100000000000002
+simulation	noisy_proxy	25.0	precision	cadspot_product-minus-adjusted_minimum	40	0.017499999999999998	0.003999999999999996	0.031000000000000007
+simulation	noisy_proxy	25.0	precision	cadspot_product-minus-spline_product	40	0.004499999999999999	-0.007000000000000009	0.015499999999999996
+simulation	noisy_proxy	50.0	precision	cadspot_product-minus-raw_product	40	0.22675	0.20275000000000004	0.2505
+simulation	noisy_proxy	50.0	precision	cadspot_product-minus-technical_product	40	0.08025	0.06300000000000001	0.097
+simulation	noisy_proxy	50.0	precision	cadspot_product-minus-adjusted_target	40	0.044000000000000004	0.032	0.05575
+simulation	noisy_proxy	50.0	precision	cadspot_product-minus-adjusted_minimum	40	0.014000000000000002	0.007999999999999998	0.020000000000000007
+simulation	noisy_proxy	50.0	precision	cadspot_product-minus-spline_product	40	-0.002250000000000001	-0.011499999999999993	0.007249999999999995
+simulation	nonlinear_compact	10.0	precision	cadspot_product-minus-raw_product	40	0.0025	0.0	0.00625
+simulation	nonlinear_compact	10.0	precision	cadspot_product-minus-technical_product	40	0.0025	0.0	0.00625
+simulation	nonlinear_compact	10.0	precision	cadspot_product-minus-adjusted_target	40	-0.00125	-0.0037500000000000007	0.0
+simulation	nonlinear_compact	10.0	precision	cadspot_product-minus-adjusted_minimum	40	0.0	0.0	0.0
+simulation	nonlinear_compact	10.0	precision	cadspot_product-minus-spline_product	40	-0.0675	-0.08875	-0.0475
+simulation	nonlinear_compact	25.0	precision	cadspot_product-minus-raw_product	40	0.0055	0.0015000000000000002	0.0095
+simulation	nonlinear_compact	25.0	precision	cadspot_product-minus-technical_product	40	0.003999999999999999	-0.0005	0.009499999999999998
+simulation	nonlinear_compact	25.0	precision	cadspot_product-minus-adjusted_target	40	-0.0055000000000000005	-0.01	-0.0010000000000000002
+simulation	nonlinear_compact	25.0	precision	cadspot_product-minus-adjusted_minimum	40	0.0009999999999999998	-0.0015	0.003999999999999999
+simulation	nonlinear_compact	25.0	precision	cadspot_product-minus-spline_product	40	-0.1675	-0.18450000000000003	-0.15
+simulation	nonlinear_compact	50.0	precision	cadspot_product-minus-raw_product	40	0.028500000000000004	0.02025	0.0375
+simulation	nonlinear_compact	50.0	precision	cadspot_product-minus-technical_product	40	0.021	0.011	0.031
+simulation	nonlinear_compact	50.0	precision	cadspot_product-minus-adjusted_target	40	-0.01	-0.015500000000000003	-0.00475
+simulation	nonlinear_compact	50.0	precision	cadspot_product-minus-adjusted_minimum	40	-0.0027500000000000003	-0.006500000000000001	0.0010000000000000009
+simulation	nonlinear_compact	50.0	precision	cadspot_product-minus-spline_product	40	-0.23075	-0.24575	-0.21625
+injection	ovarian_compact		inspections	cadspot_product-minus-raw_product	32	-101.28125	-145.953515625	-60.544531250000034
+injection	ovarian_compact		inspections	cadspot_product-minus-technical_product	32	7.140625	-1.15625	17.219140624999994
+injection	ovarian_compact		inspections	cadspot_product-minus-adjusted_target	32	-28.90625	-49.281640625	-5.515234375000006
+injection	ovarian_compact		inspections	cadspot_product-minus-adjusted_minimum	32	18.953125	0.17148437500000036	40.984765624999994
+injection	ovarian_compact		inspections	cadspot_product-minus-spline_product	32	-16.140625	-37.781640625	3.453125
+injection	ovarian_dispersed		inspections	cadspot_product-minus-raw_product	32	-151.390625	-173.28125	-129.68671875
+injection	ovarian_dispersed		inspections	cadspot_product-minus-technical_product	32	1.859375	-5.953515625	10.390625
+injection	ovarian_dispersed		inspections	cadspot_product-minus-adjusted_target	32	-26.75	-48.578515625	-3.5
+injection	ovarian_dispersed		inspections	cadspot_product-minus-adjusted_minimum	32	21.25	4.780078125000001	39.65781249999998
+injection	ovarian_dispersed		inspections	cadspot_product-minus-spline_product	32	11.015625	-5.016015625	30.469140624999994
+injection	pdac_compact		inspections	cadspot_product-minus-raw_product	32	-101.984375	-193.18984375	-13.842968750000011
+injection	pdac_compact		inspections	cadspot_product-minus-technical_product	32	8.359375	-26.689843749999998	43.328125
+injection	pdac_compact		inspections	cadspot_product-minus-adjusted_target	32	-21.296875	-50.14140625	10.719140624999994
+injection	pdac_compact		inspections	cadspot_product-minus-adjusted_minimum	32	56.578125	28.124609375	86.54843749999998
+injection	pdac_compact		inspections	cadspot_product-minus-spline_product	32	-27.34375	-58.312890625	0.109375
+injection	pdac_dispersed		inspections	cadspot_product-minus-raw_product	32	-242.265625	-272.64453125	-213.515234375
+injection	pdac_dispersed		inspections	cadspot_product-minus-technical_product	32	-41.21875	-55.391015625	-26.780859375000006
+injection	pdac_dispersed		inspections	cadspot_product-minus-adjusted_target	32	-94.1875	-112.578515625	-71.38984375000001
+injection	pdac_dispersed		inspections	cadspot_product-minus-adjusted_minimum	32	-8.65625	-18.844140625	6.0625
+injection	pdac_dispersed		inspections	cadspot_product-minus-spline_product	32	16.796875	6.671875	28.42265624999999
+simulation	architecture_coupled		inspections	cadspot_product-minus-raw_product	40	290.8	270.71187499999996	311.3625
+simulation	architecture_coupled		inspections	cadspot_product-minus-technical_product	40	249.175	229.175	269.425
+simulation	architecture_coupled		inspections	cadspot_product-minus-adjusted_target	40	61.1375	43.3121875	79.47531249999999
+simulation	architecture_coupled		inspections	cadspot_product-minus-adjusted_minimum	40	89.0125	71.275	107.0
+simulation	architecture_coupled		inspections	cadspot_product-minus-spline_product	40	-97.6875	-116.6125	-80.0371875
+simulation	linear_compact		inspections	cadspot_product-minus-raw_product	40	-49.0875	-89.57531250000001	-8.184687500000042
+simulation	linear_compact		inspections	cadspot_product-minus-technical_product	40	-45.0625	-83.0375	-7.411250000000018
+simulation	linear_compact		inspections	cadspot_product-minus-adjusted_target	40	81.75	53.3996875	109.16281249999999
+simulation	linear_compact		inspections	cadspot_product-minus-adjusted_minimum	40	125.2875	101.44843750000001	149.81312499999999
+simulation	linear_compact		inspections	cadspot_product-minus-spline_product	40	-52.7	-76.225	-29.949062500000014
+simulation	linear_dispersed		inspections	cadspot_product-minus-raw_product	40	-232.4375	-247.9625	-216.475
+simulation	linear_dispersed		inspections	cadspot_product-minus-technical_product	40	-179.425	-199.21312500000002	-160.2125
+simulation	linear_dispersed		inspections	cadspot_product-minus-adjusted_target	40	5.975	-7.6253125	20.625624999999992
+simulation	linear_dispersed		inspections	cadspot_product-minus-adjusted_minimum	40	39.0125	27.299375	51.825312499999995
+simulation	linear_dispersed		inspections	cadspot_product-minus-spline_product	40	-4.7125	-16.2753125	5.612812499999995
+simulation	no_nuisance		inspections	cadspot_product-minus-raw_product	40	25.7125	12.2125	41.23781249999999
+simulation	no_nuisance		inspections	cadspot_product-minus-technical_product	40	11.7125	0.875	23.862812499999997
+simulation	no_nuisance		inspections	cadspot_product-minus-adjusted_target	40	45.775	14.5990625	76.36312499999998
+simulation	no_nuisance		inspections	cadspot_product-minus-adjusted_minimum	40	96.025	72.1875	120.8375
+simulation	no_nuisance		inspections	cadspot_product-minus-spline_product	40	-64.975	-92.6878125	-40.95
+simulation	no_program		inspections	cadspot_product-minus-raw_product	0			
+simulation	no_program		inspections	cadspot_product-minus-technical_product	0			
+simulation	no_program		inspections	cadspot_product-minus-adjusted_target	0			
+simulation	no_program		inspections	cadspot_product-minus-adjusted_minimum	0			
+simulation	no_program		inspections	cadspot_product-minus-spline_product	0			
+simulation	noisy_proxy		inspections	cadspot_product-minus-raw_product	40	12.7375	-11.6875	39.137812499999995
+simulation	noisy_proxy		inspections	cadspot_product-minus-technical_product	40	16.7625	-1.425	36.563437499999985
+simulation	noisy_proxy		inspections	cadspot_product-minus-adjusted_target	40	85.575	64.9371875	107.15
+simulation	noisy_proxy		inspections	cadspot_product-minus-adjusted_minimum	40	109.15	89.6371875	129.01312499999997
+simulation	noisy_proxy		inspections	cadspot_product-minus-spline_product	40	-15.5375	-27.3753125	-5.6375
+simulation	nonlinear_compact		inspections	cadspot_product-minus-raw_product	40	19.7625	1.2746875000000002	39.700312499999995
+simulation	nonlinear_compact		inspections	cadspot_product-minus-technical_product	40	1.8875	-7.425	9.087812499999997
+simulation	nonlinear_compact		inspections	cadspot_product-minus-adjusted_target	40	55.7875	36.3996875	75.06343749999999
+simulation	nonlinear_compact		inspections	cadspot_product-minus-adjusted_minimum	40	72.6	52.7621875	92.67562499999998
+simulation	nonlinear_compact		inspections	cadspot_product-minus-spline_product	40	68.025	55.1871875	82.61281249999999

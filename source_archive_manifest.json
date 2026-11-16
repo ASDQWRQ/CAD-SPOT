@@ -1,5 +1,5 @@
 {
-  "version": "2.2.0",
+  "version": "2.3.0",
   "files": [
     {
       "path": "Analysis/build_gene_lengths.py",
@@ -8,8 +8,8 @@
     },
     {
       "path": "Analysis/build_tables.py",
-      "bytes": 5607,
-      "sha256": "049d11f2ca9ea722b59fcdf80052206eb35266347bb154de2da717ba8ffa553e"
+      "bytes": 6825,
+      "sha256": "206670b42195503237deebf189dd956a7a99643fc9a7e01edec399dfbb38b506"
     },
     {
       "path": "Analysis/common_gene_sensitivity.py",
@@ -274,7 +274,7 @@
     {
       "path": "Analysis/make_figures.py",
       "bytes": 12588,
-      "sha256": "dcfedb6d0cb41ee056557e665c20e4e92eeb03f44da891d2660246ae85a09c2d"
+      "sha256": "86a883c6d3a52e897fa83a5cd31166d1175fb19ce5645ab7680d8cb1b4da65c1"
     },
     {
       "path": "Analysis/prepare_ovarian.py",
@@ -288,8 +288,8 @@
     },
     {
       "path": "Analysis/README.md",
-      "bytes": 6135,
-      "sha256": "088ea66303f361c354aa6105858e1c7ee7bb65896ea4f9afeb5a13a891ea7ab9"
+      "bytes": 6593,
+      "sha256": "12bc062b10feb59a9daaeba8d689817e26ccc78a829d9e43b6e335d97ba6d749"
     },
     {
       "path": "Analysis/test_end_to_end.py",
@@ -375,6 +375,271 @@
       "path": "Comparators/recompute_overlap.py",
       "bytes": 2377,
       "sha256": "8213f54f83fd60e5644c5778f2195a75f9eb7aabbce68e5724df528077ec8010"
+    },
+    {
+      "path": "Decision_Utility/make_report.py",
+      "bytes": 10790,
+      "sha256": "52f8699ad085669f76b477d75ee4aed486b48711b0b7f4a1c128afb00c0cfb86"
+    },
+    {
+      "path": "Decision_Utility/Program_Pair/ovarian/associations.tsv",
+      "bytes": 5910,
+      "sha256": "d83f01a2d6da52ab17631477afdae1dca15ba6b47270c24fc7bfeb733903e547"
+    },
+    {
+      "path": "Decision_Utility/Program_Pair/ovarian/input_manifest.json",
+      "bytes": 1593,
+      "sha256": "df9d693a55016b735b8d996766fb95dbf8ecd1c6568b10fa2a5adbf3788dc072"
+    },
+    {
+      "path": "Decision_Utility/Program_Pair/ovarian/panel_coverage.tsv",
+      "bytes": 8237,
+      "sha256": "5797e324ee8456a9e47f1ca5352288ec54e2824114226bd2267d5f40e903edae"
+    },
+    {
+      "path": "Decision_Utility/Program_Pair/ovarian/score_parameters.tsv",
+      "bytes": 19953,
+      "sha256": "d371039e2ceb8d09d76fe3805c6ab10a586751f99630a4df63b56bbe3477fb7c"
+    },
+    {
+      "path": "Decision_Utility/Program_Pair/ovarian/score_table.tsv.gz",
+      "bytes": 1878469,
+      "sha256": "019d60e904547d2cbc5f598b12bf99ea0e93cafa787b808c911f8a3f4fe3c3dd"
+    },
+    {
+      "path": "Decision_Utility/Program_Pair/pdac/associations.tsv",
+      "bytes": 4103,
+      "sha256": "6a55e2831091ebfdefd22637d8974f9b473d52daa8e871fb90f314d66e8573fe"
+    },
+    {
+      "path": "Decision_Utility/Program_Pair/pdac/input_manifest.json",
+      "bytes": 1580,
+      "sha256": "ce64740321cef734d95cfb74039811c78b7465640fba5bfa3d22c312706befad"
+    },
+    {
+      "path": "Decision_Utility/Program_Pair/pdac/panel_coverage.tsv",
+      "bytes": 5674,
+      "sha256": "745eacbeed1800f0cb4041977f89da3b2c442916ac3c0ccb0981ae6523d5fa47"
+    },
+    {
+      "path": "Decision_Utility/Program_Pair/pdac/score_parameters.tsv",
+      "bytes": 12774,
+      "sha256": "012bbbd6f6e965e7a81719af3fd9a9e06fbc823e692b0908e2c063ebe2a75a97"
+    },
+    {
+      "path": "Decision_Utility/Program_Pair/pdac/score_table.tsv.gz",
+      "bytes": 2266325,
+      "sha256": "1ef2142a2de1b8fb7374d455379432ed04b71c902f81ea1af0b754ce851afd99"
+    },
+    {
+      "path": "Decision_Utility/PROTOCOL.md",
+      "bytes": 4928,
+      "sha256": "9e53cabb36e38627ac38bd106a6ae7c90c691f020ead593846628e47610afdd5"
+    },
+    {
+      "path": "Decision_Utility/README.md",
+      "bytes": 2999,
+      "sha256": "914afea0cf05170d79cc4d0963d44a43cd7f2e26c48f463332b1b6b2e5b30163"
+    },
+    {
+      "path": "Decision_Utility/Results/application_audit_summary.tsv",
+      "bytes": 50942,
+      "sha256": "23d4a3a882a3352651a280808f249c3169b3cf534a4f9c0e3550ad79af5b907f"
+    },
+    {
+      "path": "Decision_Utility/Results/decision_evidence.json",
+      "bytes": 14799,
+      "sha256": "34bbebd89b6a208539fc99cc6873c6fb3d5ac79b6ff8d5165bec91f59431d603"
+    },
+    {
+      "path": "Decision_Utility/Results/Decision_Utility_Report.md",
+      "bytes": 1078,
+      "sha256": "c4f8e6a23b59a0a6fe9cf326449c8113dbe06a5567cbe3bda213bcc10040455a"
+    },
+    {
+      "path": "Decision_Utility/Results/fixed_budget_paired_differences.tsv",
+      "bytes": 27631,
+      "sha256": "f722d81130b5e06fc2b31f35153523d172a8c86c0bc7b3e2be4e1c26d1a00677"
+    },
+    {
+      "path": "Decision_Utility/Results/fixed_budget_replicates.tsv.gz",
+      "bytes": 80380,
+      "sha256": "de1769ff03481576534b9e4365edf1ae77aff35df22e2ad3dc76b4fa286a81ed"
+    },
+    {
+      "path": "Decision_Utility/Results/fixed_budget_summary.tsv",
+      "bytes": 21799,
+      "sha256": "b11426b4a1b42d1239d04a768ca2a50ea2de59af60ac036c968fa440cff19be0"
+    },
+    {
+      "path": "Decision_Utility/Results/inspection_cost_paired.tsv",
+      "bytes": 124471,
+      "sha256": "37ef0102ece56012b65f159bebae2fb714e52b020ed072c8f290068dcf70447d"
+    },
+    {
+      "path": "Decision_Utility/Results/inspection_cost_replicates.tsv.gz",
+      "bytes": 25811,
+      "sha256": "8ea436356af2968468ac8a94eb31e156f43e3dc2d99bb212f7668bbcaf510f80"
+    },
+    {
+      "path": "Decision_Utility/Results/ovarian_ifn_audit.coordinates.tsv.gz",
+      "bytes": 2323609,
+      "sha256": "4d3297683285db587c096cb1805c7d1f0e172b5fc3f14b9802582721ad310aff"
+    },
+    {
+      "path": "Decision_Utility/Results/ovarian_ifn_audit.manifest.json",
+      "bytes": 1056,
+      "sha256": "290f5eccbc0640fa3afab6f8ff571210aede70ca3d9f585d11ada3698c29acfa"
+    },
+    {
+      "path": "Decision_Utility/Results/ovarian_ifn_audit.preview.png",
+      "bytes": 58562,
+      "sha256": "1819b7e2337cc91947d810fa20e06f78625bfa97fca7f4fa33142ab290d4aa20"
+    },
+    {
+      "path": "Decision_Utility/Results/ovarian_ifn_audit.report.html",
+      "bytes": 3623,
+      "sha256": "f99e3cfbe8d061843b6a9cd6d9fc29b40e3403e62ce51f05e4c4e2eaab07ea94"
+    },
+    {
+      "path": "Decision_Utility/Results/ovarian_ifn_audit.report.pdf",
+      "bytes": 54235,
+      "sha256": "047b36dd1ad8d42e7464260cfcef95f2675e260c041658ba2e0a3a855c016c0b"
+    },
+    {
+      "path": "Decision_Utility/Results/ovarian_ifn_audit.summary.tsv",
+      "bytes": 13113,
+      "sha256": "d7a10cb2dc2cf12db58244cdd5f9bcc6d639c3a8b8282945ac92347af28d55cd"
+    },
+    {
+      "path": "Decision_Utility/Results/ovarian_stress_audit.coordinates.tsv.gz",
+      "bytes": 2363293,
+      "sha256": "9a5ccd39a26e6c8c7058213ea4ea3459e92421c4f8a015bbf8b7971d3b7e8d69"
+    },
+    {
+      "path": "Decision_Utility/Results/ovarian_stress_audit.manifest.json",
+      "bytes": 1026,
+      "sha256": "f18dec1f15840324f27fa603891bec08aaf7fe0cb1d42c291506688339d8801c"
+    },
+    {
+      "path": "Decision_Utility/Results/ovarian_stress_audit.preview.png",
+      "bytes": 57495,
+      "sha256": "6bb8a418ae96179500ebe0676db5d7cd2fb267ad1cbbe21e947f4b4d277026f8"
+    },
+    {
+      "path": "Decision_Utility/Results/ovarian_stress_audit.report.html",
+      "bytes": 3591,
+      "sha256": "a5a83ca999205a7ce47399280c1ab0f383ef0da42dd2a5abb9fde4862511e9aa"
+    },
+    {
+      "path": "Decision_Utility/Results/ovarian_stress_audit.report.pdf",
+      "bytes": 53944,
+      "sha256": "c31cc00be1deff803e962c7539fb04496ec3da10c06b36395d7f0ce64517ec8f"
+    },
+    {
+      "path": "Decision_Utility/Results/ovarian_stress_audit.summary.tsv",
+      "bytes": 13134,
+      "sha256": "345eb131cee89909aa0c3853a3de26e7023d3bc1d3b08180f53508e62af1b271"
+    },
+    {
+      "path": "Decision_Utility/Results/pdac_ifn_audit.coordinates.tsv.gz",
+      "bytes": 2700870,
+      "sha256": "9384ee1e6d5d6e4622c33e3ebec904c8bcacd9972d00f0ee76e11f18ba1a8d24"
+    },
+    {
+      "path": "Decision_Utility/Results/pdac_ifn_audit.manifest.json",
+      "bytes": 1053,
+      "sha256": "b67e834165d55597ed8046f4d62b5dee7fa35b8165fa4bdf3c8e907cac04d480"
+    },
+    {
+      "path": "Decision_Utility/Results/pdac_ifn_audit.preview.png",
+      "bytes": 54332,
+      "sha256": "6e694b84f9a8f5e03cf5eb8cbb361a52e5be92c2b8b5e1f3f12083d17045357d"
+    },
+    {
+      "path": "Decision_Utility/Results/pdac_ifn_audit.report.html",
+      "bytes": 3140,
+      "sha256": "d0c9ddba04f9685b1cd066a4baa38f292a15ed78485393accccf7aba34cc08a2"
+    },
+    {
+      "path": "Decision_Utility/Results/pdac_ifn_audit.report.pdf",
+      "bytes": 53725,
+      "sha256": "148156f2c0c13543ed5878a388f3ae64c8950ee9cec43a15bc7c20db990f9e50"
+    },
+    {
+      "path": "Decision_Utility/Results/pdac_ifn_audit.summary.tsv",
+      "bytes": 8732,
+      "sha256": "7282c14d818a10babd6c86a09ddb99bb0560f81469c3659fc2df53c7c2322267"
+    },
+    {
+      "path": "Decision_Utility/Results/pdac_stress_audit.coordinates.tsv.gz",
+      "bytes": 2783105,
+      "sha256": "bd45dbbc58b40eec983a01adde4269d8497be4bff4ad44753e57308fafd98e9b"
+    },
+    {
+      "path": "Decision_Utility/Results/pdac_stress_audit.manifest.json",
+      "bytes": 1032,
+      "sha256": "fa43d69f3c8e2b00e1c13d2ae7b64d65f946e38364fe9a9e72ee2fba4742ffa9"
+    },
+    {
+      "path": "Decision_Utility/Results/pdac_stress_audit.preview.png",
+      "bytes": 54154,
+      "sha256": "807058a28c38ae85d1184cfd912cf2d01e09651f314922aefdc8e65d5f91ddf3"
+    },
+    {
+      "path": "Decision_Utility/Results/pdac_stress_audit.report.html",
+      "bytes": 3121,
+      "sha256": "68744e111e85998ca341890f658c7ace4817d81034bcdb83bfed01846819a044"
+    },
+    {
+      "path": "Decision_Utility/Results/pdac_stress_audit.report.pdf",
+      "bytes": 53007,
+      "sha256": "a9c31e337ddea2f5bcd56d198e28b4c43e545eb540d07f35a49a1829eac79d50"
+    },
+    {
+      "path": "Decision_Utility/Results/pdac_stress_audit.summary.tsv",
+      "bytes": 8703,
+      "sha256": "51222c27b035c4e7eba78f8c0200f4b3eeccf152918c64ae61684af5a10cd2b1"
+    },
+    {
+      "path": "Decision_Utility/Results/perturbation_provenance.json",
+      "bytes": 643,
+      "sha256": "314447a501abe521783395d99be2e50c9d5d1f9adbb45f94f96b80535e22d90c"
+    },
+    {
+      "path": "Decision_Utility/Results/perturbation_qc.tsv",
+      "bytes": 16796,
+      "sha256": "34f9ea66c17cb5beefda2c1b0991318f26c3c421b2e03626f015a62d1149e8bc"
+    },
+    {
+      "path": "Decision_Utility/Results/perturbation_replicates.tsv.gz",
+      "bytes": 24714,
+      "sha256": "dcdb94c3480d9b98a45161e9312a2018ce80a5c2453ae39ddd99042bbc0628cf"
+    },
+    {
+      "path": "Decision_Utility/Results/second_pair_associations.tsv",
+      "bytes": 10584,
+      "sha256": "dbf1491dc86b05802b681cf537b31943fcf2b523c98819e17e5a720a9eb1f8ab"
+    },
+    {
+      "path": "Decision_Utility/Results/second_pair_coverage.tsv",
+      "bytes": 16114,
+      "sha256": "f35684a6a7d17506ad908e3d1149bce7d284a50fd6dc32b71bcce94aae6be908"
+    },
+    {
+      "path": "Decision_Utility/Results/stratum_retention.tsv.gz",
+      "bytes": 8062,
+      "sha256": "7f80641a2af568737ffa4d25845c703d87e21c53e96edf7a0d8d9deb17fe9c1b"
+    },
+    {
+      "path": "Decision_Utility/run_applications.py",
+      "bytes": 5263,
+      "sha256": "e2741809b84e5e1577e276ec89a01cc5fec71c0791ba80c20ec900e99026cd63"
+    },
+    {
+      "path": "Decision_Utility/run_evaluation.py",
+      "bytes": 13268,
+      "sha256": "e43cc2d3053b0ee5c1fd8da25323a4cc243f0b17bf5c5cbb55463dd9498931c9"
     },
     {
       "path": "PDAC_Transfer/gene_metadata.tsv.gz",
@@ -1138,8 +1403,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 4061,
-      "sha256": "9401659117e2d444e29c1ce44c15792c5ef9da5a0d7212f1eeb9654bfc207823"
+      "bytes": 4513,
+      "sha256": "1ba134cd3dd0a2072726d7d076ceee0c80c1eb4cb189b73974f5a5408513fac0"
     },
     {
       "path": "requirements.txt",
@@ -1149,12 +1414,17 @@
     {
       "path": "Software/cadspot.py",
       "bytes": 33292,
-      "sha256": "8401c9d82ae19a2bcc04f3901eb5b2435fd519cbfeff7368ccc575231155858b"
+      "sha256": "be6b4a17b5e79836d7b38c6095d9f4ae1dfa2fa84cdb25eafce7c93ebb604ced"
     },
     {
       "path": "Software/cadspot_null.py",
       "bytes": 22404,
       "sha256": "0010f22b7343561488d87470a52883155d868c0dbbdd82b90b8546c73a78f27c"
+    },
+    {
+      "path": "Software/decision_audit.py",
+      "bytes": 9827,
+      "sha256": "428626febacce5646faacb56834f10d1e71c19f6a6d5220ab830989cf26c4015"
     },
     {
       "path": "Software/gene_sets/reference_available20.tsv",
@@ -1183,8 +1453,8 @@
     },
     {
       "path": "Software/README.md",
-      "bytes": 18492,
-      "sha256": "4efe70c023b1c1588ffb64d16064807610c58dd97a7c2b6e111f452594b91229"
+      "bytes": 18874,
+      "sha256": "0c6d6385d5d7b2e04969059f7d4cb67e77a60064c6f5be662f64fa4ffbb6d3c4"
     },
     {
       "path": "Software/requirements.txt",
@@ -1197,9 +1467,14 @@
       "sha256": "ad8c296d4ec1772617bc1d8a5f0819daf3050131765bec815d9ca8ae3624ffa2"
     },
     {
+      "path": "Software/tests/test_decision_audit.py",
+      "bytes": 2954,
+      "sha256": "c5202bc5d0f089dda046eed181e598f3e76ae985a02b6c56d7eabc4ab53bde1c"
+    },
+    {
       "path": "Software/tests/test_ranking_methods.py",
       "bytes": 13697,
-      "sha256": "55e8c3d2212d8f981529b623151e33b3bafe82bf116f65f8fa9cc9fde44d8e82"
+      "sha256": "33edf1ceb08b9f5b4705065d1d694aa505a0d577de508c24ea86b2410dc748b2"
     },
     {
       "path": "Study_Design.md",
@@ -1329,7 +1604,7 @@
     {
       "path": "VERSION",
       "bytes": 7,
-      "sha256": "72fdf54ed9bbd597f2865a898ff81bf317dee6d121c9d3e113256e1b13f48ea3"
+      "sha256": "c3879c1c833bd46564c1040642f4a723bf7f77ceea45595fd8c77f68d2d959dd"
     }
   ]
 }

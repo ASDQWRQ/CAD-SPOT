@@ -1,4 +1,4 @@
-# Reproduce CAD-SPOT 2.2.0: ovarian worked example and PDAC transfer
+# Reproduce CAD-SPOT 2.3.0: ovarian worked example and PDAC transfer
 
 Run commands from the extracted release root with Python 3.10+ and
 `requirements.txt`. Analyses were recorded with Python 3.12.14. Use
@@ -97,9 +97,18 @@ accuracy benchmark. No package imports archived model labels as ovarian inputs.
 
 ## Presentation and relocation
 
-Figures 1/3/4 show the ovarian worked example, Figure 2 task evaluation and
-Figure 5 PDAC transfer. Figure S1 is ablation; Figure S2 is PDAC model context.
+Figures 1/4/5 show the ovarian worked example, Figure 2 task evaluation,
+Figure 3 decision audits and Figure 6 PDAC transfer. Figures S1/S2/S3 show
+ablation, PDAC model context and budget/robustness sensitivities.
 Figure creation needs registered images. Source manifests preserve actual
 acquisition-time paths; when relocating the project, rerun preparation to point
 to the new public-data cache. Tables and source records identify cohort roles
 explicitly; do not mix earlier PDAC-primary releases into current outputs.
+
+## 5. Decision-utility extension
+
+`Decision_Utility/README.md` supplies the one-command audit and all extension
+commands. `Decision_Utility/PROTOCOL.md` fixes budgets, perturbations and the
+illustrative IFN/antigen panels. Count perturbations need prepared public
+matrices; report replay uses the supplied score tables. Original outlier
+candidates and fixed-budget memberships are distinct outputs.

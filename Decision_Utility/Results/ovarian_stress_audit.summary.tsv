@@ -1,0 +1,193 @@
+sample_id	budget	record	model	n_spots	n_spatial_valid	selected	pooled_rho
+GSM6506110_SP1	10	model_selection	raw	2937	2937	10	0.3509081800311935
+GSM6506110_SP1	10	model_selection	technical	2937	2937	10	0.09046894524364466
+GSM6506110_SP1	10	model_selection	composition	2937	2937	10	0.08158266128458579
+GSM6506110_SP1	10	model_selection	spline	2937	2937	10	0.07771724605213606
+GSM6506110_SP1	10	model_agreement	all_three	2937	2937	9	
+GSM6506110_SP1	10	model_agreement	some_models	2937	2937	2	
+GSM6506110_SP1	10	model_agreement	not_selected	2937	2937	2926	
+GSM6506110_SP1	10	model_agreement	excluded	2937	2937	0	
+GSM6506111_SP2	10	model_selection	raw	1934	1934	10	0.3509081800311935
+GSM6506111_SP2	10	model_selection	technical	1934	1934	10	0.09046894524364466
+GSM6506111_SP2	10	model_selection	composition	1934	1934	10	0.08158266128458579
+GSM6506111_SP2	10	model_selection	spline	1934	1934	10	0.07771724605213606
+GSM6506111_SP2	10	model_agreement	all_three	1934	1934	9	
+GSM6506111_SP2	10	model_agreement	some_models	1934	1934	3	
+GSM6506111_SP2	10	model_agreement	not_selected	1934	1934	1922	
+GSM6506111_SP2	10	model_agreement	excluded	1934	1934	0	
+GSM6506112_SP3	10	model_selection	raw	1504	1504	10	0.3509081800311935
+GSM6506112_SP3	10	model_selection	technical	1504	1504	10	0.09046894524364466
+GSM6506112_SP3	10	model_selection	composition	1504	1504	10	0.08158266128458579
+GSM6506112_SP3	10	model_selection	spline	1504	1504	10	0.07771724605213606
+GSM6506112_SP3	10	model_agreement	all_three	1504	1504	8	
+GSM6506112_SP3	10	model_agreement	some_models	1504	1504	4	
+GSM6506112_SP3	10	model_agreement	not_selected	1504	1504	1492	
+GSM6506112_SP3	10	model_agreement	excluded	1504	1504	0	
+GSM6506113_SP4	10	model_selection	raw	3004	3004	10	0.3509081800311935
+GSM6506113_SP4	10	model_selection	technical	3004	3004	10	0.09046894524364466
+GSM6506113_SP4	10	model_selection	composition	3004	3004	10	0.08158266128458579
+GSM6506113_SP4	10	model_selection	spline	3004	3004	10	0.07771724605213606
+GSM6506113_SP4	10	model_agreement	all_three	3004	3004	8	
+GSM6506113_SP4	10	model_agreement	some_models	3004	3004	4	
+GSM6506113_SP4	10	model_agreement	not_selected	3004	3004	2992	
+GSM6506113_SP4	10	model_agreement	excluded	3004	3004	0	
+GSM6506114_SP5	10	model_selection	raw	2121	2121	10	0.3509081800311935
+GSM6506114_SP5	10	model_selection	technical	2121	2121	10	0.09046894524364466
+GSM6506114_SP5	10	model_selection	composition	2121	2121	10	0.08158266128458579
+GSM6506114_SP5	10	model_selection	spline	2121	2121	10	0.07771724605213606
+GSM6506114_SP5	10	model_agreement	all_three	2121	2121	9	
+GSM6506114_SP5	10	model_agreement	some_models	2121	2121	2	
+GSM6506114_SP5	10	model_agreement	not_selected	2121	2121	2110	
+GSM6506114_SP5	10	model_agreement	excluded	2121	2121	0	
+GSM6506115_SP6	10	model_selection	raw	1800	1800	10	0.3509081800311935
+GSM6506115_SP6	10	model_selection	technical	1800	1800	10	0.09046894524364466
+GSM6506115_SP6	10	model_selection	composition	1800	1800	10	0.08158266128458579
+GSM6506115_SP6	10	model_selection	spline	1800	1800	10	0.07771724605213606
+GSM6506115_SP6	10	model_agreement	all_three	1800	1800	5	
+GSM6506115_SP6	10	model_agreement	some_models	1800	1800	9	
+GSM6506115_SP6	10	model_agreement	not_selected	1800	1800	1786	
+GSM6506115_SP6	10	model_agreement	excluded	1800	1800	0	
+GSM6506116_SP7	10	model_selection	raw	3629	3629	10	0.3509081800311935
+GSM6506116_SP7	10	model_selection	technical	3629	3629	10	0.09046894524364466
+GSM6506116_SP7	10	model_selection	composition	3629	3629	10	0.08158266128458579
+GSM6506116_SP7	10	model_selection	spline	3629	3629	10	0.07771724605213606
+GSM6506116_SP7	10	model_agreement	all_three	3629	3629	8	
+GSM6506116_SP7	10	model_agreement	some_models	3629	3629	3	
+GSM6506116_SP7	10	model_agreement	not_selected	3629	3629	3618	
+GSM6506116_SP7	10	model_agreement	excluded	3629	3629	0	
+GSM6506117_SP8	10	model_selection	raw	3180	3180	10	0.3509081800311935
+GSM6506117_SP8	10	model_selection	technical	3180	3180	10	0.09046894524364466
+GSM6506117_SP8	10	model_selection	composition	3180	3180	10	0.08158266128458579
+GSM6506117_SP8	10	model_selection	spline	3180	3180	10	0.07771724605213606
+GSM6506117_SP8	10	model_agreement	all_three	3180	3180	9	
+GSM6506117_SP8	10	model_agreement	some_models	3180	3180	2	
+GSM6506117_SP8	10	model_agreement	not_selected	3180	3180	3169	
+GSM6506117_SP8	10	model_agreement	excluded	3180	3180	0	
+GSM6506110_SP1	25	model_selection	raw	2937	2937	25	0.3509081800311935
+GSM6506110_SP1	25	model_selection	technical	2937	2937	25	0.09046894524364466
+GSM6506110_SP1	25	model_selection	composition	2937	2937	25	0.08158266128458579
+GSM6506110_SP1	25	model_selection	spline	2937	2937	25	0.07771724605213606
+GSM6506110_SP1	25	model_agreement	all_three	2937	2937	21	
+GSM6506110_SP1	25	model_agreement	some_models	2937	2937	7	
+GSM6506110_SP1	25	model_agreement	not_selected	2937	2937	2909	
+GSM6506110_SP1	25	model_agreement	excluded	2937	2937	0	
+GSM6506111_SP2	25	model_selection	raw	1934	1934	25	0.3509081800311935
+GSM6506111_SP2	25	model_selection	technical	1934	1934	25	0.09046894524364466
+GSM6506111_SP2	25	model_selection	composition	1934	1934	25	0.08158266128458579
+GSM6506111_SP2	25	model_selection	spline	1934	1934	25	0.07771724605213606
+GSM6506111_SP2	25	model_agreement	all_three	1934	1934	23	
+GSM6506111_SP2	25	model_agreement	some_models	1934	1934	4	
+GSM6506111_SP2	25	model_agreement	not_selected	1934	1934	1907	
+GSM6506111_SP2	25	model_agreement	excluded	1934	1934	0	
+GSM6506112_SP3	25	model_selection	raw	1504	1504	25	0.3509081800311935
+GSM6506112_SP3	25	model_selection	technical	1504	1504	25	0.09046894524364466
+GSM6506112_SP3	25	model_selection	composition	1504	1504	25	0.08158266128458579
+GSM6506112_SP3	25	model_selection	spline	1504	1504	25	0.07771724605213606
+GSM6506112_SP3	25	model_agreement	all_three	1504	1504	21	
+GSM6506112_SP3	25	model_agreement	some_models	1504	1504	8	
+GSM6506112_SP3	25	model_agreement	not_selected	1504	1504	1475	
+GSM6506112_SP3	25	model_agreement	excluded	1504	1504	0	
+GSM6506113_SP4	25	model_selection	raw	3004	3004	25	0.3509081800311935
+GSM6506113_SP4	25	model_selection	technical	3004	3004	25	0.09046894524364466
+GSM6506113_SP4	25	model_selection	composition	3004	3004	25	0.08158266128458579
+GSM6506113_SP4	25	model_selection	spline	3004	3004	25	0.07771724605213606
+GSM6506113_SP4	25	model_agreement	all_three	3004	3004	20	
+GSM6506113_SP4	25	model_agreement	some_models	3004	3004	12	
+GSM6506113_SP4	25	model_agreement	not_selected	3004	3004	2972	
+GSM6506113_SP4	25	model_agreement	excluded	3004	3004	0	
+GSM6506114_SP5	25	model_selection	raw	2121	2121	25	0.3509081800311935
+GSM6506114_SP5	25	model_selection	technical	2121	2121	25	0.09046894524364466
+GSM6506114_SP5	25	model_selection	composition	2121	2121	25	0.08158266128458579
+GSM6506114_SP5	25	model_selection	spline	2121	2121	25	0.07771724605213606
+GSM6506114_SP5	25	model_agreement	all_three	2121	2121	22	
+GSM6506114_SP5	25	model_agreement	some_models	2121	2121	5	
+GSM6506114_SP5	25	model_agreement	not_selected	2121	2121	2094	
+GSM6506114_SP5	25	model_agreement	excluded	2121	2121	0	
+GSM6506115_SP6	25	model_selection	raw	1800	1800	25	0.3509081800311935
+GSM6506115_SP6	25	model_selection	technical	1800	1800	25	0.09046894524364466
+GSM6506115_SP6	25	model_selection	composition	1800	1800	25	0.08158266128458579
+GSM6506115_SP6	25	model_selection	spline	1800	1800	25	0.07771724605213606
+GSM6506115_SP6	25	model_agreement	all_three	1800	1800	15	
+GSM6506115_SP6	25	model_agreement	some_models	1800	1800	19	
+GSM6506115_SP6	25	model_agreement	not_selected	1800	1800	1766	
+GSM6506115_SP6	25	model_agreement	excluded	1800	1800	0	
+GSM6506116_SP7	25	model_selection	raw	3629	3629	25	0.3509081800311935
+GSM6506116_SP7	25	model_selection	technical	3629	3629	25	0.09046894524364466
+GSM6506116_SP7	25	model_selection	composition	3629	3629	25	0.08158266128458579
+GSM6506116_SP7	25	model_selection	spline	3629	3629	25	0.07771724605213606
+GSM6506116_SP7	25	model_agreement	all_three	3629	3629	22	
+GSM6506116_SP7	25	model_agreement	some_models	3629	3629	6	
+GSM6506116_SP7	25	model_agreement	not_selected	3629	3629	3601	
+GSM6506116_SP7	25	model_agreement	excluded	3629	3629	0	
+GSM6506117_SP8	25	model_selection	raw	3180	3180	25	0.3509081800311935
+GSM6506117_SP8	25	model_selection	technical	3180	3180	25	0.09046894524364466
+GSM6506117_SP8	25	model_selection	composition	3180	3180	25	0.08158266128458579
+GSM6506117_SP8	25	model_selection	spline	3180	3180	25	0.07771724605213606
+GSM6506117_SP8	25	model_agreement	all_three	3180	3180	19	
+GSM6506117_SP8	25	model_agreement	some_models	3180	3180	12	
+GSM6506117_SP8	25	model_agreement	not_selected	3180	3180	3149	
+GSM6506117_SP8	25	model_agreement	excluded	3180	3180	0	
+GSM6506110_SP1	50	model_selection	raw	2937	2937	50	0.3509081800311935
+GSM6506110_SP1	50	model_selection	technical	2937	2937	50	0.09046894524364466
+GSM6506110_SP1	50	model_selection	composition	2937	2937	50	0.08158266128458579
+GSM6506110_SP1	50	model_selection	spline	2937	2937	50	0.07771724605213606
+GSM6506110_SP1	50	model_agreement	all_three	2937	2937	40	
+GSM6506110_SP1	50	model_agreement	some_models	2937	2937	19	
+GSM6506110_SP1	50	model_agreement	not_selected	2937	2937	2878	
+GSM6506110_SP1	50	model_agreement	excluded	2937	2937	0	
+GSM6506111_SP2	50	model_selection	raw	1934	1934	50	0.3509081800311935
+GSM6506111_SP2	50	model_selection	technical	1934	1934	50	0.09046894524364466
+GSM6506111_SP2	50	model_selection	composition	1934	1934	50	0.08158266128458579
+GSM6506111_SP2	50	model_selection	spline	1934	1934	50	0.07771724605213606
+GSM6506111_SP2	50	model_agreement	all_three	1934	1934	42	
+GSM6506111_SP2	50	model_agreement	some_models	1934	1934	18	
+GSM6506111_SP2	50	model_agreement	not_selected	1934	1934	1874	
+GSM6506111_SP2	50	model_agreement	excluded	1934	1934	0	
+GSM6506112_SP3	50	model_selection	raw	1504	1504	50	0.3509081800311935
+GSM6506112_SP3	50	model_selection	technical	1504	1504	50	0.09046894524364466
+GSM6506112_SP3	50	model_selection	composition	1504	1504	50	0.08158266128458579
+GSM6506112_SP3	50	model_selection	spline	1504	1504	50	0.07771724605213606
+GSM6506112_SP3	50	model_agreement	all_three	1504	1504	40	
+GSM6506112_SP3	50	model_agreement	some_models	1504	1504	20	
+GSM6506112_SP3	50	model_agreement	not_selected	1504	1504	1444	
+GSM6506112_SP3	50	model_agreement	excluded	1504	1504	0	
+GSM6506113_SP4	50	model_selection	raw	3004	3004	50	0.3509081800311935
+GSM6506113_SP4	50	model_selection	technical	3004	3004	50	0.09046894524364466
+GSM6506113_SP4	50	model_selection	composition	3004	3004	50	0.08158266128458579
+GSM6506113_SP4	50	model_selection	spline	3004	3004	50	0.07771724605213606
+GSM6506113_SP4	50	model_agreement	all_three	3004	3004	35	
+GSM6506113_SP4	50	model_agreement	some_models	3004	3004	29	
+GSM6506113_SP4	50	model_agreement	not_selected	3004	3004	2940	
+GSM6506113_SP4	50	model_agreement	excluded	3004	3004	0	
+GSM6506114_SP5	50	model_selection	raw	2121	2121	50	0.3509081800311935
+GSM6506114_SP5	50	model_selection	technical	2121	2121	50	0.09046894524364466
+GSM6506114_SP5	50	model_selection	composition	2121	2121	50	0.08158266128458579
+GSM6506114_SP5	50	model_selection	spline	2121	2121	50	0.07771724605213606
+GSM6506114_SP5	50	model_agreement	all_three	2121	2121	45	
+GSM6506114_SP5	50	model_agreement	some_models	2121	2121	13	
+GSM6506114_SP5	50	model_agreement	not_selected	2121	2121	2063	
+GSM6506114_SP5	50	model_agreement	excluded	2121	2121	0	
+GSM6506115_SP6	50	model_selection	raw	1800	1800	50	0.3509081800311935
+GSM6506115_SP6	50	model_selection	technical	1800	1800	50	0.09046894524364466
+GSM6506115_SP6	50	model_selection	composition	1800	1800	50	0.08158266128458579
+GSM6506115_SP6	50	model_selection	spline	1800	1800	50	0.07771724605213606
+GSM6506115_SP6	50	model_agreement	all_three	1800	1800	40	
+GSM6506115_SP6	50	model_agreement	some_models	1800	1800	21	
+GSM6506115_SP6	50	model_agreement	not_selected	1800	1800	1739	
+GSM6506115_SP6	50	model_agreement	excluded	1800	1800	0	
+GSM6506116_SP7	50	model_selection	raw	3629	3629	50	0.3509081800311935
+GSM6506116_SP7	50	model_selection	technical	3629	3629	50	0.09046894524364466
+GSM6506116_SP7	50	model_selection	composition	3629	3629	50	0.08158266128458579
+GSM6506116_SP7	50	model_selection	spline	3629	3629	50	0.07771724605213606
+GSM6506116_SP7	50	model_agreement	all_three	3629	3629	41	
+GSM6506116_SP7	50	model_agreement	some_models	3629	3629	17	
+GSM6506116_SP7	50	model_agreement	not_selected	3629	3629	3571	
+GSM6506116_SP7	50	model_agreement	excluded	3629	3629	0	
+GSM6506117_SP8	50	model_selection	raw	3180	3180	50	0.3509081800311935
+GSM6506117_SP8	50	model_selection	technical	3180	3180	50	0.09046894524364466
+GSM6506117_SP8	50	model_selection	composition	3180	3180	50	0.08158266128458579
+GSM6506117_SP8	50	model_selection	spline	3180	3180	50	0.07771724605213606
+GSM6506117_SP8	50	model_agreement	all_three	3180	3180	37	
+GSM6506117_SP8	50	model_agreement	some_models	3180	3180	25	
+GSM6506117_SP8	50	model_agreement	not_selected	3180	3180	3118	
+GSM6506117_SP8	50	model_agreement	excluded	3180	3180	0	

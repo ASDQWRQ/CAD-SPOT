@@ -1,4 +1,4 @@
-# CAD-SPOT 2.2.0
+# CAD-SPOT 2.3.0
 
 CAD-SPOT takes user-supplied target/reference scores and covariates, reports
 association layers, and exports an interpretable coordinate ranking. This local
@@ -14,14 +14,14 @@ in hardcoded example values in this README.
 
 ## Version and Installation
 
-The designated Python 3.12 runtime passes 28 core unit/integration tests, with
+The designated Python 3.12 runtime passes 34 core unit/integration tests, with
 additional count-adapter and pitch-scaling tests under Analysis. Version 2.2.0
 retains the v2.1.1 core ranking/model arithmetic and adds upstream adapters and
 explicit bootstrap-geometry transformation. The local
-version is `2.2.0`, exported as `cadspot.__version__` and the manifest's
+version is `2.3.0`, exported as `cadspot.__version__` and the manifest's
 `cadspot_version`. Identify the build by this version, source hash and selected
 ranking method. Source hashes are recorded in the release manifest; the exact
-release is tagged `v2.2.0` in the public repository.
+release is tagged `v2.3.0` in the public repository.
 
 Version 2.1.1 buffers six-neighbor output writes per section instead of assigning
 pandas fields per spot. Arithmetic, tie handling and candidate rules are
@@ -33,6 +33,12 @@ or speed claim over other spatial tools.
 Version 2.2.0 retains that ranking arithmetic. It adds Matrix Market ovarian
 reconstruction, coverage-only cohort panel harmonization and section-pitch
 bootstrap geometry, while preserving image pixels in coordinate exports.
+
+Version 2.3.0 retains default arithmetic and adds `decision_audit.py`:
+one command exports model-dependent budget memberships, coordinate ranks, a
+manifest and a printable report. See [Decision_Utility/README.md](../Decision_Utility/README.md).
+Agreement is not biological validation or automatic model selection. Existing
+v2.2.0 timing measurements do not include this extension.
 
 Run the examples below from the **package root**, one level above Software:
 

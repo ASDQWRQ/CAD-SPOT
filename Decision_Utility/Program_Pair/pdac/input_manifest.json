@@ -1,0 +1,75 @@
+{
+  "cohort": "pdac",
+  "n_sections": 5,
+  "n_spots": 23392,
+  "intended_panels": {
+    "target_score": [
+      "IFIT1",
+      "IFIT2",
+      "IFIT3",
+      "ISG15",
+      "MX1",
+      "MX2",
+      "OAS1",
+      "OAS2",
+      "OAS3",
+      "RSAD2",
+      "IFI6",
+      "IFI44",
+      "IFI44L"
+    ],
+    "reference_score": [
+      "B2M",
+      "HLA-A",
+      "HLA-B",
+      "HLA-C",
+      "TAP1",
+      "TAP2",
+      "TAPBP",
+      "PSMB8",
+      "PSMB9",
+      "PSMB10",
+      "ERAP1",
+      "NLRC5"
+    ]
+  },
+  "used_panels": {
+    "target_score": [
+      "IFIT1",
+      "IFIT2",
+      "IFIT3",
+      "ISG15",
+      "MX1",
+      "MX2",
+      "OAS1",
+      "OAS2",
+      "OAS3",
+      "RSAD2",
+      "IFI6",
+      "IFI44",
+      "IFI44L"
+    ],
+    "reference_score": [
+      "B2M",
+      "HLA-A",
+      "HLA-C",
+      "TAP1",
+      "TAP2",
+      "TAPBP",
+      "PSMB8",
+      "PSMB9",
+      "PSMB10",
+      "ERAP1",
+      "NLRC5"
+    ]
+  },
+  "interpretation": "illustrative panels; not complete Reactome sets or validated activation signatures",
+  "biological_motivation": [
+    "https://reactome.org/content/detail/R-HSA-909733",
+    "https://reactome.org/content/detail/R-HSA-983170"
+  ],
+  "retrieved": "2026-11-16",
+  "coverage": "common nonconstant genes across cohort, without association-based selection",
+  "upstream_source": "D:\\CADSPOT_DECISION_UTILITY_20261116\\PDAC_Transfer\\input_manifest.json",
+  "upstream_sha256": "a2fe214182ef0cecf2b32a68ec563dd48e45eef00bd205d5d14c263d8aa6fa84"
+}

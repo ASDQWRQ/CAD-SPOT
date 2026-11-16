@@ -1,0 +1,22 @@
+[
+  {
+    "cohort": "ovarian",
+    "section": "GSM6506110_SP1",
+    "count_sha256": "6ae869aec12002b97f0a47478d0263698e6b0de1f1b5bb234e936ae9f1fc6781"
+  },
+  {
+    "cohort": "ovarian",
+    "section": "GSM6506111_SP2",
+    "count_sha256": "1d95d5ee367e78f7f203324b41e7e112ea4ffa757ff5647be32d8f238e268441"
+  },
+  {
+    "cohort": "pdac",
+    "section": "GSM8443449_PDAC-p1",
+    "count_sha256": "652c8af0ba8fab01760fbffc90a111eb79c940fe282f7434f6e44e5125f44442"
+  },
+  {
+    "cohort": "pdac",
+    "section": "GSM8443450_PDAC-p2",
+    "count_sha256": "8b7ccaac0deddf0cee3cfd1cb2f8e15f9f9473e231f9dbae93bc00eecc5ed4b7"
+  }
+]

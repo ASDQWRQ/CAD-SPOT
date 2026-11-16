@@ -1,4 +1,4 @@
-# CAD-SPOT 2.2.0
+# CAD-SPOT 2.3.0
 
 Composition-Aware Decomposition for Spatial Prioritization of Transcriptomic
 coordinates: an auditable workflow connecting declared scores, composition/model
@@ -45,7 +45,15 @@ composition layers together. Matched-gene probabilities concern the chosen panel
 while spatial-block intervals are conditional on observed sections/fixed scores.
 H&E registration localizes hypotheses, not histopathological validation.
 
-## What changed in 2.2.0
+## What changed in 2.3.0
+
+The new decision-audit CLI exports model-specific budget memberships, ranks,
+coordinates and a printable report. `Decision_Utility/README.md` gives one-command
+use and complete budget, input-perturbation and second-program-pair evaluations.
+Agreement is descriptive, not biological validation or automatic model choice.
+All losses against alternatives and noncomputable perturbations are retained.
+
+## Earlier additions and mathematical scope
 
 Ranking arithmetic is unchanged from buffered v2.1.1. New additions are the
 ovarian Matrix Market adapter, coverage-only panel harmonization and section-pitch
@@ -64,7 +72,7 @@ third-party environments are retrieved through documented public links.
 
 ## Versions and historical material
 
-The current software release is tagged `v2.2.0`. Earlier tags, legacy root
+The current software release is tagged `v2.3.0`. Earlier tags, legacy root
 examples and old source files are retained for history. Active ovarian sections
 are identified by `Primary/input_manifest.json`; PDAC is separately identified by
 `PDAC_Transfer/input_manifest.json`. Follow these manifests and current commands,
