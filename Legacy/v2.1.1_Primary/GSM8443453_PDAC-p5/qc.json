@@ -1,0 +1,9 @@
+{
+  "sample_id": "GSM8443453_PDAC-p5",
+  "n_input": 4952,
+  "n_kept": 4943,
+  "n_umi_below_100": 8,
+  "n_detected_below_100": 9,
+  "n_out_of_tissue": 0,
+  "n_missing_coordinates": 0
+}

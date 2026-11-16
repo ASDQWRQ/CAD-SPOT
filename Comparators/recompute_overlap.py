@@ -16,7 +16,7 @@ RUNS=[COMP/'results/stamp/k10_seed20261115_retry_numpy2',
 
 def main():
     keys=['sample_id','barcode']
-    primary=pd.read_csv(ROOT/'Primary/Results/composition_coordinates.tsv.gz',sep='\t')
+    primary=pd.read_csv(ROOT/'PDAC_Transfer/Results/composition_coordinates.tsv.gz',sep='\t')
     original=pd.read_csv(ROOT/'Comparators/inputs/eligible_spots.tsv.gz',sep='\t')
     universe=original[keys+['pxl_col_in_fullres','pxl_row_in_fullres']].copy()
     current=universe.merge(primary[keys+['cadspot_candidate','x','y']],on=keys,validate='one_to_one')
@@ -31,7 +31,7 @@ def main():
              '--outputs',*[str(p) for p in RUNS],'--out',str(out),
              '--n-perm','9999','--seed','20261115','--block-widths','8','4','12']
     subprocess.run(command,check=True)
-    payload=dict(primary_spots=len(primary),primary_candidates=int(primary.cadspot_candidate.sum()),
+    payload=dict(comparison_cohort='PDAC_GSE274103_transfer',primary_spots=len(primary),primary_candidates=int(primary.cadspot_candidate.sum()),
         model_input_spots=len(current),model_input_candidates=int(current.cadspot_candidate.sum()),
         comparison_type='reused_candidate_blind_model_outputs_new_labels_not_retrained',
         command=command,spatial_permutations=9999,seed=20261115,

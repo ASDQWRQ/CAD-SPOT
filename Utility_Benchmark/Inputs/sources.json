@@ -1,12 +1,12 @@
 [
   {
-    "dataset": "primary",
-    "source": "D:\\CADSPOT_BMC_INTEGRATED_20261115\\Primary\\score_table.tsv.gz",
-    "sha256": "7d748abae864928f96a861ed475256049c8506d14453a9fa6ad500ce90bdd900"
+    "dataset": "ovarian",
+    "source": "Primary\\score_table.tsv.gz",
+    "sha256": "37737ea1a168cd03aaf9b8117bc20f36bb42f91efb426793f25dc90e7bb64bc4"
   },
   {
-    "dataset": "external",
-    "source": "D:\\CADSPOT_BMC_INTEGRATED_20261115\\External_EndToEnd\\NYU_PDAC1\\score_table.tsv.gz",
-    "sha256": "82184c0f72c542f78c6dbed07614026c7042ecee7dacabb333450be2ec1fc08d"
+    "dataset": "pdac",
+    "source": "PDAC_Transfer\\score_table.tsv.gz",
+    "sha256": "7d748abae864928f96a861ed475256049c8506d14453a9fa6ad500ce90bdd900"
   }
 ]

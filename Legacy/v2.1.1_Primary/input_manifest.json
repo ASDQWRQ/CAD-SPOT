@@ -1,0 +1,72 @@
+[
+  {
+    "sample_id": "GSM8443449_PDAC-p1",
+    "counts": "D:\\CADSPOT_REVISION_20261115\\Data\\GSE274103\\raw\\GSM8443449_PDAC-p1_filtered_feature_bc_matrix.h5",
+    "counts_sha256": "bb68242041c96ae6ba6cd4e84caac7ab8b5094d73b7c95ec32dd7eae25df8b9c",
+    "container_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE274nnn/GSE274103/suppl/GSE274103_RAW.tar",
+    "counts_archive_member": "GSM8443449_PDAC-p1_filtered_feature_bc_matrix.h5",
+    "spatial": "D:\\CADSPOT_REVISION_20261115\\Data\\GSE274103\\raw\\GSM8443449_PDAC-p1_spatial.tar.gz",
+    "spatial_sha256": "86e0a7e6e18c3c65f332191a3339b50de8a7bf37458c919fce034e7437598844",
+    "spatial_archive_member": "GSM8443449_PDAC-p1_spatial.tar.gz",
+    "tissue_positions": "D:\\CADSPOT_REVISION_20261115\\Data\\GSE274103\\prepared\\GSM8443449_PDAC-p1\\C30_spatial\\tissue_positions.csv",
+    "spatial_dir": "D:\\CADSPOT_REVISION_20261115\\Data\\GSE274103\\prepared\\GSM8443449_PDAC-p1\\C30_spatial",
+    "coordinate_units": "full_resolution_pixels",
+    "orientation": "x=column, y=row"
+  },
+  {
+    "sample_id": "GSM8443450_PDAC-p2",
+    "counts": "D:\\CADSPOT_REVISION_20261115\\Data\\GSE274103\\raw\\GSM8443450_PDAC-p2_filtered_feature_bc_matrix.h5",
+    "counts_sha256": "3752e0c5cb039147a33ef534b477e92e7439787dccbceb9683d4d3cf86a9d57f",
+    "container_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE274nnn/GSE274103/suppl/GSE274103_RAW.tar",
+    "counts_archive_member": "GSM8443450_PDAC-p2_filtered_feature_bc_matrix.h5",
+    "spatial": "D:\\CADSPOT_REVISION_20261115\\Data\\GSE274103\\raw\\GSM8443450_PDAC-p2_spatial.tar.gz",
+    "spatial_sha256": "2486b7dad7b22d1a4562877e60410e346ed7bc12d870f3c1a7c65f03019ade80",
+    "spatial_archive_member": "GSM8443450_PDAC-p2_spatial.tar.gz",
+    "tissue_positions": "D:\\CADSPOT_REVISION_20261115\\Data\\GSE274103\\prepared\\GSM8443450_PDAC-p2\\65362-10_spatial\\tissue_positions.csv",
+    "spatial_dir": "D:\\CADSPOT_REVISION_20261115\\Data\\GSE274103\\prepared\\GSM8443450_PDAC-p2\\65362-10_spatial",
+    "coordinate_units": "full_resolution_pixels",
+    "orientation": "x=column, y=row"
+  },
+  {
+    "sample_id": "GSM8443451_PDAC-p3",
+    "counts": "D:\\CADSPOT_REVISION_20261115\\Data\\GSE274103\\raw\\GSM8443451_PDAC-p3_filtered_feature_bc_matrix.h5",
+    "counts_sha256": "4c790d601bc45771ce1f136a94f1e2b072fdde1d6392fecbe46881a921aeaeb2",
+    "container_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE274nnn/GSE274103/suppl/GSE274103_RAW.tar",
+    "counts_archive_member": "GSM8443451_PDAC-p3_filtered_feature_bc_matrix.h5",
+    "spatial": "D:\\CADSPOT_REVISION_20261115\\Data\\GSE274103\\raw\\GSM8443451_PDAC-p3_spatial.tar.gz",
+    "spatial_sha256": "46ff4cc811a54c0226dcbbc7045e51a64245008844a5713814e9a7569ea830b3",
+    "spatial_archive_member": "GSM8443451_PDAC-p3_spatial.tar.gz",
+    "tissue_positions": "D:\\CADSPOT_REVISION_20261115\\Data\\GSE274103\\prepared\\GSM8443451_PDAC-p3\\52906-10_spatial\\tissue_positions.csv",
+    "spatial_dir": "D:\\CADSPOT_REVISION_20261115\\Data\\GSE274103\\prepared\\GSM8443451_PDAC-p3\\52906-10_spatial",
+    "coordinate_units": "full_resolution_pixels",
+    "orientation": "x=column, y=row"
+  },
+  {
+    "sample_id": "GSM8443452_PDAC-p4",
+    "counts": "D:\\CADSPOT_REVISION_20261115\\Data\\GSE274103\\raw\\GSM8443452_PDAC-p4_filtered_feature_bc_matrix.h5",
+    "counts_sha256": "13415bece2f4d3ea881266109dc7575deaf5e149a26b90036086b3546c0e1c17",
+    "container_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE274nnn/GSE274103/suppl/GSE274103_RAW.tar",
+    "counts_archive_member": "GSM8443452_PDAC-p4_filtered_feature_bc_matrix.h5",
+    "spatial": "D:\\CADSPOT_REVISION_20261115\\Data\\GSE274103\\raw\\GSM8443452_PDAC-p4_spatial.tar.gz",
+    "spatial_sha256": "fbbc44cd163711ffcc97c78f682cb1fec5a728229f41bac37e2dd41434f30d22",
+    "spatial_archive_member": "GSM8443452_PDAC-p4_spatial.tar.gz",
+    "tissue_positions": "D:\\CADSPOT_REVISION_20261115\\Data\\GSE274103\\prepared\\GSM8443452_PDAC-p4\\G20_spatial\\tissue_positions.csv",
+    "spatial_dir": "D:\\CADSPOT_REVISION_20261115\\Data\\GSE274103\\prepared\\GSM8443452_PDAC-p4\\G20_spatial",
+    "coordinate_units": "full_resolution_pixels",
+    "orientation": "x=column, y=row"
+  },
+  {
+    "sample_id": "GSM8443453_PDAC-p5",
+    "counts": "D:\\CADSPOT_REVISION_20261115\\Data\\GSE274103\\raw\\GSM8443453_PDAC-p5_filtered_feature_bc_matrix.h5",
+    "counts_sha256": "bb61425bf11308be0edb08e6818d025faab69c9ebd1f7e4873c4fb6f674209ca",
+    "container_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE274nnn/GSE274103/suppl/GSE274103_RAW.tar",
+    "counts_archive_member": "GSM8443453_PDAC-p5_filtered_feature_bc_matrix.h5",
+    "spatial": "D:\\CADSPOT_REVISION_20261115\\Data\\GSE274103\\raw\\GSM8443453_PDAC-p5_spatial.tar.gz",
+    "spatial_sha256": "4fa32c208e42ae4f23831806bca43a684a0417d9bbe383cbb7bd965cc3bcea52",
+    "spatial_archive_member": "GSM8443453_PDAC-p5_spatial.tar.gz",
+    "tissue_positions": "D:\\CADSPOT_REVISION_20261115\\Data\\GSE274103\\prepared\\GSM8443453_PDAC-p5\\E22_spatial\\tissue_positions.csv",
+    "spatial_dir": "D:\\CADSPOT_REVISION_20261115\\Data\\GSE274103\\prepared\\GSM8443453_PDAC-p5\\E22_spatial",
+    "coordinate_units": "full_resolution_pixels",
+    "orientation": "x=column, y=row"
+  }
+]

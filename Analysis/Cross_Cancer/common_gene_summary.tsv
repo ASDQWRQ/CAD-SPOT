@@ -1,0 +1,3 @@
+cohort	n_spots	target_genes	reference_genes	candidates	composition_rho
+ovarian	20109	19	19	431	0.05530487828346183
+pdac	23392	19	19	635	0.3399204804057494

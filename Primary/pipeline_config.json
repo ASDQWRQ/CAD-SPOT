@@ -1,4 +1,6 @@
 {
+  "dataset": "GSE211956",
+  "role": "primary_ovarian_worked_example",
   "panels": {
     "target_score": [
       "BAX",
@@ -96,7 +98,8 @@
   ],
   "scoring": "mean_gene_z_by_section",
   "normalization": "log1p_CP10K",
-  "proxy_interpretation": "transcriptional_proxies_not_cell_fractions",
   "qc": "in_tissue=1,total_UMI>=100,detected_unique_symbols>=100,finite_coordinates",
-  "frozen_score_table_used": false
+  "membership": "cohort_intersection_of_available_nonconstant_genes_before_association",
+  "frozen_score_table_used": false,
+  "prior_prediction_or_deconvolution_used": false
 }

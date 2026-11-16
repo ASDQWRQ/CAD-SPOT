@@ -1,5 +1,5 @@
 {
-  "version": "2.1.1",
+  "version": "2.2.0",
   "files": [
     {
       "path": "Analysis/build_gene_lengths.py",
@@ -8,13 +8,13 @@
     },
     {
       "path": "Analysis/build_tables.py",
-      "bytes": 5450,
-      "sha256": "2903adf7ce91c7bd871ac5769bbeddbb096f992d43c2c7d0b10866d84d7b6c61"
+      "bytes": 5607,
+      "sha256": "049d11f2ca9ea722b59fcdf80052206eb35266347bb154de2da717ba8ffa553e"
     },
     {
       "path": "Analysis/common_gene_sensitivity.py",
-      "bytes": 1780,
-      "sha256": "f5e4faa3e8e1016ef921673ae323e360094406c491a2a39f9906b488babfcb38"
+      "bytes": 159,
+      "sha256": "0bf45406b806fe7e9c4fb657b50cf10469897ee9076e27d253ef39f8c52fe896"
     },
     {
       "path": "Analysis/comparators/common.py",
@@ -237,19 +237,49 @@
       "sha256": "a3f9f71981432c890bf703bc58219a59678f3106f41f64f2ef4d57792d90db21"
     },
     {
+      "path": "Analysis/Cross_Cancer/common_gene_membership.json",
+      "bytes": 577,
+      "sha256": "a3125ab33ea074352b46151a2d26d8371272b61908b8f506024014fb9d43ac1a"
+    },
+    {
+      "path": "Analysis/Cross_Cancer/common_gene_summary.tsv",
+      "bytes": 158,
+      "sha256": "475b25ef643c74e0d43332198ee03da681c1a1544b32ff856f283a22e86c7b18"
+    },
+    {
+      "path": "Analysis/Cross_Cancer/legacy_ranking_comparison.tsv",
+      "bytes": 268,
+      "sha256": "11111a2da413884fd7e0be83287f80f58d3c8b8f3a2c8dd8c607cf4c79ed185f"
+    },
+    {
+      "path": "Analysis/cross_cancer_coverage.py",
+      "bytes": 2311,
+      "sha256": "d08fcace705f17f8a408a187072c27b7935110f663d4f7c86592607592fab57b"
+    },
+    {
+      "path": "Analysis/download_ovarian.py",
+      "bytes": 3895,
+      "sha256": "74529edfbb323dd693d4732e4b8cff2f1efbd7908e4c281d95739caaed8e9732"
+    },
+    {
       "path": "Analysis/end_to_end.py",
-      "bytes": 17331,
-      "sha256": "403f86dfd437e4fdb350d8be5e7e3683facc9483f08e82ccce7cf14d83a0bf6f"
+      "bytes": 19182,
+      "sha256": "a5a74f3543d553d17b6b186a6b6e80fdc6baec4fce3c85e04e562fb8a8a43720"
     },
     {
       "path": "Analysis/make_comparator_figure.py",
-      "bytes": 3251,
-      "sha256": "8dd6b823ea348a5a781e9b085d955514fc9b671bfe3db974cd7e46f1174326da"
+      "bytes": 3257,
+      "sha256": "a7a4f4f8876bb6893b7cf4b7333647f60041bfb823a260734521b19fba3bd4c1"
     },
     {
       "path": "Analysis/make_figures.py",
-      "bytes": 13189,
-      "sha256": "ee92662b2e9d56c4d87d9dd3b18ae4377c1245189c04f71f976900783c71e46c"
+      "bytes": 12588,
+      "sha256": "dcfedb6d0cb41ee056557e665c20e4e92eeb03f44da891d2660246ae85a09c2d"
+    },
+    {
+      "path": "Analysis/prepare_ovarian.py",
+      "bytes": 9076,
+      "sha256": "d1d0df44e7d99e71c1facd53943c18d59cc75c36e42726ebf8f65719f673808e"
     },
     {
       "path": "Analysis/ranking_ablation.py",
@@ -258,8 +288,8 @@
     },
     {
       "path": "Analysis/README.md",
-      "bytes": 6323,
-      "sha256": "01ed2088c7eaf5894fdc418f8593849205e7342446cdab18bb6f5ba151538536"
+      "bytes": 6135,
+      "sha256": "088ea66303f361c354aa6105858e1c7ee7bb65896ea4f9afeb5a13a891ea7ab9"
     },
     {
       "path": "Analysis/test_end_to_end.py",
@@ -267,54 +297,64 @@
       "sha256": "d8af0b9c61b4520bdb5f0a46518f05d75cb685e7c50595403e9ce3696c0d56e8"
     },
     {
+      "path": "Analysis/test_ovarian_preparation.py",
+      "bytes": 3375,
+      "sha256": "bb93cbb046f60b17583353f9cdfc047a20b338f13b40c5ddeaf9df90dcb6a3ee"
+    },
+    {
+      "path": "Analysis/test_pitch_scaling.py",
+      "bytes": 1560,
+      "sha256": "83f8037cc961486d76c93b549427f390d6fdc408578bbafb6a89253e4b0f47c9"
+    },
+    {
       "path": "Comparators/current_analysis.json",
-      "bytes": 1254,
-      "sha256": "ce35313618aeb4091732fcdcecd20d57b7f2a9056a473ba05619a2a9c88db00d"
+      "bytes": 1293,
+      "sha256": "2913026c57d4c5a8131b256bd72d767f6ee508e4fd8aa6aec5beb6f4562593da"
     },
     {
       "path": "Comparators/current_inputs/eligible_spots.tsv.gz",
       "bytes": 276670,
-      "sha256": "baf0e9958ddd853f2d23f3e69b39491ea8ebbb78a847aac9d671a5603a3729a0"
+      "sha256": "1ff5e98da5a852634841e42c7e11c7419ac4a309b9805a067bd1254aebc85634"
     },
     {
       "path": "Comparators/current_inputs/model_input_keys.tsv.gz",
       "bytes": 274107,
-      "sha256": "ab2a9f09113c7d1d08157019cc5d2155d2b5be1bffc2ebe72ede802675458b33"
+      "sha256": "54de450a81366e2b4a94c5038c8eb02222491348afb825340c3f0c4f75d57a46"
     },
     {
       "path": "Comparators/current_summary/analysis_settings.json",
-      "bytes": 1236,
-      "sha256": "4dae64bdf2e27f422040f052d9d8daa1ce9cdb13580bec8beb30e0a2a7627bde"
+      "bytes": 1226,
+      "sha256": "8813290ec5f61c4765a136e8dc7501a7e3c3b6c1538009aad4d96f98731444d6"
     },
     {
       "path": "Comparators/current_summary/candidate_factor_enrichment.tsv",
-      "bytes": 203460,
-      "sha256": "15022134e2af71ff223d501aedb88b3036cdecc3aa2e85d3939a420598dbcd23"
+      "bytes": 202800,
+      "sha256": "2afa983ed0c0d51a246ed29f5b1016166b5a6c3d05664e8c2a2b65fb29205737"
     },
     {
       "path": "Comparators/current_summary/GSM8443449_PDAC-p1_common_eligible.tsv.gz",
       "bytes": 54559,
-      "sha256": "c865c1c7292defbbb59cb576a78ca1a5bb1d72e25fbb8f70681019a78144d4c0"
+      "sha256": "284a59674c1125969187fe33be1bb44ab2112f452925eb5d87ecc1fe1a96ee77"
     },
     {
       "path": "Comparators/current_summary/GSM8443450_PDAC-p2_common_eligible.tsv.gz",
       "bytes": 55001,
-      "sha256": "00e8d2f2a78db680758bacb7512e26bda5b08815d3db21bb687a73e2e9d1f36c"
+      "sha256": "43a87457d7803a3da5fd03b92d58291b3b4bdae6c41c4f68d86342dfe3133cbf"
     },
     {
       "path": "Comparators/current_summary/GSM8443451_PDAC-p3_common_eligible.tsv.gz",
       "bytes": 50057,
-      "sha256": "e82247442f9be72a3a35cc67d4812832b5113e57b6aefac9fcdc79e8eceae585"
+      "sha256": "d3b2eaafaa66130a5f7183a7a42e2583c75bb88d56cfd13c7eea0bc987700bfa"
     },
     {
       "path": "Comparators/current_summary/GSM8443452_PDAC-p4_common_eligible.tsv.gz",
       "bytes": 57333,
-      "sha256": "a67a332b59b1f98a015c0692db19b506fb839dac5ec48e9f1fc749627263a096"
+      "sha256": "735b24ed9eb8425e482b3a020aae0e60a85496919b374340f595e554d2e75fea"
     },
     {
       "path": "Comparators/current_summary/GSM8443453_PDAC-p5_common_eligible.tsv.gz",
       "bytes": 57653,
-      "sha256": "389f28b20108c610e192c8f146644b3894cd6ee7ef7cffc3497a4ff58a670ae6"
+      "sha256": "7337c93269cb58c9691c9c1cc9006b431c5e62c918708fcef7099828a134387c"
     },
     {
       "path": "Comparators/current_summary/pairwise_domain_overlap.tsv",
@@ -323,583 +363,733 @@
     },
     {
       "path": "Comparators/current_summary/within_section_summary.tsv",
-      "bytes": 4054,
-      "sha256": "e0b1d56a00c728b9bbb7fc227503498b9831ffb1ba40dc74db47761787675aa1"
+      "bytes": 4032,
+      "sha256": "e73aacb21c2ae6ac8c6c0089c3a4e51d2f5bd670b53376fe9e618dd46e9e57b4"
     },
     {
       "path": "Comparators/inputs/eligible_spots.tsv.gz",
       "bytes": 276670,
-      "sha256": "baf0e9958ddd853f2d23f3e69b39491ea8ebbb78a847aac9d671a5603a3729a0"
+      "sha256": "1ff5e98da5a852634841e42c7e11c7419ac4a309b9805a067bd1254aebc85634"
     },
     {
       "path": "Comparators/recompute_overlap.py",
-      "bytes": 2327,
-      "sha256": "ca44110ea5129befc40e0077c44f35fff83fd0437b5cbad5f7c862b63fab5bc0"
+      "bytes": 2377,
+      "sha256": "8213f54f83fd60e5644c5778f2195a75f9eb7aabbce68e5724df528077ec8010"
     },
     {
-      "path": "External/finalize_source_audit.py",
-      "bytes": 8104,
-      "sha256": "3558f1e7a683e6e5d1402a8814370fe987f3ef5aa4fe3cd412c03a47f933c491"
-    },
-    {
-      "path": "External/Input_Verification.json",
-      "bytes": 1012,
-      "sha256": "1dbdc8c4aebb7d41a829dc92558be32b273689142ce9ca38077468b04e5eadb0"
-    },
-    {
-      "path": "External/metadata/Barkley2022_publisher_Supplementary_Tables.xlsx",
-      "bytes": 36256,
-      "sha256": "a899f552e0042ab67a127c126982aab7c8ccbb8733ad387c26eb6009264c1410"
-    },
-    {
-      "path": "External/metadata/Barkley2022_TableS1.tsv",
-      "bytes": 1812,
-      "sha256": "9b4ebfdf7e038dd73c41af018ff8f7db72d896b50694c2050dbf8f9d489ace60"
-    },
-    {
-      "path": "External/metadata/GSE203612_family.soft.gz",
-      "bytes": 8044,
-      "sha256": "274de5e25d9ea1330a1bff695c69add80d9acfc6153bff30a2581fdc40277468"
-    },
-    {
-      "path": "External/metadata/GSM6177618_official_ftp_listing.html",
-      "bytes": 1847,
-      "sha256": "c1f235cbd6894e0731ab8b82fd5e235794b0c537764d4523fcce4d09c6f5d3a0"
-    },
-    {
-      "path": "External/metadata/GSM6177618_official_sample.soft.txt",
-      "bytes": 7588,
-      "sha256": "fec646bc6ce113efb969b20f6f7f8e306bf1f0729a53424988f5f85a39fed825"
-    },
-    {
-      "path": "External/metadata/NYU_PDAC1_identity_audit.json",
-      "bytes": 765,
-      "sha256": "5ff5db7503e83d94496c51c0527365ccbfaeb38463329c933f8b84faf5b21563"
-    },
-    {
-      "path": "External/prepare_external_inputs.py",
-      "bytes": 14123,
-      "sha256": "4d6f451b0df4ea55b73895db6513a53e40884df9638f65d7ade39c482cc05348"
-    },
-    {
-      "path": "External/prepared/GSM6177618_NYU_PDAC1_Vis/barcodes.tsv",
-      "bytes": 80524,
-      "sha256": "69dd6339efe307f714f18874fe2d2750e73823f7b7319f353f860fdfb0e17c5d"
-    },
-    {
-      "path": "External/prepared/GSM6177618_NYU_PDAC1_Vis/feature_to_gene.tsv",
-      "bytes": 845755,
-      "sha256": "ae516ce0e5cec08a8de2053451705980ac3d04c7a0068ba1ce1a2a1df33efdf1"
-    },
-    {
-      "path": "External/prepared/GSM6177618_NYU_PDAC1_Vis/genes.tsv",
-      "bytes": 308948,
-      "sha256": "82b0fa962c0e47d07a88f520a6cae5429255887640c23fc7686c5fa098a88c24"
-    },
-    {
-      "path": "External/prepared/GSM6177618_NYU_PDAC1_Vis/positions.tsv",
-      "bytes": 235262,
-      "sha256": "578b6cb4964f4d5277a69e33643ec01293e5c390afa9a0ba88b2341c8cf1b741"
-    },
-    {
-      "path": "External/prepared/GSM6177618_NYU_PDAC1_Vis/positions_all.tsv",
-      "bytes": 282821,
-      "sha256": "bb489df7b604fbd4558bb24b32ff1bd487db31e7a5ce606e32150ee8eab89a1e"
-    },
-    {
-      "path": "External/prepared/GSM6177618_NYU_PDAC1_Vis/source_features.tsv",
-      "bytes": 1550091,
-      "sha256": "97d97dc9a9ef286f94230ed0c93a1b3d9556b71e264e9d7bddfeb76cc4738c0a"
-    },
-    {
-      "path": "External/README.md",
-      "bytes": 5065,
-      "sha256": "94cd6419c33380a6b0e2c65ccbd8447cbfb2c181192a65b7488c5aa01a91b728"
-    },
-    {
-      "path": "External/source_checksums.tsv",
-      "bytes": 3032,
-      "sha256": "552cb9e682eb9a6668777a5ad0240e4455fa1d1a606f65c25e252d3d23afaff3"
-    },
-    {
-      "path": "External/SOURCE_ISSUE_NYU_PDAC1.md",
-      "bytes": 3517,
-      "sha256": "b082059afde4dc645facd7963bf26e47367c046a4cd6745c801c61aba5edb10c"
-    },
-    {
-      "path": "External/source_manifest.json",
-      "bytes": 12286,
-      "sha256": "b0877afc581902e042ac7d6e2cfd403877706040b9f99b36ab71c63f32db5e6c"
-    },
-    {
-      "path": "External_EndToEnd/NYU_PDAC1/gene_metadata.tsv.gz",
-      "bytes": 607159,
-      "sha256": "053458c4c879e0166244c0a5eb5916ab0cf61129df2ef00ce10be4b2e31a0fdb"
-    },
-    {
-      "path": "External_EndToEnd/NYU_PDAC1/genes.tsv",
-      "bytes": 308948,
-      "sha256": "82b0fa962c0e47d07a88f520a6cae5429255887640c23fc7686c5fa098a88c24"
-    },
-    {
-      "path": "External_EndToEnd/NYU_PDAC1/panel_coverage.tsv",
-      "bytes": 3487,
-      "sha256": "9885e89aedc2e57de975420b1da44adde4645672b7f7d4e3180772e84b977c6a"
-    },
-    {
-      "path": "External_EndToEnd/NYU_PDAC1/qc.json",
-      "bytes": 201,
-      "sha256": "9e26d59aa82e563700e9a3e282ee2a55689d242ac38ac790b66eb0b69481f810"
-    },
-    {
-      "path": "External_EndToEnd/NYU_PDAC1/Results/associations.tsv",
-      "bytes": 1393,
-      "sha256": "1e09b41d351f19aacf04c55333a9d9e0778bf86b0b6ee2924ed85f63411aea0b"
-    },
-    {
-      "path": "External_EndToEnd/NYU_PDAC1/Results/blocks_2394.tsv.gz",
-      "bytes": 13619,
-      "sha256": "973349b97c7339dc5a8deacc6a5a5eedf790886a36645f2ffe9dbf0b96723815"
-    },
-    {
-      "path": "External_EndToEnd/NYU_PDAC1/Results/blocks_4788.tsv.gz",
-      "bytes": 12787,
-      "sha256": "5ea41c59b931588ae974e34b48190f49ae1555c3a4f3b107ce76a1a6c43095a1"
-    },
-    {
-      "path": "External_EndToEnd/NYU_PDAC1/Results/blocks_7182.tsv.gz",
-      "bytes": 12359,
-      "sha256": "363000aa2aefd58e39c3f86a0c708887961b4baaa68144040d752c1f09af9017"
-    },
-    {
-      "path": "External_EndToEnd/NYU_PDAC1/Results/bootstrap_2394_audit.tsv.gz",
-      "bytes": 5469,
-      "sha256": "90e7665cca65fc89579a4e8cbc5e3c9a77b3986ece8773b712b9cacb0ad2d7b0"
-    },
-    {
-      "path": "External_EndToEnd/NYU_PDAC1/Results/bootstrap_2394_ci.tsv",
-      "bytes": 1709,
-      "sha256": "ccdd4c81184dba3431c907ee5761adb7dc660eadf21992d232bd9a57a5cd695b"
-    },
-    {
-      "path": "External_EndToEnd/NYU_PDAC1/Results/bootstrap_2394_draws.tsv.gz",
-      "bytes": 58952,
-      "sha256": "b36d1427a4a71b1b2d6d536b26054d626807b72848e2aecbcd1dcac8cc50595e"
-    },
-    {
-      "path": "External_EndToEnd/NYU_PDAC1/Results/bootstrap_4788_audit.tsv.gz",
-      "bytes": 5453,
-      "sha256": "9f4e294614460a17bb1e36b54a76f560f458ed8b4d81a306b6859ada453db8ae"
-    },
-    {
-      "path": "External_EndToEnd/NYU_PDAC1/Results/bootstrap_4788_ci.tsv",
-      "bytes": 1711,
-      "sha256": "44a5308cee9385014ee787d08e5b914be7be02c1f6b65b2a7be5a71aed5b728b"
-    },
-    {
-      "path": "External_EndToEnd/NYU_PDAC1/Results/bootstrap_4788_draws.tsv.gz",
-      "bytes": 59278,
-      "sha256": "0040ba1aab376c7899f7c8f09a31a1ac1422825e3efebd76ba30ab75b3de5bca"
-    },
-    {
-      "path": "External_EndToEnd/NYU_PDAC1/Results/bootstrap_7182_audit.tsv.gz",
-      "bytes": 5574,
-      "sha256": "6269badc6bc95ba1c635c3755f79d4c572d94237e0ecdbd4fb962ed9244506b7"
-    },
-    {
-      "path": "External_EndToEnd/NYU_PDAC1/Results/bootstrap_7182_ci.tsv",
-      "bytes": 1711,
-      "sha256": "ef00889333a5c7e29a2540ba635fcf7932b06f25831f9c6a4266fd064ab70470"
-    },
-    {
-      "path": "External_EndToEnd/NYU_PDAC1/Results/bootstrap_7182_draws.tsv.gz",
-      "bytes": 59239,
-      "sha256": "0c36bd84bd051a14b1106bd55238d61cf3fc1face13673a731d08fc847407e83"
-    },
-    {
-      "path": "External_EndToEnd/NYU_PDAC1/Results/candidate_counts.tsv",
-      "bytes": 128,
-      "sha256": "541bfcbd3be34db28cb7da0e4ec27c4af8f0cb627e0db54fba60f4016fd8e000"
-    },
-    {
-      "path": "External_EndToEnd/NYU_PDAC1/Results/common_gene_sensitivity_associations.tsv",
-      "bytes": 2270,
-      "sha256": "ff1ddf28f04caf19c291d933ca0bfff8752fbaed7ea5b0c1849714caa4422df7"
-    },
-    {
-      "path": "External_EndToEnd/NYU_PDAC1/Results/common_gene_sensitivity_counts.tsv",
-      "bytes": 162,
-      "sha256": "d402283c9f69c81444f72fe2eed635edbfc7a2b28af6342f13289196be0b4a17"
-    },
-    {
-      "path": "External_EndToEnd/NYU_PDAC1/Results/composition_baseline_comparison.tsv",
-      "bytes": 16860,
-      "sha256": "70a87ae9e490b585feb3fc68a0a3b607f801226a1619c5ee7ac4f393991e6484"
-    },
-    {
-      "path": "External_EndToEnd/NYU_PDAC1/Results/composition_coordinates.tsv.gz",
-      "bytes": 562065,
-      "sha256": "97705caffd72082cc6cd0fc1983bbc31d0e3086348188f91048bd30ade7079fc"
-    },
-    {
-      "path": "External_EndToEnd/NYU_PDAC1/Results/matched_assignments.tsv.gz",
-      "bytes": 290110,
-      "sha256": "47f4498e10081d488c595d79d09b2e9af400ee3bef2683e13daa4d2213aa8548"
-    },
-    {
-      "path": "External_EndToEnd/NYU_PDAC1/Results/matched_rhos.tsv",
-      "bytes": 37898,
-      "sha256": "64258bfef64de9f93a42f6bf830c0ffe2354ffb342452c9c35e97ca9bbc164e9"
-    },
-    {
-      "path": "External_EndToEnd/NYU_PDAC1/Results/matched_summary.tsv",
-      "bytes": 539,
-      "sha256": "3d4d6ca661a67d57d5e4efb9ec13d370c64ab385489c1b31e49a1c58e80c952f"
-    },
-    {
-      "path": "External_EndToEnd/NYU_PDAC1/Results/matching_metadata.tsv.gz",
-      "bytes": 658451,
-      "sha256": "8cdd41672836fec1e703d1539b138e315820cf656cc6a6709256c1471b49122d"
-    },
-    {
-      "path": "External_EndToEnd/NYU_PDAC1/Results/matching_universe.tsv",
-      "bytes": 90044,
-      "sha256": "2c92a203cf025698c9b1a7bb51c3c1622fe523ecf4c765bb95f7754707f7bb97"
-    },
-    {
-      "path": "External_EndToEnd/NYU_PDAC1/Results/prioritized_coordinates.tsv",
-      "bytes": 11161,
-      "sha256": "e6579298b8d32ceed8f72a9556c2a5329a7673eb7276b2c2d06a2ac8bdae3dfa"
-    },
-    {
-      "path": "External_EndToEnd/NYU_PDAC1/Results/run_manifest.json",
-      "bytes": 864,
-      "sha256": "da455e7df5adcef8dc9d5aa039f1735a6b6b15988699a210527cd04f9fd29611"
-    },
-    {
-      "path": "External_EndToEnd/NYU_PDAC1/Results/technical_baseline_comparison.tsv",
-      "bytes": 16742,
-      "sha256": "6093884477e78b810a936f4823c5f414afabe41f2fb5000954ef6303c9d0dcbf"
-    },
-    {
-      "path": "External_EndToEnd/NYU_PDAC1/Results/technical_coordinates.tsv.gz",
-      "bytes": 562136,
-      "sha256": "1b4f75c4e073a9b37c45761ecacce055ca8d6544a673d2694ce28db218ad94c8"
-    },
-    {
-      "path": "External_EndToEnd/NYU_PDAC1/score_parameters.tsv",
-      "bytes": 7145,
-      "sha256": "dc305293a2170e9302a559f8a1874937c9b5a7953d0bc074fc5041451be2d2d6"
-    },
-    {
-      "path": "External_EndToEnd/NYU_PDAC1/score_table.tsv.gz",
-      "bytes": 240063,
-      "sha256": "82184c0f72c542f78c6dbed07614026c7042ecee7dacabb333450be2ec1fc08d"
-    },
-    {
-      "path": "Primary/gene_metadata.tsv.gz",
+      "path": "PDAC_Transfer/gene_metadata.tsv.gz",
       "bytes": 649701,
       "sha256": "dd7b7863a98f3b8fc99aeec63fb049efe2989f2966b56ea8943e36216461a245"
     },
     {
-      "path": "Primary/genes.tsv",
+      "path": "PDAC_Transfer/genes.tsv",
       "bytes": 133334,
       "sha256": "f2d57dcd04e317defc87c151161892a2a1432ec76b29216f9e36f87d3cf25b18"
     },
     {
-      "path": "Primary/GSM8443449_PDAC-p1/gene_metadata.tsv.gz",
+      "path": "PDAC_Transfer/GSM8443449_PDAC-p1/gene_metadata.tsv.gz",
       "bytes": 468047,
       "sha256": "5467f4af41fbf8a59f30339c0e4d2e3cb334cb6f3bd7fe0c07798ecd8c95c7ec"
     },
     {
-      "path": "Primary/GSM8443449_PDAC-p1/genes.tsv",
+      "path": "PDAC_Transfer/GSM8443449_PDAC-p1/genes.tsv",
       "bytes": 133334,
       "sha256": "f2d57dcd04e317defc87c151161892a2a1432ec76b29216f9e36f87d3cf25b18"
     },
     {
-      "path": "Primary/GSM8443449_PDAC-p1/panel_coverage.tsv",
+      "path": "PDAC_Transfer/GSM8443449_PDAC-p1/panel_coverage.tsv",
       "bytes": 3097,
       "sha256": "00d109a6514bd170c64a6aa8281162c0e87f18c22b7db85c09f42514a5247a55"
     },
     {
-      "path": "Primary/GSM8443449_PDAC-p1/qc.json",
+      "path": "PDAC_Transfer/GSM8443449_PDAC-p1/qc.json",
       "bytes": 195,
       "sha256": "39c9f7edb91af26df7c5951f305fd9d366ce3f2fa0aa76184b2244ce662b0f80"
     },
     {
-      "path": "Primary/GSM8443449_PDAC-p1/score_parameters.tsv",
+      "path": "PDAC_Transfer/GSM8443449_PDAC-p1/score_parameters.tsv",
       "bytes": 6117,
       "sha256": "523f89f09081a2f419baf093dfd9a78344391f02caca8e80b57e745b13758657"
     },
     {
-      "path": "Primary/GSM8443449_PDAC-p1/score_table.tsv.gz",
+      "path": "PDAC_Transfer/GSM8443449_PDAC-p1/score_table.tsv.gz",
       "bytes": 489057,
       "sha256": "6939fcc0d71c70566677814980852aa4ed69d36a4b0d726e26a192c95ed38a85"
     },
     {
-      "path": "Primary/GSM8443450_PDAC-p2/gene_metadata.tsv.gz",
+      "path": "PDAC_Transfer/GSM8443450_PDAC-p2/gene_metadata.tsv.gz",
       "bytes": 486868,
       "sha256": "1940363daf35090d74adef92c154a0248e136921eb322786071bbcb609f74719"
     },
     {
-      "path": "Primary/GSM8443450_PDAC-p2/genes.tsv",
+      "path": "PDAC_Transfer/GSM8443450_PDAC-p2/genes.tsv",
       "bytes": 133334,
       "sha256": "f2d57dcd04e317defc87c151161892a2a1432ec76b29216f9e36f87d3cf25b18"
     },
     {
-      "path": "Primary/GSM8443450_PDAC-p2/panel_coverage.tsv",
+      "path": "PDAC_Transfer/GSM8443450_PDAC-p2/panel_coverage.tsv",
       "bytes": 3097,
       "sha256": "a03c6787669cdf3d3812d3090dde2bbeb2626a466387458a2fdd6fba5d12a1ac"
     },
     {
-      "path": "Primary/GSM8443450_PDAC-p2/qc.json",
+      "path": "PDAC_Transfer/GSM8443450_PDAC-p2/qc.json",
       "bytes": 193,
       "sha256": "0931fe3972c40d9229672bb4fe7e4de73675afe3b0b95060b4efd15ae4992d8b"
     },
     {
-      "path": "Primary/GSM8443450_PDAC-p2/score_parameters.tsv",
+      "path": "PDAC_Transfer/GSM8443450_PDAC-p2/score_parameters.tsv",
       "bytes": 6125,
       "sha256": "f3405d03c6805414d52c22f0581994d0222eb129d924e1fcdb884f0320fbaf7f"
     },
     {
-      "path": "Primary/GSM8443450_PDAC-p2/score_table.tsv.gz",
+      "path": "PDAC_Transfer/GSM8443450_PDAC-p2/score_table.tsv.gz",
       "bytes": 451445,
       "sha256": "6b9e8dee82b870f7e168ac4f8f5b8b6affd03d63b95b4e925948bed36efaf8d9"
     },
     {
-      "path": "Primary/GSM8443451_PDAC-p3/gene_metadata.tsv.gz",
+      "path": "PDAC_Transfer/GSM8443451_PDAC-p3/gene_metadata.tsv.gz",
       "bytes": 473185,
       "sha256": "ed070f8cee3c0708ec4b6b91588dcff9d4f43798f8d035b39105e5d2649f7536"
     },
     {
-      "path": "Primary/GSM8443451_PDAC-p3/genes.tsv",
+      "path": "PDAC_Transfer/GSM8443451_PDAC-p3/genes.tsv",
       "bytes": 133334,
       "sha256": "f2d57dcd04e317defc87c151161892a2a1432ec76b29216f9e36f87d3cf25b18"
     },
     {
-      "path": "Primary/GSM8443451_PDAC-p3/panel_coverage.tsv",
+      "path": "PDAC_Transfer/GSM8443451_PDAC-p3/panel_coverage.tsv",
       "bytes": 3097,
       "sha256": "fcb6f586252528763ef58db21c4f2e20a3580ddf2246d17477ceb24ce3b31997"
     },
     {
-      "path": "Primary/GSM8443451_PDAC-p3/qc.json",
+      "path": "PDAC_Transfer/GSM8443451_PDAC-p3/qc.json",
       "bytes": 193,
       "sha256": "5be066b7fa2e0a0dd745c1af350692c2e4d55525f3f25aba90b20629e1cd9e4e"
     },
     {
-      "path": "Primary/GSM8443451_PDAC-p3/score_parameters.tsv",
+      "path": "PDAC_Transfer/GSM8443451_PDAC-p3/score_parameters.tsv",
       "bytes": 6109,
       "sha256": "052f63129aead2a52dd762e9399e6c4e169759084eef806ff60abe74b310e7b0"
     },
     {
-      "path": "Primary/GSM8443451_PDAC-p3/score_table.tsv.gz",
+      "path": "PDAC_Transfer/GSM8443451_PDAC-p3/score_table.tsv.gz",
       "bytes": 405918,
       "sha256": "d02d8c8b93522abf3fa8a8abdb973e52f9136077316be825a807910bf6f62e35"
     },
     {
-      "path": "Primary/GSM8443452_PDAC-p4/gene_metadata.tsv.gz",
+      "path": "PDAC_Transfer/GSM8443452_PDAC-p4/gene_metadata.tsv.gz",
       "bytes": 460382,
       "sha256": "5989542cad0e86129c084d8ab18071f00ea893a250d31375309746130d6c22d2"
     },
     {
-      "path": "Primary/GSM8443452_PDAC-p4/genes.tsv",
+      "path": "PDAC_Transfer/GSM8443452_PDAC-p4/genes.tsv",
       "bytes": 133334,
       "sha256": "f2d57dcd04e317defc87c151161892a2a1432ec76b29216f9e36f87d3cf25b18"
     },
     {
-      "path": "Primary/GSM8443452_PDAC-p4/panel_coverage.tsv",
+      "path": "PDAC_Transfer/GSM8443452_PDAC-p4/panel_coverage.tsv",
       "bytes": 3097,
       "sha256": "dab9ab064e942f64f8a83dd845b1421c5c6cb4c6a709f6985195f9601199c96c"
     },
     {
-      "path": "Primary/GSM8443452_PDAC-p4/qc.json",
+      "path": "PDAC_Transfer/GSM8443452_PDAC-p4/qc.json",
       "bytes": 195,
       "sha256": "cd8214eca6987caf5cfba5bd502170e127fd2cd160c441cbd54ff30bfc4462c7"
     },
     {
-      "path": "Primary/GSM8443452_PDAC-p4/score_parameters.tsv",
+      "path": "PDAC_Transfer/GSM8443452_PDAC-p4/score_parameters.tsv",
       "bytes": 6121,
       "sha256": "3da371a4721b4e2d6b1083ab4ff4ffd84c2f509ae90c2a30c1601ab66541af24"
     },
     {
-      "path": "Primary/GSM8443452_PDAC-p4/score_table.tsv.gz",
+      "path": "PDAC_Transfer/GSM8443452_PDAC-p4/score_table.tsv.gz",
       "bytes": 483458,
       "sha256": "b620071f211fd618d2c02da62475e1a0d84e1e2f34d446e2db2392d556db48f4"
     },
     {
-      "path": "Primary/GSM8443453_PDAC-p5/gene_metadata.tsv.gz",
+      "path": "PDAC_Transfer/GSM8443453_PDAC-p5/gene_metadata.tsv.gz",
       "bytes": 475399,
       "sha256": "159ca47998d2c055bc9381cb0d7fa37173eedf10f5d848ce349dd0e4959469e5"
     },
     {
-      "path": "Primary/GSM8443453_PDAC-p5/genes.tsv",
+      "path": "PDAC_Transfer/GSM8443453_PDAC-p5/genes.tsv",
       "bytes": 133334,
       "sha256": "f2d57dcd04e317defc87c151161892a2a1432ec76b29216f9e36f87d3cf25b18"
     },
     {
-      "path": "Primary/GSM8443453_PDAC-p5/panel_coverage.tsv",
+      "path": "PDAC_Transfer/GSM8443453_PDAC-p5/panel_coverage.tsv",
       "bytes": 3097,
       "sha256": "c952f1cc00a404cdd9cdeab30d0f7b386c7463de7cce0bd30d3ac3e5ecc58de2"
     },
     {
-      "path": "Primary/GSM8443453_PDAC-p5/qc.json",
+      "path": "PDAC_Transfer/GSM8443453_PDAC-p5/qc.json",
       "bytes": 193,
       "sha256": "3376511e6041af817f517dbb05c540a27ddbad3e5e0300b10bf15a10c2b48a2a"
     },
     {
-      "path": "Primary/GSM8443453_PDAC-p5/score_parameters.tsv",
+      "path": "PDAC_Transfer/GSM8443453_PDAC-p5/score_parameters.tsv",
       "bytes": 6134,
       "sha256": "b264aebae5682a48a2be0e327ee4cf8d7a7c1fb9a94c99c6749cd82c60cf1ebf"
     },
     {
-      "path": "Primary/GSM8443453_PDAC-p5/score_table.tsv.gz",
+      "path": "PDAC_Transfer/GSM8443453_PDAC-p5/score_table.tsv.gz",
       "bytes": 488225,
       "sha256": "7e48b527265cace7c62da09ed604f6bc4c06f0f2978f3642b3b74027dbbc6dcf"
     },
     {
-      "path": "Primary/input_manifest.json",
+      "path": "PDAC_Transfer/input_manifest.json",
       "bytes": 5320,
       "sha256": "a2fe214182ef0cecf2b32a68ec563dd48e45eef00bd205d5d14c263d8aa6fa84"
     },
     {
-      "path": "Primary/panel_coverage.tsv",
+      "path": "PDAC_Transfer/panel_coverage.tsv",
       "bytes": 15369,
       "sha256": "95c55c234bd74d73fcdcd29fb9e1c421eb4a33e238cd7d4f1815d6e17c1f5a0f"
     },
     {
-      "path": "Primary/pipeline_config.json",
+      "path": "PDAC_Transfer/pipeline_config.json",
       "bytes": 1773,
       "sha256": "b4c8565ad8732b98a53fb7414046a74b8d7c12589a2ad6a436bef140fe420f46"
     },
     {
-      "path": "Primary/Results/associations.tsv",
+      "path": "PDAC_Transfer/Results/associations.tsv",
       "bytes": 4080,
       "sha256": "4910638cde27fd393248496d453309249de6e636c4e6b1544da2a2a2f22678f7"
     },
     {
-      "path": "Primary/Results/blocks_1500.tsv.gz",
-      "bytes": 176560,
-      "sha256": "63dad46ccaa5742759567458adbae9c4345778a5978a035d1a630a89e3ba23b9"
+      "path": "PDAC_Transfer/Results/blocks_12.tsv.gz",
+      "bytes": 164905,
+      "sha256": "5cf247efe9a3e635112747c17752ca5172d20094ae40debec608245363ed5904"
     },
     {
-      "path": "Primary/Results/blocks_3000.tsv.gz",
-      "bytes": 166194,
-      "sha256": "b7960924bbf4035fd5e2ccafb8f0e8f7a849c3f3023c541c3c66aa28c19794ff"
+      "path": "PDAC_Transfer/Results/blocks_18.tsv.gz",
+      "bytes": 158531,
+      "sha256": "4d30fccf59a816e0f9433274041109b34994ef15017f6eedf58ef9805d2fc071"
     },
     {
-      "path": "Primary/Results/blocks_4500.tsv.gz",
-      "bytes": 159832,
-      "sha256": "fb6f2b48b7455afa50a071ef57bca7c577e366a25b217b928960c183f4091a6e"
+      "path": "PDAC_Transfer/Results/blocks_6.tsv.gz",
+      "bytes": 174818,
+      "sha256": "7e222a16171c6314523066566fc800b1ab646cedcd46004a14a96e382b16646d"
     },
     {
-      "path": "Primary/Results/bootstrap_1500_audit.tsv.gz",
-      "bytes": 28002,
-      "sha256": "d451a026ea568accf5f283f5ca33dce06e66a29c511d7a9928026fdbf46d9e84"
+      "path": "PDAC_Transfer/Results/bootstrap_12_audit.tsv.gz",
+      "bytes": 28136,
+      "sha256": "c36f38e41243886a36e78e2405338300d44c413b3a374c2f40808cf43896c311"
     },
     {
-      "path": "Primary/Results/bootstrap_1500_ci.tsv",
-      "bytes": 4751,
-      "sha256": "2d82e38fa3090616975cc3f26ca171d2d33093aefe8aada49e67557fc5b9ec25"
+      "path": "PDAC_Transfer/Results/bootstrap_12_ci.tsv",
+      "bytes": 4690,
+      "sha256": "8eb137ff4c7609767dd18130cd651352f77554182a934818c776538e115b938d"
     },
     {
-      "path": "Primary/Results/bootstrap_1500_draws.tsv.gz",
-      "bytes": 257312,
-      "sha256": "ef6ccdff0ca35c4de9b271cb2fa59103068b6ae6d6df60d30f5eb184f84d9642"
+      "path": "PDAC_Transfer/Results/bootstrap_12_draws.tsv.gz",
+      "bytes": 259357,
+      "sha256": "f9b19be19c02dd6a10db2eba06734c29011c1075bec75632569b071c476581ed"
     },
     {
-      "path": "Primary/Results/bootstrap_3000_audit.tsv.gz",
-      "bytes": 28093,
-      "sha256": "fae52da3678e3c26761dc8d04f43b83558630313909b494c7afd03dd447a7e52"
+      "path": "PDAC_Transfer/Results/bootstrap_18_audit.tsv.gz",
+      "bytes": 27777,
+      "sha256": "69dce2d4fba8fb44b62cfd5a50b5b0c28f31a8bd92f92b52bf799066a21e6bab"
     },
     {
-      "path": "Primary/Results/bootstrap_3000_ci.tsv",
-      "bytes": 4756,
-      "sha256": "3e3ae868f60efd831b670521cd19d774fbdaff21f1a7fe8714dc33f8239055c4"
+      "path": "PDAC_Transfer/Results/bootstrap_18_ci.tsv",
+      "bytes": 4691,
+      "sha256": "eab46a6e5d1ff6cdf9e275773b5b26a8ebb0e915999fed346ac452d002b5479d"
     },
     {
-      "path": "Primary/Results/bootstrap_3000_draws.tsv.gz",
-      "bytes": 258449,
-      "sha256": "249e321fdd19a090e8bd2f2f44546317313de609a39a3d24fa06e20b3678410a"
+      "path": "PDAC_Transfer/Results/bootstrap_18_draws.tsv.gz",
+      "bytes": 259300,
+      "sha256": "6fb397a4c33e7fd85b6230b2ec06d9c108eb82f021599ccc5c4a39da0561c333"
     },
     {
-      "path": "Primary/Results/bootstrap_4500_audit.tsv.gz",
-      "bytes": 27872,
-      "sha256": "328827029d81f3440ac13a035bf575b51c343a54c7e7108e29da5b3f597dd8fd"
+      "path": "PDAC_Transfer/Results/bootstrap_6_audit.tsv.gz",
+      "bytes": 28347,
+      "sha256": "b7a86963c7d41569b3db9878627e7c9c48ef395a14f030919d1a3e496e85aa6b"
     },
     {
-      "path": "Primary/Results/bootstrap_4500_ci.tsv",
-      "bytes": 4756,
-      "sha256": "d4061333c6258f215b9f306e373a8d040089cfaba461c30f51428ec973e176b2"
+      "path": "PDAC_Transfer/Results/bootstrap_6_ci.tsv",
+      "bytes": 4671,
+      "sha256": "2f34b9628cb277f572b7b0c696597d3d4df1873fe6a41a0fd5fc64f784707131"
     },
     {
-      "path": "Primary/Results/bootstrap_4500_draws.tsv.gz",
-      "bytes": 259857,
-      "sha256": "10d6a2ad7e5ea0a23667a2b54687e4861e7a8f673f647414ab5f99a6e2d54f07"
+      "path": "PDAC_Transfer/Results/bootstrap_6_draws.tsv.gz",
+      "bytes": 257727,
+      "sha256": "534ded786a0f0d1d9eb4ccc25c319fbd9ded53157f78f56ae2348ae1d3e81c94"
     },
     {
-      "path": "Primary/Results/candidate_counts.tsv",
+      "path": "PDAC_Transfer/Results/bootstrap_coordinate_transforms.tsv",
+      "bytes": 404,
+      "sha256": "d562d8a770b9381a7781c17543997fdd67b9973fa42b247dd4b04c9978c0796c"
+    },
+    {
+      "path": "PDAC_Transfer/Results/candidate_counts.tsv",
       "bytes": 438,
       "sha256": "fc544c0471c9c24b096be21f203d789fffdebb5b29b8a50d283da2fec6cfc7db"
     },
     {
-      "path": "Primary/Results/composition_baseline_comparison.tsv",
+      "path": "PDAC_Transfer/Results/common_gene_sensitivity_associations.tsv",
+      "bytes": 6070,
+      "sha256": "7dc6b489db1a64db0bcd071077edb77ec92a024aac63fa9ba20c8ebfda25b1d4"
+    },
+    {
+      "path": "PDAC_Transfer/Results/composition_baseline_comparison.tsv",
       "bytes": 50330,
       "sha256": "94251982d8f79833e88d39ae9d6ba45463cf71091769006239bb75235741d5bb"
     },
     {
-      "path": "Primary/Results/composition_coordinates.tsv.gz",
+      "path": "PDAC_Transfer/Results/composition_coordinates.tsv.gz",
       "bytes": 6579696,
-      "sha256": "7e649829874622882639dacd4bb535187894919ec9322fa6f6f0b65fd7d4ca11"
+      "sha256": "4b213bd335668cc053c1789048dd6269b86a7f500d19a59312d71d75107cbc81"
     },
     {
-      "path": "Primary/Results/matched_assignments.tsv.gz",
-      "bytes": 273110,
-      "sha256": "4a7e8009b79c9f2930525b518929e006ee2c5c993c1fc795640eca1b4eab04b1"
+      "path": "PDAC_Transfer/Results/matched_assignments.tsv.gz",
+      "bytes": 273710,
+      "sha256": "9f247738db193e9d4083770a564ac2f5504bf008439f533bab466f2d2535f978"
     },
     {
-      "path": "Primary/Results/matched_rhos.tsv",
-      "bytes": 37777,
-      "sha256": "295d75db69f0b7685b5935fe502a2c4fc230b524123b8780b0808a05f6dafc14"
+      "path": "PDAC_Transfer/Results/matched_rhos.tsv",
+      "bytes": 37780,
+      "sha256": "769cf3de6a4847e3c73b6ead160af665c39e7afd4c220f94d305af70bbf24e8a"
     },
     {
-      "path": "Primary/Results/matched_summary.tsv",
+      "path": "PDAC_Transfer/Results/matched_summary.tsv",
       "bytes": 540,
-      "sha256": "5a8f70c83b7ed3cb67aeff9837824400cb5c58cd9db7d59f05b4e47ac749e6fe"
+      "sha256": "c61c025da017136362c84413bffe7355e2a2364cd1059ef1728cc4b1c7072213"
     },
     {
-      "path": "Primary/Results/matching_metadata.tsv.gz",
+      "path": "PDAC_Transfer/Results/matching_metadata.tsv.gz",
       "bytes": 679488,
-      "sha256": "c9a933c3e6ad58594abc66e3a0c5089cdb7ebc58a8bee8f81fea61ec012ae573"
+      "sha256": "d532ddfec64f8032aef1f30317719223444aaaea687061be3bee955630c61fac"
     },
     {
-      "path": "Primary/Results/matching_universe.tsv",
+      "path": "PDAC_Transfer/Results/matching_universe.tsv",
       "bytes": 95456,
       "sha256": "d728f11c2a23640e459f2c1d2b181ddb4abfb5d6c7ee743ba2f95a5fcb1f617d"
     },
     {
-      "path": "Primary/Results/prioritized_coordinates.tsv",
-      "bytes": 144669,
-      "sha256": "b75af4251bb474bb4bc6dc67255ef66a80c1dfb89d8e9d7255900150084dd2c7"
+      "path": "PDAC_Transfer/Results/run_manifest.json",
+      "bytes": 915,
+      "sha256": "c923111f8b0f3c74d0e701afcbb7971104e149e0f5bb0c44a36e44c7f56e7978"
     },
     {
-      "path": "Primary/Results/run_manifest.json",
-      "bytes": 864,
-      "sha256": "476a175e69c7e48f0404f447396a2cacf66926136186268daa696602395122f0"
-    },
-    {
-      "path": "Primary/Results/technical_baseline_comparison.tsv",
+      "path": "PDAC_Transfer/Results/technical_baseline_comparison.tsv",
       "bytes": 50061,
       "sha256": "9cc95b031f4b3472811a2fbd38301c161e072c08cf4d7b6400cf74507f020619"
     },
     {
-      "path": "Primary/Results/technical_coordinates.tsv.gz",
+      "path": "PDAC_Transfer/Results/technical_coordinates.tsv.gz",
       "bytes": 6580267,
-      "sha256": "3d7d6081571d6cb1888f6afe56d663dbc78f41b0327a32f0d946e58e84d02123"
+      "sha256": "f69dd8af134376e4e77595d9d9a4c57af1468265a8469a71a85245f7a6346e8b"
+    },
+    {
+      "path": "PDAC_Transfer/score_table.tsv.gz",
+      "bytes": 2313083,
+      "sha256": "7d748abae864928f96a861ed475256049c8506d14453a9fa6ad500ce90bdd900"
+    },
+    {
+      "path": "Primary/cohort_panel_membership.json",
+      "bytes": 1373,
+      "sha256": "89a28fe676034c41cace9fb99590627616cdab8f6671c211a871388a8e705a5e"
+    },
+    {
+      "path": "Primary/gene_metadata.tsv.gz",
+      "bytes": 960468,
+      "sha256": "aed944a2aa23d61c094fac90a66cbbffc324abda365ce08ae4e47b3e7be488b3"
+    },
+    {
+      "path": "Primary/genes.tsv",
+      "bytes": 308948,
+      "sha256": "6af6adb190283be2c177e564e92a5ad78a07a04db2721c347c2415af512e9ed8"
+    },
+    {
+      "path": "Primary/GSM6506110_SP1/gene_metadata.tsv.gz",
+      "bytes": 645063,
+      "sha256": "7a25d92999929bbc264c19676f8209915b8423e8b16523b348e53c6f5c6a3b36"
+    },
+    {
+      "path": "Primary/GSM6506110_SP1/genes.tsv",
+      "bytes": 308948,
+      "sha256": "6af6adb190283be2c177e564e92a5ad78a07a04db2721c347c2415af512e9ed8"
+    },
+    {
+      "path": "Primary/GSM6506110_SP1/panel_coverage.tsv",
+      "bytes": 2838,
+      "sha256": "31ba15fa004c9ffc21830127a196427c64b46fdfcf23db9a18bd17120247b9e3"
+    },
+    {
+      "path": "Primary/GSM6506110_SP1/qc.json",
+      "bytes": 189,
+      "sha256": "3c2f13962f1ca8a96ed313b3ebf465126e187e81bd62b07801f6a6532cc7e490"
+    },
+    {
+      "path": "Primary/GSM6506110_SP1/score_parameters.tsv",
+      "bytes": 6127,
+      "sha256": "bd38099082147f02d2ea07a7be39623b3c48104c5bd9af9a29a39a6dd603851c"
+    },
+    {
+      "path": "Primary/GSM6506110_SP1/score_table.tsv.gz",
+      "bytes": 274235,
+      "sha256": "f6cb62856055e1c21bb41b7cd66fdb63227c030c978192c729db991d98f3fe6f"
+    },
+    {
+      "path": "Primary/GSM6506111_SP2/gene_metadata.tsv.gz",
+      "bytes": 603572,
+      "sha256": "1bd9f43564cb249dc86b21e9b7562c5139d5956c0bcfca9b31c6ce294c6e4b3f"
+    },
+    {
+      "path": "Primary/GSM6506111_SP2/genes.tsv",
+      "bytes": 308948,
+      "sha256": "6af6adb190283be2c177e564e92a5ad78a07a04db2721c347c2415af512e9ed8"
+    },
+    {
+      "path": "Primary/GSM6506111_SP2/panel_coverage.tsv",
+      "bytes": 2838,
+      "sha256": "5fa57f81c724f570b0054dbb9583953d752c141e0c0f59d0c11ce7690e5bebb5"
+    },
+    {
+      "path": "Primary/GSM6506111_SP2/qc.json",
+      "bytes": 189,
+      "sha256": "08a3c7f92dc1ceed7fdc48b4921cd9eccb11bd11d7cc0fe3683b43a39b74391b"
+    },
+    {
+      "path": "Primary/GSM6506111_SP2/score_parameters.tsv",
+      "bytes": 6118,
+      "sha256": "ceff356ce864feba31262bc80d216045b599bac112683cc043f5e912884e0be1"
+    },
+    {
+      "path": "Primary/GSM6506111_SP2/score_table.tsv.gz",
+      "bytes": 200075,
+      "sha256": "35d06dec7e8ff552665ba8762d241e31f071872fbcd93640d3d27b90a45507bf"
+    },
+    {
+      "path": "Primary/GSM6506112_SP3/gene_metadata.tsv.gz",
+      "bytes": 601683,
+      "sha256": "67bcfe8d6dcacbd3937c6b089ba48556ca358d88f1201d51840809c57b797dbf"
+    },
+    {
+      "path": "Primary/GSM6506112_SP3/genes.tsv",
+      "bytes": 308948,
+      "sha256": "6af6adb190283be2c177e564e92a5ad78a07a04db2721c347c2415af512e9ed8"
+    },
+    {
+      "path": "Primary/GSM6506112_SP3/panel_coverage.tsv",
+      "bytes": 2838,
+      "sha256": "4b293996f91a992f61d62907f544c206a4bad5ddc2ab544aa14cd65a665f064e"
+    },
+    {
+      "path": "Primary/GSM6506112_SP3/qc.json",
+      "bytes": 189,
+      "sha256": "8fe322986972ed44b8de0440e6d360cfd6f40da1b991f62e2578912a7f591f99"
+    },
+    {
+      "path": "Primary/GSM6506112_SP3/score_parameters.tsv",
+      "bytes": 6115,
+      "sha256": "f2fc1ac039ced89e0b6dbc041422562ece17cbe421d6102a0a71cec37af352af"
+    },
+    {
+      "path": "Primary/GSM6506112_SP3/score_table.tsv.gz",
+      "bytes": 147299,
+      "sha256": "c516557df2e798a084c9cdff60faa1afe3d737fe1d0e1e501d7c609cf80bb2fc"
+    },
+    {
+      "path": "Primary/GSM6506113_SP4/gene_metadata.tsv.gz",
+      "bytes": 615389,
+      "sha256": "91eb2ccba9c2ac283a4a4c3f9c3a2b37c8f9ff0a03445c447842486a1ccc9bdb"
+    },
+    {
+      "path": "Primary/GSM6506113_SP4/genes.tsv",
+      "bytes": 308948,
+      "sha256": "6af6adb190283be2c177e564e92a5ad78a07a04db2721c347c2415af512e9ed8"
+    },
+    {
+      "path": "Primary/GSM6506113_SP4/panel_coverage.tsv",
+      "bytes": 2838,
+      "sha256": "d0c5cc8bb4dab884a852693d3090b2f5f728f36bdc1ee469bc955f846f4ae692"
+    },
+    {
+      "path": "Primary/GSM6506113_SP4/qc.json",
+      "bytes": 189,
+      "sha256": "d2b8f0364276979d5faf0612ed8d54a40f4f7b5f19e806bd997db360b92a4c5f"
+    },
+    {
+      "path": "Primary/GSM6506113_SP4/score_parameters.tsv",
+      "bytes": 6116,
+      "sha256": "ece5a7b6814106cdd4ab521866aa4f01c89e024e7e6004a295cbf78f5ad414f7"
+    },
+    {
+      "path": "Primary/GSM6506113_SP4/score_table.tsv.gz",
+      "bytes": 271404,
+      "sha256": "56e691934c932a3c435609ed25d240d24fa1e51f7f9b17e6f27054bf4debefe5"
+    },
+    {
+      "path": "Primary/GSM6506114_SP5/gene_metadata.tsv.gz",
+      "bytes": 598070,
+      "sha256": "dd79d0b87de636b055624c9ab3f1c639e7c3a248cf3416b80899d27c70440fbb"
+    },
+    {
+      "path": "Primary/GSM6506114_SP5/genes.tsv",
+      "bytes": 308948,
+      "sha256": "6af6adb190283be2c177e564e92a5ad78a07a04db2721c347c2415af512e9ed8"
+    },
+    {
+      "path": "Primary/GSM6506114_SP5/panel_coverage.tsv",
+      "bytes": 2811,
+      "sha256": "67e462092bd4b485a209959a2e571c8d116af1ffd4eba7cee9d3ab56174a5948"
+    },
+    {
+      "path": "Primary/GSM6506114_SP5/qc.json",
+      "bytes": 189,
+      "sha256": "02cdbc8a03b998ddc7650670da5e34a91003f97c5778a18190c4aacf936631d3"
+    },
+    {
+      "path": "Primary/GSM6506114_SP5/score_parameters.tsv",
+      "bytes": 6071,
+      "sha256": "3e50153ef3f13ca6a3c2bbd7650776ae950889d85a78da694283de7734437309"
+    },
+    {
+      "path": "Primary/GSM6506114_SP5/score_table.tsv.gz",
+      "bytes": 211842,
+      "sha256": "7f4230ce764117d7eaa81b8993e4b3d95c4f67d8d64678f1d7d76c32baabc185"
+    },
+    {
+      "path": "Primary/GSM6506115_SP6/gene_metadata.tsv.gz",
+      "bytes": 605238,
+      "sha256": "670de1689a76ef70187b9b4f8b3adbe270824c98c931de57fe8b0cb361a822ba"
+    },
+    {
+      "path": "Primary/GSM6506115_SP6/genes.tsv",
+      "bytes": 308948,
+      "sha256": "6af6adb190283be2c177e564e92a5ad78a07a04db2721c347c2415af512e9ed8"
+    },
+    {
+      "path": "Primary/GSM6506115_SP6/panel_coverage.tsv",
+      "bytes": 2838,
+      "sha256": "5453d6189e9f375b6350222ef18f2c4fcc3e868c7f3947171bc8821d68da25f0"
+    },
+    {
+      "path": "Primary/GSM6506115_SP6/qc.json",
+      "bytes": 189,
+      "sha256": "4d30b40bc947aa7b22cce954a51863f16d26f2f0e66f22ec515dbc124f049d67"
+    },
+    {
+      "path": "Primary/GSM6506115_SP6/score_parameters.tsv",
+      "bytes": 6124,
+      "sha256": "b46fe749467027b58666c19084916aa92b5ffc6c7efb3964d40098f389b52506"
+    },
+    {
+      "path": "Primary/GSM6506115_SP6/score_table.tsv.gz",
+      "bytes": 180070,
+      "sha256": "672e8f196d2e38fa4a5b8859143c9b17d59273cc5fe84ec9242d8dd4c38c8639"
+    },
+    {
+      "path": "Primary/GSM6506116_SP7/gene_metadata.tsv.gz",
+      "bytes": 623469,
+      "sha256": "81eaeb72a813c941546e9b2295ca20cd855b0036e9559f2af4dbc0e4e045fa85"
+    },
+    {
+      "path": "Primary/GSM6506116_SP7/genes.tsv",
+      "bytes": 308948,
+      "sha256": "6af6adb190283be2c177e564e92a5ad78a07a04db2721c347c2415af512e9ed8"
+    },
+    {
+      "path": "Primary/GSM6506116_SP7/panel_coverage.tsv",
+      "bytes": 2838,
+      "sha256": "2f78f71ee676912b06319a1d65f33cc2e0635afd84c887124542cfb9d0176f78"
+    },
+    {
+      "path": "Primary/GSM6506116_SP7/qc.json",
+      "bytes": 189,
+      "sha256": "5373fa0e6d44619f5fe70ea2006d5fdb025e0abc72bf4fde5282dbdec79c333f"
+    },
+    {
+      "path": "Primary/GSM6506116_SP7/score_parameters.tsv",
+      "bytes": 6118,
+      "sha256": "e8964b7e837b9ed14d2ed169f93fd7a66c97539abb9e0267b382b46bedc27608"
+    },
+    {
+      "path": "Primary/GSM6506116_SP7/score_table.tsv.gz",
+      "bytes": 339648,
+      "sha256": "4adc4ff27d550b23a17f0995e104e98023a0d5e6e0e583975101c5a114c29781"
+    },
+    {
+      "path": "Primary/GSM6506117_SP8/gene_metadata.tsv.gz",
+      "bytes": 630049,
+      "sha256": "d32b0da03df0d6aa7ebd53508873e3b66e37176650581ebb78877490e063c360"
+    },
+    {
+      "path": "Primary/GSM6506117_SP8/genes.tsv",
+      "bytes": 308948,
+      "sha256": "6af6adb190283be2c177e564e92a5ad78a07a04db2721c347c2415af512e9ed8"
+    },
+    {
+      "path": "Primary/GSM6506117_SP8/panel_coverage.tsv",
+      "bytes": 2838,
+      "sha256": "20bfca2b3257674868666d9735c5b293aec67bfbeaa9cb5265cdad24b14fb3c5"
+    },
+    {
+      "path": "Primary/GSM6506117_SP8/qc.json",
+      "bytes": 189,
+      "sha256": "afd2d4d493463cff9e4a7e9af99dbd9ea3b65551e96c1fd3f9bcd6a65b1a3aa5"
+    },
+    {
+      "path": "Primary/GSM6506117_SP8/score_parameters.tsv",
+      "bytes": 6126,
+      "sha256": "9aebb8cae7be8e01dfe0eb5b7aca09275043c258b36063639958411ebd4616e5"
+    },
+    {
+      "path": "Primary/GSM6506117_SP8/score_table.tsv.gz",
+      "bytes": 303249,
+      "sha256": "aada293c3f0a417f0daf38346ae82b9a8272fbb6eeef926253583259cde22941"
+    },
+    {
+      "path": "Primary/input_manifest.json",
+      "bytes": 10045,
+      "sha256": "353acb731d5deef4a8d8e5d95e5d7bebc908dd9d36667fc41066326af0554baf"
+    },
+    {
+      "path": "Primary/panel_coverage.tsv",
+      "bytes": 22474,
+      "sha256": "823f21acb3aef175260e30a02f591707286e846fc41171a0cbfadabad2147df4"
+    },
+    {
+      "path": "Primary/pipeline_config.json",
+      "bytes": 1914,
+      "sha256": "598c4917b326b570434236c503834a496e968b945d952d091078e2d6e2fd6b16"
+    },
+    {
+      "path": "Primary/Results/associations.tsv",
+      "bytes": 5944,
+      "sha256": "2fa4c96fd6f404a62f29f47fd756185d736a77e993f9e822150609e08fac7279"
+    },
+    {
+      "path": "Primary/Results/blocks_12.tsv.gz",
+      "bytes": 140512,
+      "sha256": "1c44e1ef6e7f3624fe6b6eb5d8b83c324f75e8d07df6e830974b32853fec5483"
+    },
+    {
+      "path": "Primary/Results/blocks_18.tsv.gz",
+      "bytes": 135323,
+      "sha256": "be1dbc1ee08ebed83ea5ea255842a186042e827adece158d21f703f3fabc9a93"
+    },
+    {
+      "path": "Primary/Results/blocks_6.tsv.gz",
+      "bytes": 148725,
+      "sha256": "7e7f91ea0d4b3ca4da20436e8d62db3cdf46425d6c9055d98986eb678127256d"
+    },
+    {
+      "path": "Primary/Results/bootstrap_12_audit.tsv.gz",
+      "bytes": 43839,
+      "sha256": "909e97a05ebfe12c6906bffaeaa99384c0b993ddadf4151f0005b42d535d22a1"
+    },
+    {
+      "path": "Primary/Results/bootstrap_12_ci.tsv",
+      "bytes": 6901,
+      "sha256": "b98df1e5e43c784587d7aa015dc434486a9a906b844eba25b4054d6f8a4a07f3"
+    },
+    {
+      "path": "Primary/Results/bootstrap_12_draws.tsv.gz",
+      "bytes": 395534,
+      "sha256": "bc2d7a50fbed97bc7ebec4f3f394dc0a285ba06ce150f7310d3878bef3309f2c"
+    },
+    {
+      "path": "Primary/Results/bootstrap_18_audit.tsv.gz",
+      "bytes": 44083,
+      "sha256": "ccf9adaaf23bf14bc43ae9ef207c51f8a61927145494351e01649b122f857492"
+    },
+    {
+      "path": "Primary/Results/bootstrap_18_ci.tsv",
+      "bytes": 6898,
+      "sha256": "82afede78f9bbaa558476cd71ed069476950949d313da33b86bde0b0c7179b59"
+    },
+    {
+      "path": "Primary/Results/bootstrap_18_draws.tsv.gz",
+      "bytes": 395131,
+      "sha256": "091abd4bc9e67d404d9be6f92e052d79adda6a65538871c855a2de7fe3c29592"
+    },
+    {
+      "path": "Primary/Results/bootstrap_6_audit.tsv.gz",
+      "bytes": 44353,
+      "sha256": "c85de3ab21d8118d4f93cc0cc8ece2710dc41c16faa0b7373bf519fd40a4ff31"
+    },
+    {
+      "path": "Primary/Results/bootstrap_6_ci.tsv",
+      "bytes": 6874,
+      "sha256": "3cc227cacb0d70bce05e1544a92e5997449fcf7ad48b06ca6f7f8c770427d2ae"
+    },
+    {
+      "path": "Primary/Results/bootstrap_6_draws.tsv.gz",
+      "bytes": 394057,
+      "sha256": "5651f77a31a991e88ab9a7408eea107cf93647c11738c91f3327d4d1256d9de0"
+    },
+    {
+      "path": "Primary/Results/bootstrap_coordinate_transforms.tsv",
+      "bytes": 608,
+      "sha256": "0013d48df8e227012d47e5ffec694c52a4968f31991a9fa5a17ff0019de89800"
+    },
+    {
+      "path": "Primary/Results/candidate_counts.tsv",
+      "bytes": 598,
+      "sha256": "73b441905ea864288e04a20cb90699b4d789aca80fe194aab0df99092840e50e"
+    },
+    {
+      "path": "Primary/Results/common_gene_sensitivity_associations.tsv",
+      "bytes": 9119,
+      "sha256": "e896f74a1d83650464c15a24b4d969ab75f80839427aceb788341a2f16fbb4e8"
+    },
+    {
+      "path": "Primary/Results/composition_baseline_comparison.tsv",
+      "bytes": 74268,
+      "sha256": "f2e2a57274fa9fcc0e25781eafb1dae808951312a76c4e95d71f264ece59d6b4"
+    },
+    {
+      "path": "Primary/Results/composition_coordinates.tsv.gz",
+      "bytes": 5551766,
+      "sha256": "9671b78c79dca73473fd5ee3212348cba31353cf57066b35b40b7f9c7ad718d6"
+    },
+    {
+      "path": "Primary/Results/matched_assignments.tsv.gz",
+      "bytes": 361306,
+      "sha256": "55766667a0db13c488ebd060b45e9d336ea72bd4b0be1fc90e5b6d3c661af162"
+    },
+    {
+      "path": "Primary/Results/matched_rhos.tsv",
+      "bytes": 38068,
+      "sha256": "d56e1d564cbc066a477c2894529e9faa4e9d745fc1fc38be4d77f2ecb85faca5"
+    },
+    {
+      "path": "Primary/Results/matched_summary.tsv",
+      "bytes": 542,
+      "sha256": "9e1a2aab1be7beef73f2b3d0b2afb378a57fd04f221a211ffc0eaaecd3390674"
+    },
+    {
+      "path": "Primary/Results/matching_metadata.tsv.gz",
+      "bytes": 983281,
+      "sha256": "2f25470bbe95c2064b09588a42bbc8c6e22c60ae431afb64b54fac6463fa3d24"
+    },
+    {
+      "path": "Primary/Results/matching_universe.tsv",
+      "bytes": 105625,
+      "sha256": "fbcab0b607c0f251262eb90a67b55c10d1787134070092c5d47b1243f120254c"
+    },
+    {
+      "path": "Primary/Results/run_manifest.json",
+      "bytes": 908,
+      "sha256": "fb5027660422161419c6d7948c5625854cbec95fccebb8e57e2650e878398bfc"
+    },
+    {
+      "path": "Primary/Results/technical_baseline_comparison.tsv",
+      "bytes": 74243,
+      "sha256": "66b05db3ddd0ce983c6c5d8cea26bbcf5eae2cd317ceae089fa4bc3ef9d251e5"
+    },
+    {
+      "path": "Primary/Results/technical_coordinates.tsv.gz",
+      "bytes": 5550667,
+      "sha256": "219a1c9ceb638e3c81e261fb86a5ce6f6a78a61499c16b47ee7712b8f75c82d8"
     },
     {
       "path": "Primary/score_table.tsv.gz",
-      "bytes": 2313083,
-      "sha256": "7d748abae864928f96a861ed475256049c8506d14453a9fa6ad500ce90bdd900"
+      "bytes": 1919069,
+      "sha256": "37737ea1a168cd03aaf9b8117bc20f36bb42f91efb426793f25dc90e7bb64bc4"
     },
     {
       "path": "Provenance/ensembl113_exon_union_lengths.tsv",
@@ -948,8 +1138,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 4939,
-      "sha256": "4d8798b22e0108d994bcdf402dd47ef2ee016d13c1b69f867a9664ae47658f03"
+      "bytes": 4061,
+      "sha256": "9401659117e2d444e29c1ce44c15792c5ef9da5a0d7212f1eeb9654bfc207823"
     },
     {
       "path": "requirements.txt",
@@ -959,7 +1149,7 @@
     {
       "path": "Software/cadspot.py",
       "bytes": 33292,
-      "sha256": "09af54a4fea516b9b2cf623d1f38e79b7a4b10493d9f25bb3d576f2e707e2eb4"
+      "sha256": "8401c9d82ae19a2bcc04f3901eb5b2435fd519cbfeff7368ccc575231155858b"
     },
     {
       "path": "Software/cadspot_null.py",
@@ -993,8 +1183,8 @@
     },
     {
       "path": "Software/README.md",
-      "bytes": 17919,
-      "sha256": "e7c624fa6b6bf079cd9039d75bd1365acbf8671a909602d20845a1af1bed9e8d"
+      "bytes": 18492,
+      "sha256": "4efe70c023b1c1588ffb64d16064807610c58dd97a7c2b6e111f452594b91229"
     },
     {
       "path": "Software/requirements.txt",
@@ -1009,92 +1199,82 @@
     {
       "path": "Software/tests/test_ranking_methods.py",
       "bytes": 13697,
-      "sha256": "f0b9244318aac23bbeb84452f02eed761a9c4e927fe0a4d4dea6ddcbc3bed4f0"
+      "sha256": "55e8c3d2212d8f981529b623151e33b3bafe82bf116f65f8fa9cc9fde44d8e82"
+    },
+    {
+      "path": "Study_Design.md",
+      "bytes": 4368,
+      "sha256": "05e23f236ac99b555bc769d3d0180de9dc7aa89a820ae0580a24a9ca1b50a98b"
     },
     {
       "path": "Utility_Benchmark/benchmark.py",
-      "bytes": 14908,
-      "sha256": "aefdca824f90cb613860369ee8ace2bd8b5daa838355a0389b07f6392bd8bb1b"
+      "bytes": 14751,
+      "sha256": "bdb5d6cb440e22247f5a9ed2ecd0680aaea27abc8ef3e27d3b0cae5687866f1d"
     },
     {
-      "path": "Utility_Benchmark/Inputs/external.tsv.gz",
-      "bytes": 240063,
-      "sha256": "82184c0f72c542f78c6dbed07614026c7042ecee7dacabb333450be2ec1fc08d"
+      "path": "Utility_Benchmark/Inputs/ovarian.tsv.gz",
+      "bytes": 1919069,
+      "sha256": "37737ea1a168cd03aaf9b8117bc20f36bb42f91efb426793f25dc90e7bb64bc4"
     },
     {
-      "path": "Utility_Benchmark/Inputs/primary.tsv.gz",
+      "path": "Utility_Benchmark/Inputs/ovarian_10000.tsv.gz",
+      "bytes": 939654,
+      "sha256": "b0e0853269902472b5f14ccdd3c2e6f5179dfd3245ebc582bd5a3c96157d7e54"
+    },
+    {
+      "path": "Utility_Benchmark/Inputs/pdac.tsv.gz",
       "bytes": 2313083,
       "sha256": "7d748abae864928f96a861ed475256049c8506d14453a9fa6ad500ce90bdd900"
     },
     {
-      "path": "Utility_Benchmark/Inputs/primary_10000.tsv.gz",
-      "bytes": 974326,
-      "sha256": "dd0b2333af4657e251dbe8cc9f79d81aff598e617e292d5841c894e23ae5e35c"
-    },
-    {
       "path": "Utility_Benchmark/Inputs/sources.json",
-      "bytes": 433,
-      "sha256": "04565a97a4f98b3bcebe75f1cef988f6389c7bbccab9bcbc71bce23f08f2cbd8"
+      "bytes": 340,
+      "sha256": "a338cbb843a4be2b6327ee01fb97064e6a17b4daa873d63d9b2c9c6ce7e45eb6"
     },
     {
       "path": "Utility_Benchmark/make_report.py",
-      "bytes": 12035,
-      "sha256": "b0044e8b4f9012c390844ccbc97ea93ec69a2f3fa557d006f9c457b694a62a3a"
+      "bytes": 6956,
+      "sha256": "aaec7c67246746fff7b648c6ef66674ab6f0fde54beae00dc97689e1cdfab61f"
     },
     {
       "path": "Utility_Benchmark/PROTOCOL.md",
-      "bytes": 4593,
-      "sha256": "0fc64f56f25167f79eab60028b01c8bf394e639cf66d86f73fddfb6d567a21cb"
+      "bytes": 2984,
+      "sha256": "422c7dd593a450b303e98dae30d3dc799dc0ed74226bb5f5e4243fa922bc9540"
     },
     {
       "path": "Utility_Benchmark/README.md",
-      "bytes": 3531,
-      "sha256": "68634106a1611ab5159339b7c4e91ae32796a4e3fcbc4ee7e2f0334db436b643"
+      "bytes": 1893,
+      "sha256": "1872ec11b029bfa2577cbe9cb1ef9a9b19cc917a11735f54fe24f46fc0f863c6"
     },
     {
       "path": "Utility_Benchmark/Results/accuracy_summary.tsv",
-      "bytes": 12995,
-      "sha256": "fe608fa8d6bace0acc6e808726941dd4966d5d9b6ca1db5093e0ed8d4748e498"
+      "bytes": 12945,
+      "sha256": "86893fea7aecce080a0855f4004712cb72445a86810af8813d8b99dfd521a60e"
     },
     {
       "path": "Utility_Benchmark/Results/equivalence.json",
-      "bytes": 554,
-      "sha256": "975bf9f2dfd53b73be1093c29d9ea1e83d788a05aebabe23fa1b2f761177216c"
+      "bytes": 552,
+      "sha256": "ea333343dbaec9c626bedeadf08c6c91ae888c42eb2babd55e25cc6413ad68dd"
     },
     {
-      "path": "Utility_Benchmark/Results/Figure4_task_utility.pdf",
-      "bytes": 54086,
-      "sha256": "849c95f94dbddddfce7b2d48d88efb2b81bed0fae37f1db08e46207dec3915d2"
+      "path": "Utility_Benchmark/Results/Figure2_task_utility.pdf",
+      "bytes": 54183,
+      "sha256": "2ef6c3ab36d2616999288dc3d5a54dddbec9ed2375a171770215ecafbebed2ab"
     },
     {
-      "path": "Utility_Benchmark/Results/Figure4_task_utility.png",
-      "bytes": 343659,
-      "sha256": "3d8dca9a49cd2b18572e2675db4ff5caad3606a72ff97f33116d2d84151a96f4"
+      "path": "Utility_Benchmark/Results/Figure2_task_utility.png",
+      "bytes": 340634,
+      "sha256": "a00bc8989a51119627aca30499d2842cb610a3fdc0e0619c5d13564bb0d6bc0f"
     },
     {
       "path": "Utility_Benchmark/Results/injection_replicates.tsv",
-      "bytes": 107540,
-      "sha256": "b232aa1e3bd4dcd555acda01d463573bebf70fe66c5bf16adccd1bdff69d723b"
-    },
-    {
-      "path": "Utility_Benchmark/Results/invalid_launcher_memory_round/performance_environment.json",
-      "bytes": 513,
-      "sha256": "ef829375df0327d7ab3fe0839e1a0e048615f92dedf9e4668a59d8b33bb5f028"
-    },
-    {
-      "path": "Utility_Benchmark/Results/invalid_launcher_memory_round/performance_replicates.tsv",
-      "bytes": 3798,
-      "sha256": "5602944dacb0f685d2ac8cbbdc233e435d39b537eca7d9aafed7ba424123e20d"
-    },
-    {
-      "path": "Utility_Benchmark/Results/invalid_launcher_memory_round/performance_summary.tsv",
-      "bytes": 1706,
-      "sha256": "96594a2205303ec774c65bf027ad9f486247ec1f2ff9867b4cd86d7771e20da7"
+      "bytes": 106401,
+      "sha256": "86ab7a5d8b9eba5dc5083572d8b195bf09378fa6e915d2a862730b3e6be081db"
     },
     {
       "path": "Utility_Benchmark/Results/paired_accuracy_differences.tsv",
-      "bytes": 7253,
-      "sha256": "0d4a2963bfa940047d80e83685d76c582db00e69d2583f9b8c71cc019c997063"
+      "bytes": 7196,
+      "sha256": "e3b91fd154bbfb98b6af1ffec2a5ac85327d4189e30648a24e7e23b6e4f77e1f"
     },
     {
       "path": "Utility_Benchmark/Results/performance_environment.json",
@@ -1103,13 +1283,13 @@
     },
     {
       "path": "Utility_Benchmark/Results/performance_replicates.tsv",
-      "bytes": 3872,
-      "sha256": "1fd78853e4f2930f4b900ac333edbd2ceeedd1e2a6dbb98255aedb5407d693a1"
+      "bytes": 3837,
+      "sha256": "cb8f4500f0e8611e4947c6cfd6e1c3b40766c474d64b5e7bf17e222690dece26"
     },
     {
       "path": "Utility_Benchmark/Results/performance_summary.tsv",
-      "bytes": 1757,
-      "sha256": "16d9fe736b4ec86972b58e62c62b3171d0b9161e8706992f6ebc37ad5a54e701"
+      "bytes": 1744,
+      "sha256": "1c4ccaa2db676ab35e430bbd24a3197aafd841a7a040721d583ff655f85d7d89"
     },
     {
       "path": "Utility_Benchmark/Results/simulation_replicates.tsv",
@@ -1117,19 +1297,14 @@
       "sha256": "4d7dc57471f3d4555fe8d3f86f592d20f2d00e10764606eb9f6251d535de4489"
     },
     {
-      "path": "Utility_Benchmark/Results/Utility_Tables_S13_S17.xlsx",
-      "bytes": 151939,
-      "sha256": "9d4aca85b900654a7046f6af758319442c0663faa311a5b74c330309cf8d30aa"
-    },
-    {
       "path": "Utility_Benchmark/Results/\u5b9e\u7528\u589e\u76ca\u5bf9\u7167\u62a5\u544a.md",
-      "bytes": 4135,
-      "sha256": "0f116463fb9b39b83cc13daabfcf57bc3481d9537ef362f69e4b783f7e671f4b"
+      "bytes": 1346,
+      "sha256": "a9f8701e649bc77b11f125e2b7fa68a2cef4b6347bcf14bf2526c47e6c470492"
     },
     {
       "path": "Utility_Benchmark/Software/cadspot.py",
       "bytes": 33292,
-      "sha256": "09af54a4fea516b9b2cf623d1f38e79b7a4b10493d9f25bb3d576f2e707e2eb4"
+      "sha256": "8401c9d82ae19a2bcc04f3901eb5b2435fd519cbfeff7368ccc575231155858b"
     },
     {
       "path": "Utility_Benchmark/Software/LICENSE.txt",
@@ -1154,7 +1329,7 @@
     {
       "path": "VERSION",
       "bytes": 7,
-      "sha256": "f9526c4a14038a3be9cc4c4aab6502bb785311e05a08117768244fe5c9183816"
+      "sha256": "72fdf54ed9bbd597f2865a898ff81bf317dee6d121c9d3e113256e1b13f48ea3"
     }
   ]
 }

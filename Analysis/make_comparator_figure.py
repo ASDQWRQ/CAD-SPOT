@@ -8,7 +8,7 @@ from make_figures import ROOT, grid, save, plt
 def main():
     summary=ROOT/'Comparators/current_summary';sample='GSM8443449_PDAC-p1'
     d=pd.read_csv(summary/f'{sample}_common_eligible.tsv.gz',sep='\t')
-    candidates=pd.read_csv(ROOT/'Primary/Results/composition_coordinates.tsv.gz',sep='\t',
+    candidates=pd.read_csv(ROOT/'PDAC_Transfer/Results/composition_coordinates.tsv.gz',sep='\t',
         usecols=['sample_id','barcode','x','y','cadspot_candidate'])
     base=candidates[candidates.sample_id.eq(sample)].merge(d[['sample_id','barcode']],
         on=['sample_id','barcode'],validate='one_to_one')

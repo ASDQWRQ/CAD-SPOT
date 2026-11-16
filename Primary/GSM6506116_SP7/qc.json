@@ -1,0 +1,9 @@
+{
+  "sample_id": "GSM6506116_SP7",
+  "n_input": 3632,
+  "n_kept": 3629,
+  "n_umi_below_100": 3,
+  "n_detected_below_100": 3,
+  "n_out_of_tissue": 0,
+  "n_missing_coordinates": 0
+}

@@ -19,7 +19,7 @@ from sklearn.metrics import average_precision_score
 from standalone_reference import fit_residuals,rank_reference,standardize_sections
 
 ROOT=Path(__file__).resolve().parent
-DEFAULT_DATA=ROOT.parent if (ROOT.parent/'Primary').exists() else Path(r'D:\CADSPOT_BMC_INTEGRATED_20261115')
+DEFAULT_DATA=ROOT.parent
 METHODS=['raw_product','technical_product','cadspot_product','adjusted_target','adjusted_minimum','spline_product']
 CASES=['no_nuisance','linear_compact','linear_dispersed','noisy_proxy','nonlinear_compact','architecture_coupled','no_program']
 TECH=['log_nCount','log_nFeature']
@@ -96,12 +96,12 @@ def metrics(table,truth,score):
 
 def prepare_inputs(data_root):
     out=ROOT/'Inputs';out.mkdir(exist_ok=True);records=[]
-    for label,source in [('primary',data_root/'Primary/score_table.tsv.gz'),
-                         ('external',data_root/'External_EndToEnd/NYU_PDAC1/score_table.tsv.gz')]:
+    for label,source in [('ovarian',data_root/'Primary/score_table.tsv.gz'),
+                         ('pdac',data_root/'PDAC_Transfer/score_table.tsv.gz')]:
         dest=out/f'{label}.tsv.gz';shutil.copy2(source,dest)
         records.append(dict(dataset=label,source=str(source),sha256=hashlib.sha256(dest.read_bytes()).hexdigest()))
-    d=pd.read_csv(out/'primary.tsv.gz',sep='\t')
-    d.iloc[np.sort(np.random.default_rng(661001).choice(len(d),10000,replace=False))].to_csv(out/'primary_10000.tsv.gz',sep='\t',index=False)
+    d=pd.read_csv(out/'ovarian.tsv.gz',sep='\t')
+    d.iloc[np.sort(np.random.default_rng(661001).choice(len(d),10000,replace=False))].to_csv(out/'ovarian_10000.tsv.gz',sep='\t',index=False)
     write_json(records,out/'sources.json')
 
 
@@ -118,11 +118,10 @@ def simulations(engine):
 
 def injections(engine):
     rows=[]
-    for background in ['primary','external']:
+    for background in ['ovarian','pdac']:
         d=pd.read_csv(ROOT/f'Inputs/{background}.tsv.gz',sep='\t')
-        if background=='primary':
-            names=sorted(d.sample_id.unique())[:2]
-            d=pd.concat([sub.sort_values('barcode').iloc[::3] for name,sub in d.groupby('sample_id') if name in names],ignore_index=True)
+        names=sorted(d.sample_id.unique())[:2]
+        d=pd.concat([sub.sort_values('barcode').iloc[::3] for name,sub in d.groupby('sample_id') if name in names],ignore_index=True)
         d[['target_score','reference_score']]=standardize_sections(d,d[['target_score','reference_score']].to_numpy())
         for geometry in ['compact','dispersed']:
             for rep in range(32):
@@ -164,7 +163,7 @@ def summarize():
 
 def check_equivalence():
     old,new=core('Software_baseline'),core();records=[]
-    for background in ['external','primary']:
+    for background in ['ovarian','pdac']:
         d=pd.read_csv(ROOT/f'Inputs/{background}.tsv.gz',sep='\t')
         _,a,b=old.fit_pair(d,'target_score','reference_score',TECH+COMP)
         before=old.spatial_ranking(d,a,b,target_scores=d.target_score,reference_scores=d.reference_score)
@@ -202,7 +201,7 @@ def worker(args):
 
 def performance():
     import psutil
-    jobs=[(dataset,build,rep) for dataset in ['external','primary_10000','primary'] for build in ['v2.1.0','v2.1.1','reference'] for rep in range(5)]
+    jobs=[(dataset,build,rep) for dataset in ['ovarian_10000','ovarian','pdac'] for build in ['v2.1.0','v2.2.0','reference'] for rep in range(5)]
     order=np.random.default_rng(991001).permutation(len(jobs));rows=[]
     env=os.environ.copy();env['OPENBLAS_NUM_THREADS']='1';env['OMP_NUM_THREADS']='1'
     for number,i in enumerate(order):

@@ -1,12 +1,12 @@
 {
   "arguments": {
-    "inputs": "D:\\CADSPOT_BMC_INTEGRATED_20261115\\Comparators\\current_inputs",
+    "inputs": "D:\\CADSPOT_OVARIAN_PDAC_20261116\\Comparators\\current_inputs",
     "outputs": [
-      "D:\\CADSPOT_BMC_INTEGRATED_20261115\\Analysis\\comparators\\results\\stamp\\k10_seed20261115_retry_numpy2",
-      "D:\\CADSPOT_BMC_INTEGRATED_20261115\\Analysis\\comparators\\results\\popari\\k10_seed20261115_budget50",
-      "D:\\CADSPOT_BMC_INTEGRATED_20261115\\Analysis\\comparators\\results\\spahdmap\\k10_seed20261115_production"
+      "D:\\CADSPOT_OVARIAN_PDAC_20261116\\Analysis\\comparators\\results\\stamp\\k10_seed20261115_retry_numpy2",
+      "D:\\CADSPOT_OVARIAN_PDAC_20261116\\Analysis\\comparators\\results\\popari\\k10_seed20261115_budget50",
+      "D:\\CADSPOT_OVARIAN_PDAC_20261116\\Analysis\\comparators\\results\\spahdmap\\k10_seed20261115_production"
     ],
-    "out": "D:\\CADSPOT_BMC_INTEGRATED_20261115\\Comparators\\current_summary",
+    "out": "D:\\CADSPOT_OVARIAN_PDAC_20261116\\Comparators\\current_summary",
     "n_perm": 9999,
     "seed": 20261115,
     "block_widths": [
@@ -25,5 +25,5 @@
   "multiple_testing": "BH jointly over domain and loading tests per method and block-width across sections",
   "descriptive_expected_overlap": "candidate fraction times domain size; not the conditional block-null expectation",
   "biological_scope": "sections retained separately; independent STAMP factors not aligned",
-  "eligible_sha256": "baf0e9958ddd853f2d23f3e69b39491ea8ebbb78a847aac9d671a5603a3729a0"
+  "eligible_sha256": "1ff5e98da5a852634841e42c7e11c7419ac4a309b9805a067bd1254aebc85634"
 }

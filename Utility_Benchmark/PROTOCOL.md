@@ -1,70 +1,49 @@
-# CAD-SPOT task-aligned utility benchmark
+# Ovarian-primary / PDAC-transfer task evaluation
 
-Protocol fixed before running the experiments in this directory, 15 Nov 2026.
-The purpose is to test claims, not select favorable outcomes. All scenarios,
-replicates and negative cases will be retained. This is not a clinical validation
-or a claim that CAD-SPOT outperforms Giotto, Squidpy or latent spatial models.
+Specification fixed on 16 November 2026 before observing new ovarian CAD-SPOT
+outcomes. This extends the 15 November benchmark; PDAC data and the pure
+simulation outcomes were previously examined. It is not an untouched holdout.
+No formulas, cutoffs, calipers or proxy panels are retuned on ovarian outcomes.
 
-## Hypotheses and comparisons
+## Fixed accuracy comparisons
 
-1. Conditional-coordinate recovery: does composition-adjusted ranking recover
-   a known injected local program better than raw and technical-only products
-   when broad architecture drives both scores? Primary metric: average precision
-   over every spot. Secondary: fixed top-5% precision/recall and outlier burden.
-2. Boundary cases: no nuisance, noisy composition proxies, nonlinear nuisance,
-   no injected program and a biologically architecture-coupled program. These
-   may favor baselines and must remain visible. Residualization cannot recover
-   an unconditional biological program if that program is represented by a
-   covariate being removed.
-3. Positive-quadrant ranking is not a novel estimator: an independently written
-   OLS + positive-product reference should reproduce the default. Equality is
-   expected and will not be described as an accuracy gain.
-4. Optimize implementation without changing the algorithm: replace repeated
-   per-row pandas assignments in six-neighbor annotation with section-wise
-   buffered assignment, retaining the same neighbor queries/tie policy. Compare
-   v2.1.0 with the optimized build on identical ranking inputs and outputs.
-5. Real expression-derived background: test recovery of known score-level
-   injections, with locations selected without inspecting expression scores.
-   This measures injected-program recovery, not biological ground truth.
+- Preserve seven scenarios and 40 paired seeds starting 881001: no nuisance,
+  linear compact, linear dispersed, noisy proxy, nonlinear compact,
+  architecture-coupled and no-program, on two 24-by-28 score-level grids.
+- Preserve six methods: raw product, technical-only product, composition OLS
+  product, adjusted target-only, adjusted minimum and additive spline product.
+  All-spot AP is primary; top-5% precision/recall and outlier burden secondary.
+  No-program AP remains undefined. All outcomes are reported.
+- Real backgrounds: ovarian GSE211956 and PDAC GSE274103, first two sections in
+  accession order, every third barcode-sorted spot from each. This is a fixed
+  computational subsample, not selection by score or tissue phenotype.
+- Compact/dispersed injections: 32 paired seeds starting 771001, ceil(5%) spots
+  per section, target/reference increments 1.2/1.1 original section score SDs.
+  Locations are chosen without score inspection. True labels are injected score
+  perturbations, not validated biological regions.
+- AP differences use 10,000 paired replicate resamples, seed 551001. They are
+  conditional on the two backgrounds, not patient-population confidence bounds.
 
-## Locked design
+## Implementation checks
 
-- Pure simulations: 40 paired seeds starting at 881001 (not the prior ranking
-  ablation seeds), two 24 x 28 grids, 7 scenarios: no nuisance, linear compact,
-  linear dispersed, noisy proxy, nonlinear compact, architecture-coupled biology,
-  no-program. Program amplitude target/reference 1.2/1.1, radius 4.5 grid units.
-- Methods: raw product, technical-only product, composition OLS product
-  (CAD-SPOT default), composition target-only, composition minimum, and additive
-  spline-residual product (an analysis sensitivity, not the CLI default rank).
-  Identical inputs/covariates and known labels within each replicate. No label
-  tuning; all-spot AP, not AP restricted to a favorable eligible quadrant.
-- Real backgrounds: every third barcode-ordered spot from the first two primary
-  sections, and all retained separate-study sample spots. 32 paired seeds per
-  compact/dispersed geometry, starting at 771001; exactly ceil(5%) injected per
-  section, target/reference amplitude 1.2/1.1 section SDs. Source disease metadata
-  are not used to define truth; the external identity conflict remains unresolved.
-- Summaries: every replicate, mean/SD; paired AP difference intervals from 10,000
-  resamples of independent simulation/injection replicates, not spots. No P-value
-  shopping or inference that these simulation intervals generalize to tissues.
-- Performance: five single-thread subprocess repeats per build and dataset,
-  randomized order seed 991001. External 1,759 spots, a deterministic 10,000-spot
-  primary subset, and the full 23,392-spot primary. Time the ranking kernel, not
-  downloads/bootstrap/null calibration; separately record total process wall time
-  and sampled peak process RSS. Include a lower-functionality product reference
-  for context, not a functionally equivalent speed contest.
-- Verify old/new full output equality on real tables and tie/duplicate/missing
-  fixtures. No performance result will be called improvement unless outputs
-  agree and the measured paired comparison supports it.
+- Compare frozen v2.1.0 with v2.2.0 and an independent reduced-output OLS product.
+  Version 2.2.0 retains v2.1.1 buffered ranking arithmetic; its new features are
+  the Matrix Market ovarian adapter and section-pitch bootstrap geometry.
+- Exact full ranking equality is required on both real tables and all three
+  ranking modes on tie/missing-coordinate fixtures. The independent reference
+  should match default priorities within 1e-10 and all candidate flags.
+- Time five randomized serial subprocess repeats per build on ovarian 10,000
+  spots (seed 661001 subset), full ovarian and full PDAC. Random job order uses
+  seed 991001. Set OPENBLAS_NUM_THREADS=OMP_NUM_THREADS=1. Run performance after
+  other numerical jobs finish.
+- Ranking-kernel time excludes downloads, preparation, bootstrap and matched
+  sets. Also record process wall time and sampled aggregate process-tree RSS;
+  shared pages may be counted more than once. The reduced-output reference does
+  less work and is not an equivalent-function speed comparator.
 
-No wet-lab validation, user study or speed comparison with unrelated spatial
-models is part of this protocol. Those claims remain unsupported.
+## Reporting
 
-## Measurement correction before final performance run
-
-The first timing round measured the Python launcher RSS rather than its worker
-child on this Windows installation. Those memory values are invalid; the entire
-round is retained in `Results/invalid_launcher_memory_round/` and is not pooled
-into final statistics. The final round repeats the same 45 prespecified jobs,
-order and settings while summing launcher/recursive-child RSS. Shared pages may
-be counted more than once, so this is sampled process-tree RSS, not unique heap
-allocation. Ranking times in the first round are retained for audit only.
+No wet-lab validation, patient prediction, user-study result, or accuracy/speed
+superiority over Giotto/Squidpy/latent spatial models is claimed. Geometry,
+nonlinearity, proxy error and biological composition coupling define applicability.
+The companion Study_Design.md documents cohort roles, QC and source reconstruction.

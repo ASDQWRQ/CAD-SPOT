@@ -225,8 +225,8 @@ class RankingMethodTests(unittest.TestCase):
                 self.assertTrue(exported.ranking_method.eq(method).all())
                 self.assertTrue({"priority_center", "priority_scale", "priority_scale_method"} <= set(exported))
                 manifest = json.loads(Path(str(assoc_path) + ".manifest.json").read_text())
-                self.assertEqual(manifest["cadspot_version"], "2.1.1")
-                self.assertEqual(c.__version__, "2.1.1")
+                self.assertEqual(manifest["cadspot_version"], "2.2.0")
+                self.assertEqual(c.__version__, "2.2.0")
                 self.assertEqual(manifest["arguments"]["ranking_method"], method)
                 assoc = pd.read_csv(assoc_path, sep="\t")
                 if first_assoc is None:

@@ -1,11 +1,11 @@
 {
-  "cadspot_version": "2.1.0",
+  "cadspot_version": "2.2.0",
   "python": "3.12.14",
   "numpy": "2.4.4",
   "pandas": "3.0.5",
   "scipy": "1.18.0",
   "sklearn": "1.9.0",
-  "input_sha256": "7d748abae864928f96a861ed475256049c8506d14453a9fa6ad500ce90bdd900",
+  "input_sha256": "37737ea1a168cd03aaf9b8117bc20f36bb42f91efb426793f25dc90e7bb64bc4",
   "primary_estimator": "score_residual_spearman",
   "scoring": "mean_gene_z_by_section",
   "ranking": "positive_product",
@@ -22,14 +22,15 @@
   ],
   "bootstrap_reps": 1000,
   "bootstrap_widths": [
-    1500.0,
-    3000.0,
-    4500.0
+    6,
+    12,
+    18
   ],
   "median_nearest_neighbor_pitch": null,
   "coordinate_units": "full_resolution_pixels",
   "n_sets": 500,
-  "seed": 20261115,
+  "seed": 20261116,
+  "bootstrap_coordinate_units": "section_specific_spot_pitch",
   "frozen_score_table_used": false,
-  "runtime_seconds": 309.02276690000144
+  "runtime_seconds": 279.7766124
 }

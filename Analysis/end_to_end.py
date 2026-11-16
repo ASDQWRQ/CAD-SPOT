@@ -120,8 +120,8 @@ def prepare_section(x, genes, positions, sample_id, output):
     return logx, spots, metadata, coverage
 
 
-def prepare_primary(source_root):
-    destination = ROOT / 'Primary'
+def prepare_primary(source_root, destination=None):
+    destination = Path(destination) if destination is not None else ROOT / 'Primary'
     matrices, frames, coverages, sources, sds = [], [], [], [], []
     genes = None
     for gsm in range(8443449, 8443454):
@@ -183,7 +183,27 @@ def prepare_primary(source_root):
     print('Primary prepared:', len(spots), 'spots', flush=True)
 
 
-def run_dataset(folder, reps=1000, widths=None, n_sets=500, annotation_root=None):
+def pitch_scaled_coordinates(spots):
+    """Transform geometry only; exported capture positions remain image pixels."""
+    from sklearn.neighbors import NearestNeighbors
+    transformed = spots.copy().astype({'x': float, 'y': float})
+    records = []
+    for section, group in spots.groupby('sample_id', sort=True):
+        xy = group[['x', 'y']].to_numpy(float)
+        if len(group) < 2 or not np.isfinite(xy).all():
+            raise ValueError('Pitch scaling requires two finite positions per section')
+        distances = NearestNeighbors(n_neighbors=2).fit(xy).kneighbors(xy)[0][:, 1]
+        pitch = float(np.median(distances))
+        if not pitch > 0:
+            raise ValueError('Nonpositive median nearest-other-spot pitch')
+        transformed.loc[group.index, ['x', 'y']] = xy / pitch
+        records.append(dict(sample_id=section, full_resolution_pixels_per_pitch=pitch,
+            bootstrap_coordinate_units='section_specific_spot_pitch', x_origin=0, y_origin=0))
+    return transformed, pd.DataFrame(records)
+
+
+def run_dataset(folder, reps=1000, widths=None, n_sets=500, annotation_root=None,
+                seed=SEED, bootstrap_in_pitches=False):
     folder = Path(folder)
     results = folder / 'Results'
     results.mkdir(exist_ok=True)
@@ -205,7 +225,14 @@ def run_dataset(folder, reps=1000, widths=None, n_sets=500, annotation_root=None
         rows['layer'] = layer
         ranking_frames.append(rows)
     tsv(pd.concat(ranking_frames), results / 'candidate_counts.tsv')
-    if widths is None:
+    bootstrap_spots = spots
+    if bootstrap_in_pitches:
+        bootstrap_spots, transform = pitch_scaled_coordinates(spots)
+        tsv(transform, results / 'bootstrap_coordinate_transforms.tsv')
+        if widths is None:
+            widths = [6, 12, 18]
+        pitch = None
+    elif widths is None:
         # Pixel scales differ between studies; widths are declared multiples of
         # median nearest-neighbor pitch, not transferred absolute pixel values.
         from sklearn.neighbors import NearestNeighbors
@@ -221,8 +248,8 @@ def run_dataset(folder, reps=1000, widths=None, n_sets=500, annotation_root=None
         for width in widths:
             label = f'{width:.3f}'.rstrip('0').rstrip('.')
             print('Bootstrap', folder.name, width, flush=True)
-            ci, draws, audit, blocks = core.block_bootstrap(spots, 'target_score', 'reference_score',
-                TECH, COMP, block_size=width, n_boot=reps, seed=SEED)
+            ci, draws, audit, blocks = core.block_bootstrap(bootstrap_spots, 'target_score', 'reference_score',
+                TECH, COMP, block_size=width, n_boot=reps, seed=seed)
             tsv(ci, results / f'bootstrap_{label}_ci.tsv')
             tsv(draws, results / f'bootstrap_{label}_draws.tsv.gz')
             tsv(audit, results / f'bootstrap_{label}_audit.tsv.gz')
@@ -251,7 +278,7 @@ def run_dataset(folder, reps=1000, widths=None, n_sets=500, annotation_root=None
         universe = meta.loc[variable & meta.gene_length.gt(0) & meta.detection_rate.ge(.01), 'gene'].tolist()
         exclusions = sorted({g for p in COMP for g in PANELS[p]})
         matched = null.generate_matched_sets(expression, meta, available['target_score'], available['reference_score'],
-            universe, exclusions=exclusions, n_sets=n_sets, seed=SEED,
+            universe, exclusions=exclusions, n_sets=n_sets, seed=seed,
             mean_tolerance=.25, detection_tolerance=.05, length_tolerance=.25)
         summary, rhos, scores = null.calibrate_gene_sets(expression, spots,
             available['target_score'], available['reference_score'], matched, TECH, COMP,
@@ -266,7 +293,8 @@ def run_dataset(folder, reps=1000, widths=None, n_sets=500, annotation_root=None
     core.write_manifest(results / 'run_manifest.json', dict(input_sha256=core.file_sha256(folder / 'score_table.tsv.gz'),
         primary_estimator='score_residual_spearman', scoring='mean_gene_z_by_section', ranking='positive_product',
         technical=TECH, composition=COMP, bootstrap_reps=reps, bootstrap_widths=widths,
-        median_nearest_neighbor_pitch=pitch, coordinate_units=units, n_sets=n_sets, seed=SEED,
+        median_nearest_neighbor_pitch=pitch, coordinate_units=units, n_sets=n_sets, seed=seed,
+        bootstrap_coordinate_units='section_specific_spot_pitch' if bootstrap_in_pitches else units,
         frozen_score_table_used=False, runtime_seconds=time.perf_counter()-tick))
     print(associations.query("scope == 'pooled'").to_string(index=False), flush=True)
     print(pd.concat(ranking_frames).to_string(index=False), flush=True)
@@ -274,26 +302,29 @@ def run_dataset(folder, reps=1000, widths=None, n_sets=500, annotation_root=None
 
 def main():
     p = argparse.ArgumentParser()
-    p.add_argument('--stage', choices=['download-primary', 'prepare-primary', 'prepare-external', 'run'], required=True)
+    p.add_argument('--stage', choices=['download-primary', 'prepare-primary', 'download-pdac', 'prepare-pdac', 'prepare-external', 'run'], required=True)
     p.add_argument('--source-root', type=Path, default=ROOT)
     p.add_argument('--folder', type=Path, default=ROOT / 'Primary')
     p.add_argument('--reps', type=int, default=1000)
     p.add_argument('--widths', nargs='+', type=float)
     p.add_argument('--n-sets', type=int, default=500)
+    p.add_argument('--seed', type=int, default=SEED)
+    p.add_argument('--bootstrap-in-pitches', action='store_true')
     p.add_argument('--prepared-external', type=Path)
     args = p.parse_args()
-    if args.stage == 'download-primary':
+    if args.stage in ('download-primary', 'download-pdac'):
         destination = args.source_root / 'Data'
         destination.mkdir(parents=True, exist_ok=True)
         path = destination / 'GSE274103_RAW.tar'
         if not path.exists():
-            urllib.request.urlretrieve('https://ftp.ncbi.nlm.nih.gov/geo/series/GSE274nnn/GSE274103/suppl/GSE274103_RAW.tar', path)
+            from download_ovarian import download_ranges
+            download_ranges('https://ftp.ncbi.nlm.nih.gov/geo/series/GSE274nnn/GSE274103/suppl/GSE274103_RAW.tar', path)
         raw = destination / 'GSE274103/raw'
         raw.mkdir(parents=True, exist_ok=True)
         with tarfile.open(path) as archive:
             archive.extractall(raw, filter='data')
-    elif args.stage == 'prepare-primary':
-        prepare_primary(args.source_root)
+    elif args.stage in ('prepare-primary', 'prepare-pdac'):
+        prepare_primary(args.source_root, args.folder)
     elif args.stage == 'prepare-external':
         source = args.prepared_external
         if source is None:
@@ -306,7 +337,8 @@ def main():
             raise ValueError('Prepared external barcode order mismatch')
         prepare_section(x, genes, positions, source.name, args.folder)
     else:
-        run_dataset(args.folder, args.reps, args.widths, args.n_sets, args.source_root)
+        run_dataset(args.folder, args.reps, args.widths, args.n_sets, args.source_root,
+                    args.seed, args.bootstrap_in_pitches)
 
 
 if __name__ == '__main__':

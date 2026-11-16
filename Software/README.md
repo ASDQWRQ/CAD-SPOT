@@ -1,4 +1,4 @@
-# CAD-SPOT 2.1.1
+# CAD-SPOT 2.2.0
 
 CAD-SPOT takes user-supplied target/reference scores and covariates, reports
 association layers, and exports an interpretable coordinate ranking. This local
@@ -6,21 +6,22 @@ release defaults to **positive residual co-enrichment**. Six-neighbor reference
 support remains visible as an annotation, not a required positive filter for the
 default ranking. Optional support-weighted methods remain available.
 
-The raw-to-score analysis driver is [end_to_end.py](../Analysis/end_to_end.py).
+The count adapters are [prepare_ovarian.py](../Analysis/prepare_ovarian.py) and
+[end_to_end.py](../Analysis/end_to_end.py).
 Its prepared primary input is [Primary/score_table.tsv.gz](../Primary/score_table.tsv.gz).
 Numerical analysis results belong in [Primary/Results](../Primary/Results/), not
 in hardcoded example values in this README.
 
 ## Version and Installation
 
-The designated Python 3.12 runtime passed all 28 unit/integration tests. Core
-changes are confined to ranking dispatch, eligibility, method metadata handling
-and CLI choices/defaults, plus explicit center/scale annotations. Raw associations,
-residual estimators, bootstrap and matched-null code are unchanged. The local
-version is `2.1.1`, exported as `cadspot.__version__` and the manifest's
+The designated Python 3.12 runtime passes 28 core unit/integration tests, with
+additional count-adapter and pitch-scaling tests under Analysis. Version 2.2.0
+retains the v2.1.1 core ranking/model arithmetic and adds upstream adapters and
+explicit bootstrap-geometry transformation. The local
+version is `2.2.0`, exported as `cadspot.__version__` and the manifest's
 `cadspot_version`. Identify the build by this version, source hash and selected
 ranking method. Source hashes are recorded in the release manifest; the exact
-release is tagged `v2.1.1` in the public repository.
+release is tagged `v2.2.0` in the public repository.
 
 Version 2.1.1 buffers six-neighbor output writes per section instead of assigning
 pandas fields per spot. Arithmetic, tie handling and candidate rules are
@@ -28,6 +29,10 @@ unchanged. Full outputs are exactly equal to 2.1.0 on both real score tables and
 edge-case fixtures. Utility_Benchmark contains all prespecified accuracy/timing
 comparisons, including cases favoring baselines; it is not a universal accuracy
 or speed claim over other spatial tools.
+
+Version 2.2.0 retains that ranking arithmetic. It adds Matrix Market ovarian
+reconstruction, coverage-only cohort panel harmonization and section-pitch
+bootstrap geometry, while preserving image pixels in coordinate exports.
 
 Run the examples below from the **package root**, one level above Software:
 
@@ -42,7 +47,7 @@ It is not needed by the table-only core. Run the preparation tests with
 
 ## Primary Example
 
-The primary example uses fresh scores from public GSE274103 counts and registered
+The primary ovarian example uses fresh scores from public GSE211956 counts and registered
 spatial metadata, rather than an archived target/reference table. The current
 panel definitions and QC decisions are in
 [Primary/pipeline_config.json](../Primary/pipeline_config.json); public input
@@ -58,6 +63,11 @@ population SD; its panel score is the unweighted mean. Missing/constant genes
 are recorded and omitted, not zero-imputed. The driver requires at least three
 usable genes in each panel. Section folders retain per-gene scoring parameters,
 panel coverage, QC records and matrices.
+
+The ovarian adapter fixes cohort membership using the intersection of available
+nonconstant genes before any association fitting. Noncommon exclusions and
+revised equal weights are exported. This harmonizes observed/random panel
+definitions; it is not selection by correlation or candidate outcome.
 
 The five disjoint composition-proxy panels are:
 
@@ -208,7 +218,7 @@ never silently converted to zero.
 Use [Analysis/end_to_end.py](../Analysis/end_to_end.py) for preparation and the
 two adjustment-layer coordinate outputs, associations, block bootstrap and
 matched-set audit. Raw input provisioning is separate: `prepare-primary` expects
-the public count H5 files and extracted spatial metadata at the layout its
+the public Matrix Market/H5 files and extracted spatial metadata at the layout its
 `--source-root` specifies. Their actual public URLs and checksums are documented
 in the input manifest linked above; the core does not download or guess inputs.
 
@@ -216,7 +226,7 @@ For already prepared inputs, the following runs associations, both coordinate
 layers and spatial bootstrap without requesting matched-set calibration:
 
 ```bash
-python -B Analysis/end_to_end.py --stage run --folder Primary --reps 1000 --widths 1500 3000 4500 --n-sets 0
+python -B Analysis/end_to_end.py --stage run --folder Primary --reps 1000 --bootstrap-in-pitches --seed 20261116 --n-sets 0
 ```
 
 The integrated release includes the annotation table at
@@ -322,6 +332,6 @@ estimators, bootstrap refitting, null generation/calibration and sparse keyed I/
 Temporary test outputs stay inside Software and are removed afterward.
 
 Unit fixtures check implementation contracts, not superiority on simulations or
-real data. Independent-input preparation and its source-identity audit are
-documented in `External/README.md`. Successful execution and unit tests do not
+real data. Ovarian preparation and PDAC transfer are documented in
+`Analysis/README.md` and `Study_Design.md`. Successful execution and unit tests do not
 establish histopathologic or biological validation.

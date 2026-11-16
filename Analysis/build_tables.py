@@ -14,7 +14,7 @@ def read(path):return pd.read_csv(path,sep='\t',keep_default_na=False,na_values=
 
 def combined(name):
     frames=[]
-    for label,folder in [('primary',ROOT/'Primary'),('external',ROOT/'External_EndToEnd/NYU_PDAC1')]:
+    for label,folder in [('ovarian',ROOT/'Primary'),('pdac_transfer',ROOT/'PDAC_Transfer')]:
         d=read(folder/name);d.insert(0,'dataset',label);frames.append(d)
     return pd.concat(frames,ignore_index=True)
 
@@ -25,24 +25,26 @@ def main():
     sheets.append(('S1_Panels',combined('panel_coverage.tsv')))
     import json
     rows=[]
-    for p in sorted((ROOT/'Primary').glob('GSM*/qc.json'))+[ROOT/'External_EndToEnd/NYU_PDAC1/qc.json']:
-        rows.append(json.loads(p.read_text()))
+    for folder in [ROOT/'Primary',ROOT/'PDAC_Transfer']:
+        manifest=json.loads((folder/'input_manifest.json').read_text())
+        for source in manifest:rows.append(json.loads((folder/source['sample_id']/'qc.json').read_text()))
     sheets.append(('S2_Input_QC',pd.DataFrame(rows)))
     sheets.append(('S3_Associations',combined('Results/associations.tsv')))
     intervals=[]
-    for dataset,folder in [('primary',ROOT/'Primary'),('external',ROOT/'External_EndToEnd/NYU_PDAC1')]:
+    for dataset,folder in [('ovarian',ROOT/'Primary'),('pdac_transfer',ROOT/'PDAC_Transfer')]:
         for path in sorted((folder/'Results').glob('bootstrap_*_ci.tsv')):
             frame=read(path);frame.insert(0,'dataset',dataset);intervals.append(frame)
     counts=combined('Results/candidate_counts.tsv')
     comparisons=combined('Results/composition_baseline_comparison.tsv')
     counts['record_type']='candidate_counts';comparisons['record_type']='ranking_comparison'
-    sheets.append(('S4_Ranking_and_Counts',pd.concat([counts,comparisons],ignore_index=True)))
+    legacy=read(ROOT/'Analysis/Cross_Cancer/legacy_ranking_comparison.tsv')
+    sheets.append(('S4_Ranking_and_Counts',pd.concat([counts,comparisons,legacy],ignore_index=True)))
     sheets.append(('S5_Block_Intervals',pd.concat(intervals,ignore_index=True)))
     sheets.append(('S6_Matched_Summary',combined('Results/matched_summary.tsv')))
     sheets.append(('S7_Matched_Assignments',combined('Results/matched_assignments.tsv.gz')))
     sheets.append(('S8_Ranking_Simulation',read(ROOT/'Ranking_Ablation/all_replicates.tsv')))
     sheets.append(('S9_Paired_Differences',read(ROOT/'Ranking_Ablation/paired_differences.tsv')))
-    sheets.append(('S10_Common_Gene_Check',read(ROOT/'External_EndToEnd/NYU_PDAC1/Results/common_gene_sensitivity_associations.tsv')))
+    sheets.append(('S10_Common_Gene_Check',combined('Results/common_gene_sensitivity_associations.tsv')))
     sheets.append(('S11_Model_Scope',read(ROOT/'Comparators/summary/primary_model_scope_audit.tsv')))
     sheets.append(('S12_Model_Enrichment',read(ROOT/'Comparators/current_summary/candidate_factor_enrichment.tsv')))
     utility=ROOT/'Utility_Benchmark/Results'
@@ -54,7 +56,7 @@ def main():
     contents.append(['Sheet','Rows','Description'])
     notes=[
         'Declared/used genes; proxies are not validated cell fractions',
-        'Counts/spatial QC; sample disease-identity conflict described in source audit',
+        'Ovarian primary example and previously examined PDAC transfer; not untouched validation',
         'Raw, technical and composition-proxy models, pooled and separate sections',
         'Candidate counts and ranking comparisons; outlier heuristic, no coordinate-level FDR',
         'Within-observed-section spatial block percentile intervals; not patient-population CIs',
@@ -62,9 +64,9 @@ def main():
         'Strict matching, all assignments, seed and caliper differences',
         'All 50 paired replicates for compact/dispersed/no-program geometries',
         'All method-minus-product differences; no selected seeds',
-        'Post hoc external 19/20-gene coverage sensitivity; not replacement primary',
-        'New primary versus old model-input and valid joint coverage',
-        'Updated labels on reused trained models; contextual overlap, not accuracy',
+        'Post hoc shared target/reference coverage across cancers; not replacement main scores',
+        'PDAC transfer versus preserved PDAC model-input and joint valid coverage',
+        'PDAC-only preserved model overlap; not ovarian training or accuracy evidence',
         'All 40 paired replicates per prespecified utility scenario, including null/negative cases',
         'All 32 paired injections per background/geometry; not biological ground truth',
         'AP differences across replicates, not patient-population inference',
