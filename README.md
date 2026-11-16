@@ -76,6 +76,17 @@ third-party environments are retrieved through documented public links.
 
 ## Versions and historical material
 
+The consolidated study archive is available as the named asset
+[Reproducibility_Archive.zip](https://github.com/ASDQWRQ/CAD-SPOT/releases/download/v2.3.0/Reproducibility_Archive.zip)
+on the [fixed v2.3.0 release](https://github.com/ASDQWRQ/CAD-SPOT/releases/tag/v2.3.0).
+This asset includes prepared inputs, complete study outputs, audits and replay
+commands; it is different from GitHub's automatically generated Source code ZIP.
+Extract once and start with `README.md` and `CONTENTS.md`. Verify the download
+against `SHA256SUMS.txt` on the same release. Archive SHA-256:
+`0417e8e11b1030e220d23e553c5726a121a23d060a199d3ba7742808ab812ec5`.
+The archive's contents, frozen software and scientific results are unchanged by
+this hosting update. Large original matrices and images are retrieved separately.
+
 The current software release is tagged `v2.3.0`. Earlier tags, legacy root
 examples and old source files are retained for history. Active ovarian sections
 are identified by `Primary/input_manifest.json`; PDAC is separately identified by

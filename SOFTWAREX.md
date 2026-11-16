@@ -36,6 +36,14 @@ and checksums are recorded in the input manifests.
 
 ## Evidence scope
 
+The complete code-and-results package is the named
+[Reproducibility_Archive.zip asset](https://github.com/ASDQWRQ/CAD-SPOT/releases/download/v2.3.0/Reproducibility_Archive.zip)
+on the [fixed v2.3.0 release](https://github.com/ASDQWRQ/CAD-SPOT/releases/tag/v2.3.0).
+It is hosted externally rather than uploaded as a journal ZIP attachment.
+The journal supplements provide full technical text and editable tables; a
+separate reproducibility access note gives the release link and checksum.
+This hosting/documentation update does not alter the tag, algorithms or results.
+
 The primary example is ovarian GSE211956; PDAC GSE274103 is a retrospective
 cross-cancer application, not an untouched validation cohort. Injection recovery
 is computational evidence, not pathology ground truth or measured experimental
