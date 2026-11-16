@@ -4,6 +4,10 @@ Composition-Aware Decomposition for Spatial Prioritization of Transcriptomic
 coordinates: an auditable workflow connecting declared scores, composition/model
 sensitivities, spatial uncertainty and physical-coordinate priorities.
 
+For the software-oriented manuscript scope and reproducibility entry points, see
+[SOFTWAREX.md](SOFTWAREX.md). [Licence.txt](Licence.txt) is an identical MIT-license
+alias of [LICENSE.txt](LICENSE.txt), provided for the SoftwareX repository checks.
+
 ## Applications and scope
 
 - **Primary worked example:** ovarian HGSOC, GEO GSE211956, eight Visium samples
